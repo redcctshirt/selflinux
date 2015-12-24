@@ -87,7 +87,18 @@
 <li class="toctree-l1"><a class="reference internal" href="Ueberblick_ueber_Linux.html">Überblick über Linux</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Distributionen.html">Distributionen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Grundlagen.html">Grundlagen</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">X-Window-System</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">X-Window-System</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#wheelmouse-konfiguration">Wheelmouse-Konfiguration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#problem">Problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#xfree-konfiguration">XFree Konfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testen-der-einstellungen">Testen der Einstellungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mouse-einstellen">Mouse einstellen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#einrichten-der-vor-und-zuruck-buttons">Einrichten der Vor- und Zurück-Buttons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#schlusswort">Schlusswort</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Grafische_Oberflaechen.html">Grafische Oberflächen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Systemverwaltung.html">Systemverwaltung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sicherheit.html">Sicherheit</a></li>
@@ -143,10 +154,109 @@
             
   <div class="section" id="x-window-system">
 <h1>X-Window-System<a class="headerlink" href="#x-window-system" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Contents:</p>
-<ul class="simple">
-<li>Test</li>
-</ul>
+<div class="section" id="wheelmouse-konfiguration">
+<h2>Wheelmouse-Konfiguration<a class="headerlink" href="#wheelmouse-konfiguration" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="problem">
+<h3>Problem<a class="headerlink" href="#problem" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wer unter Linux eine Intellimouse/Wheelmouse benutzen möchte, steht schnell vor dem Problem, dass die Maus sich als 3-Tasten-Maus einstellen lässt, das Rad aber nicht zum Scrollen benutzt werden kann.</p>
+<p>XFree86 erkennt standardmäßig eine 3-Tasten-Maus.</p>
+<p>Das Ziel der Konfiguration ist es, neben den zwei normalen Tasten, das Rad als 3. Taste, die beiden möglichen Rollbewegungen (auf und ab) des Rades und die zwei an der MS Intellimouse Explorer vorhandenen zusätzlichen Tasten zur Browsersteuerung zu aktivieren.</p>
+</div>
+<div class="section" id="xfree-konfiguration">
+<h3>XFree Konfiguration<a class="headerlink" href="#xfree-konfiguration" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Ausgangspunkt ist eine fertige XFree86-Konfiguration, in der nur noch der Maus-Teil angepasst werden soll. Sollte die Maus nicht erkannt worden sein, kann man sie als 3-Tasten-PS/2-Maus deklarieren.</p>
+<p>Die MS Intellimouse Explorer lässt sich auch als USB-Maus benutzen. Eine XFree86-Beispielkonfiguration ist weiter unten im Text angegeben.</p>
+<p>Die Konfiguration für en XFree86 in /etc/X11/XF86Config-4 ist in Sektionen aufgeteilt. Wir bearbeiten als Root im Editor die Sektion &#8220;InputDevice&#8221; für unsere Maus. Achtung, es können mehrere &#8220;InputDevice&#8221;-Einträge vorhanden sein. Es ist sinnvoll, schon bei der X-Konfiguration einen Namen (Identifier) mit Wiedererkennungscharakter zu verwenden. &#8220;Generic Mouse&#8221; und &#8220;Configured Mouse&#8221; sind sicher auch leicht zu unterscheiden, doch wir verwenden &#8220;Mouse[1]&#8221;.</p>
+<p>Achtung: Die nicht benötigten Sektionen müssen nicht gelöscht werden. Es reicht, sie mit einem # vor der Zeile auszukommentieren, damit sie unwirksam werden. Einer der hier vorgestellten Einträge kann dann zusätzlich eingefügt werden. Damit er wirklich aktiv ist, muss in der Sektion &#8220;ServerLayout&#8221; eine Zeile mit dem Eintrag
+XF86Config</p>
+<p>InputDevice     &#8220;Mouse[1]&#8221;</p>
+<p>vorhanden sein. Der Identifier ist also nicht nur für den eigenen Überblick wichtig. Die Sektion &#8220;InputDevice&#8221; für die MS Intellimouse Explorer als PS/2-Maus:
+XF86Config</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Section &#8220;InputDevice&#8221;</dt>
+<dd>Identifier &#8220;Mouse[1]&#8221;
+Driver &#8220;mouse&#8221;
+Option &#8220;Protocol&#8221; &#8220;ExplorerPS/2&#8221;
+Option &#8220;Device&#8221; &#8220;/dev/psaux&#8221;
+Option &#8220;ZAxisMapping&#8221; &#8220;6 7&#8221;
+Option &#8220;Buttons&#8221; &#8220;7&#8221;</dd>
+</dl>
+<p>EndSection</p>
+</div></blockquote>
+<p>Die Sektion &#8220;InputDevice&#8221; für die MS Intellimouse Explorer als USB-Maus:
+XF86Config (USB-Port)</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>Section &#8220;InputDevice&#8221;</dt>
+<dd>Identifier &#8220;Mouse[1]&#8221;
+Driver &#8220;mouse&#8221;
+Option &#8220;Protocol&#8221; &#8220;IMPS/2&#8221;
+Option &#8220;Device&#8221; &#8220;/dev/input/mice&#8221;
+Option &#8220;ZAxisMapping&#8221; &#8220;6 7&#8221;
+Option &#8220;Buttons&#8221; &#8220;7&#8221;</dd>
+</dl>
+<p>EndSection</p>
+</div></blockquote>
+<p>Beachtenswert ist hierbei die Option &#8220;Device&#8221;. Klappt /dev/input/mice nicht, kann /dev/mouse oder /dev/usbmouse eventuell weiterhelfen.</p>
+<p>Die Sektion &#8220;InputDevice&#8221; für eine einfache MS IntelliMouse als PS/2-Maus:
+XF86Config (MS Intelli Mouse)</p>
+<blockquote>
+<div><blockquote>
+<div>Section &#8220;InputDevice&#8221;
+Identifier &#8220;Mouse[1]&#8221;
+Driver &#8220;mouse&#8221;
+Option &#8220;Protocol&#8221; &#8220;IMPS/2&#8221;
+Option &#8220;Device&#8221; &#8220;/dev/psaux&#8221;
+Option &#8220;ZAxisMapping&#8221; &#8220;4 5&#8221;
+Option &#8220;Buttons&#8221; &#8220;5&#8221;</div></blockquote>
+<p>EndSection</p>
+</div></blockquote>
+<p>Änderungen an der XF86Config-4 benötigen keinen Neustart des Rechners. Damit sie wirksam werden, reicht es, den X-Server neu zu starten. Die Tastenkombination CRTL+ALT+BACKSPACE bei laufendem XFree86 reicht für gewöhnlich, um X zu beenden. X startet anschließend selbst neu, wenn ein Login-Manager wie xdm, kdm oder gdm aktiv ist. Anderenfalls hilft startx weiter. Für IntelliMouse-Modelle von Logitech, etc. ist diese Konfiguration noch nicht getestet. Bestätigungen oder Angaben zu veränderten Einstellungen nehmen wir gern entgegen.</p>
+</div>
+<div class="section" id="testen-der-einstellungen">
+<h3>Testen der Einstellungen<a class="headerlink" href="#testen-der-einstellungen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Zum Testen der Konfiguration wird in einer Konsole (xterm), das Programm xev genutzt.In dem erscheinenden Fenster mit dem Namen &#8220;Event Tester&#8221; sollte jede Mausbewegungund jeder Tastendruck zu einer Event-Ausgabe in der Konsole führen. Erst wenn jede Taste und das Rollen des Rades in beide Richtungen zu einer Ausgabe führen, kann man sicher sein, dass die Konfiguration erfolgreich war.</p>
+<img alt="_images/wheelmouse_xev.png" src="_images/wheelmouse_xev.png" />
+<p>xev</p>
+</div>
+<div class="section" id="mouse-einstellen">
+<h3>Mouse einstellen<a class="headerlink" href="#mouse-einstellen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Damit das Scrollen mit dem Mouserad in allen Applikationen, die diese Funktion unterstützen (Browser, Editoren, etc.) genutzt werden kann, muss in der .xinitrc-Datei im Home-Verzeichnis folgende Zeile eingefügt werden:
+.xinitrc</p>
+<p>/usr/X11R6/bin/xmodmap -e &#8220;pointer = 1 2 3 6 7 4 5&#8221;</p>
+<p>Bei der einfachen MS IntelliMouse mit 5 Tasten, muss der Eintrag so aussehen:
+.xinitrc (MS Intelli Mouse mit 5 Tasten)</p>
+<p>/usr/X11R6/bin/xmodmap -e &#8220;pointer = 1 2 3 4 5&#8221;</p>
+<p>Jetzt wird dieser Befehl bei jedem Start von X aufgerufen und das Scrollen mit dem Mouserad sollte möglich sein.</p>
+</div>
+<div class="section" id="einrichten-der-vor-und-zuruck-buttons">
+<h3>Einrichten der Vor- und Zurück-Buttons<a class="headerlink" href="#einrichten-der-vor-und-zuruck-buttons" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wenn alle Tasten laut xev erkannt werden, ist der nächste Schritt, den Zusatztasten der Explorer-Maus ihre Funktion zuzuordnen. Hierfür benutzt man das Programm imwheel, dass die vom X-Server erkannten Signale in Befehle konvertiert.</p>
+<p>In /etc/imwheel oder /etc/X11 muss die Datei imwheelrc editiert werden. Das Heimatverzeichnis von imwheel hängt von der benutzten Distribution ab.</p>
+<p>Man fügt folgendes ein:
+imwheelrc</p>
+<blockquote>
+<div>&#8221;.*&#8221;
+None, Up, Alt_L|Left
+None, Down, Alt_L|Right</div></blockquote>
+<p>Damit X die Tasten auch diesen Kombinationen zuordnet, fügt man in seine .xinitrc im Heimatverzeichnis die Zeile:
+.xinitrc</p>
+<p>exec imwheel -k -b &#8220;67&#8221;</p>
+<p>ein. Damit sollten diese Tasten auch ihre Funktion erfüllen.</p>
+</div>
+<div class="section" id="schlusswort">
+<h3>Schlusswort<a class="headerlink" href="#schlusswort" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Ich weise hiermit darauf hin, dass jeder für eventuelle Schäden an seinem System selbst verantwortlich ist und empfehle dringendst, von den entsprechenden Dateien immer Backups zu machen oder die alten Einträge mit einem #-Zeichen auszukommentieren.
+Viel Erfolg!</p>
+<p>Autor</p>
+<blockquote>
+<div>Nico Golde <a class="reference external" href="mailto:nion&#37;&#52;&#48;gmx&#46;net">nion<span>&#64;</span>gmx<span>&#46;</span>net</a></div></blockquote>
+<p>Formatierung</p>
+<blockquote>
+<div>Matthias Hagedorn <a class="reference external" href="mailto:matthias&#46;hagedorn&#37;&#52;&#48;selflinux&#46;org">matthias<span>&#46;</span>hagedorn<span>&#64;</span>selflinux<span>&#46;</span>org</a></div></blockquote>
+</div>
+</div>
 </div>
 
 
