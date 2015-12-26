@@ -95,6 +95,10 @@
 <li class="toctree-l1"><a class="reference internal" href="Multimedia.html">Multimedia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Anwendungs-Software.html">Anwendungs-Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Programmierung.html">Programmierung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#cvs-status-examining-a-subdir">cvs status: Examining a-subdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#cvs-status-examining-a-subdir-subsubdir">cvs status: Examining a-subdir/subsubdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#cvs-status-examining-b-subdir">cvs status: Examining b-subdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#im-vorangegangenen-beispiel-besteht-der-interessante-teil-aus-den-ersten-drei-zeilen-die-leerzeile-nicht-mitgezahlt-der-statusausgabe-jeder-datei-die-erste-zeile-ist-die-wichtigste-dort-stehen-der-dateiname-und-der-status-der-datei-innerhalb-der-arbeitskopie-zurzeit-sind-alle-dateien-auf-dem-gleichen-stand-mit-dem-archiv-daher-steht-uberall-der-status-up-to-date-wenn-jedoch-random-c-modifiziert-und-noch-nicht-an-das-archiv-mittels-commit-ubertragen-worden-ware-konnte-dies-so-aussehen">Im vorangegangenen Beispiel besteht der interessante Teil aus den ersten drei Zeilen (die Leerzeile nicht mitgezählt) der Statusausgabe jeder Datei. Die erste Zeile ist die wichtigste; dort stehen der Dateiname und der Status der Datei innerhalb der Arbeitskopie. Zurzeit sind alle Dateien auf dem gleichen Stand mit dem Archiv, daher steht überall der Status Up-to-date. Wenn jedoch random.c modifiziert und noch nicht an das Archiv mittels Commit übertragen worden wäre, könnte dies so aussehen:</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Anhang.html">Anhang</a></li>
 </ul>
 
@@ -146,7 +150,7 @@
 <ul class="simple">
 <li>ist in Arbeit</li>
 <li>stammt von <a class="reference external" href="http://www.selflinux.org/">http://www.selflinux.org/</a></li>
-<li>steht unter GFDL</li>
+<li>steht unter GFDL, bestimmte Texte stehen unter GPL oder LGPL</li>
 <li>vieles wurde in wikibooks übernommen</li>
 <li>bei Fehler, Copyrighthinweis bitte melden</li>
 <li>ist nicht mehr aktuell, vieles gibt es nicht mehr, aber vieles funktioniert noch und hat sich nicht geändert</li>
@@ -1451,7 +1455,205 @@
 <li class="toctree-l1"><a class="reference internal" href="Internet.html">Internet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Multimedia.html">Multimedia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Anwendungs-Software.html">Anwendungs-Software</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Programmierung.html">Programmierung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html">Programmierung</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Programmierung.html#cvs">CVS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#ubersicht-cvs">Übersicht CVS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#cvs-grundlagen">CVS-Grundlagen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#ein-tag-mit-cvs">Ein Tag mit CVS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#cvs-aufrufen">CVS aufrufen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#zugriff-auf-ein-archiv">Zugriff auf ein Archiv</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#ein-neues-projekt-beginnen">Ein neues Projekt beginnen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#eine-arbeitskopie-auschecken">Eine Arbeitskopie auschecken</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="Programmierung.html#dieser-diff-besteht-aus-einem-hunk">Dieser Diff besteht aus einem Hunk:</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#cvs-status-examining-a-subdir">cvs status: Examining a-subdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#cvs-status-examining-a-subdir-subsubdir">cvs status: Examining a-subdir/subsubdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#cvs-status-examining-b-subdir">cvs status: Examining b-subdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#im-vorangegangenen-beispiel-besteht-der-interessante-teil-aus-den-ersten-drei-zeilen-die-leerzeile-nicht-mitgezahlt-der-statusausgabe-jeder-datei-die-erste-zeile-ist-die-wichtigste-dort-stehen-der-dateiname-und-der-status-der-datei-innerhalb-der-arbeitskopie-zurzeit-sind-alle-dateien-auf-dem-gleichen-stand-mit-dem-archiv-daher-steht-uberall-der-status-up-to-date-wenn-jedoch-random-c-modifiziert-und-noch-nicht-an-das-archiv-mittels-commit-ubertragen-worden-ware-konnte-dies-so-aussehen">Im vorangegangenen Beispiel besteht der interessante Teil aus den ersten drei Zeilen (die Leerzeile nicht mitgezählt) der Statusausgabe jeder Datei. Die erste Zeile ist die wichtigste; dort stehen der Dateiname und der Status der Datei innerhalb der Arbeitskopie. Zurzeit sind alle Dateien auf dem gleichen Stand mit dem Archiv, daher steht überall der Status Up-to-date. Wenn jedoch random.c modifiziert und noch nicht an das Archiv mittels Commit übertragen worden wäre, könnte dies so aussehen:</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Programmierung.html#programmierung-unter-linux">Programmierung unter Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#muss-man-programmieren-konnen-um-mit-linux-zu-arbeiten">Muss man programmieren können, um mit Linux zu arbeiten?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#wieso-sich-dann-mit-programmierung-beschaftigen">Wieso sich dann mit Programmierung beschäftigen?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#was-fur-unterschiedliche-arten-an-programmiersprachen-gibt-es">Was für unterschiedliche Arten an Programmiersprachen gibt es?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#was-macht-linux-furs-programmieren-so-attraktiv">Was macht Linux fürs Programmieren so attraktiv?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#wo-anfangen">Wo anfangen?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Programmierung.html#shellprogrammierung">Shellprogrammierung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#was-ist-die-shell">Was ist die Shell?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#sinn-und-zweck">Sinn und Zweck</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#die-qual-der-wahl">Die Qual der Wahl</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#wofur-shell-programmierung">Wofür Shell-Programmierung?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#wie-sieht-ein-shell-skript-aus">Wie sieht ein Shell-Skript aus?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#grundsatzliches">Grundsätzliches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#variablen">Variablen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#vordefinierte-variablen">Vordefinierte Variablen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#variablen-substitution">Variablen-Substitution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#quoting">Quoting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#meta-zeichen">Meta-Zeichen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#mustererkennung">Mustererkennung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#programmablaufkontrolle">Programmablaufkontrolle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#kommentare">Kommentare (#)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#auswahl-der-shell">Auswahl der Shell (#!)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#null-befehl">Null-Befehl (:)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#source">Source (.)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#funktionen">Funktionen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#bedingungen">Bedingungen ([ ])</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#if">if. . .</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#case">case. . .</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#for">for. . .</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#while">while. . .</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#until">until. . .</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#continue">continue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#break">break</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#exit">exit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#befehlsformen">Befehlsformen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#datenstrome">Datenströme</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#wo-sind-unterschiede-zu-dos-batchdateien">Wo sind Unterschiede zu DOS-Batchdateien?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#anhang-a-beispiele">Anhang A: Beispiele</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#schleifen-und-ruckgabewerte">Schleifen und Rückgabewerte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#ein-typisches-init-skript">Ein typisches Init-Skript</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#parameterubergabe-in-der-praxis">Parameterübergabe in der Praxis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#fallensteller-auf-traps-reagieren">Fallensteller: Auf Traps reagieren</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#anhang-b">Anhang B</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#quellen">Quellen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Programmierung.html#regulare-ausdrucke">Reguläre Ausdrücke</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#einleitung">Einleitung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#muster-und-regulare-ausdrucke">Muster und Reguläre Ausdrücke</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#bre-und-ere">BRE und ERE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#und-los-geht-s">Und los geht&#8217;s</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#ubersicht">Übersicht</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#ein-paar-beispiele">Ein paar Beispiele</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#ab-geht-die-post">Ab geht die Post</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#mail-me">Mail me!</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#ip-adressen">IP-Adressen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#das-iperium-schlagt-zuruck">Das IPerium schlägt zurück</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#emanzipierte-superfrauen">Emanzipierte Superfrauen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Programmierung.html#bibliotheken">Bibliotheken</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#id71">Einleitung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#komplexe-systeme">Komplexe Systeme</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#systemkomponenten">Systemkomponenten</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#motivation-fur-bibliotheken">Motivation für Bibliotheken</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#arten-von-bibliotheken">Arten von Bibliotheken</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#statische-bindung">Statische Bindung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#gemeinsame-nutzung">Gemeinsame Nutzung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#dynamische-bindung">Dynamische Bindung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#beispiele">Beispiele</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#gemeinsam-genutzte-dynamisch-gelinkte-bibliotheken">Gemeinsam genutzte, dynamisch gelinkte Bibliotheken</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#verwenden-von-bibliotheken">Verwenden von Bibliotheken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#der-linux-programmlader">Der Linux Programmlader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#namen-von-bibliotheken">Namen von Bibliotheken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#platzierung-im-dateisystem">Platzierung im Dateisystem</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#funktion-des-dynamischen-linkers-programmladers">Funktion des Dynamischen Linkers (Programmladers)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#umgebungsvariablen">Umgebungsvariablen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#cache-datei-erzeugen">Cache-Datei erzeugen</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#verwalten-von-bibliotheken">Verwalten von Bibliotheken</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#installieren-von-bibliotheken">Installieren von Bibliotheken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#aktualisieren-von-bibliotheken">Aktualisieren von Bibliotheken</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#werkzeuge">Werkzeuge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#ld-linux-so">ld-linux.so</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#ldconfig">ldconfig</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#ldd">ldd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#nm">nm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#literatur">Literatur</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Programmierung.html#make">Make</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#einfuhrung">Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#grundlagen">Grundlagen</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#ein-einfaches-makefile">Ein einfaches Makefile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#regel-werk">Regel-Werk</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#abhangigkeiten">Abhängigkeiten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#pseudo-ziele">Pseudo-Ziele</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#makros">Makros</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#syntax">Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#vordefinierte-makros">Vordefinierte Makros</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#makro-ubergabe">Makro-Übergabe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#umgebungs-variablen">Umgebungs-Variablen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#prioritats-regeln">Prioritäts-Regeln</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#string-substitution">String-Substitution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#interne-makros">Interne Makros</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#suffix-regeln">Suffix-Regeln</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#null-suffix-regeln">Null-Suffix-Regeln</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#eingebaute-suffix-regeln">Eingebaute Suffix-Regeln</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#konflikt-behandlung">Konflikt-Behandlung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#eigene-suffix-regeln">Eigene Suffix-Regeln</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#kommandos">Kommandos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#wildcards">Wildcards</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#mehrere-kommandos">Mehrere Kommandos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#skript-programmierung">Skript-Programmierung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#fehlercode">Fehlercode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#ausgabe-unterdrucken">Ausgabe unterdrücken</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#projekt-management">Projekt-Management</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#schwierigkeiten">Schwierigkeiten</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#dummy-ziele">Dummy-Ziele</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#timestamp-ziele">Timestamp-Ziele</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#rekursives-make">Rekursives make</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#header-dateien">Header-Dateien</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#globale-definitionen-include-anweisung">Globale Definitionen (include-Anweisung)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#richtlinien">Richtlinien</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#allgemeine-konventionen">Allgemeine Konventionen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#utilities">Utilities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#id100">Variablen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#installations-verzeichnis">Installations-Verzeichnis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#standard-targets">Standard Targets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Programmierung.html#doxygen-howto">Doxygen Howto</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Programmierung.html#id101">Einleitung</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#doxygen">Doxygen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#vorbereitungen-fur-den-einsatz">Vorbereitungen für den Einsatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Programmierung.html#doxygen-tags">Doxygen-Tags</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Anhang.html">Anhang</a></li>
 </ul>
 </div>
