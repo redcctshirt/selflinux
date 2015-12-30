@@ -92,10 +92,115 @@
 <li class="toctree-l1"><a class="reference internal" href="Systemverwaltung.html">Systemverwaltung</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Sicherheit.html">Sicherheit</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Linux_im_Netzwerk.html">Linux im Netzwerk</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">Internet</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Internet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#zugang">Zugang</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ppp-verbindung">PPP-Verbindung</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ppp-verbindung-von-hand-herstellen-pppd-und-chat">PPP-Verbindung von Hand herstellen: pppd und chat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ppp-verbindung-von-hand-beenden">PPP-Verbindung von Hand beenden:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameter-optionen-fur-pppd-und-chat">Parameter / Optionen für pppd und chat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#der-parameter-connect-bzw-der-chat-aufruf">Der Parameter connect bzw. der chat-Aufruf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#der-parameter-dev-modem-fur-pppd">Der Parameter /dev/modem für pppd:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#der-parameter-user-fur-pppd">Der Parameter user für pppd:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ppp-verbindung-automatisch-herstellen-diald">PPP-Verbindung automatisch herstellen: diald</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#parameter-datei-etc-diald-diald-options">Parameter-Datei /etc/diald/diald.options</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#die-datei-etc-ppp-options-musz-fur-diald-leer-sein">Die Datei /etc/ppp/options muß für diald leer sein:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#erfolgskontrolle-fruher-in-var-log-ppp-log-jetzt-in-var-log-debug">Erfolgskontrolle: früher in /var/log/ppp.log - jetzt in /var/log/debug:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#zum-surfen-werden-nameserver-eintragungen-in-etc-resolv-conf-gebraucht">Zum Surfen werden Nameserver-Eintragungen in /etc/resolv.conf gebraucht:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#weitere-informationsquellen">Weitere Informationsquellen:</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#isdn-unter-linux">ISDN unter Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#isdn-wofur-brauch-ich-das">ISDN, wofür brauch&#8217; ich das?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hilfe-bei-problemen">Hilfe bei Problemen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#technik">Technik</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#dokumentation-zu-adsl">Dokumentation zu ADSL</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#warum-rp-pppoe">Warum rp-pppoe?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#die-voraussetzungen-fur-den-rp-pppoe">Die Voraussetzungen für den rp-pppoe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation-der-netzwerkkarte">Installation der Netzwerkkarte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#die-verkabelung">Die Verkabelung</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#die-konfiguration">Die Konfiguration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pap-secrets">pap-secrets</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dsl-provider">dsl-provider</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dial-on-demand">Dial-on-demand</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#der-erste-start">Der erste Start</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#manuelle-einwahl">Manuelle Einwahl</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#danksagung">Danksagung</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#world-wide-web">World Wide Web</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-transfer-protocol">File Transfer Protocol</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#e-mail">E-Mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#news">News</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#irc">IRC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#point-to-point">Point to Point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gnupg-handbuch">GnuPG-Handbuch</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#domain-name-system">Domain Name System</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#einfuhrung">Einführung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resolver">Resolver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bind">Bind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zonen">Zonen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dns-datenbank-und-deren-eintrage">DNS-Datenbank und deren Einträge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#meister-und-sklaven">Meister und Sklaven</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#resource-records">Resource Records</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-of-authority-ein-beispiel">Start of Authority - Ein Beispiel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#die-benotigten-resource-records-fur-unsere-zone">Die benötigten Resource Records für unsere Zone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#die-andere-seite-reverse-lookups">Die andere Seite - Reverse Lookups</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eine-reverse-lookup-zone">Eine Reverse Lookup Zone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zonefiles">Zonefiles</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#abkurzungen">Abkürzungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#die-fertigen-dateien">Die fertigen Dateien</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration-des-bind">Konfiguration des Bind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#root-servers-konfigurieren">ROOT-SERVERS konfigurieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eigene-zones-konfigurieren">Eigene Zones konfigurieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eine-zone-fur-localhost">Eine Zone für &#8220;localhost&#8221;</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#weitere-wichtige-konfigurationsoptionen">Weitere wichtige Konfigurationsoptionen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#starten">Starten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zoneanderungen-und-secondaries">Zoneänderungen und Secondaries</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#testen-der-konfigurationen">Testen der Konfigurationen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spielzonen">Spielzonen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mehr-informationen-als-namen-und-adressen">Mehr Informationen als Namen und Adressen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#quickstart">Quickstart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ein-produktivsystem">Ein Produktivsystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sinnvolle-soa-values">Sinnvolle SOA-Values</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secondaries-betreiben">Secondaries betreiben</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#zugriffsbeschrankungen-konfigurieren">Zugriffsbeschränkungen konfigurieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#betrieb-hinter-einer-firewall">Betrieb hinter einer Firewall</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#classless-routing-cidr">Classless Routing (CIDR)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#umgang-mit-storungen">Umgang mit Störungen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#root-rechte">Root-Rechte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chroot-umgebung">Chroot-Umgebung</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#versionen">Versionen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wachstum">Wachstum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keep-it-running">Keep it running</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#xinetd">xinetd</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#was-ist-xinetd">Was ist xinetd?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ubersetzen-und-installatieren">Übersetzen und Installatieren</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration">Konfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#die-sektion-default">Die Sektion: default</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#konfiguration-eines-dienstes">Konfiguration eines Dienstes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ports-an-adressen-binden-das-attribut-bind">Ports an Adressen binden: Das Attribut bind</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#umleiten-eines-dienstes-auf-einen-anderen-rechner">Umleiten eines Dienstes auf einen anderen Rechner</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spezielle-dienste">Spezielle Dienste</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#chroot-fur-einen-dienst">chroot für einen Dienst</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fazit">Fazit</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="Multimedia.html">Multimedia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Anwendungs-Software.html">Anwendungs-Software</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Programmierung.html">Programmierung</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#cvs-status-examining-a-subdir">cvs status: Examining a-subdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#cvs-status-examining-a-subdir-subsubdir">cvs status: Examining a-subdir/subsubdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#cvs-status-examining-b-subdir">cvs status: Examining b-subdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Programmierung.html#im-vorangegangenen-beispiel-besteht-der-interessante-teil-aus-den-ersten-drei-zeilen-die-leerzeile-nicht-mitgezahlt-der-statusausgabe-jeder-datei-die-erste-zeile-ist-die-wichtigste-dort-stehen-der-dateiname-und-der-status-der-datei-innerhalb-der-arbeitskopie-zurzeit-sind-alle-dateien-auf-dem-gleichen-stand-mit-dem-archiv-daher-steht-uberall-der-status-up-to-date-wenn-jedoch-random-c-modifiziert-und-noch-nicht-an-das-archiv-mittels-commit-ubertragen-worden-ware-konnte-dies-so-aussehen">Im vorangegangenen Beispiel besteht der interessante Teil aus den ersten drei Zeilen (die Leerzeile nicht mitgezählt) der Statusausgabe jeder Datei. Die erste Zeile ist die wichtigste; dort stehen der Dateiname und der Status der Datei innerhalb der Arbeitskopie. Zurzeit sind alle Dateien auf dem gleichen Stand mit dem Archiv, daher steht überall der Status Up-to-date. Wenn jedoch random.c modifiziert und noch nicht an das Archiv mittels Commit übertragen worden wäre, könnte dies so aussehen:</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Anhang.html">Anhang</a></li>
 </ul>
 
@@ -143,10 +248,1853 @@
             
   <div class="section" id="internet">
 <h1>Internet<a class="headerlink" href="#internet" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Contents:</p>
-<ul class="simple">
-<li>Test</li>
-</ul>
+<div class="section" id="zugang">
+<h2>Zugang<a class="headerlink" href="#zugang" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="ppp-verbindung">
+<h3>PPP-Verbindung<a class="headerlink" href="#ppp-verbindung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Beschreibung</p>
+<p>Die Pfadbeispiele sind in diesem Dokument wie folgt geregelt:</p>
+<p>pppd, chat und diald befinden sich in /usr/sbin.
+Die Konfigurationsdateien befinden sich in /etc/ppp, /etc/diald und /etc/chatscripts.</p>
+<p>Bei anderen Linux-Distributionen können es andere Verzeichnisse sein.</p>
+<div class="section" id="ppp-verbindung-von-hand-herstellen-pppd-und-chat">
+<h4>PPP-Verbindung von Hand herstellen: pppd und chat<a class="headerlink" href="#ppp-verbindung-von-hand-herstellen-pppd-und-chat" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Um eine PPP-Verbindung herzustellen, ruft man auf: /usr/sbin/pppd. pppd ruft seinerseits auf: /usr/sbin/chat. chat stellt das Modem ein, wählt den Provider an, identifiziert sich und verlangt vom Provider, den PPP-Server zu starten. Dann gibt es zurück an pppd.</p>
+<p>pppd verhandelt dann mit dem PPP-Server über den Aufbau einer PPP-Verbindung und bekommt schließlich zwei temporäre IP-Nummern: eine für den lokalen Rechner und eine zweite für den Rechner auf der Provider-Seite. Über diese IP-Nummern wird dann der Verkehr mit dem Internet abgewickelt. Anfragen ans Internet gehen an die IP-Nummer des Providers, Antworten aus dem Internet gehen an die lokale IP-Nummer.</p>
+</div>
+<div class="section" id="ppp-verbindung-von-hand-beenden">
+<h4>PPP-Verbindung von Hand beenden:<a class="headerlink" href="#ppp-verbindung-von-hand-beenden" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Die Verbindung kann beendet werden mit dem Shell-Skript /usr/sbin/poff.</p>
+</div>
+<div class="section" id="parameter-optionen-fur-pppd-und-chat">
+<h4>Parameter / Optionen für pppd und chat<a class="headerlink" href="#parameter-optionen-fur-pppd-und-chat" title="Link zu dieser Überschrift">¶</a></h4>
+<p>pppd benötigt einige Parameter (Optionen). Es sucht diese Parameter in der Datei /etc/ppp/options und in der Kommandozeile. Die Kommandozeilenparameter haben Vorrang.</p>
+<p>Die Bedeutung jedes Parameters sieht man sich mit man pppd an. Bei mir lautet der Aufruf von pppd folgendermaßen:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # /usr/sbin/pppd /dev/modem 115200 asyncmap 0 noauth crtscts debug lock modem defaultroute proxyarp noipdefault lcp-echo-interval 30 lcp-echo-failure 4 ipcp-accept-local ipcp-accept-remote noipx connect &#8220;/usr/sbin/chat -v -f /etc/chatscripts/cis&#8221; user &lt;meine user-id&gt; disconnect &#8220;/usr/sbin/chat -v -f /etc/chatscripts/hangug&#8221;</p>
+<p>Das Ganze ist eine einzige Kommandozeile. Die Schrägstriche am Ende jeder Zeile bedeuten: Diese Zeile wird in der nächsten Zeile fortgesetzt.</p>
+<p>Der komplizierteste ist der Parameter connect. Der Inhalt dieses Parameters ist selbst wiederum eine komplette Kommandozeile mit Parametern / Optionen. Nämlich der Aufruf des Programms chat.</p>
+</div>
+<div class="section" id="der-parameter-connect-bzw-der-chat-aufruf">
+<h4>Der Parameter connect bzw. der chat-Aufruf<a class="headerlink" href="#der-parameter-connect-bzw-der-chat-aufruf" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Das Programm chat wickelt ein Frage-Antwort-Spiel ab nach dem Muster:</p>
+<p>Warte auf &lt;Ausgabe vom Provider&gt;, antworte &lt;lokale Eingabe&gt;,
+Warte auf &lt;Ausgabe vom Provider&gt;, antworte &lt;lokale Eingabe&gt;,
+Warte auf &lt;Ausgabe vom Provider&gt;, antworte &lt;lokale Eingabe&gt;, usw.</p>
+<p>Die Liste von Fragen und Antworten kann in einer Datei z.B. /etc/chatscripts/cis oder in der Kommandozeile übergeben werden.</p>
+<p>Chatskript /etc/chatscripts/cis2 für Compuserve (neues Netz):</p>
+<p>/etc/chatscripts/cis2 für Compuserve (neues Netz)</p>
+<p>&#8220;&#8221; ATZ
+OK ATDT25449324
+CONNECT &#8220;&#8221;
+&#8220;Login:&#8221; cisv1
+&#8220;Password:&#8221; classic
+&#8220;User ID:&#8221; &#8220;&lt;meine user-id&gt;/noint/<a class="reference external" href="go:pppconnect">go:pppconnect</a>&#8221;
+&#8220;Password: &#8221; &#8220;&lt;mein passwort&gt;&#8221;</p>
+<p>Diese Zeilen bedeuten:
+warte auf nichts - antworte mit Modembefehl: Reset,
+warte auf Meldung vom Modem: OK -antworte mit Modembefehl: Tonwahl Compuserve,
+warte auf Meldung vom Modem: CONNECT - antworte mit nichts (d.h. nur Zeilenvorschub),
+Die restlichen 3 Zeilen sind die Verhandlung mit dem Provider.</p>
+<p>Chatskript /etc/chatscripts/cis für Compuserve (altes Netz):</p>
+<p>/etc/chatscripts/cis für Compuserve (altes Netz)</p>
+<p>&#8216;&#8217; &#8216;ATZ&#8217;
+&#8216;OK&#8217; &#8216;ATDT0406913666&#8217;
+&#8216;CONNECT&#8217; &#8216;&#8217;
+&#8216;Host Name:&#8217; &#8216;CIS&#8217;
+&#8216;User ID:&#8217; &#8216;&lt;meine user id&gt;/<a class="reference external" href="GO:PPPCONNECT">GO:PPPCONNECT</a>&#8216;
+&#8216;Password:&#8217; &#8216;&lt;mein passwort&gt;&#8217;</p>
+<p>Chatskript /etc/chatscripts/ton für T-Online:</p>
+<p>/etc/chatscripts/ton für T-Online</p>
+<p>&#8220;&#8221; ATZ
+OK ATDT0191011
+CONNECT</p>
+<p>Hinter CONNECT habe ich noch ein Leerzeichen stehen, ich bin allerdings nicht sicher, ob das wirklich nötig ist.</p>
+<p>Aus verschiedenen Newsgroup-Beiträgen weiß ich, dass es bei T-Online sehr darauf ankommt, was man nach der Meldung Connect (vom Modem) noch an T-Online sendet, damit dort auch tatsächlich der PPP-Server gestartet wird.</p>
+<p>Die obige Version meines Chat-Skripts läuft zur Zeit mit Debian-Linux 2.1 (slink). Vor einem dreiviertel Jahr lief mit Debian-Linux 2.0 (hamm)folgende Version:
+Debian-Linux 2.1 /etc/chatscripts/ton für T-Online</p>
+<p>&#8220;&#8221; ATZ
+OK ATDT0191011
+CONNECT dc</p>
+<p>Chatskript /etc/chatscripts/hangup für den pppd-Parameter disconnect:</p>
+<p>/etc/chatscripts/hangup für den pppd-Parameter disconnect</p>
+<p>&#8216;&#8217; &#8216;Kd&#8217;
+&#8216;&#8217; &#8216;+++d&#8217;
+&#8216;&#8217; &#8216;ATHd&#8217;
+&#8216;&#8217; &#8216;ATZ&#8217;</p>
+<p>Diese Zeilen bedeuten:
+warte auf nichts - lass das Modem einen BREAK senden, warte 1 Sekunde,
+warte auf nichts - Modembefehl Kommandomodus, warte 1 Sekunde,
+warte auf nichts - Modembefehl Aufhängen,warte 1 Sekunde,
+warte auf nichts - Modembefehl Reset</p>
+<p>Chatskript für andere Provider: minicom</p>
+<p>Ein Terminalprogramm wie z.B. minicom kann man benutzen, um das Chatskript für andere Provider bzw. andere Einwahlprozeduren zu ermitteln. Für Compuserve muß man die Modemparameter auf 7E1 einstellen (7 Bit Data, Even Parity, 1 Stop Bit), sonst auf 8N1.</p>
+</div>
+<div class="section" id="der-parameter-dev-modem-fur-pppd">
+<h4>Der Parameter /dev/modem für pppd:<a class="headerlink" href="#der-parameter-dev-modem-fur-pppd" title="Link zu dieser Überschrift">¶</a></h4>
+<p>/dev/modem bedeutet das Gerät bzw. die Schnittstelle für die PPP-Verbindung. Wenn das Gerät /dev/modem noch nicht vorhanden ist, kann man es z.B. erzeugen mit cp /dev/ttyS0 /dev/modem , dabei steht ttyS0 für COM1, ttyS1 für COM2, usw.</p>
+</div>
+<div class="section" id="der-parameter-user-fur-pppd">
+<h4>Der Parameter user für pppd:<a class="headerlink" href="#der-parameter-user-fur-pppd" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Während der PPP-Verhandlung (das ist nach Beendigung des chat-Programms) benötigt pppd noch einmal die User-ID und das Passwort. Bei Compuserve gehen also User-ID und Passwort zweimal durch die Leitung: Einmal mit chat und einmal mit pppd.</p>
+<p>Wenn User-ID und Passwort gesendet werden müssen, nimmt pppd den Inhalt des Parameters user und schlägt dann das Passwort in der Datei /etc/ppp/pap-secrets nach. Dort sucht es nach einer Zeile der Form</p>
+<blockquote>
+<div>&lt;user-id&gt; * &lt;passwort&gt;</div></blockquote>
+<p>Die User-ID in Compuserve besteht üblicherweise aus einer sechsstelligen Zahl, gefolgt von einem Komma, gefolgt von einer dreistelligen Zahl, Beispiel: 123456,789</p>
+<p>Die User-ID in T-Online besteht aus der Anschlusskennung (z.B. 000011112222), gefolgt von der T-Online-Nummer (z.B. 320044445555), gefolgt von einer Raute, gefolgt von der Mitbenutzernummer, (z.B. 0001). Beispiel: 000011112222320044445555#0001</p>
+<p>Die T-Online-Nummer ist im allgemeinen von der Telefonnummer abgeleitet. Die Anschlusskennung ist die erste und längere der beiden Zahlen, die Sie geheimhalten sollten, und die Ihnen im Brief auf dunklem Untergrund mitgeteilt wurde. (Die zweite Zahl, die Sie geheimhalten sollten, ist das Passwort).</p>
+<p>Wenn - wie z.B. bei T-Online - die User-ID eine Raute (#) enthält, oder wenn sie Leerzeichen enthält, sollte die User-ID in Anführungszeichen eingeschlossen werden. Die Raute könnte sonst als Kommentarzeichen (alles was jetzt kommt, ist nur Kommentar ohne Bedeutung) bzw. das Leerzeichen als Parameter-Trennzeichen interpretiert werden.</p>
+</div>
+<div class="section" id="ppp-verbindung-automatisch-herstellen-diald">
+<h4>PPP-Verbindung automatisch herstellen: diald<a class="headerlink" href="#ppp-verbindung-automatisch-herstellen-diald" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Der Ablauf ist hier so: diald erzeugt beim Start einen Proxy-Server, über den alle Netzanfragen gehen. Wenn der Proxy merkt, dass eine gewünschte IP-Nummer im lokalen Netz nicht vorhanden ist, läßt er diald eine PPP-Verbindung aufbauen. Wenn die Verbindung eine gewisse Zeit nicht benutzt wird, baut diald die Verbindung wieder ab und läßt das Modem auflegen.</p>
+<p>Zum Herstellen der Verbindung ruft diald erst chat und anschließend pppd auf. Die Kommandozeile zum Aufruf von chat und sämtliche Parameter für pppd werden beim Aufruf von diald nur an diald übergeben. diald gibt sie dann bei Bedarf weiter an chat bzw. an pppd. Der Parameter connect fehlt also diesmal bei den Parametern für pppd, statt dessen bekommt ihn diald.</p>
+</div>
+<div class="section" id="parameter-datei-etc-diald-diald-options">
+<h4>Parameter-Datei /etc/diald/diald.options<a class="headerlink" href="#parameter-datei-etc-diald-diald-options" title="Link zu dieser Überschrift">¶</a></h4>
+<p>/etc/diald/diald.options</p>
+<p>mode ppp
+device /dev/modem
+connect &#8220;/usr/sbin/chat -v -f /etc/chatscripts/ton&#8221;
+speed 115200
+modem
+lock
+crtscts
+local 127.0.0.2
+remote 127.0.0.3
+dynamic
+defaultroute
+include /etc/diald/standard.filter
+pppd-options debug noauth user &lt;meine user-id&gt; ipcp-accept-local ipcp-accept-remote
+debug 0x007D</p>
+</div>
+<div class="section" id="die-datei-etc-ppp-options-musz-fur-diald-leer-sein">
+<h4>Die Datei /etc/ppp/options muß für diald leer sein:<a class="headerlink" href="#die-datei-etc-ppp-options-musz-fur-diald-leer-sein" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Falls eine Datei /etc/ppp/options vorhanden ist, wird ihr Inhalt diald stören. Irgendwo habe ich gelesen, dass diese Datei aber auch nicht ganz fehlen darf, sie muß vorhanden, aber leer sein.</p>
+</div>
+<div class="section" id="erfolgskontrolle-fruher-in-var-log-ppp-log-jetzt-in-var-log-debug">
+<h4>Erfolgskontrolle: früher in /var/log/ppp.log - jetzt in /var/log/debug:<a class="headerlink" href="#erfolgskontrolle-fruher-in-var-log-ppp-log-jetzt-in-var-log-debug" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Wenn diald richtig läuft, sollte die Logdatei etwa so aussehen:
+/var/log/debug</p>
+<p>Jul 26 15:04:54 server diald[136]: Running connect (pid = 392).
+Jul 26 15:04:54 server chat[392]: abort on (BUSY)
+Jul 26 15:04:54 server chat[392]: abort on (NO CARRIER)
+Jul 26 15:04:54 server chat[392]: abort on (VOICE)
+Jul 26 15:04:54 server chat[392]: abort on (NO DIALTONE)
+Jul 26 15:04:54 server chat[392]: abort on (NO ANSWER)
+Jul 26 15:04:54 server chat[392]: send (ATZ^M)
+Jul 26 15:04:54 server chat[392]: expect (OK)
+Jul 26 15:04:54 server chat[392]: ^M
+Jul 26 15:04:54 server chat[392]: OK
+Jul 26 15:04:54 server chat[392]: &#8211; got it
+Jul 26 15:04:54 server chat[392]: send (ATDT0191011^M)
+Jul 26 15:04:54 server chat[392]: expect (CONNECT)
+Jul 26 15:04:54 server chat[392]: ^M
+Jul 26 15:05:21 server chat[392]: ^M
+Jul 26 15:05:21 server chat[392]: CONNECT
+Jul 26 15:05:21 server chat[392]: &#8211; got it
+Jul 26 15:05:21 server chat[392]: send (d)
+Jul 26 15:05:22 server diald[136]: Running pppd (pid = 425).
+Jul 26 15:05:22 server diald[425]: Running pppd: /usr/sbin/pppd
+-detach modem crtscts mtu 1500 mru 1500 debug noauth user &lt;my user id&gt;
+ipcp-accept-local ipcp-accept-remote
+Jul 26 15:05:22 server pppd[425]: pppd 2.3.5 started by root, uid 0
+Jul 26 15:05:22 server pppd[425]: Using interface ppp0
+Jul 26 15:05:22 server pppd[425]: Connect: ppp0 &lt;&#8211;&gt; /dev/ttyS1
+Jul 26 15:05:22 server pppd[425]: sent [LCP ConfReq id=0x1 &lt;magic
+0x9b58&gt; &lt;pcomp&gt; &lt;accomp&gt;]
+Jul 26 15:05:23 server pppd[425]: rcvd [LCP ConfReq id=0x1 &lt;mru 1524&gt;
+&lt;asyncmap 0xa0000&gt; &lt;auth pap&gt; &lt;pcomp&gt; &lt;accomp&gt; &lt; 13 09 03 00 c0 7b 7d
+a5 75&gt;]
+Jul 26 15:05:23 server pppd[425]: sent [LCP ConfRej id=0x1 &lt; 13 09 03
+00 c0 7b 7d a5 75&gt;]
+Jul 26 15:05:23 server pppd[425]: rcvd [LCP ConfAck id=0x1 &lt;magic
+0x9b58&gt; &lt;pcomp&gt; &lt;accomp&gt;]
+Jul 26 15:05:23 server pppd[425]: rcvd [LCP ConfReq id=0x2 &lt;mru 1524&gt;
+&lt;asyncmap 0xa0000&gt; &lt;auth pap&gt; &lt;pcomp&gt; &lt;accomp&gt;]
+Jul 26 15:05:23 server pppd[425]: sent [LCP ConfAck id=0x2 &lt;mru 1524&gt;
+&lt;asyncmap 0xa0000&gt; &lt;auth pap&gt; &lt;pcomp&gt; &lt;accomp&gt;]
+Jul 26 15:05:23 server pppd[425]: sent [PAP AuthReq id=0x1 user=&#8221;&lt;my
+user id&gt;&#8221; password=&#8221;&lt;my password&gt;&#8221;]
+Jul 26 15:05:23 server pppd[425]: rcvd [PAP AuthAck id=0x1 &#8220;&#8221;]
+Jul 26 15:05:23 server pppd[425]: Remote message:
+Jul 26 15:05:23 server pppd[425]: sent [IPCP ConfReq id=0x1 &lt;addr
+192.168.13.17&gt; &lt;compress VJ 0f 01&gt;]
+Jul 26 15:05:23 server pppd[425]: rcvd [IPCP ConfReq id=0x1 &lt;compress
+VJ 0f 01&gt; &lt;addr 193.158.143.45&gt;]
+Jul 26 15:05:23 server pppd[425]: sent [IPCP ConfAck id=0x1 &lt;compress
+VJ 0f 01&gt; &lt;addr 193.158.143.45&gt;]
+Jul 26 15:05:23 server pppd[425]: rcvd [IPCP ConfNak id=0x1 &lt;addr
+62.156.32.53&gt;]
+Jul 26 15:05:23 server pppd[425]: sent [IPCP ConfReq id=0x2 &lt;addr
+62.156.32.53&gt; &lt;compress VJ 0f 01&gt;]
+Jul 26 15:05:23 server pppd[425]: rcvd [IPCP ConfAck id=0x2 &lt;addr
+62.156.32.53&gt; &lt;compress VJ 0f 01&gt;]
+Jul 26 15:05:23 server pppd[425]: local IP address 62.156.32.53
+Jul 26 15:05:23 server pppd[425]: remote IP address 193.158.143.45
+Jul 26 15:05:23 server diald[136]: New addresses: local 62.156.32.53,
+remote 193.158.143.45.
+Jul 26 15:08:35 server diald[136]: Closing down idle link.
+Jul 26 15:08:35 server pppd[425]: Terminating on signal 2.
+Jul 26 15:08:35 server pppd[425]: sent [LCP TermReq id=0x2 &#8220;User
+request&#8221;]
+Jul 26 15:08:35 server pppd[425]: rcvd [LCP TermAck id=0x2]
+Jul 26 15:08:35 server pppd[425]: Connection terminated.
+Jul 26 15:08:36 server pppd[425]: Exit.
+Jul 26 15:08:38 server diald[136]: Delaying 30 seconds before clear to
+dial.</p>
+</div>
+<div class="section" id="zum-surfen-werden-nameserver-eintragungen-in-etc-resolv-conf-gebraucht">
+<h4>Zum Surfen werden Nameserver-Eintragungen in /etc/resolv.conf gebraucht:<a class="headerlink" href="#zum-surfen-werden-nameserver-eintragungen-in-etc-resolv-conf-gebraucht" title="Link zu dieser Überschrift">¶</a></h4>
+<p>/etc/resolv.conf</p>
+<p>#Nameserver für Compuserve:
+search compuserve.com
+nameserver 195.232.32.6
+nameserver 195.232.32.7</p>
+<p>#Nameserver für T-Online:
+search btx.dtag.de
+nameserver 194.25.2.129</p>
+</div>
+<div class="section" id="weitere-informationsquellen">
+<h4>Weitere Informationsquellen:<a class="headerlink" href="#weitere-informationsquellen" title="Link zu dieser Überschrift">¶</a></h4>
+<blockquote>
+<div>Alberts Homepage - die umfassendste Seite zu T-Online und PPP, die ich bisher gesehen habe - (en <a class="reference external" href="http://www.albert-rommel.de/ppp.htm">http://www.albert-rommel.de/ppp.htm</a>)
+Besonderheiten des Netzzugangs bei T-Online (de <a class="reference external" href="http://home.t-online.de/home/Diedrich.Ehlerding/besonderheiten.html">http://home.t-online.de/home/Diedrich.Ehlerding/besonderheiten.html</a>)
+ZDNet-Special zum Thema Linux (de <a class="reference external" href="http://www.zdnet.de/produkte/artikel/sw/linuxspecial/linuxspecial01-wf.html">http://www.zdnet.de/produkte/artikel/sw/linuxspecial/linuxspecial01-wf.html</a>)
+PPP Help (en <a class="reference external" href="http://howto.linuxberg.com/">http://howto.linuxberg.com/</a>)
+T-Online PPP (de <a class="reference external" href="http://www.et.FH-Osnabrueck.de/~std7765">http://www.et.FH-Osnabrueck.de/~std7765</a>)
+The diald Homepage (en <a class="reference external" href="http://diald.sourceforge.net/">http://diald.sourceforge.net/</a>)</div></blockquote>
+<p>Autoren</p>
+<blockquote>
+<div>Jörn Absatz <a class="reference external" href="mailto:mail&#37;&#52;&#48;absatz&#46;de">mail<span>&#64;</span>absatz<span>&#46;</span>de</a>
+Alexander Fischer <a class="reference external" href="mailto:selflinux&#37;&#52;&#48;tbanus&#46;de">selflinux<span>&#64;</span>tbanus<span>&#46;</span>de</a></div></blockquote>
+<p>Formatierung</p>
+<blockquote>
+<div>Matthias Hagedorn <a class="reference external" href="mailto:matthias&#46;hagedorn&#37;&#52;&#48;selflinux&#46;org">matthias<span>&#46;</span>hagedorn<span>&#64;</span>selflinux<span>&#46;</span>org</a></div></blockquote>
+</div>
+</div>
+<div class="section" id="isdn-unter-linux">
+<h3>ISDN unter Linux<a class="headerlink" href="#isdn-unter-linux" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="isdn-wofur-brauch-ich-das">
+<h4>ISDN, wofür brauch&#8217; ich das?<a class="headerlink" href="#isdn-wofur-brauch-ich-das" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Schnelle Datenverbindung</p>
+<p>ISDN bietet die Möglichkeit, die Daten schnell und digital zu übertragen. Es entfällt also der Modulator/Demodulator (Modem). ISDN-Modems sind Geräte, die der Computer wie Modems über die serielle Schnittstelle anspricht. Prinzipiell ist es auch möglich, die beiden Übertragungskanäle zusammenzuschalten und damit die Übertragungsgeschwindigkeit zu verdoppeln.</p>
+<p>ISDN hat eine sogenannte Dienstekennung, mit der man Daten-, Fax- und Sprachübertragung unterscheiden kann.</p>
+<p>Schnelle Verbindung ins Internet</p>
+<p>Nicht nur die Datenübertragung ist recht schnell. Auch der Aufbau der Verbindung erfolgt deutlich schneller als bei Modems.</p>
+<p>Transparente Netzwerkverbindung</p>
+<p>Unter Linux ist es mit ISDN möglich, die Verbindung als Netzwerk einzurichten, so dass alle Zugriffe, die den eigenen Bereich verlassen über das ISDN-Gerät z.B. ins Internet weitergeleitet werden.
+Es lassen sich auch private Netze mittels ISDN erstellen und koppeln. Diese Kopplung muss nicht über das Internet erfolgen. So lässt sich beispielsweise ein Freundes- oder Vereinsnetz aufbauen.</p>
+<p>Anrufbeantworter</p>
+<p>ISDN unter Linux ermöglicht es, einen Anrufbeantworter für jede Mehrfachrufnummer (MSN) einzurichten und Ansagen abhängig von der anrufenden oder angerufenen Telefonnummer abzuspielen.</p>
+<p>Die Einrichtung des Anrufbeantworters vbox wird in einem anderen Dokument beschrieben.</p>
+</div>
+<div class="section" id="installation">
+<h4>Installation<a class="headerlink" href="#installation" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Die Installation von ISDN unter Linux wird von immer mehr Distributionen unterstützt. Bei SuSE wird ISDN in YAST(1) unter &#8220;Administration des Systems | Hardware ins System integrieren | ISDN Hardware konfigurieren&#8221; vorgenommen. Danach sind zwei Masken auszufüllen, die eine für die Hardware, die zweite für die Software. Auch YAST(2) bietet die Möglichkeit ISDN einzurichten, allerdings in der Gruppe &#8220;Netzwerk/Basis -&gt; Konfiguration von ISDN&#8221;</p>
+<p>Welche Parameter werden benötigt?</p>
+<p>Wenn PCI-ISDN-Karten verwendet werden, kann das BIOS den Typ, die Adresse und den benötigten Interrupt an das System melden. Bei älteren Karten, muss man selbst etwas Hand anlegen. Ist die Karte eine ältere ISA-Plug-and-Play-Karte, so muss zuerst das Plug-and-Play-System konfiguriert werden, damit auf die Karte zugegriffen werden kann.</p>
+<p>Kartentyp</p>
+<p>Es sollte bekannt sein, welche Karte eingebaut ist bzw. eingebaut wird, denn die verschiedenen Typen benötigen unterschiedliche Parameter. Bei ISA-(oder Plug-and-Play-)Karten muss man die IO-Adresse und den Interrupt in Erfahrung bringen. Dies geschieht am besten durch Studium der Dokumentation und evtl. Jumper-Einstellungen auf der Karte.
+Einige Karten benötigen noch weitere Werte, die ebenfalls durch Studium der Dokumentation in Erfahrung zu bringen sind.</p>
+<p>Wenn Sie eine aktive ISDN-Karte einbinden wollen/müssen, so sollten Sie die spezielle Dokumentation der Distribution für diese Karten zuerst lesen. Bei den aktiven Karten von AVM muss beispielsweise noch zusätzlich Software auf die ISDN-Karte geladen werden, bevor sie angesprochen werden kann. Diese Software muss ebenfalls vorhanden sein, sei es über die Installationsroutinen der Distribution oder über einen Download bzw. von Diskette/CD des Herstellers.</p>
+<p>IP-Adressen</p>
+<p>Da ISDN als Netzwerkgerät (Device) eingerichtet wird, muss man der Karte eine IP-Adresse zuweisen. Diese wird zwar beim Verbindungsaufbau geändert, muss aber zu Anfang angegeben werden, damit das Gerät als Netzwerkgerät angesehen wird.</p>
+<p>Wenn man eine IP-Adresse aus einem anderen freien Netzwerk verwendet wird automatisch eine Route darauf gesetzt. Dann kann man angeben, dass alle Datenpakete über diese IP-Adresse ins Internet geschickt werden sollen (default-Route).</p>
+<p>Es wird noch eine zweite IP-Adresse benötigt, die dem anderen Ende der ISDN-Verbindung zugewiesen wird. Am besten unterscheiden sich die beiden Adressen nur im letzten Byte um 1 (Bsp.: lokale IP-Adresse der ISDN-Karte: 192.168.100.100 und 2. IP-Adresse 192.168.100.101). Die zweite Adresse wird auch als Point-to-Point-Adresse bezeichnet.</p>
+<p>MSN</p>
+<p>Man muss in aller Regel dem ISDN-Gerät eine Multi-Subscriber-Number (MSN) zuweisen. Diese wird sowohl als Kennung an die Gegenstation gesendet als auch für die Annahme eines Anrufes benötigt. Standardmäßig enthält jeder ISDN-Anschluss 3 Nummern (bei der Telekom können noch 7 weitere kostenlos geordert werden). Eine davon muss man dem ISDN-Gerät zuweisen.</p>
+<p>Protokoll</p>
+<p>Wenn ISDN über eine ISDN-Nebenstellenanlage angeschlossen ist oder ein älterer ISDN-Anschluss (vor 1995) vorliegt, kann es sein, dass noch die nationale ISDN-Variante (1TR6) verwendet wird. Im Regelfall wird das Protokoll jedoch Euro-ISDN (EDSS1) sein.</p>
+<p>Zugangsdaten für Provider</p>
+<p>Um einen Internetzugang zu bekommen muss man eine Telefonnummer, ein Konto (Account) und ein Passwort bei einem Service-Provider haben. Es gibt aber auch sogenannte Call-by-Call-Zugänge, wobei das Konto und das zugehörige Passwort allgemein bekannt und zugänglich sind. So kann man z.B. eine Verbindung über Arcor mit dem Kontonamen arcor, dem Passwort internet und der Telefonnummer 010700192070 aufbauen. Dies ist für Testzwecke sehr nützlich.</p>
+<p>Allerdings kann man dann noch nicht richtig surfen, da der Rechner nicht weiß, unter welcher IP-Adresse er die gewünschten Webseiten finden kann. Dazu muss noch die Adresse eines Nameservers eingetragen werden. Prinzipiell kann man die Adresse eines beliebigen Nameservers eintragen, jedoch kennt man üblicherweise nicht soviele, sondern bekommt vom Serviceprovider eine Adresse genannt.</p>
+<p>Installation für Internetanschluss</p>
+<p>Installationsroutinen der Distribution</p>
+<p>Mit den angegebenen Parametern können Sie sich an die Installation machen. Jede Distribution hat entsprechende Programme und erfragt die Parameter. Wenn die Hardware nicht exotisch ist und Sie alle gewünschten Parameter richtig eingegeben haben funktioniert ISDN üblicherweise. Ein Reboot ist zwar nicht unbedingt notwendig aber trotzdem empfehlenswert um sicherzustellen, dass das ISDN-Subsystem richtig gestartet wird. Achten Sie auf entsprechende Meldungen beim Systemstart.</p>
+<p>Eintragen eines Nameservers</p>
+<p>Auch dafür haben Distributionen ein Hilfsprogramm. Die Hardcore-Linuxer schreiben mit ihrem Lieblingseditor den benötigten Eintrag in die Datei /etc/resolv.conf. Darin muss (mindestens) folgender Eintrag stehen: &#8220;nameserver IP-ADRESSE_DES_SERVERS&#8221;, wobei die Anführungszeichen nicht geschrieben werden und die IP-Adresse eingetragen werden muss, die der Serviceprovider mitgeteilt hat.</p>
+<p>Besonderheiten beim Zugang über T-Online</p>
+<p>Das Einrichten eines ISDN-Zugangs für T-Online ist auch kein Hexenwerk. Die Zugangsdaten sind ein großer Zahlenwust, der fehlerfrei eingegeben werden muss.</p>
+<p>Der Loginname setzt sich zusammen aus der Zugangsnummer (wird auch häufig als Anschlusskennung bezeichnet), die in der Regel 12-stellig ist, der Abrechnungsnummer (oder früher auch der Telefonnummer, ebenfalls 12-stellig, beginnt jetzt häufig mit 32) und der Mitbenutzernummer, die einem Hash-Zeichen (&#8220;#&#8221;) folgt und 4-stellig sein muss.</p>
+<p>Beispiel:
+Zugangsnummer: 123456789098
+Rechnungsnummer: 320012345678
+Mitbenutzernummer: 0001</p>
+<p>Daraus ergibt sich der Loginname als: &#8220;123456789098320012345678#0001&#8221;</p>
+<p>Das Passwort muss entsprechend angegeben werden. Man sollte es auf der Hompage der Telekom de <a class="reference external" href="https://webmbv.t-online.de/">https://webmbv.t-online.de/</a> abändern.</p>
+<p>Sicherheitsaspekte</p>
+<p>Die Zugangsdaten werden in der Datei /etc/ppp/pap-secrets abgelegt, und zwar im Klartext! Deshalb darf diese Datei nur von root gelesen und geschrieben werden dürfen!</p>
+<p>Der Befehl
+<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> $ ls -l /etc/ppp/pap-secrets</p>
+<p>muss folgende Rechte anzeigen:
+-rw&#8212;&#8212;-    1 root     root          397 Apr  6  2001 pap-secrets</p>
+<p>Wenn das nicht so ist, so geben Sie als Administrator (root-user) folgenden Befehl ein:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # chmod 600 /etc/ppp/pap-secrets</p>
+<p>Denken Sie daran, dass jeder, der unberechtigterweise an diese Datei kommen kann, auf Ihre Kosten surfen kann. Deshalb wird spätestens jetzt ein gutes root-Passwort benötigt.</p>
+</div>
+<div class="section" id="hilfe-bei-problemen">
+<h4>Hilfe bei Problemen<a class="headerlink" href="#hilfe-bei-problemen" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Wenn die Einrichtung von ISDN nicht geklappt hat, sollten Sie zuerst die Logdatei /var/log/messages auf Fehlermeldungen des ISDN-Systems untersuchen. Hilfreich ist es, sich bei den weiteren Versuchen die Datei in einem eigenen Terminalfenster mit dem Befehl
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # tail -f /var/log/messages</p>
+<p>ständig anzeigen zu lassen. Eine Ansicht der kompletten messages-Datei kann mittels des Befehles
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # less /var/log/messages</p>
+<p>erfolgen. Achtung: Die Datei kann mehrere tausend Seiten beinhalten!</p>
+<p>Was kann schief gehen?</p>
+<p>Laut Murphys Gesetzen geht - wenn was schief geht - alles schief, was möglich ist. Aber mit etwas Systematik kann man die Probleme analysieren und beheben.</p>
+<p>Als Erstes muss der Zugriff auf das ISDN-Gerät funktionieren</p>
+<p>Dies geschieht üblicherweise mittels Kernel-Modulen (mehrere Module sind dafür nötig). Man kann ISDN auch direkt in den Kernel einkompilieren lassen, ist aber bei den Standardinstallationen praktisch nicht der Fall!</p>
+<p>Dazu muss der Kernel Modulsupport unterstützen und die ISDN-Module müssen vorhanden sein.
+Wenn der Befehl lsmod eine Tabelle ausgibt, sind Module geladen, also Modulsupport vorhanden.</p>
+<p>Nun sollte man sich auf die Suche nach den benötigten Modulen machen. Diese liegen üblicherweise in /lib/modules/KERNELVERSION/drivers/isdn/. Wenn dieses Verzeichnis nicht vorhanden oder leer ist, müssen die Module erst im Rahmen einer Kernelkompilierung erstellt werden. Die Verzeichnisnamen im ISDN-Modulverzeichnis geben ja schon Hinweise auf die unterstützten Karten. Ausgenommen das Modul Hisax - eine Karte mit diesem Namen ist mir nicht bekannt. Die Aussage ist so korrekt, allerdings ist das HiSax-Modul für sehr viele passive ISDN-Karten zuständig, die den ISDN-Chip von Siemens verwenden. Dazu zählen folgende passive Karten:
+TypNr   Name der Karte
+1       Teles 16.0
+2       Teles 8.0
+3       Teles 16.3 (non PnP)
+4       Creatix/Teles PnP
+5       AVM A1 (Fritz)
+6       ELSA PCC/PCF cards
+7       ELSA Quickstep 1000
+8       Teles 16.3 PCMCIA
+9       ITK ix1-micro Rev. 2
+10      ELSA PCMCIA
+11      Eicon.Diehl Diva ISA PnP
+11      Eicon.Diehl Diva PCI
+12      ASUS COM ISDNLink
+13      HFC-2BS0 based cards
+14      Teles 16.3c
+15      Sedlbauer Speed Card (=Teledat 100)
+15      Sedlbauer PC/104
+16      USR Sportster internal
+17      MIC card
+18      ELSA Quickstep 1000PCI
+19      Compaq ISDN S0 ISA card
+20      NETjet PCI card
+21      Teles PCI
+22      Sedlbauer Speed Star (PCMCIA)
+24      Dr. Neuhaus Niccy PnP
+24      Dr. Neuhaus Niccy PCI
+25      AVM A1 PCMCIA (Fritz!)
+26      Teles S0Box
+27      Fritz PCI
+27      AVM PnP
+28      Sedlbauer Speedfax</p>
+<p>Versuchen Sie als Erstes die Treiber (= Kernelmodul) für Ihre ISDN-Karte zu laden. Verwenden Sie dazu den modprobe-Befehl, da dieser evtl. zusätzlich benötigte Module automatisch mit lädt.
+Sie müssen dem Modul Parameter mitgeben, z.B. TypNummer (vgl. obige Tabelle), die IO-Adresse oder die Nummer des Interrupts, den Namen (id), unter dem die Karte angesprochen und das ISDN-Protokoll (1 = 1TR6, 2 =EDSS1 ) das verwendet werden soll. Ein entsprechender Aufruf könnte wie folgt lauten:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # modprobe hisax typ=5 io=0x200 irq=7 id=ippp0 protocol=2</p>
+<p>...um den Treiber für eine Fritz-Karte zu laden. Wenn es keine Fehlermeldung gibt, sollte das hisax-, isdn- und ein shlc-Modul zusätzlich in der Ausgabe von lsmod zu sehen sein. Ist dies nicht der Fall müssen Sie entweder die Parameter ändern, einen anderen Treiber ausprobieren oder den Support der Distribution anrufen. Weitergehende Informationen z.B. über Kartentypen, benötigte Parameter und Modulnamen finden Sie auch in der Dokumentation des Kernels.</p>
+<p>Wenn das Laden des Treibers erfolgreich war, sollte sich der Schnittstelle eine IP-Adresse zuweisen lassen. Den Namen der Schnittstelle haben Sie ja beim Laden des Moduls dem Treiber zugewiesen.
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # ifconfig ippp0 192.168.99.99</p>
+<p>sollte nun funktionieren, was Sie durch die erneute Eingabe von
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # ifconfig</p>
+<p>(ohne Parameter) kontrollieren können.</p>
+<p>Wenn auch der Befehl
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # isdnctrl list ippp0</p>
+<p>(bzw. mit dem von Ihnen vergebenen Namen) keine Fehlermeldung (wie z.B. no such device o.ä) bringt, läuft die Schnittstelle.</p>
+<p>Am besten konfigurieren Sie die ISDN-Schnittstelle nun nochmals mit den neuen Erkenntnissen und dem Werkzeug der Distribution.</p>
+<p>Kein Login beim Provider</p>
+<p>Wenn die Karte erfolgreich konfiguriert wurde sollte auch ein Zugang zum Provider möglich sein. Wenn das nicht der Fall ist kommen folgende Ursachen in Frage:</p>
+<blockquote>
+<div>Das ISDN-Gerät ist nicht mit der ISDN-Leitung verbunden (NTBA), oder das Verbindungskabel ist defekt.
+Die angewählte Nummer ist falsch.
+Der Loginname ist falsch.
+Besonders der lange nummerische Zugangsname von T-Online beherbergt viele Möglichkeiten für Zahlendreher. Wichtig ist auch, dass die Mitbenutzernummer (nach dem Hash-Zeichen - #) vierstellig und größer 0 ist.
+Das Passwort ist falsch.</div></blockquote>
+<p>Die Datei /var/log/messages gibt viele Hinweise zu den Fehlerquellen. Das ISDN-Protokoll gibt sogenannte Cause-Codes zurück, die den Fehler angeben. Die folgenden Tabelle listet einige der Fehlercodes auf und gibt Hinweise für die Behebung:
+Fehler-Code     Problem/Lösung
+E0066: Recovery on timer expiry         Your peer doesn&#8217;t handle a part of the DSS1 protocol correctly - its reactions upon sending -complete-requests are faulty; solution: Recompile your kernel with the option &#8220;Disable sending complete&#8221;
+Partner kann mit Teilen des DSS1-Protokolls nichts anfangen - Reaktion auf sending- complete-requests sind fehlerhaft; Lösung: Kernel neu kompilieren mit &#8220;Disable sending complete&#8221;
+E0058: Incompatible destination         It is true that you chose the right telephone number, but your peer has not loaded his ISDN- subsystem correctly or even not at all; this can happen even if the peer has misconfigured the incoming telephone numbers. Mind: addphone out 123456 or addphone out 089123456 BUT: addphone in 89123456 - this is the ONLY possibility: Include area code even for local calls, but without leading zero.
+Sicher haben Sie die richtige Telefonnummer gewählt, aber das ISDN-Subsystem beim Partner ist falsch oder nicht konfiguriert; dies passiert auch wenn die anrufende Telefonnummer beim Partner eingerichtet wurde. ACHTUNG: &#8220;addphone out 123456&#8221; oder &#8220;addphone out 089123456&#8221; RICHTIG: &#8220;addphone in 89123456&#8221; - ist nur SO möglich: Immer mit Vorwahl aber ohne führende Null.
+E0201: Unassigned number        Your dial out telephone number is wrong; if an areacode is necessary you must include a leading zero. Check out the telephone number syntax described under E0058.
+Die gewählte Nummer ist falsch: Wenn eine Vor- wahl nötig ist, muss die führende Null dabei sein. Die Schreibweise der Telefonnummer prüfen vgl. auch E0058)
+E0222: No circuit or channel available (public network)         This is what you usually call &#8220;BUSY&#8221;.
+Im Volksmund: &#8220;Besetzt&#8221;
+E0022: No circuit or channel available (user)   This may occur, when the physical connection to the peer is broken; it happened to me that the peer&#8217;s telephone lines got broken, so I didnt get an answer from the telephone company but instead my own ISDN card refused to put my call through to the peer.
+Dies kann passieren, wenn die physikalische Verbindung zum Partner zusammenbricht. Es passierte, dass die Leitung des Gegenübers zusammenbrach, ohne das es eine Rückmeldung von der Telefongesellschaft gab. Die lokale ISDN-Karte weigerte sich den Anruf abzusetzen.
+E023f: Service or option not available  The server you want to connect to is down. This one I got only one time when I tried to connect to SUSE&#8217;s ISDN server.
+Der anzurufende Server ist nicht eingeschaltet oder nicht erreichbar.
+E0211: User Busy        The peer is busy; this is the &#8216;normal&#8217; message everybody expects if the peer is actually busy. But unfortunately a different cause code is possible for exactly the same situation: For example E0222.
+Der Telefonanschluss ist besetzt; dies ist die &#8216;normale&#8217; Meldung. Leider ist auch eine andere Meldung für diese Situation möglich: Siehe auch E0222.</p>
+<p>Diese Tabelle wurde, mit freundlicher Genehmigung des Autors Jürgen Leising (  <a class="reference external" href="mailto:juergen&#46;leising&#37;&#52;&#48;hamburg&#46;de">juergen<span>&#46;</span>leising<span>&#64;</span>hamburg<span>&#46;</span>de</a>) dessen Webseite de <a class="reference external" href="http://homepage.hamburg.de/c98d93/isdn.html">http://homepage.hamburg.de/c98d93/isdn.html</a> entnommen.</p>
+<p>Kein Zugriff auf Webseiten</p>
+<p>Wenn die Einwahl klappt sieht man dies in der Datei /var/log/messages, wenn sinngemäß folgende Einträge auftauchen: remote IP xx.xx.xx.xx und local IP yy.yy.yy.yy. Wenn trotzdem keine Webseiten mit Name aufgerufen werden können, so kann das 2 Ursachen haben:</p>
+<blockquote>
+<div>keine defaultroute auf das ISDN-Device gesetzt
+kein Nameserver bekannt.</div></blockquote>
+<p>Es kommt vor, dass das Script /etc/ppp/ip-up, welches vom ippp-Daemon aufgerufen wird, die Einträge nicht richtig setzt. Das Script ruft ifconfig mit der zugewiesenen IP-Adresse auf und setzt das default-Gateway auf das ISDN-Gerät. Prüfen Sie als erstes mit dem Befehl
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # route -n</p>
+<p>ob ein default-Gateway gesetzt wurde (möglicher Eintrag 0.0.0.0 yy.yy.yy.yy ippp0, wobei yy.yy.yy.yy der IP-Adresse am anderen Ende der Verbindung, also beim Provider entspricht. Sollten die Adressen in Ordnung sein, sollte ein Ping auf eine bekannte Adresse funktionieren. Unter der IP 193.99.144.71 kann man z.B. den Server des Heise-Verlages erreichen. Wenn der Ping durchkommt, liegt das Problem am Nameservereintrag.</p>
+<p>Grundsätzlich hilft einem jeder Nameserver weiter, man sollte aber dem seines Providers den Vorzug geben. Deshalb kann man (evtl. zu Testzwecken den von T-Online verwenden. Tragen Sie in die Datei /etc/resolv.conf &#8220;nameserver 212.185.252.71&#8221; ein (sicherheitshalber mit einer Leerzeile am Ende). Nun sollte man auch die Adressen mit Namen aufrufen können und der ping www.heise.de funktionieren.</p>
+</div>
+<div class="section" id="technik">
+<h4>Technik<a class="headerlink" href="#technik" title="Link zu dieser Überschrift">¶</a></h4>
+<p>ISDN</p>
+<p>ISDN steht für Integrated Services Digital Network.</p>
+<p>Fangen wir von hinten an: Es handelt sich um ein Netzwerk. Über die beiden Kupferdrähte wird also z.B. nicht nur eine Point-To-Point-Verbindung aufgebaut, sondern es können mehrere Verbindungen gleichzeitig bestehen.</p>
+<p>Die Daten werden alle digital ausgetauscht. Analogdienste wie z.B: Fax sind hierüber daher potentiell schwieriger zu handhaben. Normalerweise werden Analogdienste über Spezialgeräte wie  a/b-Wandler oder TK-Anlagen gefahren.
+a/b-Wandler     Wandelt analoge in digitale Signale um.
+TK-Anlage       Sind Telefonanlagen</p>
+<p>Integrated Services deutet an, dass verschiedene Dienste über dieses Netzwerk genutzt werden können. Typische Services sind Analog-Sprache (SI=0) oder ISDN-Daten (SI=7), was uns hier interessiert.</p>
+<p>Der Endpunkt der Telekom-Leitung in einem Haushalt oder einem Büro ist der NTBA (kurz auch NT), der Network Terminator Basis-Anschluss. Das ist der kleine Kasten, bis zu dem sich der Netzanbieter zuständig fühlt.</p>
+<p>An einem NTBA können (normalerweise) 2 Kabel herausgeführt werden, diese bilden gemeinsam ein Bus-System, den sogenannten S0-Bus.</p>
+<p>An den S0-Bus können 8 Endgeräte angeschlossen werden. Typische Endgeräte sind ISDN-Telefone, TK-Anlagen, G4-Fax-Geräte, ISDN-Terminaladapter und ISDN-Karten.</p>
+<p>Der S0-Bus bietet 3 Kanäle: einen Steuerkanal, genannt D-Kanal. Weiterhin stehen zwei Datenkanäle, genannt Nutzkanal oder B-Kanal, mit je 64 kbit/s zur Verfügung, die jeweils zu unterschiedlichen Partnern führen und mit unterschiedlichen Diensten genutzt werden können.</p>
+<p>Die Bezeichnung der Kanäle (laut Technik der Netze von Gerd Siegmund, 3. Aufl. S. 316):</p>
+<blockquote>
+<div>Die Bezeichnungen für die Kanaltypen (B- und D-Kanal) sind ursprünglich keine Abkürzungen mit tieferen Bedeutungen. In der Anfangszeit der ISDN-Standardisierung wurden Kanaltypen mit verschiedenen Aufgaben und Eigenschaften betrachtet, die fortlaufend als A-, B-, C-, D- und E-Kanal bezeichnet wurden (A- Analog, B- 64 kbits digital, C- Komprimiert, D- Signalisierungskanal).</div></blockquote>
+<p>Auf dem D-Kanal können verschiedene Protokolle gefahren werden. Üblich sind 1TR6 (altes nationales ISDN), DSS1 (Euro-ISDN, der Quasi-Standard in 24 Ländern) und N1 in den USA. Der D-Kanal dient u.a. zur Übermittlung des Wunsches eines Verbindungsauf- und abbaus, der Übermittlung der Telefonnummern und der Gebühren. Bei einem falsch eingestellten Protokoll klappt also sehr wenig...</p>
+<p>Die Art und Weise, wie die Telefonnummer gemeldet und genannt wird, hängt vom D-Kanal-Protokoll ab:
+1TR1    EAZ (Endgeräte-Auswahl-Ziffer). Es handelt sich also nur um eine Ziffer. Die Rufnummer des Basisanschlusses wird nicht betrachtet.
+DSS1    MSN (Multiple-Subscribe-Number). Hier ist eine komplette Rufnummer gemeint, also alles hinter der Vorwahl.</p>
+<p>Die Bezeichnungen EAZ und MSN sind bei I4L (ISDN for Linux) ansonsten synonym zu benutzen (wenn das richtige Protokoll angegeben wurde). Bei einem einkommenden Call wird (hoffentlich) die Zielrufnummer übertragen, genannt CPN (called party number). Ist sie nicht bekannt, setzt sie I4L auf 0.</p>
+<p>Bekanntlich können für einen Anschluss mehrere Telefonnummern vergeben werden. Diese signalisiert die Vermittlungsstelle (kurz VSt) auf dem D-Kanal (CPN) zusammen mit dem Service-Indikator (SI).
+Mehr passiert bei einem ankommenden Call (Anruf) erst mal nicht! Es ist danach Aufgabe der Endgeräte, sich entsprechend zu verhalten: ignorieren, abweisen, oder den Anruf annehmen.</p>
+<p>Da der SI zusammen mit der Nummer auf dem D-Kanal übermittelt wird, kann dieselbe Telefonnummer mehrfach genutzt werden. Beispiel: das Telefon reagiert nur auf SI=0, der PC reagiert nur auf SI=7.</p>
+<p>Bei einem ausgehenden Anruf muss das Endgerät die MSN angeben; diese wird dann auch dem Partner übermittelt. Wird keine MSN gesetzt (was I4L nicht zulässt), setzt die VSt die Nummer ein. Wird eine falsche MSN gesetzt, bekommt man keine Verbindung (Erfahrungswerte).</p>
+<p>TK-Anlagen</p>
+<p>Worum geht es: Wer die Wahl hat zwischen einem direkten Anschluss am NTBA und einem internen S0-Bus an einer TK-Anlage, sollte sich für den direkten Anschluss entscheiden! Der Betrieb über TK-Anlagen birgt immer gewisse Überraschungen.</p>
+<p>Worum geht es nicht: Wenn man eine TK-Anlage am selben NTBA (S0 Bus) wie die ISDN-Karte angeschlossen hat, gibt es keine Probleme. Die TK-Anlage ist hier nur ein normales ISDN-Endgerät, was dieses hinten macht (Anschluss von Analog-Geräten) spielt hier keine Rolle.</p>
+<p>Das Verhalten der TK-Anlage hängt unter anderem vom Typ, von der installierten Software und vor allem von deren Konfiguration (und damit vom entsprechenden Service-Techniker) ab.</p>
+<p>Bei älteren Anlagen wird oft entgegen allen Aussagen 1TR6 anstatt DSS1 gefahren. Die Verbindungstypen können abhängig vom Service-Indikator konfiguriert werden, wobei oft nur Voice-Calls konfiguriert sind. Weiterhin besteht die Schwierigkeit herauszufinden, welche MSN/EAZ man zu benutzen hat.</p>
+<p>Ein wesentlicher Unterschied ist der, dass man nicht mit allen anderen lokalen Teilnehmern an einem Bus angeschlossen ist, sondern die TK-Anlage für jeden einzelnen Anschluss einen eigenen S0-Bus nach außen führt, an den meist nur ein Endgerät angeschlossen wird. Dieser Anschluss bekommt eine eigene Durchwahl zugewiesen, oft 2-stellig.</p>
+<p>Die beste Veranschaulichung ist, sich eine TK-Anlage als eigene Vermittlungsstelle vorzustellen.</p>
+<p>Beispiel: In Ortsnetz 321 ist eine TK-Anlage mit der Rufnummer 654 an einem Primärmultiplex-Anlagenanschluss installiert (es gibt also mehr als 2 Amtsleitungen, alternativ könnte dies auch ein Bündelanschluss sein - spielt aus dieser Sicht keine Rolle). Es sind 20 interne Leitungen vorhanden, wobei die ersten 10 für Telefone und die zweiten 10 für ISDN-Karten vorgesehen sind. Die Durchwahlnummern seien 10-19 für die Telefon und 20-29 für die ISDN-Karten. Die S0-Busse für die ISDN-Karten seien auf DSS1 konfiguriert.</p>
+<p>Dann ist als MSN jeweils 20 bis 29 zu benutzen, denn das sind die MSNs im Ortsnetz Firma (=321654). Weiterhin ist zu beachten, dass man zusätzlich eine 0 wählen muss, um aus dem Ortsnetz Firma erst mal herauszukommen.</p>
+<p>Um z.B. die Nummer 987 im Ortsnetz 321 anzurufen, muss man 0987 wählen, wobei der Gegenstelle als Rufnummer 65420 angezeigt wird. Will man in Berlin anrufen, wählt man selbst die 0030.... an und dort wird 32165420 übermittelt.</p>
+<p>Will man selber User-Authentication beim Dial-In über die Telefonnummer machen, gibt es nur eine sinnvolle Vorgehensweise: anrufen lassen. Die in /var/log/messages angezeigte Nummer dann in die entsprechende Konfigurationsdatei übernehmen.</p>
+<p>Autoren</p>
+<blockquote>
+<div>Rolf Schmidt <a class="reference external" href="mailto:rolf&#46;frogs&#37;&#52;&#48;t-online&#46;de">rolf<span>&#46;</span>frogs<span>&#64;</span>t-online<span>&#46;</span>de</a>
+Alexander Fischer <a class="reference external" href="mailto:selflinux&#37;&#52;&#48;tbanus&#46;org">selflinux<span>&#64;</span>tbanus<span>&#46;</span>org</a>
+Klaus Franken <a class="reference external" href="mailto:i4l&#37;&#52;&#48;klaus&#46;franken&#46;de">i4l<span>&#64;</span>klaus<span>&#46;</span>franken<span>&#46;</span>de</a></div></blockquote>
+<p>Formatierung</p>
+<blockquote>
+<div>Alexander Fischer <a class="reference external" href="mailto:Selflinux&#37;&#52;&#48;tbanus&#46;org">Selflinux<span>&#64;</span>tbanus<span>&#46;</span>org</a></div></blockquote>
+</div>
+</div>
+<div class="section" id="dokumentation-zu-adsl">
+<h3>Dokumentation zu ADSL<a class="headerlink" href="#dokumentation-zu-adsl" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="warum-rp-pppoe">
+<h4>Warum rp-pppoe?<a class="headerlink" href="#warum-rp-pppoe" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Der Roaring-Penguin Treiber ist eine sogenannte Userspace-Lösung, ist also ein eigenständiges Programm und nicht Teil des Kernels. Das hat den Nachteil, dass der rp-pppoe mehr CPU-Zeit benötigt als die Kernel Lösungen, dafür aber größtenteils Kernel unabhängig ist und schon längere Zeit als stabil eingestuft wird.</p>
+</div>
+<div class="section" id="die-voraussetzungen-fur-den-rp-pppoe">
+<h4>Die Voraussetzungen für den rp-pppoe<a class="headerlink" href="#die-voraussetzungen-fur-den-rp-pppoe" title="Link zu dieser Überschrift">¶</a></h4>
+<blockquote>
+<div>Ein Linuxsystem mit einem Kernel &gt;=2.0
+Kernelunterstützung für &#8220;packet sockets&#8221;. (Das ist bei den meisten Standard Kerneln der Fall)
+ppp daemon, Version 2.3.7 oder besser. Wenn dial-on-demand (Einwählen wenn gebraucht) benutzt wird, Version 2.3.10 oder besser. Für Kernel der 2.4 Serie muss der pppd 2.4 installiert werden.
+Eine funktionierende Ethernet-Netzwerkkarte
+Ein ADSL Modem
+ADSL Provider</div></blockquote>
+</div>
+<div class="section" id="installation-der-netzwerkkarte">
+<h4>Installation der Netzwerkkarte<a class="headerlink" href="#installation-der-netzwerkkarte" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Um die in Deutschland üblichen DSL Anschlüsse nutzen zu können, braucht man eine funktionierende Netzwerkkarte (von internen Modems abgesehen). Das kann auch eine alte 10BaseT (RJ45-Anschluss) Karte sein, solange Linux Treiber für sie verfügbar sind. Um die Karte zu installieren, müssen die entsprechenden Module geladen werden. Mithilfe von modconf kann der Treiber über eine Oberfläche bequem installiert werden. Sollte dieses Programm nicht zur Verfügung stehen, kann man insmod benutzen:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> ~# insmod &lt;modulname&gt;</p>
+<p>Man sollte noch einen Blick in die Datei /etc/modules werfen. Dort sollte nun ein Eintrag mit dem Kernel-Modul vorhanden sein, damit es bei jedem Start des Systems automatisch geladen wird.</p>
+<p>Um die Einrichtung abzuschließen, muss noch eine eventuell vorhandene default Route gelöscht werden:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> ~# route del default</p>
+</div>
+<div class="section" id="die-verkabelung">
+<h4>Die Verkabelung<a class="headerlink" href="#die-verkabelung" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Als erstes muss vor dem NTBA (bei ISDN) der Splitter installiert werden, der das ISDN/Analog Signal vom DSL-Signal trennt. An den Splitter wird dann mit einem RJ-45 Netzwerkkabel das DSL-Modem angeschlossen. Eventuell muss noch beim Splitter eingestellt werden ob das Telefonsignal Analog oder ISDN ist. Um die Verkabelung abzuschließen, verlegt man noch ein Netzwerkkabel von der Netzwerkkarte zum DSL-Modem.</p>
+<img alt="_images/adsl_adsl-verkabelung.png" src="_images/adsl_adsl-verkabelung.png" />
+<p>Verkabelung mit einem externen Modem</p>
+<p>Mithilfe des folgenden Kommandos kann man überprüfen, ob die Verkabelung richtig vorgenommen wurde:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> ~# pppoe -I eth1 -A</p>
+<p>Wenn alles funktioniert sollte die Ausgabe wie folgt aussehen:
+Access-Concentrator: OSNC13-nrp3
+Got a cookie: 50 64 87 59 6d bf 73 00 1d 67 98 7d c2 d3 a5 32
+AC-Ethernet-Address: 00:01:96:99:50:b7</p>
+</div>
+<div class="section" id="die-konfiguration">
+<h4>Die Konfiguration<a class="headerlink" href="#die-konfiguration" title="Link zu dieser Überschrift">¶</a></h4>
+</div>
+<div class="section" id="pap-secrets">
+<h4>pap-secrets<a class="headerlink" href="#pap-secrets" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Um den Anschluss zu konfigurieren, wird die Datei /etc/ppp/pap-secrets mit einem beliebigen Editor geöffnet:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> ~# vi /etc/ppp/pap-secrets</p>
+<p>In dieser Datei müssen nun die Einwahldaten eingetragen werden.</p>
+<p>Achtung: Das hier aufgeführte Beispiel gilt für T-Online Anschlüsse. Bei anderen Providern können die Einwahldaten anders aussehen.
+Anschlusskennung: 11111111111
+T-Onlinenummer: 222222222222
+Mitbenutzer: 0001
+Passwort: passwort</p>
+<p>Bei der Mitbenutzernummer muss darauf geachtet werden, nur die 0001 zu verwenden, da eine Einwahl mit z.B. 0002 zusätzliche Kosten verursachen kann. Am Anfang steht die Anschlusskennung gefolgt von der T-Onlinenummer, die durch ein # von der Anschlusskennung getrennt wird. Dann wird wieder durch ein # getrennt die Mitbenutzernummer und &#8220;&#64;t-online.de&#8221; angehängt, so dass sich folgende Zeichenkette ergibt:</p>
+<p><a class="reference external" href="mailto:11111111111#222222222222#0001&#37;&#52;&#48;t-online&#46;de">11111111111#222222222222#0001<span>&#64;</span>t-online<span>&#46;</span>de</a></p>
+<p>Diese muss zusammen mit dem Passwort in die Datei geschrieben werden:
+Auszug der Datei pap-secrets</p>
+<p># Secrets for authentication using PAP
+# client      server      secret      IP adresses</p>
+<p>&#8220;<a class="reference external" href="mailto:111111111111#222222222222#0001&#37;&#52;&#48;t-online&#46;de">111111111111#222222222222#0001<span>&#64;</span>t-online<span>&#46;</span>de</a>&#8221;  *  &#8220;passwort&#8221;</p>
+</div>
+<div class="section" id="dsl-provider">
+<h4>dsl-provider<a class="headerlink" href="#dsl-provider" title="Link zu dieser Überschrift">¶</a></h4>
+<p>In der Datei /etc/ppp/peers/dsl-provider müssen nun die für den ppp nötigen Optionen eingestellt werden.</p>
+<p>Die Option user muss mit den Einwahldaten, wie sie auch in der pap-secrets stehen, gefüttert werden (ohne das Passwort natürlich). Ausserdem muss das Device (z.B. eth0) entsprechend angepasst werden. Mit dem Befehl man pppd kann eine nähere Beschreibung der einzelnen Optionen aufgerufen werden.
+Auszug der Datei dsl-provider</p>
+<p># Configuration file for PPP, using PPP over Ethernet
+# to connect to a DSL provider.
+#
+# See the manual page pppd(8) for information on all the options.</p>
+<p>##
+# Section 1
+#
+# Stuff to configure...</p>
+<p># MUST CHANGE: Uncomment the following line, replacing the <a class="reference external" href="mailto:user&#37;&#52;&#48;provider&#46;net">user<span>&#64;</span>provider<span>&#46;</span>net</a>
+# by the DSL user name given to your by your DSL provider.
+# (There should be a matching entry in /etc/ppp/pap-secrets with the password.)
+#user <a class="reference external" href="mailto:myusername&#37;&#52;&#48;myprovider&#46;net">myusername<span>&#64;</span>myprovider<span>&#46;</span>net</a></p>
+<p># Use the pppoe program to send the ppp packets over the Ethernet link
+# This line should work fine if this computer is the only one accessing
+# the Internet through this DSL connection. This is the right line to use
+# for most people.
+pty &#8220;/usr/sbin/pppoe -I eth0 -T 80 -m 1452&#8221;</p>
+<p># If the computer connected to the Internet using pppoe is not being used
+# by other computers as a gateway to the Internet, you can try the following
+# line instead, for a small gain in speed:
+#pty &#8220;/usr/sbin/pppoe -I eth0 -T 80&#8221;</p>
+<p># An even more conservative version of the previous line, if things
+# don&#8217;t work using -m 1452...
+#pty &#8220;/usr/sbin/pppoe -I eth0 -T 80 -m 1412&#8221;</p>
+<p># The following two options should work fine for most DSL users.</p>
+<p># Assumes that your IP address is allocated dynamically
+# by your DSL provider...
+noipdefault
+# Comment out if you already have the correct default route installed
+defaultroute</p>
+<p>##
+# Section 2
+#
+# Uncomment if your DSL provider charges by minute connected
+# and you want to use demand-dialing.
+#
+# Disconnect after 300 seconds (5 minutes) of idle time.</p>
+<p>#demand
+#idle 300</p>
+<p>##
+# Section 3
+#
+# You shouldn&#8217;t need to change these options...</p>
+<p>hide-password
+lcp-echo-interval 20
+lcp-echo-failure 3
+# Override any connect script that may have been set in /etc/ppp/options.
+connect /bin/true
+noauth
+persist
+mtu 1492</p>
+</div>
+<div class="section" id="dial-on-demand">
+<h4>Dial-on-demand<a class="headerlink" href="#dial-on-demand" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Für all diejenigen die einen zeitabhängigen Tarif haben, ist die Section 2 in der Datei dsl-provider interresant. Hier kann durch Auskommentieren von demand die automatische Einwahl und idle xxx das automatische Trennen der Verbindung aktiviert werden. Die xxx muss durch die Idle Zeit in Sekunden ersetzt werden.</p>
+</div>
+<div class="section" id="der-erste-start">
+<h4>Der erste Start<a class="headerlink" href="#der-erste-start" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Bevor wir zum ersten Mal die Verbindung testen, sollte noch in der dsl-provider die Option nodetach angefügt werden, so dass der pppd beim Start nicht in den Hintergrund rutscht und wir die Ausgaben verfolgen können. Um alle Ausgaben verfolgen zu können, geben wir in einer extra Konsole, als root, noch folgenden Befehl ein:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> ~# tail -f /var/log/messages</p>
+<p>Nun können wir die Verbindung zum erstenmal testen:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> ~# pppd call dsl-provider</p>
+<p>Die Ausgabe des pppd sollte in etwa so aussehen:
+pppd[1578]: pppd 2.4.1 started by root, uid 0
+pppd[1578]: Serial connection established.
+pppd[1578]: Using interface ppp0
+pppd[1578]: Connect: ppp0 &lt;&#8211;&gt; /dev/pts/2
+pppoe[1579]: PADS: Service-Name: &#8216;&#8217;
+pppoe[1579]: PPP session is 31959
+pppd[1578]: local  IP address 62.226.75.9
+pppd[1578]: remote IP address 62.225.254.169</p>
+<p>Um zu testen, ob die Verbindung funktioniert, muss ein ping auf eine ip abgesetzt werden:
+<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ ping 134.100.212.78</p>
+<p>War der Ping erfolgreich, so steht auch unsere Verbindung. Nun können wir noch testen, ob der Nameserver richtig übernommen wurde:
+<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ ping www.selflinux.de</p>
+<p>Sollte die Namensauflösung fehlschlagen, kann man alternativ auch einen DNS-Server per Hand eintragen. Dies muss in der Datei /etc/resolv.conf geschehen:
+Auszug der Datei resolv.conf</p>
+<p>search
+nameserver 212.185.253.9
+nameserver 194.25.2.129</p>
+<p>Normalerweise sollte dies aber nicht nötig sein, da die Adresse des Nameservers automatisch bezogen wird.</p>
+</div>
+<div class="section" id="manuelle-einwahl">
+<h4>Manuelle Einwahl<a class="headerlink" href="#manuelle-einwahl" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Die manuelle Einwahl ist für all diejenigen interresant, die einen zeitabhängigen Tarif haben und die Kosten gerne unter Kontrolle haben (was bei Dial-on-Demand nicht der Fall ist).</p>
+<p>Um eine manuelle Einwahl durchführen zu können, muss ein Script in /usr/local/bin/ angelegt werden. Das Script kann man nennen wie man will, sinnvoll ist z.B. connectadsl o.ä.
+Connectadsl</p>
+<p>#! /bin/sh
+#
+# Connectadsl: Skript zur Erstellung einer Verbindung zum Provider
+# via ADSL/T-DSL fuer Debian GNU/Linux
+#
+# Verbindung starten: connectadsl start
+# Verbindung stoppen: connectadsl stop
+#
+# written by: Michael Schlenstedt
+# <a class="reference external" href="mailto:Michael&#37;&#52;&#48;adsl4linux&#46;de">Michael<span>&#64;</span>adsl4linux<span>&#46;</span>de</a>
+# <a class="reference external" href="http://www.adsl4linux.de">http://www.adsl4linux.de</a>
+#
+# Version: 0.2a
+#
+#
+# Einstellungen:
+#
+#
+#
+# Pfad zu pppd
+#
+PPPD=&#8221;/usr/sbin/pppd&#8221;
+#
+# Pfad zu sudo
+#
+SUDO=&#8221;/usr/bin/sudo&#8221;
+#
+#
+#
+# Ende der Einstellungen
+#
+#
+#
+# Wenn UID ungleich &#8220;0&#8221; (root), dann führe Skript mit sudo aus
+#
+#
+if test -x $SUDO; then</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>if test $UID -ne 0; then</dt>
+<dd>exec $SUDO $0 $*</dd>
+</dl>
+<p>fi</p>
+</div></blockquote>
+<p>fi
+#
+# Mit welchem Parameter wurde das Skript gestartet: Start oder Stop
+#
+case &#8220;$1&#8221; in
+#
+# Bei Stop wird aufgelegt
+#
+stop)</p>
+<blockquote>
+<div>echo Verbindung beenden
+killall pppd
+;;</div></blockquote>
+<p>#
+# Beim Parameter (Start) wird die Verbindung aufgebaut
+#
+start)</p>
+<blockquote>
+<div>echo Verbindung starten
+$PPPD call dsl-provider
+;;</div></blockquote>
+<dl class="docutils">
+<dt><a href="#id1"><span class="problematic" id="id2">*</span></a>)</dt>
+<dd>echo Falscher oder garkein Parameter angegeben!
+echo Bitte starten sie $0 mit dem Parameter start oder stop
+;;</dd>
+</dl>
+<p>esac</p>
+<p>Der große Vorteil bei der Verwendung dieses Scriptes ist, dass auch ein non-root user eine Internetverbindung herstellen kann. Diese Funktion wird über das Programm sudo realisiert.</p>
+<p>Soll nur root die Möglichkeit des Einwählens haben, so reichen die folgenden Befehle aus, und das Script wird nicht benötigt:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> ~# pon dsl-provider</p>
+<p>Verbindungs Abbau:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> ~# poff</p>
+<p>Um nun als normaler user die frisch eingerichtete Internetverbindung nutzen zu können, muss noch das Programm sudo installiert werden. Normalerweise sollte jede Distribution ein entsprechendes Paket bereitstellen. Sollte dies nicht der Fall sein, kann man es hier en <a class="reference external" href="http://www.sudo.ws/sudo/">http://www.sudo.ws/sudo/</a> herunterladen.</p>
+<p>Ist die Installation abgeschlossen, muss sudo nur noch konfiguriert werden. Hierzu ruft man visudo auf:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> ~# visudo</p>
+<p>Visudo lässt sich wie der Editor  vi benutzen.</p>
+<p>Nun trägt man wie im unteren Beispiel die User ein, die das Internet nutzen können sollen.
+sudoers file</p>
+<p># sudoers file.
+#
+# This file MUST be edited with the &#8216;visudo&#8217; command as root.
+#
+# See the man page for the details on how to write a sudoers file.
+#</p>
+<p># Host alias specification</p>
+<p># User alias specification</p>
+<p># Cmnd alias specification</p>
+<p># User privilege specification
+root    ALL=(ALL) ALL
+Peter   ALL=NOPASSWD:/usr/local/bin/connectadsl</p>
+<p>Loggt man sich nun mit dem Benutzer Peter ein, kann er mit den folgenden zwei Befehlen die eingerichtete Verbindung nutzen:
+<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ connectadsl start
+<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ connectadsl stop</p>
+<p>Damit ist die Einrichtung des A-DSL Anschlusses abgeschlossen.</p>
+<p>Viel Spaß im WWW (Welt Weites Warten <em>g</em>)</p>
+</div>
+<div class="section" id="danksagung">
+<h4>Danksagung<a class="headerlink" href="#danksagung" title="Link zu dieser Überschrift">¶</a></h4>
+<p>Viele Informationen und Texte für diesen Artikel stammen von de <a class="reference external" href="http://www.adsl4linux.de">http://www.adsl4linux.de</a></p>
+<p>Autor</p>
+<blockquote>
+<div>Simon Schwarz <a class="reference external" href="mailto:s&#46;sch-&#37;&#52;&#48;gmx&#46;de">s<span>&#46;</span>sch-<span>&#64;</span>gmx<span>&#46;</span>de</a></div></blockquote>
+<p>Formatierung</p>
+<blockquote>
+<div>Axel Gross <a class="reference external" href="mailto:axelgross&#37;&#52;&#48;web&#46;de">axelgross<span>&#64;</span>web<span>&#46;</span>de</a></div></blockquote>
+</div>
+</div>
+</div>
+<div class="section" id="world-wide-web">
+<h2>World Wide Web<a class="headerlink" href="#world-wide-web" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="file-transfer-protocol">
+<h2>File Transfer Protocol<a class="headerlink" href="#file-transfer-protocol" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="e-mail">
+<h2>E-Mail<a class="headerlink" href="#e-mail" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="news">
+<h2>News<a class="headerlink" href="#news" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="irc">
+<h2>IRC<a class="headerlink" href="#irc" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="point-to-point">
+<h2>Point to Point<a class="headerlink" href="#point-to-point" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="gnupg-handbuch">
+<h2>GnuPG-Handbuch<a class="headerlink" href="#gnupg-handbuch" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+<div class="section" id="domain-name-system">
+<h2>Domain Name System<a class="headerlink" href="#domain-name-system" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Beschreibung</p>
+<p>Dieses Dokument soll den Einstieg in DNS erleichtern. Es wendet sich an zukünftige DNS-Administratoren von kleinen Netzwerken.</p>
+<p>Kommentare, Korrekturen und Hinweise sind willkommen! Dazu bitte eine kurze eMail an: Steffen Dettmer &lt;<a class="reference external" href="mailto:steffen&#37;&#52;&#48;dett&#46;de">steffen<span>&#64;</span>dett<span>&#46;</span>de</a>&gt; schicken.</p>
+<div class="section" id="einfuhrung">
+<h3>Einführung<a class="headerlink" href="#einfuhrung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Da sich ein Mensch IP-Nummern schlecht merken kann, benutzt man lieber Namen. Nun braucht man einen Dienst, der diese irgendwie in IP-Adressen übersetzen kann.</p>
+<p>Zunächst führte man (auf jedem Host) die Datei /etc/hosts ein, in der, durch Whitespace getrennt, eine IP-Adresse, ein Name und beliebig viele Aliasnamen stehen. Der Name ist der &#8220;erste, wirkliche, echte Systemname&#8221;, die Aliasnamen sind zusätzliche. In der Praxis kann das natürlich auch umgekehrt sein, denn manche Administratoren verwechseln die Namen und geben dem System mit dem Kommando hostname einen Namen, der eigentlich &#8220;nur&#8221; ein Alias ist. Dies kann unter Umständen zu Problemen führen.</p>
+<p>Eine /etc/hosts kann zum Beispiel so aussehen:
+/etc/hosts</p>
+<p>127.0.0.1    localhost
+192.168.1.1  ns1.selflinux.de
+192.168.1.2  ns2.selflinux.de
+192.168.1.3  rebecca.selflinux.de www.selflinux.de</p>
+<p>Neben dem localhost Eintrag, der stets eingetragen sein sollte, sind hier noch zwei Namesserver und ein Webserver eingetragen. Der Webserver heißt eigentlich rebecca, www ist ein Zweit- oder Aliasname.</p>
+<p>Damit Namen auf allen Maschinen bekannt sind, müssen die Einträge in allen /etc/hosts auf allen Maschinen stehen. In den Anfängen des ARPA-Net wurde diese Datei als hosts.txt dann auf alle Maschinen verteilt. Diese wurde schnell groß und unübersichtlich. Um Konflikte zu vermeiden, kam man auf die Idee, jeder Organisation einen Namen zu geben, der durch einen Punkt dahinter geschrieben wurde. Damit blieben die Namen eindeutig, auch wenn zwei Organisationen einen Host Namens FTP haben wollten, denn hinter dem Punkt waren sie unterschiedlich.
+Später kam noch eine weitere Unterteilung hinzu, nämlich die nach Ländern. So gibt es jetzt einen Server www in der Organisation selflinux in Deutschland, kurz www.selflinux.de. Die Organisation bezeichnet man allgemeiner als Domain, was im mathematischen Sinne das &#8220;Gemeinsame&#8221; bedeutet.</p>
+<p>Da das für tausende von Maschinen nicht mehr wartbar ist, erfand man eine verteilte Datenbank, die das verwaltet, und nannte es das Domain Name System, kurz DNS. Verteilte Datenbank bedeutet, dass jeder nur einen Teil verwaltet. Eine einfache und hier günstige Struktur ist die Baumstruktur, die angewendet wird.
+An der Wurzel stehen die sogenannten Top Level Domains, TLDs, z.B. de, com, org. Diese werden von Wurzelservern bedient, also dem Teil der Datenbank, der darüber Informationen hat. Englisch heißen diese ROOT-SERVERS.
+Darunter kommen dann die Server, welche die TLD-Datenbanken haben, es sind mehere, um ausfallsicher zu sein und die Last zu verteilen. Diese haben dann Informationen über die Organisations-Domains, die man zusammen mit der TLD kurz mit Domain bezeichnet, eine Domain wäre z.B. selflinux.de.
+Eine Domain hat in der Regel einen Namensserver, der nun endlich die Namen wie www kennt. Das nennt man Delegation.</p>
+<p>Da DNS-Server aus Performancegründen Namen cachen (also zwischenspeichern), kann es auch sein, dass ein anderer Namensserver www.selflinux.de kennt, aber er hat die Information &#8220;aus zweiter Hand&#8221;. Die Server, die die Daten wirklich haben, meist eine Datei auf einer Platte, und deren Antwort verbindlich ist, nennt man autoritativ. Bekommt man von einem DNS-Server eine Antwort aus dem Cache, so ist sie als non-autorativ gekennzeichnet, d.h, sie ist vielleicht nicht mehr gültig.
+Ein TLD Server ist für eine TLD (z.B. de) autoritativ.</p>
+<p>Die &#8220;Rootdomain&#8221;, die Vater/Mutterdomain, nennt man &#8221;.&#8221;.
+Ein ROOT-SERVER ist also für &#8221;.&#8221; autoritativ.</p>
+<p>Die ROOT-SERVER delegieren nun die Autorität zu den TLD-Servern. Der ROOT-SERVER &#8220;weiß&#8221; (und bestimmt), welcher DNS-Server für z.B. de autoritativ ist. Ein de-Server enthält nun auch nicht die Daten über www der Domain selflinux, sondern er delegiert die Autorität zu einem anderen DNS-Server, der nun unter selflinux.de; eintragen kann, was er will, z.B. www.</p>
+</div>
+<div class="section" id="resolver">
+<h3>Resolver<a class="headerlink" href="#resolver" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Ein Programm, z.B. ein WWW-Browser, muß nun natürlich so einen DNS-Server fragen können. Damit das nicht jedes Programm von sich aus implementieren muß, ist das Bestandteil der libc. Dies nennt man Resolver, zu deutsch: &#8220;Auflöser&#8221;. Die Funktionen verwenden Konfigurationsdateien (bzw. bei Win entsprechende Registryeinträge), um z.B. die IP Adresse des zu verwenden Namensservers zu ermitteln. Der Resolver sendet eine Anfrage an einen DNS-Server, und erwartet die (endgültige) Antwort. Der DNS-Server muß nun hinten beginnend den Namen auflösen. Soll er z.B. www.selflinux.de für den Klienten auflösen, muß er sich dabei rekursiv durch die DNS-Struktur hangeln.</p>
+<p>Er fragt zuerst einen ROOT-SERVER nach den DNS-Servern (falls noch nicht im Cache), die für de. autoritativ sind. Dann fragt er einen dieser nach den für selflinux.de. autoritativen, und einen von diesen nach www.selflinux.de.. Hat er die Antwort im Cache, oder hatte ein anderer DNS-Server (der von &#8220;unserem&#8221; als Forwarder benutzt wird, der also die Anfragen weitergereicht bekommt) die Antwort im Cache, so wird sie dem Client als non-authoritative gekennzeichnet übermittelt. Diese Information bekommt das Programm normalerweise allerdings nicht zu sehen.
+Es gibt auch DNS-Server, die diese rekursiven Resolveranfragen nicht auflösen. Diese können von einem Client nicht als DNS-Server benutzt werden. Das reduziert die Belastung dieser DNS-Server, was z.B. bei den ROOT-Servern wichtig ist.</p>
+<p>Häufig wird unter UN*X der BSD-Resolver verwendet. Dieser wird mit der Datei /etc/resolv.conf konfiguriert. Hier können einige Optionen gesetzt werden. Eine ist natürlich die zu verwendenden Namensserver. Diese werden einfach untereinander (jeder in einer Zeile) aufgezählt (z.B.: &#8220;nameserver 127.0.0.1&#8221; usw.). Zusätzlich wird hier die DNS-Domain eingetragen (z.B.: &#8220;domain self-linux.de&#8221;), und eine Suchliste (z.B.: &#8220;search selflinux.de de com&#8221; - ein benutzerfreundliches Beispiel).
+Es wird immer der erste Namenserver gefragt, außer wenn dieser ausfällt. Nach einem großzügigen Timeout wird dann der zweite verwendet.</p>
+<p>Es gibt eine Erweiterung, der Splitted Resolver. Hier kann man zusätzlich angeben, für welche Domains der Namesserver verwendet wird (die Option &#8220;nameserver&#8221; erhält dies als weiteren Parameter). Diese Erweiterung ist allerdings relativ selten anzutreffen. Die Suchliste funktioniert wie folgt:
+Wird ein Name nicht gefunden, so wird der erste Teil der Suchliste angehängt (also selflinux.de). Wird auch der so erweitere Name nicht gefunden, so wird dem ursprünglichen der zweite Teil angehängt, und eine dritte Anfrage gestartet usw. Der Client (also das Programm) bemerkt davon nichts. So kann man sich etwas Schreibarbeit sparen. Eine Beispieldatei wäre also:
+/etc/resolv.conf</p>
+<p>domain selflinux.de
+search selflinux.de de com
+nameserver 127.0.0.1
+nameserver 192.168.1.53</p>
+<p>Sicherheitshalber sollte man stets mehrere Nameserver angeben.</p>
+<p>Verwendet man Windows-Clients, so sind diese Paramter im entsprechenden Fenster einzustellen. Dabei ist zu beachten, dass Windows Namen grundsätzlich zuerst über das Windows-Namensprotokoll aufzulösen versucht, was zu unerwarteten Effekten führen kann.</p>
+<p>In einer weiteren Datei (/etc/nsswitch.conf) legt man unter moderneren UN*X-Varianten fest, in welcher Reihenfolge welche Methoden zur Namensauflösung verwendet werden (lokale Dateien, DNS oder NIS). Die entsprechende Option heißt &#8220;hosts&#8221;. In einer typischen DNS-Konfiguration (ohne NIS) ist sie meist auf
+/etc/nsswitch.conf</p>
+<p>hosts:  files dns</p>
+<p>gesetzt (erst lokale Datei: /etc/hosts, dann DNS verwenden).</p>
+</div>
+<div class="section" id="bind">
+<h3>Bind<a class="headerlink" href="#bind" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Im folgenden wird bind in einer 8er-Version vorrausgesetzt. bind ist der Nameserver-Deamon, der vom Internet Software Consortium gepflegt und entwickelt wird. Es sind zwar noch hier und da Versionen 4.x im Einsatz, diese sterben jedoch aus. Neue Server sollten immer eine aktuelle Version erhalten, und auch bestehende sollten hin und wieder geupdatet werden, insbesondere, wenn Sicherheitslücken bekannt geworden sind!</p>
+</div>
+<div class="section" id="zonen">
+<h3>Zonen<a class="headerlink" href="#zonen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nun gibt es einen weiteren wichtigen Begriff: Zone. Ein Zone wird gerne mit einer Domain verwechselt, da muß man aufpassen, die Unterschiede sind wichtig.
+In Kurzform: Eine Zone ist das, für das ein DNS-Server authoritativ ist, also etwas Delegiertes.</p>
+<p>Ein DNS-Server ist immer für eine oder mehrere Zones maßgebend (nämlich die, die zu ihm delegiert wurden). Umgekehrt gibt es zu jeder Zone einen DNS-Server, der für diese autoritativ ist. Nun gibt es aber sehr große Zones, z.B. die der Universität Berkeley berkeley.edu. Die DNS-Admins von Berkeley delegieren also weiter.
+Zum Beispiel könnte man die großen Zweige cs und math delegieren. Die bekommen einen eigenen Server und der Admin von cs muß nicht immer die Admins von Berkeley auffordern, einen Namen einzutragen, das kann er selbst machen. Damit sind cs und math Zonen der Domain Berkeley. Diese bezeichnet man auch als Subdomains, da sie unter Berkeley liegen.</p>
+<p>Wir haben nun eine Domain, die aus mehreren Zonen besteht, und jede Zone gehört zu genau einer Domain (nämlich Berkeley). Berkeley selbst ist auch eine Zone, aber diese enthält nur wenige Informationen, nämlich die Adressen der DNS-Server, die für cs und math maßgebend sind, und vielleicht noch ein paar Namen aus kleinen Subdomains wie z.B. art. Diese Subdomain liegt nun - im Gegensatz zu cs - in der Zone Berkeley! Das heißt also, cs hat einen eigenen Namensserver, ist also eine Zone, art jedoch nicht. Hier liegt also der Unterschied, denn beides sind Subdomains, aber nur cs ist eine Subzone.</p>
+</div>
+<div class="section" id="dns-datenbank-und-deren-eintrage">
+<h3>DNS-Datenbank und deren Einträge<a class="headerlink" href="#dns-datenbank-und-deren-eintrage" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Eine DNS-Datenbank besteht aus zwei wichtigen Typen von Einträgen: Zuordnung von Namen zu Adressen (Addressrecords &#8220;A&#8221;), und Einträgen, die einer Adresse einen Namen zuordnen, also Zeigern auf einen Namen (Reverserecords &#8220;PTR&#8221;). Daneben gibt es aber noch weitere. Diese Einträge liegen in einer Zone, die von einem Namensserver authoritativ verwaltet werden. Diese Einträge selbst nennt man Resource Record, kurz RR.</p>
+<p>Neben Namen und IP-Adressen gibt es einen RR (also &#8220;Typ&#8221;) für die Eigenschaften einer Zone. Es gibt RRs, die Textinformationen beinhalten, die geographische Position festlegen und weitere.
+Die DNS-Datenbank ist also eine verteilte Datenbank, die in Zonen unterteilt ist. Diese Zonen werden von DNS-Servern bedient. Eine Zone besteht aus Einträgen, die man Resource Records nennt.</p>
+</div>
+<div class="section" id="meister-und-sklaven">
+<h3>Meister und Sklaven<a class="headerlink" href="#meister-und-sklaven" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Da man für große Zones mehere DNS-Server benötigt, können diese Datenbanken übertragen werden. Auf einer Maschine werden die Dateien gepflegt, und dann auf die anderen kopiert. Diese eine Maschine nennt man &#8220;Master&#8221; oder Primary, die anderen &#8220;Slave&#8221; oder Secondary. Die letzteren sind die moderneren Formen. &#8220;Slave&#8221; ist irreführend, denn ein Slave kann für einen anderen &#8220;Slave&#8221; auch &#8220;Master&#8221; sein, und außerdem ist ein Slave auch authoritativ für diese Zone.
+Die DNS-Server von großen Zonen kann man in der Regel gar nicht fragen, da sie stark abgesichert sind, dazu sind die Secondaries da.</p>
+<p>Von &#8220;außen&#8221; kann man nicht erkennen, ob man einen Master oder einen Slave fragt, beide sind genauso authoritativ für die Zone. Ein Slave legt die Zonendaten auch auf seiner Platte ab, damit er auch nach einem Neustart Antworten liefern kann, wenn der Master nicht erreichbar ist. Hier liegt der große Unterschied zum Caching. Daten aus dem Cache werden beim Neustart verworfen.
+Daten aus dem Cache können niemals authoritativ sein.</p>
+<p>Der DNS-Server bestimmt auch einige Eigenschaften der Zone selbst, z.B. wie lange die Zone gecached werden darf, und in welchen Zeitabständen die Secondaries prüfen sollen, ob sich die Zone geändert hat. Diese Daten liegen in einem ganz speziellen Record, dem Start of Authority, kurz SOA. Dieser legt den Beginn und die Eigenschaften einer Zone fest.</p>
+</div>
+<div class="section" id="resource-records">
+<h3>Resource Records<a class="headerlink" href="#resource-records" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Ein Record besteht aus mehreren Teilen: dem Objekt (Datenbankleute nennen es auch das Schlüsselfeld), der TTL (Time to live, die maximale Zeit, die es gecacht werden darf), der Klasse, zu der der Record gehört, der Typ des Records (z.B. &#8220;A&#8221; für eine Namen-Address-Zuordnung) und dem Inhalt.</p>
+<p>Die TTL gibt an, wie lange ein Objekt gecached werden darf, also wie lange es in einem Cache lebt. Üblich sind Werte von drei oder besser acht Stunden.</p>
+<p>Die Klasse gibt an, zu welcher Netzwerkart der Name gehört. Das Internet heißt IN, das ist in 99,99% der Fälle die verwendete Klasse, die wenigen Ausnahmen (Chaosnet und Hesiod - damit man es mal gehört hat, früher gab es auch mal CSNET) werden hier nicht behandelt, bis auf eine kleine Ausnahme.</p>
+<p>Der Typ wurde schon erwähnt: Es gibt Namen, Adressen, Texte (die wichtige Zusatzinformationen enthalten können), Aliasnamen, Hostinformationen, Mailserver und andere. Einige davon gibt es praktisch fast nur &#8220;auf dem Papier&#8221;.</p>
+</div>
+<div class="section" id="start-of-authority-ein-beispiel">
+<h3>Start of Authority - Ein Beispiel<a class="headerlink" href="#start-of-authority-ein-beispiel" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Zone selflinux.de. (ab jetzt schreiben wir immer, wenn wir sicher sind, den vollen Namen zu meinen, einen &#8221;.&#8221; hinten dran, den Namen der Root-Zone) könnte so aussehen (nur der SOA RR):</p>
+<blockquote>
+<div>selflinux.de. IN SOA [Inhalt]</div></blockquote>
+<p>Das Objekt ist die Zone. Es gehört zur Klasse Internet, und es handelt sich um eine Zone, genauer gesagt, um den Start einer Autorität.</p>
+<p>Nun müssen hier etliche Informationen drinstehen:</p>
+<blockquote>
+<div>Der Name des primären Nameservers (Ursprungsserver)
+Eine EMailadresse, falls jemand mal eine Frage oder einen Hinweis hat. Hier wird anstatt des &#8220;&#64;&#8221; Zeichens ein &#8221;.&#8221; verwendet (ja, hier darf eine EMailadresse im ersten Teil keinen Punkt enthalten!)</div></blockquote>
+<p>Dann in Klammern:</p>
+<blockquote>
+<div>Eine Seriennummer der Zonenversion, an der die Secondaries erkennen, ob sich was geändert hat
+Informationen, wann die Secondaries diese Zonendaten aktualisieren sollen (refresh)
+Wie lange sie warten sollen, wenn das nicht klappt (retry)
+Nach welcher Zeit die Daten definitiv ungültig sind (expire)
+Wie lange ein RR mindestens gültig ist (min. TTL).</div></blockquote>
+<p>Die Zeiten werden alle in Sekunden angegeben. Da sich die Seriennummer stets erhöhen muß, hat es sich bewährt, das aktuelle Datum im Format JJJJMMTT und eine zweistellige tägliche laufende Nummer zu verwenden. So erkennt man auch gleich, wann die Zone zum letzten Mal verändert wurde.</p>
+<p>Damit sieht ein SOA so aus (&#8221;;&#8221; trennt Kommentare):
+named.hosts</p>
+<dl class="docutils">
+<dt>selflinux.de. IN SOA pri-ns.selflinux.de. admin.selflinux.de. (</dt>
+<dd>2000012501 ; Serial (Seriennummer)
+10800      ; Refresh (Aktualisierung) 3 Stunden
+3600       ; Retry (neuer Versuch)
+864000     ; Expire (ungültig nach 10 Tagen)
+86400 )    ; min. TTL (Mindestgültigkeit) 1 Tag</dd>
+</dl>
+<p>DNS ist nicht case-sensitv, .de., .De.;, .DE. ist also das gleiche. Deshalb schreibe ich RR-Typen und Klassen groß, Namen klein, um besser unterscheiden zu können.</p>
+</div>
+<div class="section" id="die-benotigten-resource-records-fur-unsere-zone">
+<h3>Die benötigten Resource Records für unsere Zone<a class="headerlink" href="#die-benotigten-resource-records-fur-unsere-zone" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In dieser Zone gibt es selbstverständlich DNS-Server, die diese Angaben weitergeben können. Diese RR&#8217;s heißen NS - Name Server, das sieht dann so aus:
+selflinux.zone</p>
+<p>selflinux.de. IN NS ns1.selflinux.de.
+selflinux.de. IN NS ns2.selflinux.de.</p>
+<p>Wir könnten auch noch pri-ns dazuschreiben, aber wir möchten nicht, dass dieser viel gefragt wird, also lassen wir ihn weg.</p>
+<p>Nun finden sich in der /etc/hosts (beispielsweise) folgende Einträge:
+/etc/hosts</p>
+<p>192.168.1.1  ns1.selflinux.de
+192.168.1.2  ns2.selflinux.de
+192.168.1.3  rebecca.selflinux.de www.selflinux.de</p>
+<p>Der &#8220;localhost&#8221; Eintrag paßt nicht in die Zone &#8220;selflinux.de&#8221;, da &#8220;localhost&#8221; ja nicht mit &#8220;selflinux.de&#8221; endet.</p>
+<p>rebecca hat einen Zweitnamen &#8220;www&#8221;. Zweitnamen sind vom RR Type CNAME (canonical name). Dabei gilt es zu beachten, dass CNAMEs nie &#8220;auf der rechten Seite stehen dürfen&#8221;. Das bedeutet, es gibt keine CNAMEs von CNAMEs, MX- oder NS-Records &#8220;zeigen&#8221; nicht auf CNAMEs, sondern immer auf A-Address-Records.</p>
+<p>Diese nun übersetzt in RRs:
+selflinux.zone</p>
+<p>ns1.selflinux.de.     IN A 192.168.1.1
+ns2.selflinux.de.     IN A 192.168.1.2
+rebecca.selflinux.de. IN A 192.168.1.3
+www.selflinux.de.     IN CNAME rebecca.selflinux.de.</p>
+<p>Hier sind keine TTLs (Cache-Zeiten) angegeben, es wird die min TTL aus dem SOA Record verwendet. Wir könnten das aber machen, z.B.:
+selflinux.zone</p>
+<p>www.selflinux.de.     3600 IN CNAME rebecca.selflinux.de.</p>
+<p>Der WWW-Name darf nur eine Stunde gecached werden (vielleicht steht die Umstellung auf eine andere Maschine bevor?). Das senkt die Performance, führt zu höherem Traffic, darf also nicht versehentlich drin stehen bleiben.</p>
+<p>Für die gesamte Zone sei ein Mailserver verantwortlich, z.B. rebecca. Mit dem MX-RR definiert man einen Mail Exchanger und dessen Priorität. Niedrigere Prioritäten werden dabei vorgezogen. Ein Eintrag könnte demnach lauten:
+selflinux.zone</p>
+<p>selflinux.de.          IN MX 10 rebecca.selflinux.de.</p>
+<p>Damit bekommt rebecca Mail für &lt;user&gt;&#64;selflinux.de. Natürlich muß das dortige Mailprogramm eMail dieses Aussehens annehmen, und nicht weitersenden (z.B. Klasse &#8220;Cw&#8221; bei sendmail muß diese Namen &#8220;selflinux.de&#8221; [als Hostnamen] beinhalten). Zusätzlich kann für jeden Host mittels Wildcard &#8220;*&#8221; dieser Mailexchanger erzwungen werden:
+selflinux.zone</p>
+<p><a href="#id3"><span class="problematic" id="id4">*</span></a>.selflinux.de.        IN MX 10 rebecca.selflinux.de.</p>
+<p>Dabei ist zu beachten, dass das auch für garnicht existierende Hosts matched, man kann also EMail an sowas wie &lt;user&gt;&#64;halleluja.ax123.selflinux.de senden.</p>
+</div>
+<div class="section" id="die-andere-seite-reverse-lookups">
+<h3>Die andere Seite - Reverse Lookups<a class="headerlink" href="#die-andere-seite-reverse-lookups" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nun kann hosts aber mehr, und zwar auch rückwärts: IP in Namen &#8220;auflösen&#8221;. Das nennt man reverse-lookups. Um nicht ein neues Schema (neben Domains und Zones) zu benötigen, hat man einfach die Zones benutzt, das Konzept ist ja flexibel - schließlich kann man nicht alle Domains durchfragen, bis man die Adresse gefunden hat!</p>
+<p>Diese Art der Auflösung wird vor allem bei sicherheitsempfindlichen Diensten verwendet. Das Tool nslookup (siehe auch Abschnitt &#8220;Testen der Konfigurationen&#8221;) beispielsweise prüft, ob die IP-Adresse zu einem DNS-Server existiert (macht also ein Reverse Lookup), und auch NFS-Server lösen Client-IP-Adressen rückwärts auf. Der Sinn darin ist, DNS Spoof-Angriffe zu erschweren.
+Bei diesen Angriffen werden DNS-Namen gefälscht, beispielsweise durch einen Eindringling auf einem DNS-Server. Da häufig für Vorwärts- und Rückwärtsauflösung verschiedene Server und vor allem verschiedene Delegationen verwendet werden, muß ein Angreifer häufig die Kontrolle über zwei DNS-Server erlangen, hat also etwas schlechtere Chancen.</p>
+<p>Dafür gibt es einen neuen Domain-Namensraum, der nicht Namen als Domains benutzt, sondern IP-Adressen. Dieser ist ziemlich unabhängig vom &#8220;normalen&#8221; Namensraum! Diese Domain hat man &#8220;arpa&#8221; genannt (eben aus historischen Gründen). Da es für alle Klassen (z.B. Internet) eigene Adressen gibt, ist auch diese Teil des Namens. Internet-Adressen sind in-addr, also heißt die Domain &#8220;in-addr.arpa.&#8221;. Dieser Baum enthält dann letztlich alle IP-Adressen. Diese muß man natürlich delegieren können!
+Dabei gibt es eine Besonderheit: die allgemeineren, die Netzwerknamen (Domainnamen) stehen ja hinten, z.B. ist &#8220;www&#8221; ein Host im Netzwerk &#8220;selflinux.de.&#8221;. Bei IP-Adressen steht das Netzwerk aber vorn, der Hostanteil hinten! Bei der Delegation wird ein bestimmter Teil (etwas &#8220;Allgemeineres&#8221;, z.B. eine Domain) delegiert. Wenn man das jetzt mit IP-Adressen macht, kann man nicht den ersten Teil einer IP-Adresse delegieren, denn dann hätte man ein &#8220;Loch&#8221; - den Hostanteil - das erst in einer tieferen Instanz gefüllt werden könnte! Also muß man die IP-Adresse byteweise umdrehen, so wird aus &#8220;192.168.1.2&#8221; &#8220;2.1.168.192&#8221;. Nun steht der Netzwerkanteil hinten, und man kann einen Teil delegieren, wie auch bei Domainnamen.
+Das kann man wie bei Namen an jedem &#8221;.&#8221; machen. Die Zone &#8220;in-addr.arpa.&#8221; enthält also 255 Zonen, eine davon ist &#8220;192.in-addr.arpa.&#8221;, diese enthält wiederum 255 Zonen usw. Rebecca liegt also in Zone &#8220;1.168.192.in-addr.arpa.&#8221;. Diese benötigt erst einmal einen SOA Record. Namensserver und EMail seien wie oben.</p>
+</div>
+<div class="section" id="eine-reverse-lookup-zone">
+<h3>Eine Reverse Lookup Zone<a class="headerlink" href="#eine-reverse-lookup-zone" title="Link zu dieser Überschrift">¶</a></h3>
+<p>1.168.192.zone</p>
+<dl class="docutils">
+<dt>1.168.192.in-addr.arpa. IN SOA pri-ns.selflinux.de. admin.selflinux.de. (</dt>
+<dd>2000012501 ; Serial (Seriennummer)
+10800      ; Refresh (Aktualisierung) 3 Stunden
+3600       ; Retry (neuer Versuch)
+864000     ; Expire (ungültig nach 10 Tagen)
+86400 )    ; min. TTL (Mindestgültigkeit) 1 Tag</dd>
+</dl>
+<p>Die Nameserver schreibt man auch einfach dazu:
+1.168.192.zone</p>
+<p>1.168.192.in-addr.arpa. IN NS ns1.selflinux.de.
+1.168.192.in-addr.arpa. IN NS ns2.selflinux.de.</p>
+<p>Nun die drei eigentlichen Einträge. Man hat jetzt PTR-Records, weil wir ja rückwärts auflösen:
+1.168.192.zone</p>
+<p>1.1.168.192.in-addr.arpa.       IN PTR  ns1.selflinux.de.
+2.1.168.192.in-addr.arpa.       IN PTR  ns2.selflinux.de.
+3.1.168.192.in-addr.arpa.       IN PTR  rebecca.selflinux.de.</p>
+<p>(wieder ohne TTLs)</p>
+</div>
+<div class="section" id="zonefiles">
+<h3>Zonefiles<a class="headerlink" href="#zonefiles" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Da das später Zonefiles für bind werden sollen, müssen diese in Dateien geschrieben werden. Standardmäßig liegen diese in /var/named/ - auch die von Primären Servern. Über die Namen der Dateien gehen die Meinungen auseinander, insbesondere, wenn es um Reverse-Lookup-Dateien geht. Viele sind gewoht, bei Dateien einen Postfix anzuhängen (&#8221;.txt&#8221;, &#8221;.c&#8221;), deshalb kann man hier &#8221;.zone&#8221; verwenden.
+Hier wird der Domainname + &#8221;.zone&#8221; verwendet, also &#8220;selflinux.zone&#8221; und &#8220;1.168.192.zone&#8221; (wenn man nur in-addr für Reverse braucht, also vermutlich alle bis auf ein paar Jungs vom MIT).</p>
+<p>Bei Secondary Servern (Slaves) werden diese Dateien nicht per Hand angelegt. Sie werden vom Primary geholt, wenn es nötig ist, also wenn die Refresh-Zeit um ist, oder der Primary eine entsprechende Nachricht schickt. Die Daten werden dann in die Dateien geschrieben, damit sie notfalls auch einen Neustart &#8220;überleben&#8221;.</p>
+<p>Für jede Zone gibt es eine Datei, und in jeder Datei darf nur ein SOA vorkommen. Wir brauchen also bereits zwei, und da wir auch vermutlich &#8220;localhost&#8221; auflösen können möchten, wie im Prinzip fast jeder DNS-Server, sind wir schon bei vier.</p>
+</div>
+<div class="section" id="abkurzungen">
+<h3>Abkürzungen<a class="headerlink" href="#abkurzungen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Unsere Zonefiles sind nun ziemlich unübersichtlich, aber bei bind sind einige Abkürzungen möglich. bind weiß ja (wir werden es ihm später sagen), welche Domain in welcher Datei liegt.</p>
+<p>bei dem Eintrag:
+selflinux.zone</p>
+<p>ns1.selflinux.de.     IN A 192.168.1.1</p>
+<p>Beispielsweise ist ja klar, dass er zu &#8221;.selflinux.de.&#8221; gehört (sonst wäre es die falsche Datei!). Das kann man weglassen. Auch die Klasse kann man weglassen, dann wird &#8220;IN&#8221; angenommen, man erhält:
+selflinux.zone</p>
+<p>ns1     A       192.168.1.1</p>
+<p>Die Domain wird an alle Namen angehängt, nicht jedoch an IP-Adressen, die hinter einem &#8220;A&#8221; stehen. Aber an Namen, die z.B. hinter einem &#8220;CNAME&#8221; stehen, es sei denn, diese sind explizit als vollständig angegeben und enden mit einem &#8221;.&#8221;.
+Beim SOA Record ist das ähnlich:
+selflinux.zone</p>
+<p>selflinux.de. IN SOA pri-ns.selflinux.de. admin.selflinux.de.  (...)</p>
+<p>Für die Domain &#8220;selflinux.de&#8221;, in deren Datei wir uns ja befinden, kann man auch &#8220;&#64;&#8221; schreiben, also:
+selflinux.zone</p>
+<p>&#64; IN SOA pri-ns.selflinux.de. admin.selflinux.de.  (...)</p>
+<p>Die Domain wird auch hier angehängt, deshalb geht auch:
+selflinux.zone</p>
+<p>&#64;       SOA     pri-ns admin (...)</p>
+<p>aber es sieht nicht mehr sehr gut aus... Der Autor mag z.B. gar keine Abkürzungen in SOA Records, aber das ist Geschmackssache.</p>
+<p>Es gibt noch eine weitere Abkürzung: Gibt es mehrere RRs für dasselbe Objekt, so muß dieses nur einmal (beim ersten RR) genannt werden. Die weiteren werden dann so angenommen, also ist auch erlaubt:
+selflinux.zone</p>
+<dl class="docutils">
+<dt>selflinux.de. IN NS ns1.selflinux.de.</dt>
+<dd>IN NS ns2.selflinux.de.</dd>
+</dl>
+<p>Da hier diese Einträge direkt nach dem SOA Record kommen (der ja ein RR für &#8220;selflinux.de.&#8221; ist), kann man bei 1. NS RR (also beim 2. RR der Zone) dieses auch noch weglassen, was in der Praxis meistens gemacht wird.</p>
+<p>Auch muß man (für bind, andere DNS-Server machen das vielleicht anders!) die Zeiten im SOA und TTLs nicht unbedingt in Sekunden angeben, man schreibt statt &#8220;3600&#8221; einfach &#8220;3H&#8221;. Es gibt für Tage (days) &#8220;D&#8221;, für Wochen (weeks) &#8220;W&#8221; und für Minuten (minutes) &#8220;M&#8221;.</p>
+<p>Verwendet man keine TTL-Angaben bei den Records, wird ein Defaultwert verwendet. Ältere bind-Versionen verwenden hierzu stets min. TTL aus dem SOA Record, neuere kennen dazu die Direktive $TTL, die im Zonefile eingestellt wird. In den Beispielen wird hier immer eine Default-TTL von einem Tag verwendet: $TTL 1d.</p>
+</div>
+<div class="section" id="die-fertigen-dateien">
+<h3>Die fertigen Dateien<a class="headerlink" href="#die-fertigen-dateien" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nun seien die folgenden beiden Dateien in /var/named:
+/var/named/selflinux.zone</p>
+<p>$TTL 1d</p>
+<dl class="docutils">
+<dt>selflinux.de.   IN  SOA pri-ns.selflinux.de. admin.selflinux.de. (</dt>
+<dd><p class="first">2000012501 ; Serial (Seriennummer)
+3H         ; Refresh (Aktualisierung)
+1H         ; Retry (neuer Versuch)
+1M         ; Expire (ungültig nach)
+1D )       ; min. TTL (mindeste Gültigkeit)</p>
+<blockquote class="last">
+<div>IN  NS    ns1.selflinux.de.
+IN  NS    ns2.selflinux.de.</div></blockquote>
+</dd>
+</dl>
+<p>ns1             IN  A     192.168.1.1
+ns2             IN  A     192.168.1.2
+rebecca         IN  A     192.168.1.3
+www             IN  CNAME rebecca.selflinux.de.</p>
+<p>/var/named/1.168.192.zone</p>
+<p>$TTL 1d</p>
+<dl class="docutils">
+<dt>1.168.192.in-addr.arpa. IN SOA pri-ns.selflinux.de. admin.selflinux.de. (</dt>
+<dd><p class="first">2000012501 ; Serial (Seriennummer)
+3H         ; Refresh (Aktualisierung)
+1H         ; Retry (neuer Versuch)
+1M         ; Expire (ungültig nach)
+1D )       ; min. TTL (mindeste Gültigkeit)</p>
+<blockquote class="last">
+<div>IN  NS    ns1.selflinux.de.
+IN  NS    ns2.selflinux.de.</div></blockquote>
+</dd>
+</dl>
+<p>1               IN  PTR   ns1.selflinux.de.
+2               IN  PTR   ns2.selflinux.de.
+3               IN  PTR   rebecca.selflinux.de.</p>
+<p>(ein hohes Expire ist in der Praxis durchaus sinnvoll)</p>
+<p>Diese sollen nun von bind als Primäre Zonen verwaltet werden, er soll autorativ sein, dafür sind die Dateien entwickelt worden.</p>
+</div>
+<div class="section" id="konfiguration-des-bind">
+<h3>Konfiguration des Bind<a class="headerlink" href="#konfiguration-des-bind" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nun müssen wir bind entsprechend konfigurieren. Wie schon im ersten Teil wird dabei auf bind-Version 8 und höher eingegangen.
+Bei Neuinstallationen sollte keinesfalls mehr bind 4 verwendet werden!</p>
+<p>Beginnen wir mit einer typischen Konfiguration für ein kleines Netzwerk. Wir stellen nur einen DNS-Server auf, also soll dieser alle DNS-Funktionen erfüllen: Er soll unsere Zones halten, von Clients/Resolvern als DNS-Server verwendet werden können, und einen Cache aufbauen können, um Datenverkehr zu sparen.</p>
+<p>Die Syntax der Konfigurationsdatei ist ähnlich zu C++. Die Datei besteht aus Anweisungen, die jeweils mit einem Semikolon abgeschlossen werden. Anweisungen können auch Blöcke sein. Es gibt Blöcke, die einen Namen haben. Der Block selbst wird in {} geklammert.
+Eine wichtige Anweisung bzw. ein wichtiger Block ist options {};. Hier stehen die globalen Optionen. Der andere wichtige Blockname ist zone. Zwischen Zone und den {} Klammern steht der Name der Zone, also &#8216;zone &#8220;selflinux.de&#8221; {};&#8217;.
+Kommentare können wie in C++ in &#8220;/<em>&#8221; und &#8220;</em>/&#8221; gefaßt werden, oder nach &#8220;//&#8221; bis zum Zeilenende reichen.
+Wichtige Anweisungen im Optionsblock sind:
+/etc/named.conf</p>
+<blockquote>
+<div><p>directory &#8220;/var/named&#8221; ;    // Verzeichnis mit den Zonefiles
+forwarders {1.2.3.4;        // Welche DNS Server als</p>
+<blockquote>
+<div>1.2.3.5;};      // Forwarder verwenden?</div></blockquote>
+<dl class="docutils">
+<dt>// forward only;            // nicht selbst auflösen,</dt>
+<dd>// sondern den Forwarder das
+// machen lassen</dd>
+<dt>forward first;              // den Forwarder fragen, wenn</dt>
+<dd>// der es nicht weiß, selbst
+// rekursiv nachfragen</dd>
+</dl>
+</div></blockquote>
+<p>Den Rest lassen wir erstmal weg, verwenden also die Defaults. Diese wurden beim Compilieren festgelegt. Wenn man ein Paket seiner Distribution verwendet, sollten diese gut zu den anderen passen.
+Es sei an dieser Stelle ausdrücklich darauf hingewiesen, dass man keine Forwarders verwenden muß.</p>
+</div>
+<div class="section" id="root-servers-konfigurieren">
+<h3>ROOT-SERVERS konfigurieren<a class="headerlink" href="#root-servers-konfigurieren" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wenn der DNS-Server selbst rekursiv fragen können soll (also in allen Fällen, außer &#8220;forward only;&#8221;), muß er natürlich die ROOT-SERVER kennen. Das sind die Server für die Zone &#8221;.&#8221;. Diese Zone konfiguriert man in der Regel wie folgt:
+/etc/named.conf</p>
+<dl class="docutils">
+<dt>zone &#8221;.&#8221; {</dt>
+<dd>type hint;                 // ist keine &#8220;richtig&#8221; Zone
+file &#8220;root.hint&#8221;;          // Datei mit den  ROOT-SERVERS
+};</dd>
+</dl>
+<p>In &#8220;root.hint&#8221; stehen die &#8220;A&#8221; (Address) Records (RRs) der ROOT-SERVER, das sieht z.B. so aus:
+/var/named/root.hint</p>
+<p>.                        3600000  IN  NS    A.ROOT-SERVERS.NET.
+A.ROOT-SERVERS.NET.      3600000      A     198.41.0.4</p>
+<p>.                        3600000      NS    B.ROOT-SERVERS.NET.
+B.ROOT-SERVERS.NET.      3600000      A     128.9.0.107</p>
+<p>Das sollte jetzt verständlich sein: Für &#8221;.&#8221; gibt es in der Klasse IN einen Nameserver mit sehr langer TTL, der A.ROOT-SERVERS.NET. heißt, und dessen IP-Adresse.</p>
+<p>Da sich die IP-Adressen auch ändern können, muß diese Datei gepflegt werden. Dazu eignet sich das Dienstprogramm dig aus der BIND-Distribution.
+Hat man bereits ein System, das funktionierend Namen auflösen kann (z.B. wenn es einfach einen DNS-Server vom Provider in der /etc/resolv.conf konfiguriert hat, die &#8220;dns&#8221; in /etc/nsswitch.conf hinter &#8220;hosts&#8221; steht), braucht man nur ein:
+<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> $ dig . ns</p>
+<p>zu machen, und erhält eine aktuelle Liste. Man kann auch explizit einen DNS-Server angeben, mit:
+<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> $ dig &#64;ns.isp.com . ns</p>
+<p>Betreibt man einen nur cachenden Server (mindestens ein solcher gehört eigentlich in jedes Netzwerk, um die Performance zu erhöhen), ist damit die Konfiguration im Prinzip fertig. Hat man gute Verbindung zu DNS-Servern mit gutem Cache (also DNS-Server, die häufig gefragt werden), so kann man diese als Forwarder konfigurieren. Hat man die besondere Situation eines sich über Wählleitungen einwählenden Netzes oder auch Hosts, macht es Sinn, die DNS-Server des Providers als Forwarders zu verwenden (wie man es auch als Client tun würde - außer natürlich, diese sind überlastet). Forwarders sind auch nützlich, wenn der DNS-Server öfter herruntergefahren wird. Verwendet man mehrere verschiedene Provider, so verwendet man am besten keine Forwarder, um Probleme mit Zugriffsbeschränkungen zu vermeiden.</p>
+</div>
+<div class="section" id="eigene-zones-konfigurieren">
+<h3>Eigene Zones konfigurieren<a class="headerlink" href="#eigene-zones-konfigurieren" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Zones, für die der Server authoritative ist (also wenn er Primary oder Secondary ist, das hieß früher irreführend Master bzw. Slave), müssen jetzt in der Konfigurationsdatei aufgeführt werden:
+/etc/named.conf</p>
+<dl class="docutils">
+<dt>zone &#8220;selflinux.de&#8221; {</dt>
+<dd>type master;            // wir sind Primary
+file &#8220;selflinux.zone&#8221;;  // in der Datei stehen die Zone-RRs</dd>
+</dl>
+<p>};</p>
+<dl class="docutils">
+<dt>zone &#8220;1.168.192.in-addr.arpa&#8221; {</dt>
+<dd>type master;
+file &#8220;1.168.192.zone&#8221;;
+};</dd>
+</dl>
+<p>Bei Secondaries konfiguriert man &#8220;type slave;&#8221; und ebenfalls ein File (z.B. file &#8220;slave/myzone.zone&#8221;;). Zusätzlich muß man dann aber noch den (die) Masterserver angeben: &#8220;masters {1.2.3.4;};&#8221;.</p>
+</div>
+<div class="section" id="eine-zone-fur-localhost">
+<h3>Eine Zone für &#8220;localhost&#8221;<a class="headerlink" href="#eine-zone-fur-localhost" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Der Name &#8220;localhost&#8221; sollte immer mit der IP 127.0.0.1 verknüpft sein. Um dies per DNS zu erreichen, gibt es zwei grundlegende Herangehensweisen, die in der Praxis auftauchen. Einmal denkt man sich &#8220;localhost&#8221; zu einer Zone zugehörig, zum Beispiel als &#8220;localhost.selflinux.de.&#8221;. In diesem Fall wird der Name einfach als Address-Record in das entsprechende Zonefile eingetragen.</p>
+<p>Eine andere Möglichkeit ist, den Namen als &#8220;localhost.&#8221; zu interpretieren. Aus Sicht des DNS handelt es sich dabei um eine Toplevelzone (mit einer IP-Adresse, aber keinen weiteren darunterliegenden Records). Das verletzt allerdings etwas das Konzept von den Toplevel-Domains, funktioniert in der Praxis jedoch sehr gut. Um dies zu erreichen, erzeugt man ein entsprechendes Zonefile:
+/var/named/localhost.zone</p>
+<p>$TTL 1d</p>
+<dl class="docutils">
+<dt>localhost. IN SOA pri-ns.selflinux.de. admin.selflinux.de. (</dt>
+<dd><p class="first">2000012501 ; Serial (Seriennummer)
+3H         ; Refresh (Aktualisierung)
+1H         ; Retry (neuer Versuch)
+1M         ; Expire (ungültig nach)
+1D )       ; min. TTL (mindeste Gültigkeit)</p>
+<blockquote class="last">
+<div><p>IN  NS    ns1.selflinux.de.
+IN  NS    ns2.selflinux.de.</p>
+<p>IN  A     127.0.0.1</p>
+</div></blockquote>
+</dd>
+</dl>
+<p>Eine zugehörige Reverse-Zone:
+/var/named/0.0.127.zone</p>
+<p>$TTL 1d</p>
+<dl class="docutils">
+<dt>0.0.127.in-addr.arpa. IN SOA pri-ns.selflinux.de. admin.selflinux.de. (</dt>
+<dd><p class="first">2000012501 ; Serial (Seriennummer)
+3H         ; Refresh (Aktualisierung)
+1H         ; Retry (neuer Versuch)
+1M         ; Expire (ungültig nach)
+1D )       ; min. TTL (Mindestgültigkeit)</p>
+<blockquote class="last">
+<div>IN  NS    ns1.selflinux.de.
+IN  NS    ns2.selflinux.de.</div></blockquote>
+</dd>
+</dl>
+<p>1               IN  PTR   localhost.</p>
+<p>In der named.conf werden beide Zonen eingetragen:
+/etc/named.conf</p>
+<dl class="docutils">
+<dt>zone &#8220;localhost&#8221; {</dt>
+<dd>type master;
+file &#8220;localhost.zone&#8221;;</dd>
+</dl>
+<p>};</p>
+<dl class="docutils">
+<dt>zone &#8220;0.0.127.in-addr.arpa&#8221; {</dt>
+<dd>type master;
+file &#8220;0.0.127.zone&#8221;;</dd>
+</dl>
+<p>};</p>
+<p>Wird die erste Methode verwendet, also localhost als Host einer Domain interpretiert, so wird nur die Reverse-Zone benötigt (da es ja keine Toplevel-Zone &#8220;localhost.&#8221; gibt). In dieser muß der PTR-Record dann konsistenterweise auf die Domain zeigen, beispielsweise &#8220;localhost.selflinux.de.&#8221;. Man kann auch eine Mischung aus beiden Methoden konfigurieren. Dazu wird eine Zone &#8220;localhost.&#8221; erzeugt, und ein Hosteintrag in der Domain. Dieser Eintrag im Zonefile der Domain ist sinnvollerweise ein CNAME auf &#8220;localhost.&#8221;:
+/var/named/localhost.zone</p>
+<p>localhost       IN CNAME localhost.</p>
+<p>Die Reverse-Zone sieht damit wie im Beispiel aus.
+Vergleicht man beide Methoden, stellt man fest, dass deren Funktion von der Konfiguration der Clients abhängt. Normalerweise muß eine Maschine in der Lage sein, &#8220;localhost&#8221; aufzulösen. Verwendet man die erste Methode, muß also eine Suchliste definiert sein, bei der unter mindestens einer Domain der Host &#8220;localhost&#8221; existiert. Hier liegt also ein Vorteil der zweiten Methode.
+Der Hauptnachteil der zweiten Methode ist, dass man eine &#8220;localhost.&#8221;-Topleveldomain definiert, was das Toplevel-Konzept etwas verletzt, und dadurch von einigen Administratoren als unsauber bezeichnet wird. In der Praxis hat sich jedoch die zweite Methode bewährt, die zudem etwas performanter ist, und findet breiten Einsatz.</p>
+</div>
+<div class="section" id="weitere-wichtige-konfigurationsoptionen">
+<h3>Weitere wichtige Konfigurationsoptionen<a class="headerlink" href="#weitere-wichtige-konfigurationsoptionen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Hier ganz kurz noch ein paar wichtige Optionen:
+named.conf</p>
+<dl class="docutils">
+<dt>listen-on port 53 { 1.2.3.4; }; //Port 53 des angebenen</dt>
+<dd>//Interfaces verwenden. Sinnvoll,
+//wenn man z.B. Dialup-Interfaces
+//hat, die nicht von Clients
+//verwendet werden sollen</dd>
+<dt>query-source address * port 53; //Port 53 beim _Senden_ verwenden</dt>
+<dd>//sinnvoll hinter Firewalls.
+//Zusätzlich kann auch eine
+//Interfaceaddresse angeben
+//werden, sinnvoll bei Multihomed-Hosts</dd>
+<dt>notify yes;                     //bei Änderungen an den</dt>
+<dd>//Datenbanken dies den
+//Secondaries mitteilen</dd>
+<dt>recursion no;                   //Verwendet man am besten</dt>
+<dd>//bei
+//Servern, die nur Primary sind
+//Clienten können
+//diesen Namen nicht verwenden!</dd>
+<dt>check-names master warn;        //sind Zone-RRs falsch, nur warnen,</dt>
+<dd>//nicht abbrechen</dd>
+</dl>
+<p>check-names master fail;        //Abbruch, wenn Zone fehlerhaft ist
+allow-query { any; };           //Jeder darf fragen
+allow-update { none; };         //keiner darf updaten (ändern)
+allow-update { 1.2.3.4; };      //1.2.3.4 darf updaten
+allow-transfer { 1.2.3/24; };   //nur Netz 1.2.3.0/24 darf</p>
+<blockquote>
+<div>//Zonetransfers machen</div></blockquote>
+<p>Die ersten vier Optionen dürfen nur im &#8220;options {};&#8221;-Block auftreten, die anderen hier genannten Optionen können auch in &#8220;zone {};&#8221;-Blöcken auftauchen, so dass sich beispielsweise Zugriffsrechte pro Zone einstellen lassen. &#8220;notify&#8221; sollte bei Slaves auf &#8220;no&#8221; stehen, da diese sonst dem Primary Zonenänderungen überflüssigerweise mitteilen.</p>
+</div>
+<div class="section" id="starten">
+<h3>Starten<a class="headerlink" href="#starten" title="Link zu dieser Überschrift">¶</a></h3>
+<p>bind wird normalerweise über ein kleines rc-script gestartet. Man kann bind starten, indem man &#8220;/pfad/named&#8221; aufruft, z.B. /usr/sbin/named. Beenden geht unter Linux einfach mit killall named. Aber dabei ist zu beachten, dass andere Systeme wie z.B. Solaris ein anderes killall haben - dieses killt wirklich alles, hier müßte man mit ps -ef|grep named die PID des Prozesses ermitteln, und diesen mit kill &lt;pid&gt; beenden.
+Eleganter geht das mit dem Dienstprogramm ndc: zum Starten verwendet man ndc start, zum Beenden ndc stop.</p>
+<p>Man muß nun sorgfältig die Logfiles des syslogd prüfen, um Fehler zu erkennen. Die Fehlermeldungen sind in der Regel sehr aussagekräftig, und führen schnell zur Ursache. Schwierig zu erkennen ist aber z.B. eine vergessene geschweifte Klammer in der named.conf, besonders für ungeübte und nicht-C++-Kenner. Wird eine Zone angemeckert, so muß das Zonefile untersucht werden.</p>
+<p>Sehr ungünstige Werte innerhalb des SOA-Records führen z.B. zu einer Warnung. In diesem Fall sagt bind aber sogar, was ihn stört, so dass man den Fehler schnell korrigieren kann. Problematischer sind Fehler in der Art von &#8220;Cannot find NS on...&#8221;. Das deutet darauf hin, dass der NS für eine Zone nicht erreichbar ist, oder nicht existiert. Es muß hier der Name eines DNS-Servers stehen, der authoritativ für die Zone ist! Dieser Fehler wird häufig nicht sofort erkannt.</p>
+<p>Wird ein Server von einem anderen als authoritativ für diese Zone genannt, und ist dieser genannte Server aber selbst nicht der Meinung, authoritativ für diese Zone zu sein, nennt man ihn lame server. Wären alle &#8220;lame&#8221;, verfällt die Zone mit Ablauf der Cache- bzw. Expirezeiten, man merkt es also nicht unbedingt sofort, aber es ist ein schweres Problem.</p>
+<p>Hat man die Zonefiles geändert, und die Seriennummer erhöht, müssen die Datenbanken neu geladen werden, dazu macht man ein:
+<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> $ ndc reload</p>
+<p>und prüft natürlich wieder die Logfiles.</p>
+</div>
+<div class="section" id="zoneanderungen-und-secondaries">
+<h3>Zoneänderungen und Secondaries<a class="headerlink" href="#zoneanderungen-und-secondaries" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Ist &#8220;notify yes;&#8221; konfiguriert, so sendet BIND bei jedem Reload eine Nachricht an die Secondaries, dass die Zone modifiziert wurde. Die Secondaries holen daraufhin den SOA-Record, und schauen, ob sich die Seriennummer erhöht hat. Wenn ja, so wird die Zone vom Primary transferiert, ansonsten passiert nichts. Deshalb darf man nie vergessen, die Seriennummer zu erhöhen!
+Der Vorgang, der von den Secondaries beim Empfang einer Notify Message stattfindet, ist der selbe wie der, der beim Erreichen der Refresh-Time einer Zone stattfindet.</p>
+</div>
+<div class="section" id="testen-der-konfigurationen">
+<h3>Testen der Konfigurationen<a class="headerlink" href="#testen-der-konfigurationen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Es gibt ein Tool, mit dem man fast beliebige DNS-Anfragen machen kann, um z.B. Konfigurationen zu testen. Dieses ist Teil der bind-Distribution und heißt nslookup. Dieses versteht viele Optionen als Parameter, kann aber auch interaktiv verwendet werden.
+Um die Wirkung der Searchlist zu unterdrücken, sollten wiederum vollqualifizierte Hostnamen mit einem anschließenden Punkt verwendet werden. Mit diesem Tool fragt man nach Daten der Zone, z.B. &#8220;www.selflinux.de.&#8221; Folgende Optionen stehen im interaktiven Modus zur Verfügung (hier teilweise abgekürzt):</p>
+<blockquote>
+<div>&#8220;server &lt;server&gt;&#8221;, z.B. server ns.selflinux.de
+Die Anfragen werden an &lt;server&gt; gesendet.
+&#8220;set querytype=&lt;RR Typ&gt;&#8221;, z.B. set q=any
+Anfragen nach RR-Typ machen
+&#8220;set debug&#8221; / &#8220;set nodebug&#8221;
+Es werden viele zusätzliche Informationen angezeigt, sehr hilfreich bei der Fehlersuche
+&#8220;set recurse&#8221; / &#8220;set norecurse&#8221;
+Rekursive oder nicht rekursive Anfragen machen
+&#8220;ls &lt;zone&gt;&#8221;, z.B. ls selflinux.de
+Zonentransfer machen, und diese auflisten
+ls kennt mehrere Optionen, z.B. &#8220;-t &lt;RR Type&gt;&#8221;</div></blockquote>
+<p>Beim Testen muß natürlich auch nach IP-Adressen gefragt werden, um zu testen, ob diese richtig zurück in Hostnamen übersetzt werden.</p>
+<p>Ein sehr gutes automatisches Tool für derartige Tests ist dnswalk, insbesondere bei großen Zones ist es sehr nützlich. Dieses erfordert Perl5, und das Modul Net::DNS. Dieses kann, falls erforderlich, mit der CPAN-Shell einfach und meist unproblematisch installiert werden (perl -MCPAN -e shell, nach der Konfiguration genügt in der Regel ein install Net::DNS).
+dnswalk findet man unter: en  http://www.cis.ohio-state.edu/~barr/dnswalk/ Beim Aufruf übergibt man mindestens die zu testende Zone (mit abschließendem Punkt). DNSwalk kann auch rekursiv delegierte Zones durchlaufen.</p>
+<p>Das Tool nslookup hat aber auch einige Nachteile, die das Debugging erschweren können. Beispielsweise versucht nslookup stets, zumindest in neueren Versionen, den Namen des DNS-Servers rückwärts aufzulösen. Dies ist oft sinnvoll, um DNS-Spoof-Angriffe zu erschweren. Bei Aufsetzen eines DNS-Systems funktioniert damit das Tool jedoch erst, wenn die Reverse-Zonen konfiguriert sind, und die DNS-IPs richtig auflösen. Um &#8220;nur&#8221; einfache Tests der Namen zu machen, kann man jedoch andere Tools verwenden, zum Beispiel die, die den normalen Resolver verwenden (beispielsweise zeigt auch ping die IP-Adresse an).</p>
+<p>bind kann auch sämtliche Anfragen via syslog(3) loggen. Dazu verwendet man das Dienstprogramm ndc (das Kontroll-Interface), um es einzuschalten:
+<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> $ ndc querylog</p>
+<p>Nun kann man verfolgen, welche Namen aufgelöst werden sollen, welche Server dazu verwendet werden, usw. Das ist auch bei Dial-On-Demand-Verbindungen hilfreich. Ein Blick in die Manpage von ndc verrät außerdem weitere Kommandos. Eines davon ist dumpdb:
+<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> $ ndc dumpdb</p>
+<p>Das sorgt dafür, dass die gesamte Datenbank in eine Datei geschrieben wird. Deren Name kann mit der &#8220;dump-file&#8221;-Direktive im &#8220;options {};&#8221;- Block gesetzt werden, ansonsten wird /var/tmp/named_dump.db verwendet. Diese Datei enthält alle autoritativen Zonendaten und den gesamten Cache, d.h. sie ist ziemlich groß (ein normaler Server produziert dabei einige tausend Zeilen!). Dort kann man z.B. die Zonen überprüfen, oder nach evtl. falsch gecachten Einträge suchen (wenn z.B. zu klären ist, welcher Server eine bestimmte Anfrage falsch beantwortet), in der Praxis wird das aber vermutlich die Ausnahme sein.</p>
+</div>
+<div class="section" id="spielzonen">
+<h3>Spielzonen<a class="headerlink" href="#spielzonen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nach RFC 2606 darf man &#8221;.test&#8221;, &#8221;.example&#8221;, &#8221;.localhost&#8221; und &#8221;.invalid&#8221; als TLD verwenden. Diese TLDs sind für entsprechenden Gebrauch reserviert, wobei &#8221;.example&#8221; für Beispiele und Dokumentationen und &#8221;.test&#8221; für Software-Tests empfolen ist. &#8221;.localhost&#8221; ist für 127.0.0.1 reserviert und sollte nicht anders verwendet werden.</p>
+</div>
+<div class="section" id="mehr-informationen-als-namen-und-adressen">
+<h3>Mehr Informationen als Namen und Adressen<a class="headerlink" href="#mehr-informationen-als-namen-und-adressen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Es gibt RR-Typen, die weniger technischen Aufgaben dienen, sondern allgemeine Informationen liefern. Zunächst gibt es den Typ HINFO, das steht für &#8220;Host Information&#8221;. Damit besteht die Möglichkeit, einen Maschinennamen (Hardware-Namen) und einen Betriebsystemnamen aufzunehmen. Historisch gesehen sollte es dazu dienen, um Dienste von den richtigen Maschinen zu verlangen (z.B. HTTP vom WWW-Server), deshalb sollten diese Werte Abkürzungen aus RFC 1700 (oder Nachfolger) sein, oder auch eigene Abkürzungen. In der Praxis findet dieser RR-Typ nicht die breite Verwendung.
+Die Verwendung dieses Records veröffentlicht Informationen, die die Sicherheit beeinflussen können, da ein potentieller Attacker mehr Informationen besitzt, die er gegen das Netz einsetzen kann.</p>
+<p>Ein Beispiel wäre:
+selflinux.zone</p>
+<p>sun12           IN HINFO &#8220;Sun Enterprise 450&#8221; &#8220;SunOS 5.6&#8221;</p>
+<p>Für die Dienstzuordnung dient auch der SRV-Record, der in RFC 2052 beschrieben wird. Dabei wird eine zu einem Namen Assigned Number (d.h. laut RFC 1700) verwendet, die als Prefix vor den Namen gesetzt wird. Sucht ein Client z.B. einen FTP-TCP/IP-Dienst in der Domain selflinux.dx, so würde er nach ftp.tcp.selflinux.de fragen. Ein solcher Datensatz enthält dann die folgenden Felder: Priorität (niedrige werden vorgezogen), Wichtung (größere Server bekommen höhere Nummern), Portnummer (auf der Zielmaschine), Zielmaschine. Ein Beispiel wäre:
+selflinux.zone</p>
+<p>nntp.tcp        IN SRV   10 0 119   sun12</p>
+<p>Dieser RR findet anscheinend in der Praxis kaum Verwendung.</p>
+<p>Eine weitere Art der Information ist der geographische Standort. Dieser kann mit einem LOC-RR dargestellt werden. Dieser enthält dabei geographische Breite, Länge und die Höhe über dem Meeresspiegel. Das Format des Datensatzes ist Grad, Minuten, Sekunden, N/S (Nord/Süd), Grad, Minuten, Sekunden (Komma erlaubt, z.B. &#8220;4.12&#8221;), W/E (West/East), Höhe (in Metern). Sekunden und Minuten dürfen weggelassen werden.
+Bei der Ermittlung der Werte hilft en  <a class="reference external" href="http://www.ckdhr.com/dns-loc/">http://www.ckdhr.com/dns-loc/</a> und sehr gut ist auch en  <a class="reference external" href="http://www.mapblast.com/">http://www.mapblast.com/</a> . Ein Beispiel (Der Ort sei Lat.: 52 56&#8217; (etwa 52,9) N, Long.: 12 49&#8217; (12,8) E:
+selflinux.zone</p>
+<p>selflinux.de    LOC    52 55 N    12 50 E    100m</p>
+<p>Dahinter kann dann noch die Größe, die vertikale, die horizontale Genauigkeit kommen (alle drei in Metern). Damit kann man z.B. die Genauigkeit senken, in dem man sie nur grob auf ein paar tausend Meter angibt, um Sicherheitsrisiken zu vermeiden. Näheres siehe RFC 1876.</p>
+<p>Diese Informationen können dann z.B. von graphischen traceroute-ähnlichen Programmen verwendet werden, die dann auf einer (Welt-)Karte die Routenwege einzeichnen.</p>
+</div>
+<div class="section" id="quickstart">
+<h3>Quickstart<a class="headerlink" href="#quickstart" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Es gibt noch einen ganz anderen, &#8220;unorthodoxen&#8221; Weg zu einem DNS-Server. Man schreibt einfach alle Daten in die /etc/hosts, und verwendet das Tool h2n. Dieses erzeugt aus der hosts Zonefiles und sogar ein Konfigurationsfile für bind. Es ist durchaus keine schlechte Idee, dieses Tool zum ersten Erstellen der Files zu verwenden, und diese dann weiterzupflegen. Der Autor hat es jedoch nie benutzt, so dass an dieser Stelle nicht näher darauf eingegangen werden kann.</p>
+</div>
+<div class="section" id="ein-produktivsystem">
+<h3>Ein Produktivsystem<a class="headerlink" href="#ein-produktivsystem" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Bis jetzt war alles Spaß. Für einen Produktionsserver sind noch einige Dinge zu beachten. Im folgenden ein paar Tips, die das Leben hoffentlich vereinfachen.</p>
+<p>Im Allgemeinen muß man natürlich vor allem sorgfältig arbeiten. Die meisten Leute sind es sowieso gewohnt, dass DNS-Einträge bis zu drei Tage dauern. Man sollte sich also Zeit lassen, nicht &#8220;eben mal auf die Schnelle ein paar RRs einfügen&#8221;. Man sollte immer Backups von den Datenbanken haben. Dabei bietet sich ein Revision Control System an, z.B. rcs oder cvs. Verwaltet man mehrere Zonen, so kann man darüber nachdenken, ein Script zu erstellen, das dnswalk für alle Zonen automatisch machen kann. Evtl. kann man den Primary direkt nach ausgesuchteten, sehr wichtigen Adressen per cron fragen, um im Fehlerfalle schnell eine EMail zu bekommen.
+Es ist auch zu beachten, dass sich unter Umständen Fehler erst nach einigen Tagen zeigen, da die Cachezeiten u.U. relativ groß sind.</p>
+<p>Es ist sinnvoll, die Option &#8220;check-names fail;&#8221; beim Primary zu setzen, um Fehler schnellstmöglich festzustellen, bevor ebtl. falsche Daten von Secondaries geholt werden. Im Extremfalle verwenden diese diese Option, und werfen die fehlerhafte Zone nach dem Transfer sofort weg!</p>
+<p>Um sicher zugehen, nach jeder Änderung die Serial richtig zu setzen, kann ein kleines Script verwendet werden. Dies erscheint sinnvoll, da die Serial eine wichtige Rolle spielt. Da man in der Regel das Datum im Format JJJJMMTT plus eine zweistellige laufende Nummer verwendet (falls man mehrmals am Tag etwas ändert), wird diese zwangsläufig immer größer. Ein großes Problem aber ist z.B., wenn man sich vertippt, und eine Ziffer zuviel verwendet. Dann hat man eine Serial, die so groß ist, dass sie nie &#8220;richtig&#8221; erreicht wird. Eine Serial zurückzusetzen, ist so einfach jedoch nicht möglich.</p>
+<p>Ein derartiges Script könnte z.B. nach der Zeichenkette &#8221;; Serial&#8221; suchen, die nach einem entsprechenden Datumscode steht (dieser Kommentar wurde auch hier in den Beispielen verwendet). Verwendet man dazu perl, könnte man zu folgender Lösung kommen:
+new_serial.pl</p>
+<p>#!/usr/bin/perl -pi.ser
+#Y2K stable - Perl RULES :) &lt;<a class="reference external" href="mailto:steffen&#37;&#52;&#48;dett&#46;de">steffen<span>&#64;</span>dett<span>&#46;</span>de</a>&gt;</p>
+<p>#Starten mit einem Bind Zone File als Paramter. Es wird ein
+#Backup erzeugt (Endung .ser), und alle Zeilen der Form
+#&#8221;JJJJMMTTNN ; Serial&#8221;, z.B. &#8220;2000012501 ; Serial&#8221; angepaßt
+#aufs aktuelle Datum bzw. die laufende Nummer erhöht.</p>
+<p>#start with bind zone files, it will replace serial of the form
+#&#8221;YYYYMMDD00 ; Serial&#8221;  i.e. &#8220;2000012501 ; Serial&#8221;
+#to new date or incrementing last two digits</p>
+<p>my ($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) =
+localtime(time);
+my $date = sprintf(&#8220;%4d%02d%02d&#8221;, 1900+$year, $mon+1, $mday);</p>
+<dl class="docutils">
+<dt>if (m/((20|19)d{6})(d{2})(s+;s+[Ss]erials+)$/) {</dt>
+<dd><p class="first">my $old_date = $1;
+my $old_serial = $3;
+my $rest = $4;
+my $serial = $old_serial;
+if ($old_date eq $date) {</p>
+<blockquote>
+<div>$serial++;</div></blockquote>
+<dl class="docutils">
+<dt>} else {</dt>
+<dd>$serial = 0;</dd>
+</dl>
+<p>}
+$serial = sprintf(&#8220;%02d&#8221;, $serial);
+s/${old_date}${old_serial}${rest}/${date}${serial}${rest}/;
+print STDERR &#8220;Serial found! Old: [$old_date $old_serial]  &#8211;&gt; &#8221;,</p>
+<blockquote class="last">
+<div>&#8220;Changed to [$date $serial]n&#8221;;</div></blockquote>
+</dd>
+</dl>
+<p>}</p>
+<p>Es mag Sinn machen, das so aktualisierte File von diesem Script auch gleich ins RCS/CVS einzuchecken bzw. zu &#8220;committen&#8221; (ci -l &lt;file&gt; / cvs commit &lt;file&gt; - letzteres geht in der Regel allerdings nicht als &#8220;root&#8221;).</p>
+</div>
+<div class="section" id="sinnvolle-soa-values">
+<h3>Sinnvolle SOA-Values<a class="headerlink" href="#sinnvolle-soa-values" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Viele machen sich kaum Gedanken um die Wahl günstiger SOA-Werte. Um Ressourcen zu sparen, sollten diese nicht zu klein sein. Hohe TTLs haben dafür den Nachteil, dass im Falle einer Umstellung viel Zeit vergeht, bis die neuen Namen verteilt sind. Da man oft schon im vorraus weiß, wann eine solche Umstellung beginnt, kann man z.B. drei Tage vorher die TTL für die betroffenen RRs senken, z.B. von acht auf zwei Stunden. Einen Tag nach der Umstellung erhöht man sie einfach wieder (Erhöhung der Seriennummer nicht vergessen).</p>
+<p>Bei sehr statischen Zonen kann man das Refresh auch relativ hoch ansetzen, und auch, wenn das Notify von allen Secondaries unterstützt und in der Zone eingesetzt wird. Hier sind dann durchaus Werte von 24 Stunden sinnvoll. Kann man Notify nicht zu allen Secondaries einsetzen, muß man allerdings für einen zügigen Betrieb diesen Wert senken, z.B. auf drei Stunden.</p>
+<p>Das Expire sollte immer hoch angesetzt werden. Kann ein Secondary seinen Primary nicht erreichen, wird nach diesem Zeitraum die Zone ungültig, d.h. sie wird nicht mehr beantwortet. Bei einem geringen Expire, z.B. nur zwei Tage, könnte ein Ausfall eines einzigen Servers, nämlich des Secondaries, über das Wochenende das DNS-System lahmlegen, ein sehr unangenehmer Gedanke. Deshalb sollte man als absolutes Minimum eine Woche setzen!</p>
+</div>
+<div class="section" id="secondaries-betreiben">
+<h3>Secondaries betreiben<a class="headerlink" href="#secondaries-betreiben" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Stellt man DNS für eine Zone, so sind die Vorschriften des Betreibers der übergeordneten Zone zu beachten. Betreibt man z.B. eine &#8220;de.&#8221;-Domain, wie &#8220;selflinux.de.&#8221;, so gelten die Vorschriften des de DENIC. Eine sehr sinnvolle ist z.B., dass eine Zone über mindestens zwei, über verschiedene Wege zu erreichende authorative Server verfügen muß.</p>
+<p>Normalerweise hat man einerseits den Primary und andererseits braucht man mindestens einen Secondary in einem anderen Netzwerk. Für einen guten ISP sollte es kein Problem darstellen, einen Secondary zu betreiben. Es scheint auch eine gute Idee zu sein, zwei Secondaries vom ISP machen zu lassen, was diesem technisch keine Probleme bereiten sollte, da er vermutlich auch selbst Zonen bedient. Damit kann man diese beiden als NS-Einträge verwenden, so dass er Primary gar nicht gefragt wird. Das ermöglicht, die Firewall entsprechend scharf einzustellen.</p>
+<p>DNS ist sicherheitsempfindlich. Gefälschte Datenbanken können es einem Eindringling z.B. ermöglichen, auf NFS- Shares zuzugreifen, wenn er die entsprechende in-addr.arpa.-Zone modifiziert. Auch mit dem Verändern der lokalen DNS-Server kann er Sicherheitslücken erzeugen, so z.B. Anfragen zu einer anderen Maschine umleiten, und so z.B. Passwörter stehlen, von einer Vielzahl von Denial-Of-Service-Attacken ganz zu schweigen.</p>
+<p>Betreibt man selbst Secondaries, so sollten auf diesen Maschinen möglichst wenig andere Dienste laufen (das gilt selbstverständlich ganz besonders für Primaries!).</p>
+<p>Secondaries sollten &#8220;check-names warn;&#8221; verwenden, um einen Ausfall durch einen Tippfehler oder ähnliches möglichst zu verhindern.</p>
+</div>
+<div class="section" id="zugriffsbeschrankungen-konfigurieren">
+<h3>Zugriffsbeschränkungen konfigurieren<a class="headerlink" href="#zugriffsbeschrankungen-konfigurieren" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Nach Möglichkeit sollte der Zugriff so weit wie möglich beschränkt werden. Verwendet man kein dynamisches Update, so sollte man die option &#8220;allow-update { none; };&#8221; verwenden, ansonsten die IP-Adresse von jeder berechtigten Maschine aufzählen. Steht diese Option im &#8220;options {};&#8221;-Block, so gilt sie für alle Zones. Hat eine Zone einen eigenen Eintrag, so überschreibt dieser den globalen im &#8220;Options {};&#8221;-Block stehenden.</p>
+<p>Ein Primary, der nirgendwo als &#8220;NS&#8221;-Record auftritt, wird normalerweise nie Anfragen erhalten, außer Zonetransfers von seinen Secondaries. Deshalb kann man in diesem Falle die Option &#8220;allow-query { none; };&#8221; setzen, diese darf ebenfalls im &#8220;options {};&#8221;-Block stehen, und damit global gelten.</p>
+<p>Sehr häufig erlauben die Server Zonetransfers nur ihren Secondaries. Damit erlaubt auch ein Secondary (der von keinem als Primary verwendet wird, theoretisch lassen sich die Server aber kaskadieren) überhaupt keine Zonetransfers, höchstens zu ein, zwei Maschinen zu Testzwecken (wo z.B. dnswalk läuft, das Zonetransfres benötigt). Das konfiguriert man mit der Option &#8220;allow-transfer { none; };&#8221;, bzw. bei Primaries durch Aufzählen der IP-Adressen der Secondaries (und evtl. Testhosts), z.B. &#8220;allow-transfer { 1.2.3.4; 1.2.3.5; };&#8221;. Anstatt einzelner Adressen können selbstverständlich auch Netzwerke angegeben werden.</p>
+<p>bind (ab Version 8) unterstützt auch ACLs (Access Control Lists), was die Übersicht erhöht. Hier kann man symbolische Namen für IP Adressen und Netzwerke vergeben, ein Beispiel:
+/etc/named.conf</p>
+<p>acl fremde_clients { !1.2.3/24; any; };    // alle, außer 1.2.3.0/24
+acl locals  { 1.2.4.0/24; };               // eigenes Netz
+acl transfer { 1.2.10.53; 1.2.11.53; };    // Secondaries
+acl clients { locals; transfer; };         // Resolver
+acl dhcp { 1.2.4.254; };                   // DHCP-Server</p>
+<p>allow-transfer { transfer; };
+allow-query { clients; };
+allow-update { dhcp; };</p>
+<p>Das ist dann besser lesbar.</p>
+<p>Dabei müssen die ACLs natürlich vor deren Verwendung definiert werden. Sollen diese bereits im &#8220;options {};&#8221;-Block verwendet werden, müssen diese davor (also außerhalb dieses Blockes) definiert werden. Finden die ACLs in den &#8220;zone {};&#8221;-Blöcken Anwendung, so können nach dem &#8220;options {};&#8221;-Block (und vorzugsweise vor dem ersten &#8220;-zone {};&#8221;-Block) definiert werden. Die Struktur sähe z.B. so aus:
+/etc/named.conf</p>
+<p>acl transfer { 1.2.10.53; 1.2.11.53; };    // Secondaries</p>
+<dl class="docutils">
+<dt>options {</dt>
+<dd>allow-transfer { transfer; };</dd>
+</dl>
+<p>};</p>
+<p>acl locals  { 192.168.0.0/16; };           // eigenes Netz</p>
+<dl class="docutils">
+<dt>zone &#8220;my.play.net.de&#8221; {</dt>
+<dd>allow-query { locals; };
+};</dd>
+</dl>
+<p>Damit könnte man dann eventuell eine interne, private Zone für private IP-Adressen auf dem normalen DNS-Server konfigurieren, aber den Zugriff aus dem Internet verbieten. Ansonsten kann es zu Störungen fremder Clienten führen, da Namen u.U. falsch aufgelöst werden könnten.</p>
+</div>
+<div class="section" id="betrieb-hinter-einer-firewall">
+<h3>Betrieb hinter einer Firewall<a class="headerlink" href="#betrieb-hinter-einer-firewall" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Hierbei gibt es zwei zu trennenden Dinge: DNS-Server, die Clientanfragen bearbeiten, und Autoritative-Server. Man kann diese auf getrennten Maschinen unterbringen, denn DNS-Server, die Clientanfragen beantworten, sind von Denial-Of-Service Attacken nicht so stark betroffen, wie Authoritative-Server. Mit der Option</p>
+<blockquote>
+<div>query-source address * port 53;</div></blockquote>
+<p>kann man bind anweisen, alle Anfragen von Port 53 aus zu machen. Damit kann man die Firewall für die hohen Ports (&gt;1023) auch noch sperren. Zusätzlich kann man auch die Zieladdressen begrenzen, wenn man den Server &#8220;forward-only;&#8221; konfiguriert. Dann gibt man ihm z.B. drei Forwarder, und erlaubt nur Verbindungen zu diesen. Diese Verbindungsregeln müssen für UDP und TCP gelten, da bind bei Anfragen, die nicht mehr in ein einzelnes UDP-Paket passen, TCP verwendet. Selbstverständlich sollte die Firewall Regelverstöße loggen.</p>
+<p>Betreibt man einen Primary, und läßt die Secondaries vom ISP machen, so muß mit diesem abgesprochen werden, von welchen Maschinen aus welche Art von Zugriff zu erlauben ist. Einige verwenden z.B. ping für Tests, außerdem wird evtl. von einer anderen Maschine zu Testzwecken ein Zonetransfer probiert, bevor der Eintrag in den &#8220;richtigen&#8221; Server gemacht wird. Erhält man ungenügende Auskunft, so erstellt man eine Firewallregel, die alle Anfragen durchläßt, aber dabei loggen (Es reicht aus, Pakete mir gesetztem SYN-Bit zu loggen, allerdings macht das in der Praxis selten Sinn, da zu verbotenen Ports sowieso nur SYN-Pakete kommen werden, und der Aufwand für die zusätzlichen Regeln [die für TCP] kaum Nutzen bringt, sofern man keine &#8220;ACCEPTS&#8221; loggt). Dann kann man das Logfile analysieren, und erkennt, welche Maschinen Daten austauschen.</p>
+<p>Leider kann man DNS nicht durch den rinetd redirecten, da dieser kein UDP unterstützt.</p>
+<p>Da mindestens ein Slave außerhalb des Netzes steht, muß also mindestens dieser durch die Firewall dürfen. Um das testen zu können, sollte immer ein zusätzlicher Host erlaubt werden, also sowohl durch die Firewall dürfen, als auch einen Zonentransfer machen dürfen. Dann kann man nslookup auf diesem Host verwenden, um mit ls &lt;Zonenname&gt; einen Test-Zonetransfer durchzuführen.</p>
+<p>Beim ersten Zugriff der Secondaries sollte man immer das Firewall- Log im Auge behalten, da die Provider gern einen Host, der Zugriff benötigt, vergessen. Das ist z.B. die Testmaschine, an dem die Zonen geprüft werden. So sieht man das Problem sofort, und kann eine entsprechende Regel evtl. schnell einfügen.</p>
+</div>
+<div class="section" id="classless-routing-cidr">
+<h3>Classless Routing (CIDR)<a class="headerlink" href="#classless-routing-cidr" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Bei der klassischen Struktur des Internet gab es als kleinstes Netzwerk ein &#8220;Class C&#8221;-Netz mit 8 Bit Hostanteil, also für 254 Maschinen. Da viele kleinere Firmen existieren, wäre das eine große Verschwendung von IP-Adressen, deshalb vergibt man auch Teilnetze davon (z.B. mit 4-7 Bit Hostanteil, also /25 bis /29 Netze mit 6 bis 126 nutzbaren Adressen). Diese Technik nennt man CIDR (Classless Internet Domain Routing - Klassenloses Internetrouting), weil man nicht mehr an Klasse-A/B/C-Netze gebunden ist, und ein klassisches A-Netz z.B. wie 256 B-Netze routen und vergeben kann.</p>
+<p>Dabei tut sich dann ein Problem auf: die Auflösung der IP-Adressen in Namen in der in-addr.arpa Zone. Da Delegation ja nur an den &#8220;Punkten&#8221;, also an der Bytegrenze einer IP-Adresse möglich ist, muß das C-Netz, das zu verschiedenen Teilen von verschiedenen Firmen verwendet wird, vom Provider verwaltet werden, da erstmal keine Delegation möglich ist. Das ist dann unpraktisch, da eine Firma jede Veränderung über diesen Umweg durchführen muß.</p>
+<p>Mit einem Trick, der auf ein Newsposting von G.A. Herrmannsfeldt zurückgeht (und inzwischen in RFC 2317 beschrieben ist), lassen sich die Adressen eines solchen Teilnetzes dann aber doch delegieren. Die Idee dabei ist, dass in der eigentlichen in-addr.arpa die Adressen CNAME-Records sind (also Aliasnamen), die auf andere Zonen zeigen. Diese anderen Zonen lassen sich dann &#8220;delegieren&#8221;, bzw. werden dort und dafür die entsprechenden Nameserver eingesetzt. Im klassischen Falle sähe die unpraktische Zone beim Provider ja so aus (zu den Netzen 192.168.2.0/30, 192.168.2.4/30 usw.):
+2.168.192.zone</p>
+<p>$TTL 1d</p>
+<dl class="docutils">
+<dt>2.168.192.in-addr.arpa. IN SOA pri-ns.selflinux.de. admin.selflinux.de. (</dt>
+<dd><p class="first">2000012501 ; Serial (Seriennummer)
+3H         ; Refresh (Aktualisierung)
+1H         ; Retry (neuer Versuch)
+1M         ; Expire (ungültig nach)
+1D )       ; min. TTL (mindeste Gültigkeit)</p>
+<blockquote class="last">
+<div>IN  NS          ns1.selflinux.de.
+IN  NS          ns2.selflinux.de.</div></blockquote>
+</dd>
+</dl>
+<p>1               IN  PTR         lisa.simpson.net.
+2               IN  PTR         bart.simpson.net.</p>
+<p>5               IN  PTR         ernie.sesam.org.
+6               IN  PTR         bert.sesam.org.</p>
+<p>usw. Nun möchte man das also über CNAMES in andere Zonen zeigen lassen. Als Namen für diese Zone könnte man die Netzwerknummer verwenden (also 0.2.168.192.in-addr.arpa und [kurz] &#8220;4&#8221; - die Telekom macht das z.B. so), oder auch noch die Broadcastaddressen dazunehmen (also &#8220;0-3&#8221;), oder die Netzmaske (&#8220;0-3&#8221;, oder auch &#8220;0/30&#8221;, was genau genommen nicht verboten ist, da es sich hierbei nicht um einen Hostnamen handelt, wäre der &#8220;/&#8221; erlaubt), also erhält man z.B. (nur diese Records):
+2.168.192.zone</p>
+<p>1               IN  CNAME       1.0-3.2.168.192.in-addr.arpa.
+2               IN  CNAME       2.0-3.2.168.192.in-addr.arpa.</p>
+<p>5               IN  CNAME       5.4-8.2.168.192.in-addr.arpa.
+6               IN  CNAME       6.4-8.2.168.192.in-addr.arpa.</p>
+<p>Der Zone 0-3.2.168.192.in-addr.arpa. müssen dann natürlich noch NS-RRs hinzugefügt werden. Diese müssen in der zu &#8220;0-3&#8221; übergeordneten Zone eingetragen werden - also in der, in der auch die CNAMES stehen. Das ist günstig, man erhält zusätzlich z.B.:
+2.168.192.zone</p>
+<p>0-3.2.168.192.in-addr.arpa. IN NS ns1.simpson.net.
+0-3.2.168.192.in-addr.arpa. IN NS ns2.simpson.net.</p>
+<p>In diesen delegierten Zonen werden dann vom DNS-Admin von simpson.net die PTR Records untergebracht. Das sieht dann z.B. so aus:
+0-3.2.168.192.zone</p>
+<p>$TTL 1d</p>
+<dl class="docutils">
+<dt>0-3.2.168.192.in-addr.arpa. IN SOA pri-ns.simpson.net. admin.simpson.net. (</dt>
+<dd><p class="first">2000012501 ; Serial (Seriennummer)
+3H         ; Refresh (Aktualisierung)
+1H         ; Retry (neuer Versuch)
+1M         ; Expire (ungültig nach)
+1D )       ; min. TTL (Mindestgültigkeit)</p>
+<blockquote class="last">
+<div>IN NS ns1.simpson.net.
+IN NS ns2.simpson.net.</div></blockquote>
+</dd>
+</dl>
+<p>1               IN  PTR         lisa.simpson.net.
+2               IN  PTR         bart.simpson.net.</p>
+<p>Es ist auch nicht zwingend notwendig, die &#8220;erfundenen&#8221; neuen Zones unter die in-addr.arpa.-Zone zu legen, man könnte auch 0-3.simpson.net. verwenden, oder gar arpa.simpson.net. Das muß je nach Fall entschieden werden. Diese Entscheidung liegt beim übergeordneten Provider.</p>
+<p>Leider kann man dieses Verfahren nicht mehrfach anwenden, um weiter zu delegieren, da in diesem Fall ein CNAME auf einen CNAME zeigt, was nicht sein soll (und was damit zu Problemen führen kann).</p>
+</div>
+<div class="section" id="umgang-mit-storungen">
+<h3>Umgang mit Störungen<a class="headerlink" href="#umgang-mit-storungen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Schäden durch DNS-Serverausfälle lassen sich durch redundante Systeme weitgehend vermeiden. Clienten sind so zu konfigurieren, dass sie mehrere Server kennen. Fällt ein solcher Server aus (der ja ein caching-only Nameserver sein kann, also einer, der für keine Zone authoritative ist), wechselt der Resolver einfach auf einen anderen, bis auf etwas Zeitverlust kein weiterer Nachteil. Die Reihenfolge der Server ist von Client zu Client zu mischen, um Lastverteilung zu erreichen.</p>
+<p>Es sind ausreichend viele Secondaries bereitzustellen, ansonsten wird der Betrieb u.U. durch Überlast gestört. Verwenden lokale Clienten andere DNS-Server, so wird das u.U. spät bemerkt. Fällt ein Secondary aus, stellt das kurzfristig kein allzu großes Problem dar, solange noch mindestens ein Secondary verfügbar ist. Dabei muß vermieden werden, dass in diesem Falle der oder die verbleibenden Secondaries überlastet werden.</p>
+<p>Fällt ein Primary aus, und ist dieser nur Primary, aber keiner mit einem NS-RR aufgeführter (auch hidden primary; genannt), so verläuft der Ausfall vollkommen transparent, bis die Secondaries die Zone expiren (also wegwerfen), was so um die zwei bis sechs Wochen dauern sollte (je nach Konfiguration der SOA-Records der Zone). Nach dieser Zeit ist die Zone jedoch vollkommen unbekannt! In der Praxis ist das jedoch mehr als genug Zeit, um einen neuen Server aufzusetzen, ein Backup einzuspielen, und so notfalls einfach den kompletten Server zu wechseln.</p>
+<p>Da DNS auf verteilten Datenbanken beruht, muß bei einer Kontrolle bzw. beim Debugging beachtet werden, welcher Server (welcher Secondary, welcher Forwarder etc.) welche Antwort gibt. So kann es z.B. sein, dass ein Secondary fehlerhaft arbeitet. Ein Test kann aber die richtige Antwort liefern, falls dieser zufällig nicht gefragt wird. Diese Antwort wird dann evtl. noch von einem Forwarder gecached. Deshalb sollte man bei Tests die Secondaries einen nach dem anderen direkt fragen. Widersprechen sich z.B. zwei Secondaries, können die Fehler diffus und versteckt auftreten.</p>
+<p>Haben sich die Zonendateien in letzter Zeit geändert, ist es auch möglich, dass ein Secondary den Transfer noch nicht durchführen konnte. Deshalb muß als erstes geprüft werden, ob die SOA-Serial überhaupt die aktuelle ist. Eventuell gibt es Probleme mit der Notification (wenn alles funktioniert, sollten die aktualisierten Zonen in wenigen Minuten den Secondaries bekannt sein).</p>
+<p>Es gibt auch Fehler, die eigentlich in anderen Zonen liegen, als in der sie bemerkt werden. So ist es zum Beispiel denkbar, dass ein NS-Record fehlerhaft scheint, in Wirklichkeit aber der dazugehörige A-Record aus der Zone, zu der der DNS-Server gehört, fehlerhaft ist oder nicht existiert. Diese Zone wird dann eventuell auch noch von anderen verwaltet...</p>
+</div>
+<div class="section" id="root-rechte">
+<h3>Root-Rechte<a class="headerlink" href="#root-rechte" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Häufig wird BIND unter root-Rechten gestartet. Das ist natürlich ein Sicherheitsrisiko und sollte vermieden werden. Bei aktuellen Versionen ist das sehr einfach. Zunächst müssen eine eigene Gruppe und ein eigener Benutzer eingerichtet werden. Unter Linux kann man diese ganz einfach mit den folgenden beiden Kommandos anlegen:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # groupadd named
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # useradd -d /var/named -g named named</p>
+<p>Nun muß das Verzeichnis /var/named an diesen Benutzer &#8220;verschenkt&#8221; werden:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # chown -R named:named /var/named</p>
+<p>Eigentlich besteht kein Grund, eigene, primäre Zonenfiles (also die, für die der Server authorativ und kein Secondary ist) zu verschenken. bind muß aber in der Lage sein, sekundäre Zonefiles zu schreiben, nachdem sie vom Primary geladen wurden. Dazu kann man aber auch ein Unterverzeichnis verwenden, und nur dieses schreibbar machen. Dann kann im Falle des Mißbrauches der Benutzerkennung (z.B. durch einen erfolgreichen Angriff) kein primäres Zonefile verändert werden.</p>
+<p>Nun muß der Startaufruf um zwei Parameter erweitert werden, damit bind weiß, das er unter anderen Benutzerrechten laufen soll:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # /usr/sbin/named -u named -g named</p>
+<p>Nach der Initialisierung werden dann die root-Rechte abgelegt. Beim Start sind diese natürlich noch kurz erforderlich, da sonst der Port 53 nicht verwendet werden könnte (privilegierte Ports dürfen nur von root verwendet werden).</p>
+</div>
+<div class="section" id="chroot-umgebung">
+<h3>Chroot-Umgebung<a class="headerlink" href="#chroot-umgebung" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Um es noch sicherer zu bekommen, kann man bind auch in einer chroot-Umgebung laufen lassen. Das macht allerdings etwas mehr Arbeit, denn alle von bind benötigten Dateien müssen dann unterhalb dieses chroot-Verzeichnisses liegen. Dazu sind dann einige Schritte notwendig. Vorallem muß bind als eigener User laufen, da chroot mit Root-Rechten nicht sinnvoll funktioniert.</p>
+<p>Zunächst muß einen minimale Verzeichnisstruktur erzeugt werden, die bind verwenden kann. Sie kann z.B. unter /var/named.chroot erzeugt werden. Dazu folgendes Kommando (als root!):
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # mkdir -p /var/named.chroot/etc
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # mkdir -p /var/named.chroot/var/named
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # mkdir -p /var/named.chroot/var/run
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # mkdir -p /var/named.chroot/bin
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # mkdir -p /var/named.chroot/usr/sbin
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # mkdir -p /var/named.chroot/dev
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # mkdir -p /var/named.chroot/lib</p>
+<p>Nun müssen die Konfigurationsdatei und die Datenbanken kopiert werden:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # cp -p /etc/named.conf /var/named.chroot/etc/
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # cp -pR /var/named /var/named.chroot/var</p>
+<p>Nun sind die Rechte der Dateien zu korrigieren:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # chown -R root:root /var/named.chroot/
+root&#64;linux # chmod 755 /var/named.chroot
+root&#64;linux # chmod 755 /var/named.chroot/*
+root&#64;linux # chown -R named:named /var/named.chroot/var/named/
+root&#64;linux # chown -R named:named /var/named.chroot/var/run/
+root&#64;linux # chmod 644 /var/named.chroot/etc/*
+root&#64;linux # chmod 755 /var/named.chroot/lib/*
+root&#64;linux # chmod 755 /var/named.chroot/usr/sbin
+root&#64;linux # chmod 755 /var/named.chroot/usr/sbin/*</p>
+<p>Normalerweise verwendet man dynamisch gelinkte Binärdateien, und so müssen die Bibliotheken kopiert werden. Zuerst muß man schauen, welche Libs benötigt werden:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # ldd <cite>which named</cite></p>
+<p>Eine Ausgabe könnte sein:
+libc.so.6 =&gt; /lib/libc.so.6 (0x4001d000)
+/lib/ld-linux.so.2 =&gt; /lib/ld-linux.so.2 (0x40000000)</p>
+<p>Es kann bei anderen Unix-Derivaten sein, dass das Kommando ldd oder which nicht verfügbar ist. Dann muß ein anderer Weg gefunden werden.</p>
+<p>Diese Dateien werden kopiert:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # cp -p /lib/libc.so.6 /var/named.chroot/lib/
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # cp -p /lib/ld-linux.so.2 /var/named.chroot/lib/</p>
+<p>Dann benötigt BIND die Gerätedatei /dev/null. Hat man ein modernes /bin/cp, so reicht ein:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # cp -a /dev/null /var/named.chroot/dev/</p>
+<p>andernfalls muß man das Gerät neu anlegen:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # mknod /var/named.chroot/dev/null c 1 3</p>
+<p>(Die konkreten Parameter können wiederum bei anderen Unix-Derivaten abweichen).</p>
+<p>BIND benötigt die Datei /etc/localtime:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # cp /etc/localtime /var/named.chroot/etc/</p>
+<p>und natürlich seine eigenen /etc/passwd-Einträge. Diese können z.B. mit folgenden Einzeilern erzeugt werden:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # cat /etc/passwd | grep &#8216;named&#8217; &gt; /var/named.chroot/etc/passwd
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # cat /etc/group | grep &#8216;named&#8217; &gt; /var/named.chroot/etc/group</p>
+<p>Wenn bind über syslogd(8) loggt, und nicht nur über eigene logfiles, muß hier noch weiter angepaßt werden. Normalerweise greift BIND auf /dev/log zu. Diese Datei ist nun aber nicht mehr erreichbar. syslogd muß also eine Datei zusätzlich verwenden, die erreichbar ist. Ein halbwegs moderes syslogd kennt dazu den Parameter &#8220;-a&#8221;, der nun beim Start des Syslogdeamons angegeben werden muß. Dazu muß u.U. das Startscript angepaßt werden. Bei einer SuSE-Distribution kann man aber auch den Parameter SYSLOGD_PARAMS in /etc/rc.config verwenden:
+/etc/rc.config</p>
+<p>SYSLOGD_PARAMS=&#8221;-a /var/named.chroot/dev/log&#8221;</p>
+<p>Sonst muß der &#8220;-a&#8221;-Parameter an der entsprechenden Stelle im Startscript hinzugefügt werden. Danach ist syslogd neu zu starten. dabei sollte syslogd nun diese Datei erzeugt haben. Leider neigen scheinbar einige syslogd-Versionen dazu, hier Bugs zu besitzen, und nur noch diesen Socket auzuwerten oder dergleichen. Ein Update sollte dem abhelfen.</p>
+<p>Soll bind nicht über syslogd loggen, sondern in Dateien schreiben, kann folgendes konfiguriert werden:
+/etc/named.conf</p>
+<p>logging {</p>
+<blockquote>
+<div><dl class="docutils">
+<dt>channel file_log {</dt>
+<dd>file &#8220;named.log&#8221;;
+severity info;</dd>
+</dl>
+<p>};</p>
+<dl class="docutils">
+<dt>channel file_debug {</dt>
+<dd>file &#8220;named.run&#8221;;
+severity dynamic;</dd>
+</dl>
+<p>};</p>
+<dl class="docutils">
+<dt>category default {</dt>
+<dd>file_log; file_debug;</dd>
+</dl>
+<p>};</p>
+</div></blockquote>
+<p>};</p>
+<p>Nun müssen die Programme selbst kopiert werden, mindestens named und named-xfer (mit which named kann herrausgefunden werden, wo sich diese befinden). Dabei muß beachtet werden, dass der Pfad zu named-xfer &#8220;hardcoded&#8221; im Binärprogramm steht. Dieser Pfad muß dann um den chroot-Pfad erweitert werden, damit das Programm von bind gefunden wird. Liegen named und named-xfer z.B. in /usr/sbin (wie bei SuSE), so müssen sie nach /var/named.chroot/usr/sbin kopiert werden:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # cp /usr/sbin/named* /var/named.chroot/usr/sbin/</p>
+<p>Man kann natürlich auch in ein anderes Verzeichnis kopieren, muß dann aber in der Konfigurationsdatei den Pfad entsprechend angeben, z.B.:
+/etc/named.conf</p>
+<dl class="docutils">
+<dt>options {</dt>
+<dd>...
+named-xfer &#8220;/bin/named-xfer&#8221;;</dd>
+</dl>
+<p>};</p>
+<p>Dabei ist wieder zu beachten, dass die benötigten Libs geladen werden können. Der hier angegebene Pfad ist natürlich um das Chroot-Verzeichnis gekürzt anzugeben, da BIND dann von dieser nichts mehr sieht, also unter /bin etwas anderes versteht, als ein nicht ge-chrooteter Prozeß.</p>
+<p>Der Startaufruf für BIND muß nun nur noch um den Parameter &#8220;-t&#8221; erweitert werden:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # /usr/sbin/named -u named -g named -t /var/named.chroot</p>
+<p>Nun sollte überprüft werden, ob Anfragen noch richtig beantwortet werden, und ob ein Zonetransfer funktioniert.</p>
+<p>Da (ein älteres) ndc das pid-File in /var/run erwartet, und nicht in /var/named.chroot/var/run, kann hier ein Symlink helfen, der vom Startscript nach dem Starten jeweils erzeugt wird:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # ln -s /var/named.chroot/var/run/named.pid /var/run/</p>
+<p>Beim Beenden kann der Link dann einfach gelöscht werden:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # rm -f /var/run/named.pid</p>
+<p>Es ist zu beachten, dass ndc restart und ndc start nicht mehr verwendet werden sollten, da hier die Parameter aus unserem Startscript nicht verwendet werden! Dann wird bind unter root-Rechten ohne chroot ausgeführt!
+Modernere ndc-Versionen handhaben die Verbindung anders. Es wird ein control channel verwendet, defaultmäßig ist das /var/run/ndc. Das kann über Parameter geändert werden. Ein modernes ndc kann aber auch über Parameter dazu veranlaßt werden, ein pid-File zu verwenden. Diese Defaults können beim Compilieren allerdings geändert werden. Sonst lautet der Aufruf von ndc wie folgt:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # ndc -c /var/named.chroot/var/run/ndc</p>
+<p>Es ist wohl eine gute Idee, hierauf einen Shell-&#8220;Alias&#8221; zu setzen, z.B. in ~/.profile:
+~/.profile</p>
+<p>alias ndc=&#8217;ndc -c /var/named.chroot/var/run/ndc&#8217;</p>
+<p>Es sollte mindestens ein reload probiert werden, um zu sehen, ob z.B. bind jetzt noch seine Konfigurationsdatei lesen kann. Beim ersten Start funktioniert das immer, da vor dem Setzen der chroot Umgebung noch root-Rechte vorhanden sind, was bei reload ja nicht mehr der Fall ist. Gegebenenfalls sind die Rechte zu kontrollieren. Hierbei gilt, bind darf ruhig viel (alles) lesen können, aber nur die Slave-Zones schreiben (also darf dem User nur wenig gehören - nur das Slave-Zonen-Verzeichnis).</p>
+</div>
+<div class="section" id="versionen">
+<h3>Versionen<a class="headerlink" href="#versionen" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Da bind leider immer wieder Sicherheitslücken enthält, ist es ein beliebter Angriffspunkt für Angreifer. Da zu vielen bind-Versionen Sicherheitslücken bekannt sind, kann eine Angreiferin auf die Idee kommen, einfach die Version abzufragen, und dann kann sie die nun bekannten Sicherheitslücken ausnutzen.
+Deshalb mag es günstig sein, die Versionsnummer nicht zu verraten, um der Angreiferin das Leben etwas schwerer zu machen.</p>
+<p>Die Version läßt sich erfahren, wenn man einen BIND-Server nach &#8220;version.bind&#8221;, Type TXT, in der Klasse CHAOS fragt. Das geschieht z.B. mit folgendem Kommando:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # dig &#64;&lt;server&gt; version.bind TXT CHAOS</p>
+<p>Eine Antwort sieht dann (gekürzt) so aus:
+VERSION.BIND.           0S CHAOS TXT    &#8220;8.1.2&#8221;</p>
+<p>Man kann dazu natürlich auch nslookup verwenden:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # nslookup -class=CHAOS -query=txt version.bind.</p>
+<p>Neuere BIND-Versionen kennen eine Konfigurationsoption, um die dabei angezeigte Zeichenkette zu setzen. Man kann sich damit dann eine Version 10.100.1000 basteln, oder auf etwas ganz anderes setzen Das kann dann so aussehen:
+/etc/named.conf</p>
+<dl class="docutils">
+<dt>options {</dt>
+<dd>...
+version &#8220;[Secured]&#8221;;</dd>
+</dl>
+<p>};</p>
+<p>Dann wird mit dem Kommando das auch angezeigt:
+VERSION.BIND.           0S CHAOS TXT    &#8220;[Secured]&#8221;</p>
+<p>Und Rückschlüsse auf die Version sind so nicht mehr möglich. Diese Änderung kann natürlich auch gemacht werden, in dem der RR &#8220;version.bind&#8221; in einer Zone gesetzt wird. Dabei können dann, wie für jede andere Zone auch, ACL-Berechtigungen konfiguriert werden. Diese Zone wird so konfiguriert, wie auch die Zonen der normalen Namen der Klasse IN. Dazu benötigt man z.B. folgenden Eintrag in der Konfigurationsdatei:
+/etc/named.conf</p>
+<dl class="docutils">
+<dt>zone &#8220;bind&#8221; CHAOS {</dt>
+<dd><p class="first">type master;
+file &#8220;bind.zone&#8221;;
+allow-query { none; };     //Zugriff verweigern
+allow-transfer { none; };  //damit AXFR auch nicht geht.</p>
+<blockquote class="last">
+<div>};</div></blockquote>
+</dd>
+</dl>
+<p>Natürlich kann man auch Ausgewählten den Zugriff erlauben. Nun muß noch die Datenbank selbst angelegt werden. Sie kann folgenden Inhalt haben:
+bind.zone</p>
+<dl class="docutils">
+<dt>bind. CHAOS SOA pri-ns.selflinux.de. admin.selflinux.de. (</dt>
+<dd><p class="first">2000012501 ; Serial (Seriennummer)
+3H         ; Refresh (Aktualisierung)
+1H         ; Retry (neuer Versuch)
+100D       ; Expire (ungültig nach)
+1D )       ; min. TTL (Mindestgültigkeit)</p>
+<p class="last">CHAOS   NS      dns</p>
+</dd>
+</dl>
+<p>version CHAOS   TXT     &#8220;[Secured]&#8221;</p>
+</div>
+<div class="section" id="wachstum">
+<h3>Wachstum<a class="headerlink" href="#wachstum" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Wichtig ist vor allem, Störungen schnell zu erkennen und so beseitigen zu können. Auch die Auslastung in Spitzenzeiten ist zu überwachen. Wird diese zu hoch, kann man über eine Delegation von Teilen der Domain nachdenken, oder weitere Secondaries einsetzen. Sind cachende Server überlastet, so ist es aufwendiger, neue einzusetzen, da diese ja bei den Clienten konfiguriert werden müssen. Eventuell ist aber die Hardware ausreichend erweiterbar (vielleicht hilft auch erstmal ein Hauptspeicherausbau).</p>
+<p>Um einen reibungslosen Betrieb zu erhalten, ist es wichtig, den Überblick zu haben. Deshalb sollte man sich die Zeit nehmen, Adresspläne zu pflegen, Topologiediagramme aktuell zu halten und Änderungen mit anderen Beteiligten zu synchronisieren und abzusprechen. Normalerweise sollte ein DNS-Admin wissen, wer für eine bestimmte Maschine verantwortlich ist, und der weiß, wo sie physikalisch steht. Im Idealfall erfährt der DNS-Admin auch, wenn Maschinen aus dem Betrieb genommen werden. Leider werden dessen IP-Adressen teilweise einfach stillschweigend für neue Maschinen verwendet. Erstmal kein Problem. Aber in drei Jahren vielleicht...</p>
+</div>
+<div class="section" id="keep-it-running">
+<h3>Keep it running<a class="headerlink" href="#keep-it-running" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Dieser goldene Satz gilt natürlich auch für den DNS-Administrator. Läuft BIND einmal, so muß mit nur wenig Wartungsaufwand gerechnet werden. Hin und wieder sollte man die Root-Server Einträge erneuern, da sich deren IP-Adressen mit der Zeit ändern können. Sicherheitshinweise sollten verfolgt werden, und so ist evtl. die Software zu updaten. Routineprüfungen schaden selbstverständlich nicht, insbesondere ein Beobachten der Logfiles (dazu verwendet man am besten ein Tool, wie logsurfer oder logmail).</p>
+<p>Autor</p>
+<blockquote>
+<div>Steffen Dettmer <a class="reference external" href="mailto:steffen&#37;&#52;&#48;dett&#46;de">steffen<span>&#64;</span>dett<span>&#46;</span>de</a></div></blockquote>
+<p>Formatierung</p>
+<blockquote>
+<div>Peter Schneewind <a class="reference external" href="mailto:peter&#37;&#52;&#48;schneewind&#46;net">peter<span>&#64;</span>schneewind<span>&#46;</span>net</a></div></blockquote>
+</div>
+</div>
+<div class="section" id="xinetd">
+<h2>xinetd<a class="headerlink" href="#xinetd" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Beschreibung</p>
+<p>Das Programm xinetd, extended Internet services daemon, stellt einen guten Schutz gegenüber unbefugten Zugriffen dar und vermindert die Gefahr eines  Denial of Service Angriffes. Ebenso, wie die bewährte Kombination von inetd und  tcpd, steuert es die Zugriffsrechte des Rechners, leistet darüberhinaus aber noch viel mehr. In diesem Artikel werden die Fähigkeiten von xinetd vorgestellt.</p>
+<div class="section" id="was-ist-xinetd">
+<h3>Was ist xinetd?<a class="headerlink" href="#was-ist-xinetd" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Das klassische inetd dient der Steuerung und Überwachung von Netzwerkverbindungen eines Rechners. Trifft eine Anfrage auf einem Port ein, der von inetd verwaltet wird, wird diese an das Programm  tcpd weitergeleitet. Dieses entscheidet auf Basis der Regeln in den Dateien hosts.allow und hosts.deny, ob die Anfrage zulässig ist. Ist dies der Fall, so wird der entsprechende Serverprozess , zum Beispiel ftpd, gestartet und die Anfrage bearbeitet. Dieser Mechanismus ist auch als  TCP_Wrapper bekannt.</p>
+<p>xinetd bietet ähnliche Möglichkeiten zur Zugriffssteuerung an, wie der  TCP_Wrapper. Zusätzlich leistet es noch mehr:</p>
+<blockquote>
+<div><p>Zugriffssteuerung von TCP, UDP und RPC Diensten (letzteres funktioniert nicht ganz so gut)
+Zugriff zu bestimmten Zeiten
+Protokollierung von zulässigen, als auch von unzulässigen Anfragen
+effizienter Schutz vor  Denial of Service Angriffen. Dies sind Angriffe, bei denen versucht wird, den Rechner zu blockieren, indem dessen Resourcen in großem Maße belegt werden:</p>
+<blockquote>
+<div>Beschränkung der Zahl der Server des gleichen Types, die simultan laufen dürfen
+Festlegung der maximalen Zahl gleichzeitig laufendener Server
+Beschränkung der Größe der Protokolldateien</div></blockquote>
+<p>Dienste können an bestimmte Netzwerkschnittstellen gebunden werden. Dadurch können einzelne Dienste etwa innerhalb eines privaten Netzwerkes verwendet werden, stehen aber nach außen hin nicht zur Verfügung.
+Verwendung als Proxy. Recht nützlich in Verbindung mit  ip_masquerading (bzw. NAT), wodurch Rechner eines internen Netzwerkes von außen her erreicht werden können, obwohl nur eine IP bekannt ist</p>
+</div></blockquote>
+<p>Das Hauptproblem, wie schon erwähnt, stellt die Abwicklung von RPC Aufrufen dar. Jedoch arbeiten portmap und xinetd großartig zusammen.</p>
+<p>Im ersten Teil dieses Artikels wird erklärt, wie xinetd funktioniert. Ausführlich wird die Konfiguration des Systems, sowie einige spezielle Optionen (Beschränkung auf ein Netzinterface, Umleitung) beschrieben. Dabei werden zur Veranschaulichung einige Beispiele vorgestellt. Im zweiten Teil schließlich wird xinetd im laufen Betrieb betrachtet und ein Blick auf die Protokolldateien geworfen. Zum Schluß gibt es dann noch einen nützlichen Tip.</p>
+</div>
+<div class="section" id="ubersetzen-und-installatieren">
+<h3>Übersetzen und Installatieren<a class="headerlink" href="#ubersetzen-und-installatieren" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Von en <a class="reference external" href="http://www.xinetd.org/">http://www.xinetd.org/</a> kann man das Programm beziehen. In diesem Artikel wurde Version 2.1.8.9pre10 verwendet. Übersetzung und Installation sehen wie üblich aus:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # ./configure
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # make
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # make install</p>
+<p>configure bietet auch hier die üblichen Optionen. Desweiteren gibt es zur Übersetzungszeit drei spezielle Schalter:</p>
+<blockquote>
+<div>&#8211;with-libwrap: Wird diese Option verwendet. so überprüft xinetd, ob die Konfigurationsdateien für tcpd (/etc/hosts.allow und /etc/hosts.deny) zu finden sind. Falls auf diese zugegriffen werden kann, verwendet xinetd seine Kontrolmechanismen. Soll diese Option verwendet werden, so müssen  tcp_wrapper und die notwendigen Bibliotheken auf dem System installiert sein (Bemerkung: alles, was der Wrapper leistet, kann auch mit xinetd realisiert werden. Entscheidet man sich dennoch dafür, steigt die Zahl der Konfigurationsdateien unnötig an und die Administration wird aufwendiger. Es ist daher nicht zu empfehlen).
+&#8211;with-loadavg: Übersetzt man xinetd mit dieser Option, kann später bei der Konfiguration des Programmes die Option max_load verwendet werden. Durch diese können Server deaktiviert werden, sollte der Rechner zu überlasten drohen, eine wesentliche Einstellung zur Abwehr von  DoS Angriffen.
+&#8211;with-inet6: Unterstützung für IPv6. Sowohl IPv4, als auch IPv6 Verbindungen werden verwaltet, allerdings werden ggfs. IPv4 Adressen in das IPv6 Format umgewandelt.</div></blockquote>
+<p>Es ist nicht notwendig, vor dem Start von xinetd das Programm inetd zu beenden. Dies kann aber zu einem unerwarteten Verhalten beider Programme führen!</p>
+<p>Über folgende Signale kann man das Verhalten von xinetd beeinflussen:</p>
+<blockquote>
+<div>SIGUSR1: Die Konfigurationsdatei wird erneut ausgelesen und die Einstellungen für die jeweiligen Dienste werden entsprechend angepasst.
+SIGUSR2: Wie oben, zusätzlich werden unnötige Daemonprogramme beendet.
+SIGTERM: Beendet xinetd und alle Daemonprogramme, die gestartet worden waren.</div></blockquote>
+<p>Die oben erwähnten Signale können recht bequem mittels eines Skriptes verwendet werden, und z. B. über Stichworte wie start, stop, restart, soft und hard als Parameter des Skriptes gesendet werden (die letzten beiden korrespondieren zu SIGUSR1 und SIGUSR2).</p>
+</div>
+<div class="section" id="konfiguration">
+<h3>Konfiguration<a class="headerlink" href="#konfiguration" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Die Datei /etc/xinetd.conf dient standardmäßig der Konfiguration des xinetd Daemons (eine alternative Datei kann als Kommandozeilenparameter übergeben werden). Ist die Konfiguration von xinetd auch nicht allzu komplex, so doch ein wenig aufwendiger und die Syntax unterscheidet sich erheblich von der des Vorgängerprogrammes inetd.</p>
+<p>Es gibt zwei Werkzeuge namens itox und xconv.pl, welche mit xinetd mitkommen und den Inhalt von /etc/inetd.conf als Basis für die Konfigurationsdatei von xinetd verwenden. Damit ist es das natürlich nicht gewesen, da die Regeln, definiert in der Wrapper Konfiguration, nicht berücksichtigt werden. itox wird wohl nicht mehr weiterentwickelt. Generell ist xconv.pl die bessere Wahl, auch wenn die Ergebnisse noch zusätzlich per Hand angepasst werden müssen, da xinetd mehr Funktionalität als inetd bietet.
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # /usr/local/sbin/xconv.pl &lt; /etc/inetd.conf &gt; /etc/xinetd.conf</p>
+<p>Am Anfang der Konfigurationsdatei stehen die Standardeinstellungen. Alle Attribute, die hier zu finden sind, werden für jeden Dienst, der von xinetd verwaltet wird, verwendet. Für jeden Dienst folgt nun ein eigener Bereich, in welchem Standardeinstellungungen angepasst werden können.</p>
+<p>Der Eintrag für die Standardeinstellungen sieht so aus:</p>
+<p>defaults
+{</p>
+<blockquote>
+<div>attribut operator wert(e)
+...</div></blockquote>
+<p>}</p>
+<p>Die Werte jedes Attributes, die diesem hier zugwiesen werden, sind für alle folgenden Dienste gültig. Deswegen kann man mittels des Attributes only_from eine feste Liste von  IP Adressen angeben, die die Dienste nutzen dürfen:</p>
+<p>only_from = 192.168.1.0/24/192.168.5.0/24 192.168.10.17</p>
+<p>Dadurch dürfen alle Rechner mit obigen Adressen alle hier konfigurierten Dienste in Anspruch nehmen. Aber natürlich können diese Werte zusätzlich noch für jeden Dienst einzeln modifiziert werden (man werfe einen Blick auf die weiter unten vorgestellten Operatoren). Dies ist allerdings ein wenig riskant. Es ist besser, will man das System einfach und sicher halten, nicht erst Standardwerte zu definieren, die dann später für einzelne Dienste wieder eingeschränkt werden. Betrachtet man beispielsweise Zugriffsrechte, so besteht die einfachste Vorgehensweise darin, zuerst generell den Zugriff zu verbieten und dann für jeden Dienst einzeln die anvisierten Benutzer anzugeben und diesen den Zugriff zu ermöglichen (bei  tcp_wrapper wird dies dadurch realisiert, dass zuerst in der Datei hosts.deny die Regel ALL:ALL&#64;ALL eingetragen wird und dann in hosts.allow alle zugelassenen Dienste und die erlaubten IP Adressen etwaiger Benutzer angegeben werden).</p>
+<p>Die Syntax eines Eintrags für einen Dienst in xinetd.conf sie folgendermaßen aus:</p>
+<p>service
+{</p>
+<blockquote>
+<div>attribut operator wert(e)
+...</div></blockquote>
+<p>}</p>
+<p>Als Operatoren stehen zur Auswahl: =, += und -=. Die meisten Attribute lassen jedoch nur den Operator = zu. Dieser weist einem Attribut einen bestimmten Wert zu. Durch += wird ein Eintrag einer Liste von Werten hinzugefügt, mittels -= hingegen wird der Eintrag aus der Liste entfernt.</p>
+<p>Im Folgenden gibt es eine kurze Übersicht der Attribute. Deren Einsatz wird in einigen Beispielen verdeutlicht werden. Weitergehende Informationen kann man der  Manpage zu xinetd.conf entnehmen.
+Attribut        Werte und Beschreibung
+Flags   Nur die gängigsten Werte werden hier aufgeführt; weitere sind in der Dokumentation zu finden:</p>
+<blockquote>
+<div>IDONLY: Es werden nur Verbindungen mit Client-Rechnern zugelassen, auf denen ein Server zur Identifikation läuft.
+NORETRY: Unterbindet das Anlegen eines neuen Prozesses im Fehlerfall.
+NAMEINARGS: Das erste Argument des Attributes server_args wird als argv[0] des Servers verwendet. Dadurch wird es möglich, tcpd zu verwenden, indem es dem Attribut server zugewiesen wird, gefolgt vom Namen des Servers und dessen Parameter als sever_args, genau, wie bei inetd.</div></blockquote>
+<p>log_type        xinetd verwendet  syslog, als Selektor wird standardmäßig daemon.info gewählt.</p>
+<blockquote>
+<div>SYSLOG Selektor [level]: Auswahl zwischen daemon, auth, user oder local0-7 des syslog Daemons.
+FILE [max_size [absolute_max_size]]: In die hier angegebene Datei wird die Ausgabe gesichert. Die beiden Optionen begrenzen die Dateigröße. Wird der erste Wert erreicht, wird eine Nachricht an  syslog gesendet. Die Protokollierung des jeweiligen Dienstes wird eingestellt, sobald die Dateigröße den zweiten Parameter erreicht (sollte es sich um eine mehrfach verwandte Datei oder um eine Standardeinstellung in xinetd.conf handeln, können auch mehrere Dienste betroffen sein).</div></blockquote>
+<p>log_on_success  Bei Start eines Servers können mehrere unterschiedliche Informationen festgehalten werden:</p>
+<blockquote>
+<div>PID: die Server PID (handelt es sich um einen internen Dienst von xinetd ist die PID 0)
+HOST: Die Adresse des Clients
+USERID: Die ID des Benutzers, der den Dienst in Anspruch nimmt, entsprechend dem in der RFC1413 definierten Protokolles
+EXIT: Der Statuswert, den der Prozess bei Beendigung zurückliefert
+DURATION: Verbindungsdauer</div></blockquote>
+<p>log_on_failure  Hierdurch kann eine Vielzahl an Informationen protokolliert werden, sobald ein Server nicht gestartet werden kann, sei es aufgrund fehlender Resourcen oder der Verletzung der Zugriffsregeln:</p>
+<blockquote>
+<div>HOST, USERID: wie oben
+ATTEMPT: Hält einen Zugriffsversuch fest. Diese Option wird automatisch gewählt, sobald ein weiterer Wert gesetzt wird
+RECORD: Protokolliert alle Informationen, die über den Client verfügbar sind.</div></blockquote>
+<p>nice    Ändert die Priorität des Servers, analog dem Unixbefehl nice.
+no_access       Liste der Clients, denen der Zugriff auf den jeweiligen Dienst verweigert werden soll
+only_from       Liste aller akzeptierten Rechner. Wird diesem Attribut kein Wert zugewiesen, so ist kein Zugriff auf den Dienst möglich
+port    Port, unter dem der Dienst erreichbar ist. Sollte dieser auch in der Datei /etc/services stehen, müssen beide Wert übereinstimmen.
+protocol        Das hier angegebene Protokoll muss in der Datei /etc/protocols aufgeführt sein. Wird dieses Attribut nicht gesetzt, wird das Standardprotokoll des Servers verwendet
+server  Pfad, unter dem der Server zu finden ist
+server_args     Parameter, die an den Server übergeben werden sollen
+socket_type     stream (TCP), dgram (UDP), raw (IP Direktzugriff) oder seqpacket ()
+type    xinetd verwaltet drei Arten von Diensten:</p>
+<blockquote>
+<div>RPC: alle, die in der Datei /etc/rpc zu finden sind. Funktioniert nicht besonders gut
+INTERNAL: Dienste, die direkt von xinetd verwaltet werden (echo, time, daytime, chargen und discard)
+UNLISTED: Dienste, die weder in /etc/rpc noch in /etc/services stehen</div></blockquote>
+<p>Bemerkung: man kann mehrere Werte kombinieren, wie bei den internen Diensten servers, services und xadmin gezeigt wird.
+wait    Legt das threading-Verhalten des Dienstes fest. Es gibt zwei Möglichkeiten:</p>
+<blockquote>
+<div>yes: Der Dienst ist mono-threaded, dass heisst es kann immer nur eine Verbindungen dieses Types unterhalten werden
+no: Für jede neue Anfrage startet xinetd einen neuen Serverprozess, unter Berücksichtigung etwaiger Beschränkungen der maximalen Zahl an Servern (Achtung: Standardmäßig gibt es keine Obergrenze für die Serverzahl)</div></blockquote>
+<p>cps     Beschränkt die Zahl der zugelassenen Verbindungen. Als erster Parameter wird die Zahl selbst angeben. Der zweite Wert legt die Zeit fest, die der Dienst für weitere Verbindungen erreichbar ist, sobald das Limit erreicht wurde.
+instances       Maximale Zahl an Servern des gleichen Types, die simultan laufen dürfen
+max_load        Tatsächliche maximale Last eines Servers (z. B. 2 oder 2.5). Wird dieser Wert überschritten, nimmt der Server keine weiteren Anfragen an
+per_source      Ein Zahlenwert oder UNLIMITED. Ermöglicht es, die Zahl der Verbindungen, die ein Dienst mit einem einzelnen Clientrechner unterhält, zu beschränken</p>
+<p>Die letzten vier Attribute bieten die Möglichkeit, die Resourcen je nach Server zu verwalten. Dies stellt einen effizienten Schutz vor  Denial of Service Angriffen dar.</p>
+<p>In diesem Abschnitt wurden ein wenig von der Funktionalität von xinetd vorgestellt. Im nächsten wird nun gezeigt, wie diese angewandt wird und einige Regeln erläutert, so dass xinetd korrekt funktioniert.</p>
+</div>
+<div class="section" id="die-sektion-default">
+<h3>Die Sektion: default<a class="headerlink" href="#die-sektion-default" title="Link zu dieser Überschrift">¶</a></h3>
+<p>In diesem Abschnitt können Standardwerte für eine Anzahl von Attributen (eine komplette Liste ist in der Dokumentation zu finden) gesetzt werden. Einige der Attribute, wie etwa only_from, no_access, log_on_success oder log_on_failure, können gleichzeitig Werte dieser Sektion und der der einzelnen Dienste beinhalten.</p>
+<p>Der erste Schritt hin zu einem sicheren System ist, standardmäßig allen Rechnern den Zugriff zu verweigern. Danach wird dann für den jeweiligen Dienst getrennt festgelegt, wer diesen nutzen darf. Wie gesehen gibt es zwei Attribute, die den Zugriff auf Basis der IP Adresse eines Rechners steuern: only_from und no_access. Unter Verwendung des letzteren:</p>
+<p>no_access = 0.0.0.0/0</p>
+<p>wird der Zugriff auf alle Dienste unterbunden. Soll dann etwa echo allen zugängig gemacht werden, sollte in der Sektion für den echo Dienst folgendes stehen:</p>
+<p>only_from = 0.0.0.0/0</p>
+<p>Unter Verwendung dieser Einstellungen erhält man folgende Ausgabe:</p>
+<p>Sep 17 15:11:12 charly xinetd[26686]: Service=echo-stream: only_from
+list and no_access list match equally the address 192.168.1.1</p>
+<p>Bei der Entscheidung, ob ein Zugriff erlaubt werden soll, werden die Adresslisten beider Attribute überprüft. Wird die Adresse des Clientrechners von beiden Listen überdeckt, so ist das Attribut relevant, welches weniger allgemein ist. Kann dies nicht festgestellt werden (beide gleich allgemein), so wird die Verbindung nicht zugelassen. Um dies zu beheben, sollte man stattdessen folgendes schreiben:</p>
+<p>only_from = 192.0.0.0/8</p>
+<p>Eine einfachere Lösung besteht darin, in der Sektion defaults folgendes Attribut zu verwenden:</p>
+<p>only_from =</p>
+<p>Wird kein Wert zugewiesen, scheitert jeder Verbindungsaufbau. Danach kann jeder Dienst den Zugriff über eine entsprechende Zuweisung an dieses Attribut regeln.</p>
+<p>Wichtig: Wird gar keine Zugriffsregel (also weder das Attribut only_from, noch no_access) für einen Dienst aufgestellt (weder in dessen, noch in der defaults Sektion), so kann jeder diesen Dienst nutzen!</p>
+<p>Ein Beispiel für die defaults Sektion:</p>
+<p>defaults
+{</p>
+<blockquote>
+<div><p>instances       = 15
+log_type        = FILE /var/log/servicelog
+log_on_success  = HOST PID USERID DURATION EXIT
+log_on_failure  = HOST USERID RECORD
+only_from       =
+per_source      = 5</p>
+<p>disabled = shell login exec comsat
+disabled = telnet ftp
+disabled = name uucp tftp
+disabled = finger systat netstat</p>
+<p>#INTERNAL
+disabled = time daytime chargen servers services xadmin</p>
+<p>#RPC
+disabled = rstatd rquotad rusersd sprayd walld</p>
+</div></blockquote>
+<p>}</p>
+<p>Mittels servers, services und xadmin unter #INTERNAL kann xinetd gesteuert werden. Später dazu mehr.</p>
+</div>
+<div class="section" id="konfiguration-eines-dienstes">
+<h3>Konfiguration eines Dienstes<a class="headerlink" href="#konfiguration-eines-dienstes" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Was muss man nun noch zusätzlich tun, um einen Dienst zu konfigurieren? Es müssen noch gegebenenfalls die Standardwerte einiger Attribute angepasst bzw. weitere Attribute für den jeweiligen Dienst verwendet werden.</p>
+<p>Einige Attribute müssen, je nach Art des Dienstes (INTERNAL, UNLISTED oder RPC), angegeben werden:
+Attribut        Verwendung
+socket-type     Jeder Dienst
+user    Nur Dienste, die keine INTERNAL Dienste sind
+server  Nur Dienste, die keine INTERNAL Dienste sind
+wait    Alle Dienste
+protocol        Alle RPC Dienste und solche, die nicht in /etc/services zu finden sind
+rpc_version     Jeder RPC Dienst.
+rpc_number      Jeder RPC Dienst ohne Eintrag in /etc/rpc.
+port    Jeder Dienst, der kein RPC Dienst ist und nicht in /etc/services steht</p>
+<p>Hier ein Beispiel, wie die Konfiguration von Diensten aussieht:</p>
+<p>service ntalk
+{</p>
+<blockquote>
+<div>socket_type   = dgram
+wait          = yes
+user          = nobody
+server        = /usr/sbin/in.ntalkd
+only_from     = 192.168.1.0/24</div></blockquote>
+<p>}</p>
+<p>service ftp
+{</p>
+<blockquote>
+<div>socket_type  = stream
+wait         = no
+user         = root
+server       = /usr/sbin/in.ftpd
+server_args  = -l
+instances    = 4
+access_times = 7:00-12:30 13:30-21:00
+nice         = 10
+only_from    = 192.168.1.0/24</div></blockquote>
+<p>}</p>
+<p>Man beachte, dass diese Dienste nur im lokalen Netzwerk zugäglich sind (293.268.1.0/24). Was FTP angeht, so wurde der Zugriff noch weiter eingeschränkt: Nur 4 Rechnern wurde der Zugriff gestattet und dies auch nur zu bestimmten Zeiten.</p>
+</div>
+<div class="section" id="ports-an-adressen-binden-das-attribut-bind">
+<h3>Ports an Adressen binden: Das Attribut bind<a class="headerlink" href="#ports-an-adressen-binden-das-attribut-bind" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Mittels diesem Attribut kann man einen Dienst an eine IP Adresse binden. Besitzt der Rechner sowieso nur eine Adresse, ist dies nicht sehr sinnig. Ein Rechner allerdings, der einerseits an einem lokalen Netzwerk, andereseits an das Internet angebunden ist, besitzt mindestens zwei Adressen.</p>
+<p>Angenommen, eine Firma möchte einen FTP Server für ihre Angestellten installieren, etwa, damit diese auf interne Dokumente zugreifen und diese lesen können. Desweiteren sollen Kunden mittels FTP auf die Firmenprodukte zugreifen können. bind ist wie geschaffen für diesen Fall. Es werden zwei FTP Dienste definiert. Diese müssen allerdings von xinetd unterschieden werden können. Dazu wird das Attribut id verwendet. Durch dieses wird ein Dienst eindeutig identifiziert. Sollte ein Dienst dem Attribut keinen Wert zuweisen, so wird standardmäßig der Dienstname als Wert verwendet.</p>
+<p>service ftp
+{</p>
+<blockquote>
+<div>id           = ftp-public
+wait         = no
+user         = root
+server       = /usr/sbin/in.ftpd
+server_args  = -l
+instances    = 4
+nice         = 10
+only_from    = 0.0.0.0/0 #allows every client
+bind         = 212.198.253.142 #public IP address for this server</div></blockquote>
+<p>}</p>
+<p>service ftp
+{</p>
+<blockquote>
+<div>id           = ftp-private
+socket_type  = stream
+wait         = no
+user         = root
+server       = /usr/sbin/in.ftpd
+server_args  = -l
+only_from    = 192.168.1.0/24 #only for internal use
+bind         = 192.168.1.1  #local IP address for this server (charly)</div></blockquote>
+<p>}</p>
+<p>Durch den Einsatz von bind kann das jeweilige Daemonprogramm angesprochen werden, abhängig von der Zieladresse der Pakete. Will ein Client im lokalen Netzwerk auf interne Daten zugreifen, so muss er die lokale Adresse (bzw. den assoziierten Rechnernamen) des FTP Servers verwenden. In der Protokolldatei steht dann:</p>
+<p><a class="reference external" href="mailto:00/9/17&#37;&#52;&#48;16">00/9/17<span>&#64;</span>16</a>:47:46: START: ftp-public pid=26861 from=212.198.253.142
+<a class="reference external" href="mailto:00/9/17&#37;&#52;&#48;16">00/9/17<span>&#64;</span>16</a>:47:46: EXIT: ftp-public status=0 pid=26861 duration=30(sec)
+<a class="reference external" href="mailto:00/9/17&#37;&#52;&#48;16">00/9/17<span>&#64;</span>16</a>:48:19: START: ftp-internal pid=26864 from=192.168.1.1
+<a class="reference external" href="mailto:00/9/17&#37;&#52;&#48;16">00/9/17<span>&#64;</span>16</a>:48:19: EXIT: ftp-internal status=0 pid=26864 duration=15(sec)</p>
+<p>Der erste Teil stammt vom Befehl ftp 212.198.253.142, während der zweite Teil vom Aufruf von charly auf sich selbst resultiert: ftp 192.168.1.1.</p>
+<p>Was passiert aber nun, falls ein Rechner keine zwei statischen IP Adressen hat? Dies ist zum Beispiel bei  PPP Verbindungen oder beim Einsatz von  DHCP der Fall. Es wäre besser, könnten Dienste an Netzwerkschnittstellen selbst, anstatt an Adressen gebunden werden. Dies jedoch ist bei xinetd noch nicht in Sicht und stellt ein wirkliches Problem dar. Das Design eines C Modules beispielsweise, dass auf ein Netzwerkinterface oder eine Adresse zugreifen soll, ist stark vom jeweiligen Betriebssystem abhängig, und da xinetd auf vielen Plattformen arbeiten soll, ist dies problematisch. Unter Verwendung eines Skriptes kann das Problem gelöst werden:</p>
+<p>#!/bin/sh</p>
+<p>PUBLIC_ADDRESS=`/sbin/ifconfig $1 | grep &#8220;inet addr&#8221; | awk &#8216;{print $2}&#8217;| awk -F: &#8216;{print $2}&#8217;`
+sed s/PUBLIC_ADDRESS/&#8221;$PUBLIC_ADDRESS&#8221;/g /etc/xinetd.base &gt; /etc/xinetd.conf</p>
+<p>Dieses Skript liest die gewünschte Konfiguration aus der Datei /etc/xinetd.base aus, wobei PUBLIC_ADDRESS als Platzhalter für die dynamische Adresse steht und nimmt die entsprechenden Änderungen in /etc/xinetd.conf vor. Hierbei wird PUBLIC_ADDRESS durch die Adresse ersetzt, die dem Interface zugeordnet ist, welches dem Skript als Parameter übergeben wird. Der Aufruf des Skriptes hängt von der Art der Verbindung ab: Am einfachsten ist es, den Aufruf in die jeweilige ifup-* Datei einzutragen und xinetd neu zu starten.</p>
+</div>
+<div class="section" id="umleiten-eines-dienstes-auf-einen-anderen-rechner">
+<h3>Umleiten eines Dienstes auf einen anderen Rechner<a class="headerlink" href="#umleiten-eines-dienstes-auf-einen-anderen-rechner" title="Link zu dieser Überschrift">¶</a></h3>
+<p>xinetd kann auch als ein transparenter Proxy verwendet werden (jedenfalls beinahe, wie später zu sehen sein wird) und zwar mittels dem Attribut redirect. Dieses erlaubt es, eine Anfrage an einen Dienst an einen anderen Rechner und einem bestimmten Port weiterzuleiten.</p>
+<p>telnet service
+{</p>
+<blockquote>
+<div>flags  = REUSE
+socket_type = stream
+wait  = no
+user  = root
+server = /usr/sbin/in.telnetd
+only_from = 192.168.1.0/24
+redirect = 192.168.1.15 23</div></blockquote>
+<p>}</p>
+<p>Dabei passiert folgendes:
+<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> $ telnet charly
+Trying 192.168.1.1...
+Connected to charly.
+Escape character is &#8216;^]&#8217;.</p>
+<p>Digital UNIX (sabrina) (ttyp1)</p>
+<p>login:</p>
+<p>Es scheint, als ob eine Verbindung mit dem Rechner charly aufgebaut worden ist. Tatsächlich aber befindet sich sabrina auf der anderen Seite der Verbindung (eine Alpha Maschine, auch an Digital UNIX zu erkennen). Die Weiterleitung kann recht nützlich, aber auch gefährlich sein.</p>
+</div>
+<div class="section" id="spezielle-dienste">
+<h3>Spezielle Dienste<a class="headerlink" href="#spezielle-dienste" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Es gibt drei Dienste, die nur für xinetd verwendet werden. Diese sind weder in /etc/rpc, noch in /etc/services zu finden und müssen das UNLISTED Flag setzen (neben dem INTERNAL Flag, welches anzeigt, dass sie xinetd Dienste sind).</p>
+<blockquote>
+<div>servers: Auskunft über die gerade laufenden Server
+services: liefert Informationen über die angebotenen Dienste, ihre Protokolle und Ports
+xadmin: bietet Funktionen der beiden oben genannten Dienste</div></blockquote>
+<p>Es ist offensichtlich, dass durch diese Dienste das System verletzbarer wird. Sie stellen wichtige Informationen zu Verfügung. Zur Zeit gibt es keine Sicherheitsmechanismen für den Zugriff auf diese Dienste (etwa Passwortschutz). Sie sollten nur in der Einrichtungsphase verwendet werden. Zunächst wird der Zugriff auf sie in dem Abschnitt defaults generell gesperrt:</p>
+<dl class="docutils">
+<dt>defaults {</dt>
+<dd>...
+disabled = servers services xadmin
+...</dd>
+</dl>
+<p>}</p>
+<p>Bevor sie dann aktiviert werden sollten einige Vorkehrungen getroffen werden:</p>
+<blockquote>
+<div>Der Rechner, auf dem xinetd läuft, sollte der einzige Rechner sein, dem es erlaubt ist, die Dienste zu nutzen
+Die Anzahl der gleichzeitig erlaubten Serverinstanzen sollte eins sein
+Zugegriffen werden darf nur von dem Rechner aus, auf dem der Server läuft.</div></blockquote>
+<p>Hier ein Beispiel für die Konfiguration des xadmin Dienstes. Die Einstellung der beiden anderen Dienste erfolgt analog, bis auf die Portnummer natürlich.</p>
+<p>service xadmin
+{</p>
+<blockquote>
+<div>type  = INTERNAL UNLISTED
+port  = 9100
+protocol = tcp
+socket_type = stream
+wait  = no
+instances = 1
+only_from = 192.168.1.1  #charly</div></blockquote>
+<p>}</p>
+<p>Der Dienst xadmin bietet fünf Befehle:</p>
+<blockquote>
+<div>help ...
+show run : gleicht dem Dienst servers und gibt Auskunft über die zur Zeit laufenden Server
+show avail : gleicht dem Dienst services und informiert über die verfügbaren Dienste (und ein wenig mehr)
+bye oder exit ...</div></blockquote>
+<p>Das System kann auch ohne diese Dienste getestet werden. Befehle, wie netstat, fusert, lsof geben ebenfalls einen Überblick über das, was auf dem Rechner vonstatten geht, ohne ihn ein wenig unsicherer durch die Verwendung der Dienste zu machen!</p>
+</div>
+<div class="section" id="chroot-fur-einen-dienst">
+<h3>chroot für einen Dienst<a class="headerlink" href="#chroot-fur-einen-dienst" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Oft wird empfohlen, die Bereiche eines Dienstes einzuschränken oder eine neue Umgebung zu generieren. Der Befehl chroot ändert das Wurzelverzeichnis für einen Befehl oder ein Skript:
+<a class="reference external" href="mailto:root&#37;&#52;&#48;linux">root<span>&#64;</span>linux</a> # chroot [options] new_root</p>
+<p>Auf diese Weise werden häufig Dienste wie  bind/DNS oder  FTP gesichert. Um dies zu erreichen und dabei gleichzeitig die Vorzüge von xinetd nutzen zu können, muss chroot als Server deklariert werden. Die Parameter werden dann über das Attribut server_args übergeben.</p>
+<p>service ftp
+{</p>
+<blockquote>
+<div>id           = ftp
+socket_type  = stream
+wait         = no
+user         = root
+server       = /usr/sbin/chroot
+server_args  = /var/servers/ftp /usr/sbin/in.ftpd -l</div></blockquote>
+<p>}</p>
+<p>Sobald nun eine Anfrage, den jeweiligen Dienst betreffend, eintrifft, wird als erstes chroot ausgeführt. Das erste Argument, dass diesem übergeben wird, ist der erste Eintrag in sever_args: das neue Wurzelverzeichnis. Zuletzt wird der Server gestartet.</p>
+</div>
+<div class="section" id="fazit">
+<h3>Fazit<a class="headerlink" href="#fazit" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Es mag sich nun die Frage stellen, ob nun xinetd oder inetd verwendet werden sollte. Es ist nun einmal so, dass xinetd ein wenig mehr Administration verlangt, vorallem, solange es nicht mit den Linux Distributionen mitgeliefert wird. Eine sichere Lösung stellt der Einsatz von xinetd auf Rechnern dar, die eine Verbindung mit dem Rest der Welt (etwa dem Internet) haben. xinetd bietet einfach den besseren Schutz. Für Rechner in einem lokalen Netzwerk sollte inetd vollkommen ausreichend sein.</p>
+<p>Autoren</p>
+<blockquote>
+<div>Florian Frank <a class="reference external" href="mailto:florian&#46;frank&#37;&#52;&#48;pingos&#46;org">florian<span>&#46;</span>frank<span>&#64;</span>pingos<span>&#46;</span>org</a>
+Harald Radke <a class="reference external" href="mailto:harryrat&#37;&#52;&#48;gmx&#46;de">harryrat<span>&#64;</span>gmx<span>&#46;</span>de</a>
+Frédéric Raynal <a class="reference external" href="mailto:pappy&#37;&#52;&#48;users&#46;sourceforge&#46;net">pappy<span>&#64;</span>users<span>&#46;</span>sourceforge<span>&#46;</span>net</a></div></blockquote>
+<p>Formatierung</p>
+<blockquote>
+<div>Florian Frank <a class="reference external" href="mailto:florian&#46;frank&#37;&#52;&#48;pingos&#46;org">florian<span>&#46;</span>frank<span>&#64;</span>pingos<span>&#46;</span>org</a></div></blockquote>
+</div>
+</div>
 </div>
 
 
