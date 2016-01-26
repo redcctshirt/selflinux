@@ -9,7 +9,7 @@ Einleitung
 Computergeschichte
 ------------------
 
-Beschreibung
+**Beschreibung**
 
 In diesem Kapitel wird die Geschichte des Computers von seinen mechanischen Anfängen, über die frühen Relais- und Röhrenrechner bis hin zu den auf Microchips basierenden Rechnern der Neuzeit behandelt. Auch wenn dieses Kapitel nicht in unmittelbarem Zusammenhang mit Linux steht, so bietet es doch interessante Hintergrundinformationen, welche die Möglichkeiten und Einschränkungen beim Umgang mit einem Computer, also auch einem Linuxsystem, verständlicher machen können. 
 
@@ -22,14 +22,14 @@ Um sich bei der Berechnung großer Zahlen zu behelfen, hat der Mensch zahlreiche
 
 Eine ganz eigene Welt öffnet sich mit dem Aufkommen mechanischer Addiermaschinen. Basierten die ersten dieser Geräte noch auf handgefeilten Zahnrädern und produzierten somit noch gewisse Ungenauigkeiten, leisteten spätere Varianten mit "verbesserter Hardware" doch schon Erstaunliches. Insbesondere das Problem des Zehnerübertrags lässt die Walzen und Hebel einer solchen Maschine mitunter phantastische Prozeduren durchlaufen. In heutigen Rechenchips hat sich dieses Problem in Form von "Übertragsbits" erhalten - die Zeiten ändern sich, aber die Probleme bleiben ...
 
-Ein interessantes Gebiet, das heute zu den wichtigsten in der Informatik gehört, ist die  Verschlüsselung von Information, bevorzugt Textinformation. Frühe Algorithmen, die vorwiegend auf Substitution basieren, bieten bereits einige über 3000 Jahre alte Geheimschriften der Ägypter und Mesopotamier an. Später entwickelten sich dynamischere Zeichenzuordnungen, indem z.B. verstellbare Ringe zur Chiffrierung und Dechiffrierung verwendet wurden. In der Neuzeit gewinnen Chiffriergeräte insbesondere im militärischen Bereich an Bedeutung. Hier sei etwa an die Geschichte der ENIGMA erinnert - ursprünglich gebaut aus zwei elektrischen Schreibmaschinen, die durch ein Bündel von Drähten verbunden wurden. Eine Weiterentwicklung dieses Geräts wurde im zweiten Weltkrieg von der deutschen Wehrmacht verwendet - über 100.000 ENIGMAs ließ sie bauen und vertraute nahezu blind auf die Sicherheit ihrer Verschlüsselung. Die Tatsache, dass die Briten die Verschlüsselung der ENIGMA durch den Einsatz tausender Mathematiker brechen konnten, spielte keine unerhebliche Rolle für den weiteren Verlauf der Ereignisse. 
+Ein interessantes Gebiet, das heute zu den wichtigsten in der Informatik gehört, ist die  `Verschlüsselung <Internet.html#gnupg-handbuch>`_ von Information, bevorzugt Textinformation. Frühe Algorithmen, die vorwiegend auf Substitution basieren, bieten bereits einige über 3000 Jahre alte Geheimschriften der Ägypter und Mesopotamier an. Später entwickelten sich dynamischere Zeichenzuordnungen, indem z.B. verstellbare Ringe zur Chiffrierung und Dechiffrierung verwendet wurden. In der Neuzeit gewinnen Chiffriergeräte insbesondere im militärischen Bereich an Bedeutung. Hier sei etwa an die Geschichte der ENIGMA erinnert - ursprünglich gebaut aus zwei elektrischen Schreibmaschinen, die durch ein Bündel von Drähten verbunden wurden. Eine Weiterentwicklung dieses Geräts wurde im zweiten Weltkrieg von der deutschen Wehrmacht verwendet - über 100.000 ENIGMAs ließ sie bauen und vertraute nahezu blind auf die Sicherheit ihrer Verschlüsselung. Die Tatsache, dass die Briten die Verschlüsselung der ENIGMA durch den Einsatz tausender Mathematiker brechen konnten, spielte keine unerhebliche Rolle für den weiteren Verlauf der Ereignisse. 
 
 Der Einbruch des Digitalen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Alle bislang erwähnten Hilfsmittel und Geräte haben nichts mit dem Dualsystem zu tun und sind daher nur indirekte Vorläufer heutiger Rechner. Erst die Verknüpfung des Dualsystems mit einigen technischen Entwicklungen ließ die Leistung der entwickelten Rechengeräte Schlag um Schlag wachsen.
 
-Als Erster beschrieb de Gottfried Wilhelm Leibniz eine Rechenmaschine zur Durchführung von Rechnungen im Dualsystem. Viel später, im Jahr 1933, entschloss sich de Konrad Zuse, das Dualsystem seiner geplanten Rechenmaschine zu Grunde zulegen. Dieses Gerät, die sogenannte Z1, wurde 1939 fertiggestellt und verwendete rein mechanische Schalt- und Speicherglieder.
+Als Erster beschrieb `Gottfried Wilhelm Leibniz <http://de.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz>`_ eine Rechenmaschine zur Durchführung von Rechnungen im Dualsystem. Viel später, im Jahr 1933, entschloss sich `Konrad Zuse <http://de.wikipedia.org/wiki/Konrad_Zuse>`_, das Dualsystem seiner geplanten Rechenmaschine zu Grunde zulegen. Dieses Gerät, die sogenannte Z1, wurde 1939 fertiggestellt und verwendete rein mechanische Schalt- und Speicherglieder.
 
 Die Geschwindigkeit (und die Menge) mechanischer Glieder ist naturgemäß beschränkt. Der Fortschritt auf dem Gebiet der Elektrotechnik ermöglichte nun den Einsatz von elektromechanischen Relais anstelle der rein mechanischen Teile. Ein Schaltkreis dient auf einfachste Weise zur Abbildung des dualen Systems: Durch Schaltkontakte kann der Stromfluss geöffnet und geschlossen werden. AUS-Zustand und EIN-Zustand können nun die 0 und die 1 des Dualsystems abbilden. Das Schließen eines solchen elektrischen Kontaktes kann auf verschiedene Arten geschehen.
 
@@ -44,18 +44,20 @@ Die weiteren Fortschritte auf elektrotechnischer Ebene wurden durch die Miniatur
 Das von Neumann-Modell
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Ein Mitglied des ENIAC-Projektes war de John von Neumann. Von Neumann war ein weltweit bekannter Mathematiker und wird gelegentlich als ein Genie vom Range eines Leonardo da Vinci bezeichnet. Er hatte ein phänomenales Gedächtnis und neben der Mathematik auch ausgezeichnete Kenntnisse in Physik. Ihm fiel auf, dass die Programmierung des ENIAC über das Umstecken von Kabeln und das Betätigen von Schaltern viel zu umständlich war. Er entwarf daher ein Konzept, das heute als "von Neumann-Maschine" bekannt ist, und nach dem auch das Programm selbst im Speicher des Rechners abgelegt wird. Man muss nicht lange überlegen, um zu verstehen, dass diese Idee die Programmierung von Computern revolutionierte. Wenn sich ein Programm im Speicher des Rechners befindet, sind lediglich einige Ladevorgänge erforderlich, um ein anderes Programm auf dem Rechner laufen zu lassen. Damit wird die Maschine flexibler und universeller, und das Schreiben und Testen von Programmen wird viel einfacher.
+Ein Mitglied des ENIAC-Projektes war `John von Neumann <http://de.wikipedia.org/wiki/John_von_Neumann>`_. Von Neumann war ein weltweit bekannter Mathematiker und wird gelegentlich als ein Genie vom Range eines Leonardo da Vinci bezeichnet. Er hatte ein phänomenales Gedächtnis und neben der Mathematik auch ausgezeichnete Kenntnisse in Physik. Ihm fiel auf, dass die Programmierung des ENIAC über das Umstecken von Kabeln und das Betätigen von Schaltern viel zu umständlich war. Er entwarf daher ein Konzept, das heute als "von Neumann-Maschine" bekannt ist, und nach dem auch das Programm selbst im Speicher des Rechners abgelegt wird. Man muss nicht lange überlegen, um zu verstehen, dass diese Idee die Programmierung von Computern revolutionierte. Wenn sich ein Programm im Speicher des Rechners befindet, sind lediglich einige Ladevorgänge erforderlich, um ein anderes Programm auf dem Rechner laufen zu lassen. Damit wird die Maschine flexibler und universeller, und das Schreiben und Testen von Programmen wird viel einfacher.
 
 .. image:: images/computer_geschichte_neumann-modell.png
+	:align: center
+	:alt: von-Neuman Modell; Grafik Rolf Brunsendorf
 
 von-Neuman Modell; Grafik Rolf Brunsendorf
 
 Das Modell besteht aus fünf Teilen: Speicher, Rechenwerk, Steuereinheit, sowie Ein- und Ausgabe. Die wichtigsten Prinzipien lauten wie folgt:
 
-    Der Speicher enthält sowohl die Operationen selbst als auch die Daten, auf denen die Operationen ausgeführt werden.
-    Die Steuereinheit entspricht einem Befehlsprozessor, in dem die Anweisungen eines Programmes interpretiert und die Ausführung dieser Befehle (z.B. in der richtigen Reihenfolge) gesteuert werden.
-    Das Rechenwerk (ALU = arithmetic logical unit) entspricht einem Datenprozessor, in dem die notwendigen datentransformierenden Operationen durchgeführt werden.
-    Ein- und Ausgabe bilden die Schnittstelle zur Außenwelt, es ist jedoch nicht festgelegt, wie diese Mechanismen implementiert sind.
+* Der Speicher enthält sowohl die Operationen selbst als auch die Daten, auf denen die Operationen ausgeführt werden.
+* Die Steuereinheit entspricht einem Befehlsprozessor, in dem die Anweisungen eines Programmes interpretiert und die Ausführung dieser Befehle (z.B. in der richtigen Reihenfolge) gesteuert werden.
+* Das Rechenwerk (ALU = arithmetic logical unit) entspricht einem Datenprozessor, in dem die notwendigen datentransformierenden Operationen durchgeführt werden.
+* Ein- und Ausgabe bilden die Schnittstelle zur Außenwelt, es ist jedoch nicht festgelegt, wie diese Mechanismen implementiert sind.
 
 Die Entwicklung des Massenmarktes bis zum heutigen PC
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -81,16 +83,15 @@ Da sich an der grundlegenden PC-Architektur seit der Einführung des IBM-PCs nic
 Mit eigenen Augen
 ^^^^^^^^^^^^^^^^^
 
-Wer sich für einen tieferen Einblick in die Geschichte der Datenverarbeitung interessiert, dem sei das de Heinz Nixdorf Museums-Forum in Paderborn empfohlen. Die Ausstellung des Museums erzählt mit über 2000 Objekten die Geschichte der Informationstechnik. 
+Wer sich für einen tieferen Einblick in die Geschichte der Datenverarbeitung interessiert, dem sei das `Heinz Nixdorf Museums-Forum <http://www.hnf.de/>`_ in Paderborn empfohlen. Die Ausstellung des Museums erzählt mit über 2000 Objekten die Geschichte der Informationstechnik. 
 
 Autor
 
-    Matthias Kleine kleine_matthias@gmx.de
-
+* Matthias Kleine kleine_matthias@gmx.de
 	
 Formatierung
 
-    Matthias Kleine kleine_matthias@gmx.de
+* Matthias Kleine kleine_matthias@gmx.de
 
 
 Was ist Linux?
@@ -101,7 +102,7 @@ Begriffsklärung
 
 Es soll hier zunächst einmal klargestellt werden, was man unter dem Begriff "Linux" eigentlich versteht, und wie dieser Begriff hier im SelfLinux-Tutorial (auch) verwendet wird.
 
-Prinzipiell ist mit dem Begriff "Linux" nur der Kernel gemeint, also der Teil des Systems, der z.B. die Ressourcen für die laufenden Programme und die Anwender verwaltet. Obwohl der Kernel ein essentieller Teil des Systems ist, wäre er ohne zusätzliche Software allerdings nutzlos. Um diesen Kernel effektiv nutzen zu können, ist weitere (teilweise sehr systemnahe) Software notwendig, also das eigentliche Betriebssystem. Derzeit wird in den meisten Fällen die Software des GNU-Projektes (en http://www.gnu.org) in Verbindung mit dem Linux-Kernel verwendet. Das GNU-Projekt entwickelt bereits seit 1984 Freie Software (de http://www.gnu.org/philosophy/free-sw.de.html), unter anderem das Unix-ähnliche Softwaresystem GNU. Als 1991 die Arbeit am Linux-Kernel begann, war dieses Softwaresystem bereits fast fertig, sodass man auf einen Großteil Freier Software für die Linux-Entwicklung zurückgreifen konnte.
+Prinzipiell ist mit dem Begriff "Linux" nur der Kernel gemeint, also der Teil des Systems, der z.B. die Ressourcen für die laufenden Programme und die Anwender verwaltet. Obwohl der Kernel ein essentieller Teil des Systems ist, wäre er ohne zusätzliche Software allerdings nutzlos. Um diesen Kernel effektiv nutzen zu können, ist weitere (teilweise sehr systemnahe) Software notwendig, also das eigentliche Betriebssystem. Derzeit wird in den meisten Fällen die Software des GNU-Projektes (http://www.gnu.org) in Verbindung mit dem Linux-Kernel verwendet. Das GNU-Projekt entwickelt bereits seit 1984 Freie Software (http://www.gnu.org/philosophy/free-sw.de.html), unter anderem das Unix-ähnliche Softwaresystem GNU. Als 1991 die Arbeit am Linux-Kernel begann, war dieses Softwaresystem bereits fast fertig, sodass man auf einen Großteil Freier Software für die Linux-Entwicklung zurückgreifen konnte.
 
 Heute sind beide Komponenten, der Linux-Kernel und die GNU-Betriebssoftware, kaum noch voneinander zu trennen. Beide Teile haben sich gegenseitig vorangebracht und gegenseitig befruchtet.
 
@@ -109,18 +110,18 @@ Korrekterweise müsste man also eigentlich, wenn man das Betriebssystem meint, v
 
 Es hat sich allerdings heute eingebürgert, dass umgangssprachlich unter dem Begriff "Linux" die Kombination aus Kernel und Systemwerkzeugen gemeint ist. An vielen Stellen in diesem Tutorial (beginnend bereits im vorliegenden Text) wird dies genauso gehandhabt. Es finden sich also als Bezeichnung für das Betriebssystem gleichbedeutend die Begriffe "Linux" und "GNU/Linux", und für den Kernel "Kernel" oder "Linux-Kernel". Dies soll keinesfalls eine Verunglimpfung der hervorragenden Arbeit des GNU-Projektes sein, sondern trägt eher der Tatsache Rechnung, dass diese Benennung heutzutage von den meisten Anwendern verstanden und benutzt wird.
 
-Eine detaillierte Erklärung über die Zusammenhänge zwischen GNU und Linux ist auf en http://www.gnu.org/gnu/linux-and-gnu.html zu finden.
+Eine detaillierte Erklärung über die Zusammenhänge zwischen GNU und Linux ist auf http://www.gnu.org/gnu/linux-and-gnu.html zu finden.
 
-HINWEIS: Natürlich wird auf GNU/Linux-Systemen nicht nur Software eingesetzt, die unter der GNU GPL steht. Es gibt viele andere Freie Lizenzen, unter denen Software stehen kann. Einen ersten Überblick kann man sich auch hier beim GNU-Projekt auf en http://www.gnu.org/licenses/licenses.html verschaffen.
+HINWEIS: Natürlich wird auf GNU/Linux-Systemen nicht nur Software eingesetzt, die unter der GNU GPL steht. Es gibt viele andere Freie Lizenzen, unter denen Software stehen kann. Einen ersten Überblick kann man sich auch hier beim GNU-Projekt auf http://www.gnu.org/licenses/licenses.html verschaffen.
 
 Kurze Einführung
 ^^^^^^^^^^^^^^^^
 
-(GNU/)Linux ist ein hochstabiles, sehr schnelles und voll funktionsfähiges Unix-ähnliches Betriebssystem. Es wird von einer Gemeinschaft von tausenden von Leuten im Internet programmiert und unter der GNU General Public License verteilt, das heisst, es ist frei erhältlich. Es wird weltweit von mehreren Millionen Leuten, Organisationen und Firmen benutzt (aktuelle Zahlen gibt es beim en Linux Counter).
+(GNU/)Linux ist ein hochstabiles, sehr schnelles und voll funktionsfähiges Unix-ähnliches Betriebssystem. Es wird von einer Gemeinschaft von tausenden von Leuten im Internet programmiert und unter der GNU General Public License verteilt, das heisst, es ist frei erhältlich. Es wird weltweit von mehreren Millionen Leuten, Organisationen und Firmen benutzt (aktuelle Zahlen gibt es beim `Linux Counter <http://www.linuxcounter.org/>`_).
 
 Linux
 
-    Das ist nur der Kernel. Ein Kernel ist ein Stück Software, das die Kommunikation zwischen den einzelnen Hardwarekomponenten und den Anwenderprogrammen regelt. Das mag trivial klingen, ist aber eine sehr komplexe Aufgabe. Jedes OS (Operating System) hat einen Kernel, nur werden die wenigsten nach dessen Namen benannt. 
+    Das ist **nur** der Kernel. Ein Kernel ist ein Stück Software, das die Kommunikation zwischen den einzelnen Hardwarekomponenten und den Anwenderprogrammen regelt. Das mag trivial klingen, ist aber eine sehr komplexe Aufgabe. Jedes OS (Operating System) hat einen Kernel, nur werden die wenigsten nach dessen Namen benannt. 
 
 Betriebssystem (engl. Operating System)
 
@@ -132,7 +133,7 @@ Shell
 
 X-Server
 
-    Es ist möglich ein Linux-Betriebssystem (also Kernel und Systemprogramme) auf einem Plattenplatz von <50 MB unterzubringen (zum Beispiel mit Hilfe einer RAM-Disk, wie sie bei Embedded-Linux-Systemen verbreitet ist). Allerdings steht dann mit Sicherheit nur eine Shell (Befehlszeilen-Prompt) als Benutzerschnittstelle zur Verfügung. Heute möchten nur noch wenige den Komfort einer grafischen Benutzeroberfläche missen, trotzdem ist eine grafische Oberfläche (unter Unix X-Server, X Window System oder X11 genannt) nicht Teil des Betriebssystems, sondern ein Programm, das auf diesem läuft. 
+    Es ist möglich ein Linux-Betriebssystem (also Kernel und **Systemprogramme**) auf einem Plattenplatz von <50 MB unterzubringen (zum Beispiel mit Hilfe einer RAM-Disk, wie sie bei Embedded-Linux-Systemen verbreitet ist). Allerdings steht dann mit Sicherheit nur eine Shell (Befehlszeilen-Prompt) als Benutzerschnittstelle zur Verfügung. Heute möchten nur noch wenige den Komfort einer grafischen Benutzeroberfläche missen, trotzdem ist eine grafische Oberfläche (unter Unix X-Server, X Window System oder X11 genannt) nicht Teil des Betriebssystems, sondern ein Programm, das auf diesem läuft. 
 
 Desktop
 
@@ -178,17 +179,17 @@ Eigenschaften von Linux
 Unterstützte Plattformen
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Intel x86 / IA-32 (i386): PCs mit Intel-, AMD- oder Cyrix-Prozessoren, die zum 80386 kompatibel sind.
-IA-64 (ia64): Der neue Intel-Prozessor wird von Beginn an unterstützt.
-AMD64 Der 64bit-Prozessor von AMD wird ebenfalls von Anfang an unterstützt.
-Motorola/IBM PowerPC (powerpc): Power Macintosh und Kompatible. Beachten Sie, dass es zwei Linux-Versionen für den PPC gibt: eine generische und eine, die auf dem Mach-Microkernel aufbaut.
-Motorola 68k (m68k): MicroLinux und uClinux für 68000 Prozessoren ohne MMU: Palmpilot, Amiga 500, ColdFire. Ebenso für Atari und verschiedenste embedded Systeme.
-MIPS R3000: Digital Decstations (mipsel) und SGI Computer (mips).
-ARM (arm): Acorn Archimedes.
-DEC Alpha (alpha): DEC Alpha und Kompatible.
-Sun Sparc (sparc): Sun4c und höher. Ebenso UltraSparc-Prozessoren. Das ist einer der schnellsten und stabilsten Ports.
-HP PA-RISC (hppa): Hewlett-Packard PA-RISC-Architektur.
-S/390 (s390): IBM S/390-Server und IBM zSeries. 
+* Intel x86 / IA-32 (i386): PCs mit Intel-, AMD- oder Cyrix-Prozessoren, die zum 80386 kompatibel sind.
+* IA-64 (ia64): Der neue Intel-Prozessor wird von Beginn an unterstützt.
+* AMD64: Der 64bit-Prozessor von AMD wird ebenfalls von Anfang an unterstützt.
+* Motorola/IBM PowerPC (powerpc): Power Macintosh und Kompatible. Beachten Sie, dass es zwei Linux-Versionen für den PPC gibt: eine generische und eine, die auf dem Mach-Microkernel aufbaut.
+* Motorola 68k (m68k): MicroLinux und uClinux für 68000 Prozessoren ohne MMU: Palmpilot, Amiga 500, ColdFire. Ebenso für Atari und verschiedenste embedded Systeme.
+* MIPS R3000: Digital Decstations (mipsel) und SGI Computer (mips).
+* ARM (arm): Acorn Archimedes.
+* DEC Alpha (alpha): DEC Alpha und Kompatible.
+* Sun Sparc (sparc): Sun4c und höher. Ebenso UltraSparc-Prozessoren. Das ist einer der schnellsten und stabilsten Ports.
+* HP PA-RISC (hppa): Hewlett-Packard PA-RISC-Architektur.
+* S/390 (s390): IBM S/390-Server und IBM zSeries. 
 
 Voraussetzungen
 ^^^^^^^^^^^^^^^
@@ -208,21 +209,23 @@ Es ist schneller, stabiler und besser skalierbar als so manches kommerzielle Sys
 Wer leistet Support für Linux?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Sie erhalten gratis Support von zahlreichen Internet-Newsgroups, Mailinglisten und ungezählten WWW-Seiten. Sie haben die Möglichkeit, dem Programmierer einer Software direkt eine Mail zu schicken. Sie können auch mit Ihrer lokalen Linux oder Unix User Group Kontakt aufnehmen. Wenn Sie kommerziellen Support benötigen, können Sie sich an einen der Distributoren oder eine Firma, die Linux einsetzt und unterstützt, wenden. Eine Liste solcher Firmen erscheint beispielsweise monatlich im Linux-Magazin (de http://www.linux-magazin.de).
+Sie erhalten gratis Support von zahlreichen Internet-Newsgroups, Mailinglisten und ungezählten WWW-Seiten. Sie haben die Möglichkeit, dem Programmierer einer Software direkt eine Mail zu schicken. Sie können auch mit Ihrer lokalen Linux oder Unix User Group Kontakt aufnehmen. Wenn Sie kommerziellen Support benötigen, können Sie sich an einen der Distributoren oder eine Firma, die Linux einsetzt und unterstützt, wenden. Eine Liste solcher Firmen erscheint beispielsweise monatlich im Linux-Magazin (http://www.linux-magazin.de).
 
 Warum der Pinguin?
 ^^^^^^^^^^^^^^^^^^
 
 .. image:: images/was_ist_linux_tux.png
+    :align: center
+    :alt: Der Tux
 
 Viele haben sich sicher schon einmal gefragt, warum gerade ein Pinguin das am weitesten verbreitete Symbol für Linux auf der Welt ist.
 
-Alles begann damit, dass eine Linux User Group in Bristol in England für Linus Torvalds einen Pinguin gekauft hat. Linus machte sich auf den weiten Weg um das Tier zu besuchen. Als er dort ankam, stellte sich heraus, dass sie ihm keinen Pinguin gekauft, sondern nur in seinem Namen eine Patenschaft für einen Pinguin übernommen hatten. Aber wie kam es jetzt, dass der Pinguin als Symbol für Linux genommen wurde?
-Dies war die Idee von Tove, seiner Frau. Linus versuchte ein Symbol für Linux zu finden, da ihn viele Leute darauf ansprachen, dass es gut wäre, ein eigenes Symbol zu haben. Die anderen Linux Firmen hatten ja zu dem Zeitpunkt auch schon alle eigene Logos. Seine Frau dachte bei der Logosuche an Pinguine, weil Linus in einem Zoo in Australien einmal von einem Pinguin gebissen wurde. Dies geschah beim Versuch, die Pinguine einfach so über ihren Zaun hinweg zu streicheln.
+Alles begann damit, dass eine Linux User Group in Bristol in England für *Linus Torvalds* einen Pinguin gekauft hat. Linus machte sich auf den weiten Weg um das Tier zu besuchen. Als er dort ankam, stellte sich heraus, dass sie ihm keinen Pinguin gekauft, sondern nur in seinem Namen eine Patenschaft für einen Pinguin übernommen hatten. Aber wie kam es jetzt, dass der Pinguin als Symbol für Linux genommen wurde?
+Dies war die Idee von *Tove*, seiner Frau. *Linus* versuchte ein Symbol für Linux zu finden, da ihn viele Leute darauf ansprachen, dass es gut wäre, ein eigenes Symbol zu haben. Die anderen Linux Firmen hatten ja zu dem Zeitpunkt auch schon alle eigene Logos. Seine Frau dachte bei der Logosuche an Pinguine, weil Linus in einem Zoo in Australien einmal von einem Pinguin gebissen wurde. Dies geschah beim Versuch, die Pinguine einfach so über ihren Zaun hinweg zu streicheln.
 
-Nach diesem Erlebnis entwickelte Linus komischerweise eine Leidenschaft für Pinguine und Tove machte den Vorschlag, er solle doch einfach einen Pinguin als Logo nehmen. Linus sprach die Idee des Pinguins nach langem Überlegen mit Henry Hall und Maddog ab und schließlich entschieden sie sich dafür, dass der Pinguin gut ist.
+Nach diesem Erlebnis entwickelte *Linus* komischerweise eine Leidenschaft für Pinguine und *Tove* machte den Vorschlag, er solle doch einfach einen Pinguin als Logo nehmen. Linus sprach die Idee des Pinguins nach langem Überlegen mit *Henry Hall* und *Maddog* ab und schließlich entschieden sie sich dafür, dass der Pinguin gut ist.
 
-Als nächstes spornte Linus die Internetgemeinde an, ihm Bilder von Pinguinen zu schicken. Linus gab sich jedoch nicht mit einem x-beliebigen Pinguin ab, nein, sein Pinguin sollte glücklich aussehen, "so als hätte er eine Maß Bier genossen und den besten Sex seines Lebens gehabt". Er wählte die Version von Larry Ewing, einem Grafiker, der am Institute for Scientific Computing an der A&M University in Texas arbeitete, aus. Der Pinguin sollte unverwechselbar sein, was er mit Tux, so sein Name, auch geschafft hat.
+Als nächstes spornte Linus die Internetgemeinde an, ihm Bilder von Pinguinen zu schicken. Linus gab sich jedoch nicht mit einem x-beliebigen Pinguin ab, nein, sein Pinguin sollte glücklich aussehen, "so als hätte er eine Maß Bier genossen und den besten Sex seines Lebens gehabt". Er wählte die Version von *Larry Ewing*, einem Grafiker, der am Institute for Scientific Computing an der A&M University in Texas arbeitete, aus. Der Pinguin sollte unverwechselbar sein, was er mit *Tux*, so sein Name, auch geschafft hat.
 
 Während normale Pinguine einen schwarzen Schnabel und schwarze Füße haben, sollte das Linux Maskottchen wegen der Einzigartigkeit einen orangen Schnabel und orangefarbene Füße haben, so dass es so aussieht, als sei die Mutter des Pinguins eine Ente.
 "Als hätte Daisy Duck sich auf einer Antarktis-Kreuzfahrt vergessen und einen wilden One-Night-Stand mit einem einheimischen Federvieh gehabt".
@@ -236,14 +239,13 @@ ISBN: 3-423-36299-5
 
 Autoren
 
-    Lugs philipp.frauenfelder@swissonline.ch
-    Heiko Degenhardt hede@pingos.org
-    Nico Golde nion@gmx.net
+* Lugs philipp.frauenfelder@swissonline.ch
+* Heiko Degenhardt hede@pingos.org
+* Nico Golde nion@gmx.net
 	
 Formatierung
 
-    Matthias Hagedorn matthias.hagedorn@selflinux.org
-
+* Matthias Hagedorn matthias.hagedorn@selflinux.org
 
 
 Linux Geschichte

@@ -43,7 +43,7 @@ Autoren
 	
 Formatierung
 
-    Florian Frank florian.frank@pingos.org
+* Florian Frank florian.frank@pingos.org
 
 
 Vorwort
@@ -80,7 +80,7 @@ Formatierung
 Danksagung
 ----------
 
- Wir möchten uns zunächst einmal bei den Lesern dieser Dokumentation für ihr Interesse an SelfLinux bedanken (und damit auch am Thema "GNU/Linux" an sich). Nur durch die vielen interessierten Anwender kann dieses Betriebssystem eine immer weitere Verbreitung finden. Natürlich sind die `Argumente <Einleitung.html#eigenschaften-von-linux>`_sehr überzeugend, die für einen Einsatz von GNU/Linux sprechen. Aber was wären all diese Argumente ohne die vielen Anwender, die sie überprüfen?
+Wir möchten uns zunächst einmal bei den Lesern dieser Dokumentation für ihr Interesse an SelfLinux bedanken (und damit auch am Thema "GNU/Linux" an sich). Nur durch die vielen interessierten Anwender kann dieses Betriebssystem eine immer weitere Verbreitung finden. Natürlich sind die `Argumente <Einleitung.html#eigenschaften-von-linux>`_sehr überzeugend, die für einen Einsatz von GNU/Linux sprechen. Aber was wären all diese Argumente ohne die vielen Anwender, die sie überprüfen?
 
 Wichtig waren und sind dabei vor allem diejenigen unserer Leser, die durch eigene Initiative zur Verbesserung unseres Tutorials beigetragen haben.
 
