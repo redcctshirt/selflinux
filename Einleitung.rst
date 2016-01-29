@@ -3,6 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. |br| raw:: html
+
+   <br />
+
 Einleitung
 ==========
 
@@ -255,21 +259,21 @@ Die Geschichte von Linux
 
 1991
 
-Der 21-jährige finnische Student Linus Benedict Torvalds beginnt, aufbauend auf dem en Minix Betriebssystem, ein unixartiges Betriebssystem für AT-386-Computer zu schreiben. Er schreibt am 5. Oktober in der Newsgroup en comp.os.minix:
+Der 21-jährige finnische Student Linus Benedict Torvalds beginnt, aufbauend auf dem `Minix <http://www.cs.vu.nl/~ast/minix.html>`_ Betriebssystem, ein unixartiges Betriebssystem für AT-386-Computer zu schreiben. Er schreibt am 5. Oktober in der Newsgroup `comp.os.minix <http://groups.google.de/groups?hl=de&lr=&ie=UTF-8&oe=UTF-8&q=comp.os.minix&btnG=Google+Suche&meta=>`_:
 
-    "...As I mentioned a month ago, I'm working on a free version of a Minix-look-alike for AT-386 computers. It has finally reached the stage where it's even usable (though may not be, depending on what you want), and I am willing to put out the sources for wider distribution. It is just version 0.02... but I've successfully run bash, gcc, gnu-make, gnu-sed, compress, etc. under it." 
+    "...As I mentioned a month ago, I'm working on a free version of a Minix-look-alike for AT-386 computers. It has finally reached the stage where it's even usable (though may not be, depending on what you want), and I am willing to put out the sources for wider distribution. It is just version 0.02 - but I've successfully run bash, gcc, gnu-make, gnu-sed, compress, etc. under it." 
 
 1992
 
-Linus Torvalds verteilt die Version 0.12 per anonymous FTP im Internet, was zu einem sprunghaften Anstieg der Zahl interessierter Benutzer führt. Da diese Zahl so groß wird, dass die nötige Kommunikation nicht mehr per E-Mail zu bewältigen ist, wird in den Usenet News die Gruppe en alt.os.linux ins Leben gerufen. Dies hat zur Folge, dass eine explosionsartige Weiterentwicklung des Systems im ganzen Internet entsteht und von Linus Torvalds fortan en koordiniert wird.
+*Linus Torvalds* verteilt die Version 0.12 per anonymous FTP im Internet, was zu einem sprunghaften Anstieg der Zahl interessierter Benutzer führt. Da diese Zahl so groß wird, dass die nötige Kommunikation nicht mehr per E-Mail zu bewältigen ist, wird in den Usenet News die Gruppe `alt.os.linux <http://groups.google.de/groups?q=alt.os.linux&ie=UTF-8&oe=UTF-8&hl=de&btnG=Google+Suche>`_ ins Leben gerufen. Dies hat zur Folge, dass eine explosionsartige Weiterentwicklung des Systems im ganzen Internet entsteht und von *Linus Torvalds* fortan `koordiniert <http://www.kernel.org/>`_ wird.
 
 1993
 
-Bereits über 100 Programmierer arbeiten am Linux-Code mit. Durch Anpassung des Linux-Kernels an die GNU-Umgebung der en Free Software Foundation (FSF) im Jahre 1993 wachsen die Möglichkeiten von Linux erneut stark an, da man nun auf eine en große Sammlung an vorhandener freier Software und Tools zurückgreifen kann, die unter Linux laufen.
+Bereits über 100 Programmierer arbeiten am Linux-Code mit. Durch Anpassung des Linux-Kernels an die GNU-Umgebung der `Free Software Foundation (FSF) <http://www.fsfeurope.org/>`_ im Jahre 1993 wachsen die Möglichkeiten von Linux erneut stark an, da man nun auf eine `große Sammlung <http://www.gnu.org/directory/>`_ an vorhandener freier Software und Tools zurückgreifen kann, die unter Linux laufen.
 
 1994
 
-Mit der Linux-Version 1.0 wird der Betriebssystem-Kernel netzwerkfähig und die User-Zahl steigt auf 100.000 an. Ein wichtiger Schritt, der ebenfalls im Jahre 1994 geschieht, ist auch die Anpassung einer grafischen Benutzerschnittstelle (GUI) auf Linux. Diese wird von einer weiteren Non-Profit-Gruppe, dem en XFree86-Projekt, beigesteuert. Linus Torvalds stellt nun den Quelltext des Linux-Kernels offiziell unter die  GPL. Somit ist die freie Existenz von Linux gesichert.
+Mit der Linux-Version 1.0 wird der Betriebssystem-Kernel netzwerkfähig und die User-Zahl steigt auf 100.000 an. Ein wichtiger Schritt, der ebenfalls im Jahre 1994 geschieht, ist auch die Anpassung einer grafischen Benutzerschnittstelle (GUI) auf Linux. Diese wird von einer weiteren Non-Profit-Gruppe, dem `XFree86-Projekt <http://www.xfree86.org/>`_, beigesteuert. *Linus Torvalds* stellt nun den Quelltext des Linux-Kernels offiziell unter die  `GPL <https://de.wikipedia.org/wiki/GNU_General_Public_License>`_. Somit ist die freie Existenz von Linux gesichert.
 
 1995
 
@@ -285,11 +289,11 @@ Nun erscheinen wöchentlich neue, aktualisierte Versionen des Linux-Kernels. Ver
 
 1998
 
-Das Desktop-Projekt en KDE wird gestartet. Es arbeiten etwa 750 Programmierer am Quellcode dieser heute am weitesten verbreiten  Desktopumgebung.
+Das Desktop-Projekt `KDE <http://www.kde.org/>`_ wird gestartet. Es arbeiten etwa 750 Programmierer am Quellcode dieser heute am weitesten verbreiten  Desktopumgebung.
 
 Seit diesem Jahr überschlagen sich die Ereignisse rund um Linux. Viele namhafte Hardware- und Softwarehersteller kündigen die Portierung ihrer Produkte auf Linux an.
 
-Darunter finden sich Firmen wie de IBM und de Compaq, die Linux als Betriebssystem auf ihren Computern unterstützen. en Informix und de Oracle entwickeln ihre Datenbanken fortan auch für Linux.
+Darunter finden sich Firmen wie de `IBM <http://www.ibm.de/>`_ und de `Compaq <http://www.compaq.de/>`_, die Linux als Betriebssystem auf ihren Computern unterstützen. `Informix <http://www.informix.de/>`_ und `Oracle <http://www.oracle.de/>`_ entwickeln ihre Datenbanken fortan auch für Linux.
 
 Netscape gibt die Quellen seines Webbrowsers frei und lässt die zukünftige Entwicklung durch das Mozilla-Projekt vorantreiben.
 
@@ -297,9 +301,9 @@ Netscape gibt die Quellen seines Webbrowsers frei und lässt die zukünftige Ent
 
 Die Kernelversion 2.2 erscheint. Sie verfügt über einen verbesserten SMP-Support und einen überarbeiteten Netzwerkcode.
 
-Ein neues Desktop-Projekt mit dem Namen en GNOME wird gestartet.
+Ein neues Desktop-Projekt mit dem Namen `GNOME <http://www.gnome.org/>`_ wird gestartet.
 
-Zur Soundunterstützung erscheint das en Open Sound System. Auch Samba wird in einer neuen Version 2.0 veröffentlicht.
+Zur Soundunterstützung erscheint das `Open Sound System <http://www.opensound.com/>`_. Auch Samba wird in einer neuen Version 2.0 veröffentlicht.
 
 Die Portierung von Domino Notes wird angekündigt, und IBM propagiert seine Linux-Strategie.
 
@@ -311,7 +315,7 @@ KDE 2.0 erscheint.
 
 IBM kündigt für 2001 Investitionen in Linux in der Höhe von 1 Milliarde Dollar an.
 
-Sun veröffentlicht den Quellcode von StarOffice unter der en LGPL (Lesser GPL) und legt damit den Grundstein für en OpenOffice.
+Sun veröffentlicht den Quellcode von StarOffice unter der `LGPL (Lesser GPL) <http://www.gnu.org/copyleft/lesser.html>`_ und legt damit den Grundstein für `OpenOffice <http://www.openoffice.org/>`_.
 
 2001
 
@@ -325,99 +329,118 @@ Samba 2.2 erscheint.
 
 Das OpenOffice-Projekt bringt OpenOffice in der Version 1.0 auf den Markt. Es ist ein komplettes Office-Paket mit Textverarbeitung, Tabellenkalkulation, Präsentationsmodul und läuft nicht nur unter Linux.
 
-Der OpenSource Webbrowser en Mozilla wird nach vier Jahren in der Version 1.0 veröffentlicht.
+Der OpenSource Webbrowser `Mozilla <http://www.mozilla.org/>`_ wird nach vier Jahren in der Version 1.0 veröffentlicht.
 
 Auch bei den Desktops wird die nächste Runde eingeläutet: KDE 3.0 erscheint im Frühling, GNOME 2.0 zur Jahresmitte.
 
 2003
 
-Linus Torvalds wechselt von seinem bisherigen Arbeitgeber Transmeta in das en Open Source Development Lab (OSDL). Dort wird er in Zukunft auch beruflich seine Zeit der Arbeit am Linux-Kernel widmen.
+Linus Torvalds wechselt von seinem bisherigen Arbeitgeber Transmeta in das `Open Source Development Lab (OSDL) <http://www.osdl.org/>`_. Dort wird er in Zukunft auch beruflich seine Zeit der Arbeit am Linux-Kernel widmen.
 
 Linux findet zusehends Verbreitung auf Embedded Systemen.
 
 Der Münchener Stadtrat hat sich am 28. Mai auf Grund einer Studie für die Umstellung seiner 14.000 Computer von Windows auf Linux entschieden.
 
-en XFree86 wird in der Version 4.3 veröffentlicht und bietet dadurch viele neue Treiber für moderne Grafikkarten.
+`XFree86 <http://www.xfree86.org/>`_ wird in der Version 4.3 veröffentlicht und bietet dadurch viele neue Treiber für moderne Grafikkarten.
 
-en KDE Desktop 3.1 erscheint.
+`KDE <http://www.kde.org/>`_ Desktop 3.1 erscheint.
 
-en OpenOffice wird in der Version 1.1 veröffentlicht, welches etliche Erweiterungen gegenüber den Vorgängerversionen bietet.
+`OpenOffice <http://www.openoffice.org/>`_ wird in der Version 1.1 veröffentlicht, welches etliche Erweiterungen gegenüber den Vorgängerversionen bietet.
 
-en Samba erscheint in der Version 3.0, welche gerade im Bereich als Domänenkontroller viele Erweiterungen und Verbesserungen erfahren hat. Auch eine Integration in das von Windows 2000 eingeführte "Active Directory" ist nun möglich.
+`Samba <http://www.samba.org/>`_ erscheint in der Version 3.0, welche gerade im Bereich als Domänenkontroller viele Erweiterungen und Verbesserungen erfahren hat. Auch eine Integration in das von Windows 2000 eingeführte "Active Directory" ist nun möglich.
 
-en Gnome Desktop 2.4 erscheint.
+`Gnome <http://www.gnome.org/>`_ Desktop 2.4 erscheint.
 
-Die Entwicklerserie 2.5 des en Linux-Kernels wird geschlossen und in die Serie 2.6.0-test übergeführt.
+Die Entwicklerserie 2.5 des `Linux-Kernels <http://www.kernel.org/>`_ wird geschlossen und in die Serie 2.6.0-test übergeführt.
 
 Am 17. Dezember wird Version 2.6.0 des Linux-Kernels freigegeben.
 
 2004
 
-2004 war das Jahr der Livedistributionen. Stein des Anstoßes ist en Knoppix, ein Debian Derivat, das bis heute viele Nachahmer auf den Plan gerufen hat. Weitere populäre Vetreter sind en Kanotix, ein Fork von Knoppix, sowie die SuSE Linux Live CD.
+2004 war das Jahr der Livedistributionen. Stein des Anstoßes ist `Knoppix <http://www.knoppix.org/>`_, ein Debian Derivat, das bis heute viele Nachahmer auf den Plan gerufen hat. Weitere populäre Vetreter sind `Kanotix <http://www.kanotix.com/>`_, ein Fork von Knoppix, sowie die SuSE Linux Live CD.
 
-en NetBSD schafft nach über 10 Jahren den Sprung auf die Version 2.
+`NetBSD <http://www.netbsd.org/>`_ schafft nach über 10 Jahren den Sprung auf die Version 2.
 
-Der größte deutsche Distributeur von Linux, die en SuSE Linux AG, wird von Novell aufgekauft. Die Folge ist die Einstellung der SuSE Linux Personal Serie, die vor allem zur Verbreitung von Linux auf Heimcomputern geführt hatte.
+Der größte deutsche Distributeur von Linux, die `SuSE Linux AG <http://www.novell.com/linux/suse/>`_, wird von Novell aufgekauft. Die Folge ist die Einstellung der SuSE Linux Personal Serie, die vor allem zur Verbreitung von Linux auf Heimcomputern geführt hatte.
 
-en KDE Desktop 3.3 erscheint. Die Groupware Kontact ist erstmals offizieller Bestandteil des Desktops.
+`KDE <http://www.kde.org/>`_ Desktop 3.3 erscheint. Die Groupware Kontact ist erstmals offizieller Bestandteil des Desktops.
 
-Aufgrund von Unstimmigkeiten bei der Lizenz des XFree86 Projektes, die nicht mit der GPL vereinbar ist, wird die en Xorg Foundation gegründet.
+Aufgrund von Unstimmigkeiten bei der Lizenz des XFree86 Projektes, die nicht mit der GPL vereinbar ist, wird die `Xorg <http://www.x.org/>`_ Foundation gegründet.
 
-en Gnome Desktop 2.8 erscheint.
+`Gnome <http://www.gnome.org/>`_ Desktop 2.8 erscheint.
 
-Die en Kernelentwicklung schreitet bis Version 2.6.10 fort.
+Die `Kernelentwicklung <http://www.kernel.org/>`_ schreitet bis Version 2.6.10 fort.
 
-en Mandrake 10.1 steht ab Dezember zum Download bereit.
+`Mandrake <http://www.mandrakelinux.com/>`_ 10.1 steht ab Dezember zum Download bereit.
 
 2005
 
-en Gnome Desktop 2.10 erscheint.
+`Gnome <http://www.gnome.org/>`_ Desktop 2.10 erscheint.
 
-en KDE Desktop 3.4 erscheint.
+`KDE <http://www.kde.org/>`_ Desktop 3.4 erscheint.
 
-en Openoffice Version 2 hat Beta-Status erreicht.
+`Openoffice <http://www.openoffice.org/>`_ Version 2 hat Beta-Status erreicht.
 
-en Mozilla Firefox und Thunderbird liegen in Version 1.02 vor. 
+`Mozilla <http://www.mozilla.org/>`_ Firefox und Thunderbird liegen in Version 1.02 vor. 
 
 Autoren
 
-    Frank Börner frank@frank-boerner.de
-    Johnny Graber selflinux@jgraber.ch
-    Felix Grigoleit datenflut@web.de
+* Frank Börner frank@frank-boerner.de
+* Johnny Graber selflinux@jgraber.ch
+* Felix Grigoleit datenflut@web.de
 	
 Formatierung
 
-    Matthias Nuessler m.nuessler@web.de
+* Matthias Nuessler m.nuessler@web.de
 
 
 Was ist SelfLinux?
 ------------------
 
+In diesem Kapitel geht es um die Entstehung die Ziele und den aktuellen Stand von SelfLinux. 
+
 Geschichte
 ^^^^^^^^^^
 
-SelfLinux ging 1999 aus dem Projekt de "PingoS" hervor, das sich zum Ziel gesetzt hat, die Verbreitung von Linux in Schulen zu unterstützen. Noch heute sind einige Teammitglieder auch im PingoS-Projekt aktiv.
+SelfLinux ging 1999 aus dem Projekt `"PingoS" <http://www.pingos.org/>`_ hervor, das sich zum Ziel gesetzt hat, die Verbreitung von Linux in Schulen zu unterstützen. Noch heute sind einige Teammitglieder auch im PingoS-Projekt aktiv.
 
 Wichtige Eckdaten des Projektes waren:
-1999 	Gründung des Projektes nach Diskussionen auf der SuSE Linux Mailingliste
-März 2000 	Registrierung bei en SourceForge; damit ergab sich die Möglichkeit, eine professionelle Projektarbeit z.B. unter Verwendung von  CVS zu beginnen
-April/Mai 2000 	Erstellung/Diskussion des ersten "Richtlinienentwurfs" über die Projektarbeit (Verwendung von CVS, Aufgaben der Admins, Bildung von Teams...)
-Januar 2001 	Neue Datenbank für die Verwaltung der Mitglieder, der Artikel und so weiter
-Juli 2001 	Erste Testversion auf dem LinuxTag in Stuttgart
-Juli 2002 	Erstellung eines ersten "Basisrelease" mit den in unseren Augen notwendigsten Texten
-September 2002 	SelfLinux 0.2.0 erschienen
-November 2002 	SelfLinux 0.2.1 erschienen
-Dezember 2002 	SelfLinux 0.4.0 erschienen
-Februar 2003 	SelfLinux 0.6.0 erschienen
-August 2003 	SelfLinux 0.8.0 erschienen
-SelfLinux 0.8.1 erschienen
-Oktober 2003 	Umzug des CVS-Repositories von Sourceforce zu PingoS SelfLinux 0.9.1 erschienen
-Dezember 2003 	SelfLinux 0.9.2 erschienen
-Februar 2004 	SelfLinux 0.9.3 erschienen
-März 2004 	SelfLinux 0.10.0 erschienen
-Juni 2004 	Umstellung des Repositories auf Subversion
-August 2004 	SelfLinux 0.11.0 erschienen
-Oktober 2004 	SelfLinux 0.11.1 erschienen
+
+1999 Gründung des Projektes nach Diskussionen auf der SuSE Linux Mailingliste
+
+März 2000 Registrierung bei `SourceForge <http://www.sourceforge.net/>`_; damit ergab sich die Möglichkeit, eine professionelle Projektarbeit z.B. unter Verwendung von `CVS <https://de.wikipedia.org/wiki/Concurrent_Versions_System>`_ zu beginnen
+
+April/Mai 2000 Erstellung/Diskussion des ersten "Richtlinienentwurfs" über die Projektarbeit (Verwendung von CVS, Aufgaben der Admins, Bildung von Teams...)
+
+
+Januar 2001 Neue Datenbank für die Verwaltung der Mitglieder, der Artikel und so weiter
+Juli 2001 Erste Testversion auf dem LinuxTag in Stuttgart
+
+Juli 2002 Erstellung eines ersten "Basisrelease" mit den in unseren Augen notwendigsten Texten
+
+September 2002 SelfLinux 0.2.0 erschienen
+
+November 2002 SelfLinux 0.2.1 erschienen
+
+Dezember 2002 SelfLinux 0.4.0 erschienen
+
+Februar 2003 SelfLinux 0.6.0 erschienen
+
+August 2003 SelfLinux 0.8.0 erschienen, SelfLinux 0.8.1 erschienen
+
+Oktober 2003 Umzug des CVS-Repositories von Sourceforce zu PingoS SelfLinux 0.9.1 erschienen
+
+Dezember 2003 SelfLinux 0.9.2 erschienen
+
+Februar 2004 SelfLinux 0.9.3 erschienen
+
+März 2004 SelfLinux 0.10.0 erschienen
+
+Juni 2004 Umstellung des Repositories auf Subversion
+
+August 2004 SelfLinux 0.11.0 erschienen
+
+Oktober 2004 SelfLinux 0.11.1 erschienen
 
 Nach den vielen Diskussionen der Anfangszeit hat sich nun ein Konzept herauskristallisiert, an dem derzeit viele Leute im gesamten deutschsprachigen Raum arbeiten. Die Idee hinter diesem Konzept sowie die möglichen Schritte zur Realisierung sollen im Folgenden beschrieben werden. 
 
@@ -429,15 +452,15 @@ Die Entwicklung der Informationstechnologie schreitet so schnell fort wie kaum e
 Derzeitige Linux-Dokumentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Linux im engeren Sinne bezeichnet lediglich den Betriebssystem-Kern, mit dem der normale Anwender nur selten unmittelbar konfrontiert wird. In einem weiter gefassten Sinn kann man unter dem Begriff Linux jedoch auch all diejenigen Systembestandteile und Werkzeuge zusammenfassen, welche den täglichen Umgang mit einem Linux-System ausmachen und mit welchen der Benutzer oder Administrator aller Wahrscheinlichkeit nach in Kontakt geraten wird.
+`Linux <https://de.wikipedia.org/wiki/Linux>`_ im engeren Sinne bezeichnet lediglich den Betriebssystem-Kern, mit dem der normale Anwender nur selten unmittelbar konfrontiert wird. In einem weiter gefassten Sinn kann man unter dem Begriff Linux jedoch auch all diejenigen Systembestandteile und Werkzeuge zusammenfassen, welche den täglichen Umgang mit einem Linux-System ausmachen und mit welchen der Benutzer oder Administrator aller Wahrscheinlichkeit nach in Kontakt geraten wird.
 
-Für das System im Allgemeinen und auch für die meisten dieser Werkzeuge gibt es heute bereits eine recht gute Dokumentation ( Manual-Pages, Info-Seiten, HTML-Seiten im Web, (Online-)Bücher, FAQs, HOWTOs u.v.a.m.). Diese vorhandene Linux-Dokumentation erscheint uns trotzdem ungenügend, denn:
+Für das System im Allgemeinen und auch für die meisten dieser Werkzeuge gibt es heute bereits eine recht gute Dokumentation (`Manual-Pages, Info-Seiten, HTML-Seiten im Web, (Online-)Bücher, FAQs, HOWTOs u.v.a.m. <Grundlagen.html#linux-hilfe>`_). Diese vorhandene Linux-Dokumentation erscheint uns trotzdem ungenügend, denn:
 
-    Sie besteht aus vielen isolierten Dokumenten.
-    Sie baut folglich nicht logisch aufeinander auf.
-    Sie ist vielfach nur in Englisch verfügbar.
-    Sie ist häufig mangelhaft oder gar nicht illustriert.
-    Sie nutzt nicht (oder nur in geringem Maße) die Möglichkeiten von Hypertexten.
+* Sie besteht aus vielen isolierten Dokumenten.
+* Sie baut folglich nicht logisch aufeinander auf.
+* Sie ist vielfach nur in Englisch verfügbar.
+* Sie ist häufig mangelhaft oder gar nicht illustriert.
+* Sie nutzt nicht (oder nur in geringem Maße) die Möglichkeiten von Hypertexten.
 
 Diese Situation hat einige unerwünschte Konsequenzen. Zum einen wird es dem Einsteiger oder Umsteiger erschwert, sich systematisch Kenntnisse über Linux anzueignen. Dies schreckt viele potentielle Benutzer ab, die sich vielleicht gern mit diesem freien Betriebssystem beschäftigen würden.
 
@@ -448,7 +471,7 @@ Eine systematische Einarbeitung sowie ein gezieltes Auffinden von Informationen 
 Die Ziele von SelfLinux
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-SelfLinux möchte die in unseren Augen bestehenden Nachteile der  derzeitigen Linux-Dokumentation schließen helfen. Im Vordergrund steht das Bestreben, einen Einblick in die Grundlagen der Arbeitsweise von Linux und der mit ihm verbundenen Werkzeuge zu geben. Der Benutzer und Administrator soll ein Verständnis für die Systemzusammenhänge entwickeln, das ihm bei der Problemlösung in der täglichen Arbeit behilflich sein wird. Von Anfang an möchten wir den Blick auch auf das richten, was "unter der Haube" geschieht, um Einblicke in die innere Logik des Systems zu geben, die vermutlich so viele Linux-Anhänger in ihren Bann zieht.
+SelfLinux möchte die in unseren Augen bestehenden Nachteile der `derzeitigen Linux-Dokumentation <Grundlagen.html#linux-hilfe>`_ schließen helfen. Im Vordergrund steht das Bestreben, einen Einblick in die Grundlagen der Arbeitsweise von Linux und der mit ihm verbundenen Werkzeuge zu geben. Der Benutzer und Administrator soll ein Verständnis für die Systemzusammenhänge entwickeln, das ihm bei der Problemlösung in der täglichen Arbeit behilflich sein wird. Von Anfang an möchten wir den Blick auch auf das richten, was "unter der Haube" geschieht, um Einblicke in die innere Logik des Systems zu geben, die vermutlich so viele Linux-Anhänger in ihren Bann zieht.
 
 SelfLinux möchte vieles sein: Tutorial für Einsteiger, Ratgeber für Fortgeschrittene, bis hin zur Referenz für Profis. Aber natürlich können wir nicht alles auf einmal leisten. In den ersten Releases werden wir uns daher darauf konzentrieren, dem Einsteiger einen systematischen Weg zum fortgeschrittenen Linux-Wissen zu weisen. Wo bereits Texte verfügbar sind, werden wir jedoch auch den Fortgeschrittenen nicht vergessen. Ein Nachschlagen nach bestimmten Themen lohnt allemal. Wir sind darüber hinaus sicher, dass auch diejenigen, die sich für fortgeschritten halten, viele elementare Themen haben brach liegen lassen, so dass sich auch für sie eine Lektüre der Einführungskapitel lohnen wird. Was die Verwendung als Nachschlagewerk angeht, so möge man noch etwas Geduld mit uns haben. Hunderte Autoren werden nötig sein, um den Umfang eines echten Nachschlagewerkes zu ermöglichen. Wir arbeiten daran - und Sie sind herzlich eingeladen, im Rahmen Ihrer Möglichkeiten (mit ihren Fachkenntnissen ...) daran teilzunehmen. 
 
@@ -461,39 +484,40 @@ Dies möchten wir realisieren, indem wir Texte einem bestimmten Kenntnisstand zu
 
 In den Diskussionen haben sich die folgenden drei wesentlichen Themen als "Eckpfeiler" für die Arbeit erwiesen:
 
-    Das Layout des Tutorials
-    Die Struktur der Kapitel
-    Die Arbeitsweise der Teams
+* Das Layout des Tutorials
+* Die Struktur der Kapitel
+* Die Arbeitsweise der Teams
 
 
-Das Layout des Tutorials
+**Das Layout des Tutorials**
 
 Das Layout des Tutorials ist in seinen Grundzügen fertiggestellt. Dazu gehört die Menüstruktur ebenso wie Vereinbarungen über das Format von Überschriften, Absätzen und anderen wiederkehrenden Textstrukturen, die Festlegung von bestimmten Darstellungsarten für Kommandos, Dateiauszüge usw. Autoren verfassen ihre Texte im ASCII-Format und überlassen die Formatierung der Texte einem Layout-Team.
 
-Die Struktur der Kapitel
+**Die Struktur der Kapitel**
 
 Die Kapitel-Struktur von SelfLinux ist im Wesentlichen eine Baumstruktur, d.h. man navigiert vom Allgemeinen zum Speziellen und zurück, wie es beispielsweise vom Linux-Dateibaum her bekannt ist. Da es bei Hypertexten jedoch grundsätzlich keinen Anfang und kein Ende, kein oben und unten gibt, kann man durch Verlinkung auch andere Navigationswege ermöglichen. Daraus ergibt sich in unseren Augen ein riesiger Vorteil von SelfLinux gegenüber herkömmlicher Dokumentation: SelfLinux ermöglicht aufgrund seines Aufbaus den Einsatz in unterschiedlichen Ebenen der Wissensbeschaffung:
 
-Verwendung als Tutorial
+**a) Verwendung als Tutorial**
 
 Es ist beispielsweise möglich, SelfLinux ganz linear als ein Tutorial zu verwenden, das beim Einfachen beginnt und zum Komplizierteren fortschreitet. Spätere Kapitel bauen also auf früheren auf. Die Benutzung entspricht der eines Buches.
 
-Verwendung als Referenz
+**b) Verwendung als Referenz**
 
 Für das schnelle Auffinden von Informationen ist meist eine Referenz das Mittel der Wahl. Sobald das vorliegende Textmaterial dies sinnvoll erscheinen lässt, ist eine Indizierung geplant, welche die Verwendung als Referenz ermöglichen soll. Neben einer Stichwortreferenz soll es auch eine Kommandoreferenz geben.
 
-Die Arbeitsweise der Teams
+**Die Arbeitsweise der Teams**
 
 Das SelfLinux-Team arbeitet virtuell, d.h. die Kommunikation findet praktisch ausschließlich per E-Mail statt, entweder über die Mailingliste des Projektes oder unter einzelnen Teilnehmern zur Absprache von Details. Entscheidungen werden üblicherweise gemeinsam getroffen. Vorschläge aller Art sind willkommen, nach Möglichkeit mit Hinweisen zur Umsetzung.
 
 Die Arbeit des SelfLinux-Teams gliedert sich in die folgenden Bereiche:
-Autoren 	Schreiben von eigenen Texten für SelfLinux im reinen Textformat. Die Themen orientieren sich an der Kapitelstruktur.
-Scouts 	Suchen von geeigneten Texten im Internet, Klärung des Copyrights, Einbindung in SelfLinux.
-Layouter 	Formatierung der Texte, Erstellung und Einbindung von Illustration.
-Quality 	Korrekturlesen, abschließende Überprüfung der Texte.
-XML 	Betreuung, Verwaltung und Pflege von XML.
-Translate 	Übersetzung von Texten und Einbindung in SelfLinux.
-Bugs 	Suchen, finden, eintragen und fixen von Bugs. 
+
+Autoren - Schreiben von eigenen Texten für SelfLinux im reinen Textformat. Die Themen orientieren sich an der Kapitelstruktur.
+Scouts - Suchen von geeigneten Texten im Internet, Klärung des Copyrights, Einbindung in SelfLinux.
+Layouter - Formatierung der Texte, Erstellung und Einbindung von Illustration.
+Quality - Korrekturlesen, abschließende Überprüfung der Texte.
+XML - Betreuung, Verwaltung und Pflege von XML.
+Translate - Übersetzung von Texten und Einbindung in SelfLinux.
+Bugs - Suchen, finden, eintragen und fixen von Bugs. 
 
 
 Entstehung eines SelfLinux-Dokumentes
@@ -501,16 +525,25 @@ Entstehung eines SelfLinux-Dokumentes
 
 Aus den oben beschriebenen Anforderungen an SelfLinux ergibt sich folgender "Lebenslauf" eines Dokumentes für das Tutorial:
 
-    Ein Text wird erstellt
-    Ein Text wird entweder von einem Autor geschrieben, oder von einem Scout oder Übersetzer eingecheckt. Dieser Text ist in reinem ASCII-Format geschrieben. Er enthält noch keinerlei endgültige Formatierungen etc.
-    Erste Qualitätskontrolle
-    Hier überprüft die Quality, ob der Text den Richtlinien für "Plain"-Texte in SelfLinux entspricht, ob der Text fehlerfrei, ob er logisch aufgebaut ist, ob der Autor angegeben ist u.v.a.m.
-    Der Text wird formatiert
-    Nun wird vom Layout das Textdokument mit den für SelfLinux spezifizierten XML-Tags versehen, etwaige Bilder werden eingefügt, das Format festgelegt etc.
-    Zweite Qualitätskontrolle
-    Danach wird abermals überprüft, ob das Dokument den festgelegten Richtlinien entspricht.
-    Der Text wird für ein Release freigegeben
-    Es ist nun ein fertiges Dokument entstanden, das für eine Veröffentlichung im Rahmen von SelfLinux vorgemerkt wird. Solche Releases werden dann von Zeit zu Zeit auf der offiziellen Homepage von SelfLinux eingearbeitet und zum Download angeboten.
+**1. Ein Text wird erstellt**
+
+Ein Text wird entweder von einem Autor geschrieben, oder von einem Scout oder Übersetzer eingecheckt. Dieser Text ist in reinem ASCII-Format geschrieben. Er enthält noch keinerlei endgültige Formatierungen etc.
+
+**2. Erste Qualitätskontrolle**
+
+Hier überprüft die Quality, ob der Text den Richtlinien für "Plain"-Texte in SelfLinux entspricht, ob der Text fehlerfrei, ob er logisch aufgebaut ist, ob der Autor angegeben ist u.v.a.m.
+
+**3. Der Text wird formatiert**
+
+Nun wird vom Layout das Textdokument mit den für SelfLinux spezifizierten XML-Tags versehen, etwaige Bilder werden eingefügt, das Format festgelegt etc.
+
+**4. Zweite Qualitätskontrolle**
+
+Danach wird abermals überprüft, ob das Dokument den festgelegten Richtlinien entspricht.
+
+**5. Der Text wird für ein Release freigegeben**
+
+Es ist nun ein fertiges Dokument entstanden, das für eine Veröffentlichung im Rahmen von SelfLinux vorgemerkt wird. Solche Releases werden dann von Zeit zu Zeit auf der offiziellen Homepage von SelfLinux eingearbeitet und zum Download angeboten.
 
 Während des gesamten Arbeitsablaufs ist die Kommunikation zwischen den beteiligten Personen sowie die Dokumentation der Schritte von entscheidender Bedeutung. Zur Kommunikation dient hauptsächlich die Mailingliste, aber auch E-Mail zwischen den Mitglieder des Core-Teams. Zur Dokumentation und Versionskontrolle setzen wir Subversion ein. So hat jeder Entwickler die Möglichkeit, mit anderen zusammen an ein und demselben Dokument zu arbeiten, Zwischenstände zu sichern, die geleisteten Arbeitsschritte zu 
 kennzeichnen und vieles mehr.
@@ -530,13 +563,13 @@ Deshalb suchen wir für alle Teams noch Mitwirkende, die ein wenig Zeit mitbring
 
 Autoren
 
-    Florian Frank florian.frank@pingos.org
-    Heiko Degenhardt hede@pingos.org
-    Matthias Kleine kleine_matthias@gmx.de
+* Florian Frank florian.frank@pingos.org
+* Heiko Degenhardt hede@pingos.org
+* Matthias Kleine kleine_matthias@gmx.de
 	
 Formatierung
 
-    Johnny Graber linux@jgraber.ch
+* Johnny Graber linux@jgraber.ch
 
 
 Linksammlungen
@@ -551,70 +584,70 @@ Diese kleine Auswahl sollte das Auffinden von Informationen und weiteren Webseit
 Einstiegsseiten zu Linux
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Linux.de 	de http://www.linux.de
-Linux.ch 	de http://www.linux.ch
-Linux.com 	en http://www.linux.com
-Linux.org 	en http://www.linux.org
-
+:Linux.de: http://www.linux.de
+:Linux.ch: http://www.linux.ch
+:Linux.com: http://www.linux.com
+:Linux.org: http://www.linux.org
+    
 Rund um GNU
 ^^^^^^^^^^^
 
-GNU 	en http://www.gnu.org
-FSF 	en http://www.fsf.org/
-FSF Europe 	en http://www.fsfeurope.org
+:GNU: http://www.gnu.org
+:FSF: http://www.fsf.org/
+:FSF Europe: http://www.fsfeurope.org
 
 Allerlei Software
 ^^^^^^^^^^^^^^^^^
 
-SourceForge 	en http://www.sourceforge.net
-Freshmeat 	en http://www.freshmeat.net
-RPMfind 	en http://www.rpmfind.net
-BerliOS 	de http://www.berlios.de
-Linuxiso 	en http://www.linuxiso.org
-TuCowsLinux 	en http://linux.tucows.com/
+:SourceForge: http://www.sourceforge.net
+:Freshmeat: http://www.freshmeat.net
+:RPMfind: http://www.rpmfind.net
+:BerliOS: http://www.berlios.de
+:Linuxiso: http://www.linuxiso.org
+:TuCowsLinux: http://linux.tucows.com/
 
 Desktops
 ^^^^^^^^
 
-GNOME 	en http://www.gnome.org
-KDE 	en http://www.kde.org
-XFCE 	en http://www.xfce.org
-Afterstep 	en http://www.afterstep.org
-WindowMaker 	en http://www.windowmaker.org
-FVWM 	en http://www.fvwm.org
-Fluxbox 	en http://www.fluxbox.org
+:GNOME: http://www.gnome.org
+:KDE: http://www.kde.org
+:XFCE: http://www.xfce.org
+:Afterstep: http://www.afterstep.org
+:WindowMaker: http://www.windowmaker.org
+:FVWM: http://www.fvwm.org
+:Fluxbox: http://www.fluxbox.org
 
 Distributionen
 ^^^^^^^^^^^^^^
 
-Debian 	en http://www.debian.org
-Mandrake 	en http://www.linux-mandrake.com
-Red Hat 	de http://www.redhat.de
-Suse 	de http://www.suse.de
-Slackware 	en http://www.slackware.com
-Gentoo 	en http://www.gentoo.org
-Knoppix 	de http://www.knopper.net/knoppix/
+:Debian: http://www.debian.org
+:Mandrake: http://www.linux-mandrake.com
+:Red Hat: http://www.redhat.de
+:Suse: http://www.suse.de
+:Slackware: http://www.slackware.com
+:Gentoo: http://www.gentoo.org
+:Knoppix: http://www.knopper.net/knoppix/
 
 Usergroups
 ^^^^^^^^^^
 
-DE 	de http://www.lug.de
-CH 	de http://www.lugs.ch
-AT 	de http://www.luga.at
+:DE: http://www.lug.de
+:CH: http://www.lugs.ch
+:AT: http://www.luga.at
 
 Diverses
-^^^^^^^^^^
+^^^^^^^^
 
-Linuxcounter 	en http://counter.li.org
-Linuxlinks 	en http://www.linuxlinks.com
+:Linuxcounter: http://counter.li.org
+:Linuxlinks: http://www.linuxlinks.com
 
 
 Autor
 
-    Johnny Graber linux@jgraber.ch
+* Johnny Graber linux@jgraber.ch
 	
 Formatierung
 
-    Matthias Hagedorn matthias.hagedorn@selflinux.org
+* Matthias Hagedorn matthias.hagedorn@selflinux.org
 
 
