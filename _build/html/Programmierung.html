@@ -104,16 +104,70 @@
 <li class="toctree-l4"><a class="reference internal" href="#zugriff-auf-ein-archiv">Zugriff auf ein Archiv</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ein-neues-projekt-beginnen">Ein neues Projekt beginnen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#eine-arbeitskopie-auschecken">Eine Arbeitskopie auschecken</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#andere-nutzliche-cvs-kommandos">Andere nützliche CVS-Kommandos</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#verwaltung-eines-cvs-archivs">Verwaltung eines CVS-Archivs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#die-rolle-des-administrators">Die Rolle des Administrators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#beschaffen-und-bauen-von-cvs-unter-unix">Beschaffen und Bauen von CVS unter Unix</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#anatomie-einer-cvs-distribution">Anatomie einer CVS-Distribution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mit-einem-archiv-beginnen">Mit einem Archiv beginnen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#finden-sie-mehr-heraus">Finden Sie mehr heraus</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cvs-fur-fortgeschrittene">CVS für Fortgeschrittene</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#uber-die-grundlagen-hinaus">Über die Grundlagen hinaus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cvs-als-telefon">CVS als Telefon</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#watches-wer-arbeitet-wann-woran">Watches: Wer arbeitet wann woran</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#log-nachrichten-und-commit-e-mails">Log-Nachrichten und Commit-E-Mails</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wie-man-eine-arbeitskopie-los-wird">Wie man eine Arbeitskopie los wird</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#uberblick-uber-die-projekthistorie">Überblick über die Projekthistorie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#detaillierter-uberblick-uber-projektaktivitaten-anmerkungen">Detaillierter Überblick über Projektaktivitäten: Anmerkungen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#verwendung-der-schlusselwortexpansion">Verwendung der Schlüsselwortexpansion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eine-prekare-lage-wie-uberlebt-man-die-arbeit-mit-verzweigungen">Eine prekäre Lage: Wie überlebt man die Arbeit mit Verzweigungen?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#haufig-mit-der-hauptversion-verschmelzen">Häufig mit der Hauptversion verschmelzen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#der-koordinierte-ansatz-verschmelzungen-von-und-zur-hauptversion">Der koordinierte Ansatz: Verschmelzungen von und zur Hauptversion</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#der-ansatz-fliegender-fisch-wie-s-einfacher-geht">Der Ansatz »fliegender Fisch«: Wie&#8217;s einfacher geht</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#die-quelltexte-dritter-verfolgen-vendor-branches">Die Quelltexte Dritter verfolgen: Vendor Branches</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#der-bescheidene-guru">Der bescheidene Guru</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tipps-und-troubleshooting">Tipps und Troubleshooting</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#wenn-mal-was-schief-lauft">Wenn mal was schief läuft</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#die-ublichen-verdachtigen">Die üblichen Verdächtigen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#haufige-probleme-und-deren-losung">Häufige Probleme und deren Lösung</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cvs-referenz">CVS-Referenz</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#organisation-und-konventionen">Organisation und Konventionen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#kommandos">Kommandos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#typische-eigenschaften-von-cvs-kommandos">Typische Eigenschaften von CVS-Kommandos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#globale-optionen">Globale Optionen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#liste-der-befehle">Liste der Befehle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#schlusselwortersetzung-rcs-schlusselworter">Schlüsselwortersetzung (RCS-Schlüsselwörter)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#liste-der-schlusselworter">Liste der Schlüsselwörter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#archivverwaltungsdateien">Archivverwaltungsdateien</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#laufzeit-kontrolldateien">Laufzeit-Kontrolldateien</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dateien-in-der-arbeitskopie">Dateien in der Arbeitskopie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#umgebungsvariablen">Umgebungsvariablen</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#werkzeuge-von-drittanbietern-die-mit-cvs-zusammen-arbeiten">Werkzeuge von Drittanbietern, die mit CVS zusammen arbeiten</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#was-sind-werkzeuge-von-drittanbietern">Was sind Werkzeuge von Drittanbietern?</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pcl-cvs-eine-emacs-bedienungsoberflache-fur-cvs">pcl-cvs: eine Emacs-Bedienungsoberfläche für CVS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#installation-von-pcl-cvs">Installation von pcl-cvs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#benutzung-von-pcl-cvs">Benutzung von pcl-cvs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fehlerbehandlung-in-pcl-cvs">Fehlerbehandlung in pcl-cvs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#die-zukunft-von-pcl-cvs">Die Zukunft von pcl-cvs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cvsutils-allgemeine-werkzeuge-zur-nutzung-mit-cvs">cvsutils: allgemeine Werkzeuge zur Nutzung mit CVS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cvs2cl-pl-die-erzeugung-von-changelogs-im-gnu-stil-aus-cvs-logs">cvs2cl.pl: die Erzeugung von ChangeLogs im GNU-Stil aus CVS Logs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cvslock-sperren-von-archiven">cvslock: Sperren von Archiven</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#weitere-pakete">Weitere Pakete</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eigene-werkzeuge-schreiben">Eigene Werkzeuge schreiben</a></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="#cvs-status-examining-a-subdir">cvs status: Examining a-subdir</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#cvs-status-examining-a-subdir-subsubdir">cvs status: Examining a-subdir/subsubdir</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#cvs-status-examining-b-subdir">cvs status: Examining b-subdir</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#im-vorangegangenen-beispiel-besteht-der-interessante-teil-aus-den-ersten-drei-zeilen-die-leerzeile-nicht-mitgezahlt-der-statusausgabe-jeder-datei-die-erste-zeile-ist-die-wichtigste-dort-stehen-der-dateiname-und-der-status-der-datei-innerhalb-der-arbeitskopie-zurzeit-sind-alle-dateien-auf-dem-gleichen-stand-mit-dem-archiv-daher-steht-uberall-der-status-up-to-date-wenn-jedoch-random-c-modifiziert-und-noch-nicht-an-das-archiv-mittels-commit-ubertragen-worden-ware-konnte-dies-so-aussehen">Im vorangegangenen Beispiel besteht der interessante Teil aus den ersten drei Zeilen (die Leerzeile nicht mitgezählt) der Statusausgabe jeder Datei. Die erste Zeile ist die wichtigste; dort stehen der Dateiname und der Status der Datei innerhalb der Arbeitskopie. Zurzeit sind alle Dateien auf dem gleichen Stand mit dem Archiv, daher steht überall der Status Up-to-date. Wenn jedoch random.c modifiziert und noch nicht an das Archiv mittels Commit übertragen worden wäre, könnte dies so aussehen:</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#programmierung-unter-linux">Programmierung unter Linux</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#muss-man-programmieren-konnen-um-mit-linux-zu-arbeiten">Muss man programmieren können, um mit Linux zu arbeiten?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#wieso-sich-dann-mit-programmierung-beschaftigen">Wieso sich dann mit Programmierung beschäftigen?</a></li>
@@ -208,7 +262,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#namen-von-bibliotheken">Namen von Bibliotheken</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#platzierung-im-dateisystem">Platzierung im Dateisystem</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#funktion-des-dynamischen-linkers-programmladers">Funktion des Dynamischen Linkers (Programmladers)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#umgebungsvariablen">Umgebungsvariablen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id72">Umgebungsvariablen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cache-datei-erzeugen">Cache-Datei erzeugen</a></li>
 </ul>
 </li>
@@ -253,7 +307,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#eigene-suffix-regeln">Eigene Suffix-Regeln</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#kommandos">Kommandos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id79">Kommandos</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#wildcards">Wildcards</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mehrere-kommandos">Mehrere Kommandos</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#skript-programmierung">Skript-Programmierung</a></li>
@@ -273,7 +327,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#richtlinien">Richtlinien</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#allgemeine-konventionen">Allgemeine Konventionen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#utilities">Utilities</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id100">Variablen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id102">Variablen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#installations-verzeichnis">Installations-Verzeichnis</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#standard-targets">Standard Targets</a></li>
 </ul>
@@ -281,7 +335,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#doxygen-howto">Doxygen Howto</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id101">Einleitung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id103">Einleitung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#doxygen">Doxygen</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#vorbereitungen-fur-den-einsatz">Vorbereitungen für den Einsatz</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#doxygen-tags">Doxygen-Tags</a></li>
@@ -898,9 +952,9 @@ done
 Bemerkung
 Hier wurde das Kommando mit cvs ci anstatt cvs commit angegeben. Die meisten CVS-Kommandos haben, um die Tipparbeit zu vereinfachen, Kurzformen. Von checkout, update und commit sind die Kurzformen co, up und ci. Eine Liste aller Kurzformen kann mit dem Befehl cvs &#8211;help-synonyms abgefragt werden.</p>
 <p>In den meisten Fällen kann die Revisionsnummer einer Datei ignoriert werden. Meistens werden diese Nummern nur für interne Verwaltungsaufgaben von CVS selbst automatisch verwendet. Dennoch sind Revisionsnummern sehr nützlich, wenn man ältere Versionen einer Datei holen möchte (oder dagegen einen Diff macht).</p>
-<p>Die Untersuchung der Entries-Datei ist nicht die einzige Möglichkeit, Revisionsnummern herauszubekommen. Dazu kann auch das status-Kommando verwendet werden.
-<a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs status hello.c
-=====================================================
+<p>Die Untersuchung der Entries-Datei ist nicht die einzige Möglichkeit, Revisionsnummern herauszubekommen. Dazu kann auch das status-Kommando verwendet werden.</p>
+<p><a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs status hello.c
+<code class="docutils literal"><span class="pre">`=====================================================`</span></code>
 File: hello.c Status: Up-to-date</p>
 <p>Working revision: 1.3 Tue Apr 20 02:34:42 1999
 Repository revision: 1.3 /usr/local/cvs/myproj/hello.c,v
@@ -910,44 +964,40 @@ Sticky Options: (none)</p>
 <p>Dies gibt, wenn es ohne bestimmte Dateinamen aufgerufen wird, den Status aller Dateien eines Projektes aus:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs status
 cvs status: Examining.
-============================================
+<code class="docutils literal"><span class="pre">`============================================`</span></code>
 File: README.txt Status: Up-to-date</p>
 <p>Working revision: 1.1.1.1 Sun Apr 18 18:18:22 1999
 Repository revision: 1.1.1.1 /usr/local/cvs/myproj/README.txt,v
 Sticky Tag: (none)
 Sticky Date: (none)
 Sticky Options: (none)</p>
-<p>Repository revision: 1.3 /usr/local/cvs/myproj/hello.c,v
+<p><code class="docutils literal"><span class="pre">`================================================`</span></code>
+File: hello.c Status: Up-to-date
+Working revision: 1.3 Tue Apr 20 02:34:42 1999
+Repository revision: 1.3 /usr/local/cvs/myproj/hello.c,v
 Sticky Tag: (none)
 Sticky Date: (none)
 Sticky Options: (none)</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="cvs-status-examining-a-subdir">
-<h1>cvs status: Examining a-subdir<a class="headerlink" href="#cvs-status-examining-a-subdir" title="Link zu dieser Überschrift">¶</a></h1>
-<p>File: whatever.c Status: Up-to-date</p>
+<p>cvs status: Examining a-subdir
+<code class="docutils literal"><span class="pre">`===============================================`</span></code>
+File: whatever.c Status: Up-to-date</p>
 <p>Working revision: 1.1.1.1 Sun Apr 18 18:18:22 1999
 Repository revision: 1.1.1.1 /usr/local/cvs/myproj/a-subdir/whatever.c,v
 Sticky Tag: (none)
 Sticky Date: (none)
 Sticky Options: (none)</p>
-</div>
-<div class="section" id="cvs-status-examining-a-subdir-subsubdir">
-<h1>cvs status: Examining a-subdir/subsubdir<a class="headerlink" href="#cvs-status-examining-a-subdir-subsubdir" title="Link zu dieser Überschrift">¶</a></h1>
-<p>File: fish.c Status: Up-to-date</p>
+<p>cvs status: Examining a-subdir/subsubdir
+<code class="docutils literal"><span class="pre">`===============================================`</span></code>
+File: fish.c Status: Up-to-date</p>
 <p>Working revision: 1.2 Mon Apr 19 06:35:27 1999
 Repository revision: 1.2 /usr/local/cvs/myproj/
 a-subdir/subsubdir/fish.c,v
 Sticky Tag: (none)
 Sticky Date: (none)
 Sticky Options: (none)</p>
-</div>
-<div class="section" id="cvs-status-examining-b-subdir">
-<h1>cvs status: Examining b-subdir<a class="headerlink" href="#cvs-status-examining-b-subdir" title="Link zu dieser Überschrift">¶</a></h1>
-<p>File: random.c Status: Up-to-date</p>
+<p>cvs status: Examining b-subdir
+<code class="docutils literal"><span class="pre">`==============================================`</span></code>
+File: random.c Status: Up-to-date</p>
 <p>Working revision: 1.2 Mon Apr 19 06:35:27 1999
 Repository revision: 1.2 /usr/local/cvs/myproj/b-subdir/random.c,v
 Sticky Tag: (none)
@@ -955,10 +1005,9 @@ Sticky Date: (none)
 Sticky Options: (none)
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$</p>
 <p>Ignorieren Sie einfach alle Teile, die Sie nicht verstehen. Tatsächlich gilt dies grundsätzlich für CVS. Oft wird die kleine Information, die Sie benötigen, von Unmengen an Informationen flankiert, die Sie entweder gar nicht interessieren oder vielleicht auch gar nicht verstehen. Das ist völlig normal. Suchen Sie sich einfach das heraus, was Sie brauchen, und ignorieren Sie den Rest.</p>
-</div>
-<div class="section" id="im-vorangegangenen-beispiel-besteht-der-interessante-teil-aus-den-ersten-drei-zeilen-die-leerzeile-nicht-mitgezahlt-der-statusausgabe-jeder-datei-die-erste-zeile-ist-die-wichtigste-dort-stehen-der-dateiname-und-der-status-der-datei-innerhalb-der-arbeitskopie-zurzeit-sind-alle-dateien-auf-dem-gleichen-stand-mit-dem-archiv-daher-steht-uberall-der-status-up-to-date-wenn-jedoch-random-c-modifiziert-und-noch-nicht-an-das-archiv-mittels-commit-ubertragen-worden-ware-konnte-dies-so-aussehen">
-<h1>Im vorangegangenen Beispiel besteht der interessante Teil aus den ersten drei Zeilen (die Leerzeile nicht mitgezählt) der Statusausgabe jeder Datei. Die erste Zeile ist die wichtigste; dort stehen der Dateiname und der Status der Datei innerhalb der Arbeitskopie. Zurzeit sind alle Dateien auf dem gleichen Stand mit dem Archiv, daher steht überall der Status Up-to-date. Wenn jedoch random.c modifiziert und noch nicht an das Archiv mittels Commit übertragen worden wäre, könnte dies so aussehen:<a class="headerlink" href="#im-vorangegangenen-beispiel-besteht-der-interessante-teil-aus-den-ersten-drei-zeilen-die-leerzeile-nicht-mitgezahlt-der-statusausgabe-jeder-datei-die-erste-zeile-ist-die-wichtigste-dort-stehen-der-dateiname-und-der-status-der-datei-innerhalb-der-arbeitskopie-zurzeit-sind-alle-dateien-auf-dem-gleichen-stand-mit-dem-archiv-daher-steht-uberall-der-status-up-to-date-wenn-jedoch-random-c-modifiziert-und-noch-nicht-an-das-archiv-mittels-commit-ubertragen-worden-ware-konnte-dies-so-aussehen" title="Link zu dieser Überschrift">¶</a></h1>
-<p>File: random.c Status: Locally Modified</p>
+<p>Im vorangegangenen Beispiel besteht der interessante Teil aus den ersten drei Zeilen (die Leerzeile nicht mitgezählt) der Statusausgabe jeder Datei. Die erste Zeile ist die wichtigste; dort stehen der Dateiname und der Status der Datei innerhalb der Arbeitskopie. Zurzeit sind alle Dateien auf dem gleichen Stand mit dem Archiv, daher steht überall der Status Up-to-date. Wenn jedoch random.c modifiziert und noch nicht an das Archiv mittels Commit übertragen worden wäre, könnte dies so aussehen:
+<code class="docutils literal"><span class="pre">`====================================================`</span></code>
+File: random.c Status: Locally Modified</p>
 <p>Working revision: 1.2 Mon Apr 19 06:35:27 1999
 Repository revision: 1.2 /usr/local/cvs/myproj/b-subdir/random.c,v
 Sticky Tag: (none)
@@ -966,7 +1015,7 @@ Sticky Date: (none)
 Sticky Options: (none)</p>
 <p>Working revision und Repository revision zeigen an, ob die Datei mit dem Archiv übereinstimmt. Zurück bei der original Arbeitskopie (die Kopie von jrandom, welche die aktuellen Änderungen von hello.c noch nicht hat) wird Folgendes ausgegeben:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs status hello.c
-==================================================
+<code class="docutils literal"><span class="pre">`==================================================`</span></code>
 File: hello.c Status: Needs Patch</p>
 <p>Working revision: 1.2 Mon Apr 19 02:17:07 1999
 Repository revision: 1.3 /usr/local/cvs/myproj/hello.c,v
@@ -983,7 +1032,7 @@ printf (&#8220;this change will conflictn&#8221;);</p>
 printf (&#8220;between hello and goodbyen&#8221;);</p>
 <p>einfügte. Zu diesem Zeitpunkt ist der Status unserer Kopie von hello.c
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs status hello.c
-===============================================
+<code class="docutils literal"><span class="pre">`===============================================`</span></code>
 File: hello.c Status: Needs Merge</p>
 <p>Working revision: 1.2 Mon Apr 19 02:17:07 1999
 Repository revision: 1.3 /usr/local/cvs/myproj/hello.c,v
@@ -1009,7 +1058,7 @@ main ()
 printf (&#8220;Hello, world!n&#8221;);
 &lt;&lt;&lt;&lt;&lt;&lt; hello.c
 printf (&#8220;this change will conflictn&#8221;);
-=======
+<code class="docutils literal"><span class="pre">`=======`</span></code>
 printf (&#8220;between hello and goodbyen&#8221;);
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 1.3
 printf (&#8220;Goodbye, world!n&#8221;);
@@ -1018,7 +1067,10 @@ printf (&#8220;Goodbye, world!n&#8221;);
 &lt;&lt;&lt;&lt;&lt;&lt; (Dateiname)
 die noch nicht durch Commit abgeschickten Änderungen der Arbeitskopie
 blah blah lah</p>
-<p>und so weiter
+<p><code class="docutils literal"><span class="pre">`=======`</span></code>
+die neuen Änderungen aus dem Archiv
+blah blah blah
+und so weiter
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; (letzte Revisionsnummer des Archivs)</p>
 <p>In der Entries-Datei wird ebenfalls vermerkt, dass sich die Datei derzeit in einem nur halbwegs fertigen Zustand befindet:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cat CVS/Entries
@@ -1067,28 +1119,28 @@ jrandom: 1.1.1
 keyword substitution: kv
 total revisions: 5; selected revisions: 5
 description:
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+<code class="docutils literal"><span class="pre">`----------------`</span></code>
 revision 1.4
 date: 1999/04/20 04:14:37; author: jrandom; state: Exp; lines: +1 -1
 adjusted middle line
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+<code class="docutils literal"><span class="pre">`----------------`</span></code>
 revision 1.3
 date: 1999/04/20 02:30:05; author: qsmith; state: Exp; lines: +1 -0
 added new middle line
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+<code class="docutils literal"><span class="pre">`----------------`</span></code>
 revision 1.2
 date: 1999/04/19 06:35:15; author: jrandom; state: Exp; lines: +1 -0
 print goodbye too
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+<code class="docutils literal"><span class="pre">`----------------`</span></code>
 revision 1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp;
 branches: 1.1.1;
 Initial revision
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+<code class="docutils literal"><span class="pre">`----------------`</span></code>
 revision 1.1.1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp; lines: +0 -0
 initial import into CVS
-=========================================</p>
+<code class="docutils literal"><span class="pre">`=========================================`</span></code></p>
 <p>Wie üblich, steht am Anfang eine Menge an Informationen, die einfach ignoriert werden kann. Die richtig guten Sachen kommen nach den Zeilen mit den Strichen, und das Format ist eigentlich selbsterklärend.</p>
 <p>Wenn mehrere Dateien mit einem Commit abgeschickt wurden, erscheint dafür nur eine Log-Nachricht; dies kann beim Nachvollziehen von Veränderungen nützlich sein. Zum Beispiel haben wir zuvor fish.c und random.c gleichzeitig mit einem Commit abgeschickt. Dies geschah wie folgt:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs commit -m &#8220;filled out C code&#8221;
@@ -1115,20 +1167,20 @@ jrandom: 1.1.1
 keyword substitution: kv
 total revisions: 3; selected revisions: 3
 description:
-&#8212;&#8212;&#8212;&#8212;&#8212;
+<code class="docutils literal"><span class="pre">`---------------`</span></code>
 revision 1.2
 date: 1999/04/19 06:35:27; author: jrandom; state: Exp; lines: +8 -1
 filled out C code
-&#8212;&#8212;&#8212;&#8212;&#8212;
+<code class="docutils literal"><span class="pre">`---------------`</span></code>
 revision 1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp;
 branches: 1.1.1;
 Initial revision
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+<code class="docutils literal"><span class="pre">`----------------`</span></code>
 revision 1.1.1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp; lines: +0 -0
 initial import into CVS
-=================================================
+<code class="docutils literal"><span class="pre">`=================================================`</span></code>
 RCS file: /usr/local/cvs/myproj/b-subdir/random.c,v
 Working file: b-subdir/random.c
 head: 1.2
@@ -1141,20 +1193,20 @@ jrandom: 1.1.1
 keyword substitution: kv
 total revisions: 3; selected revisions: 3
 description:
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+<code class="docutils literal"><span class="pre">`----------------`</span></code>
 revision 1.2
 date: 1999/04/19 06:35:27; author: jrandom; state: Exp; lines: +8 -1
 filled out C code
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+<code class="docutils literal"><span class="pre">`----------------`</span></code>
 revision 1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp;
 branches: 1.1.1;
 Initial revision
-&#8212;&#8212;&#8212;&#8212;&#8212;-
+<code class="docutils literal"><span class="pre">`----------------`</span></code>
 revision 1.1.1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp; lines: +0 -0
 initial import into CVS
-============================================</p>
+<code class="docutils literal"><span class="pre">`============================================`</span></code></p>
 <p>In dieser Ausgabe kann man sehen, dass die beiden Revisionen Teil des gleichen Commits waren. (Die Tatsache, dass die Zeitstempel der beiden Revisionen gleich sind, oder zumindest sehr nahe beieinander liegen, ist ein weiterer Beweis.)</p>
 <p>Log-Nachrichten durchzusehen ist eine gute Methode, um einen Überblick darüber zu bekommen, was in einem Projekt vorgegangen oder was mit einer Datei zu einem bestimmten Zeitpunkt passiert ist. Es gibt auch freie Werkzeuge, um die rohe cvs log-Ausgabe in ein kompakteres und lesbareres Format umzuwandeln (wie beispielsweise das GNU ChangeLog-Format); diese Werkzeuge werden an dieser Stelle nicht behandelt, werden aber in  Kapitel 10 eingeführt.</p>
 <p>Veränderungen untersuchen und zurücknehmen</p>
@@ -1165,7 +1217,7 @@ adjusted middle line</p>
 <p>und sich fragt, was jrandom getan hat. Formal gesprochen fragt sich qsmith: Was ist der Unterschied zwischen meiner Revision (1.3) von hello.c und der darauf folgenden von jrandom (1.4)? Dies kann mit dem diff-Kommando herausgefunden werden, indem nun zwei unterschiedliche Revisionen durch die zusätzliche Kommandooption -r verglichen werden:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs diff -c -r 1.3 -r 1.4 hello.c
 Index: hello.c
-================================================
+<code class="docutils literal"><span class="pre">`================================================`</span></code>
 RCS file: /usr/local/cvs/myproj/hello.c,v
 retrieving revision 1.3
 retrieving revision 1.4
@@ -1213,7 +1265,7 @@ printf (&#8220;Goodbye, world!n&#8221;);
 }</p>
 <p>Als Nächstes führt er update -p aus, um sicherzustellen, dass die Revision 1.3 tatsächlich die ist, die er haben möchte:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs update -p -r 1.3 hello.c
-=========================================
+<code class="docutils literal"><span class="pre">`=========================================`</span></code>
 Checking out hello.c
 RCS: /usr/local/cvs/myproj/hello.c,v
 VERS: 1.3
@@ -1247,7 +1299,7 @@ cvs update: Updating b-subdir</p>
 <p>Wenn nun update ausgeführt wird, wird die Datei als modifiziert markiert, was auch Sinn hat, da der Inhalt verändert wurde. Speziell ist der Inhalt der gleiche wie der der älteren Revision 1.3 (nicht dass CVS sich darüber bewusst wäre, dass diese identisch mit einer älteren Revision ist - CVS merkt nur, dass die Datei verändert wurde). Wenn qsmith ganz sichergehen wollte, könnte er einen Diff zur Überprüfung machen:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -Q diff -c
 Index: hello.c
-=============================================
+<code class="docutils literal"><span class="pre">`=============================================`</span></code>
 RCS file: /usr/local/cvs/myproj/hello.c,v
 retrieving revision 1.4
 diff -c -r1.4 hello.c
@@ -1302,6 +1354,10 @@ done</p>
 <p>Zurückführung ist kein Ersatz für Kommunikation</p>
 <p>Aller Wahrscheinlichkeit nach war das, was qsmith in diesem Beispiel getan hat, sehr gemein. Arbeitet man mit anderen Leuten an einem wirklichen Projekt und ist man der Meinung, dass jemand eine Veränderung eingebracht hat, die nicht so gut war, sollte man zuerst mit ihm oder ihr darüber reden. Vielleicht gibt es einen guten Grund für diese Veränderung, oder sie oder er hat einfach nicht genau darüber nachgedacht. Auf jeden Fall gibt es keinen Grund, diese sofort rückgängig zu machen. Alle Revisionen werden von CVS permanent gespeichert, und man kann daher jederzeit wieder zu einer älteren Revision zurückkehren, nachdem man sich mit dem entsprechend Verantwortlichen abgesprochen hat.</p>
 <p>Wenn Sie ein Projektleiter sind und Abgabefristen einzuhalten haben oder meinen, das Recht und die Notwendigkeit dazu zu haben, dann machen Sie es so - aber schicken Sie direkt anschließend eine E-Mail an den Autor der zurückgenommenen Veränderung, und erklären Sie ihm, warum Sie es getan haben und was Ihrer Meinung nach korrigiert werden müsse, damit die Veränderung wieder einfließen kann.</p>
+</div>
+</div>
+<div class="section" id="andere-nutzliche-cvs-kommandos">
+<h4>Andere nützliche CVS-Kommandos<a class="headerlink" href="#andere-nutzliche-cvs-kommandos" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Zu diesem Zeitpunkt sollten Sie mit CVS schon recht gut vertraut sein. Daher werde ich an dieser Stelle mit dem Führungsstil aufhören und einige weitere nützliche Kommandos zusammenfassend erläutern.</p>
 <p>Dateien hinzufügen</p>
 <p>Dateien hinzuzufügen geschieht in zwei Schritten: Zuerst wird das add-Kommando ausgeführt und anschließend das Commit. Die Datei wird erst tatsächlich im Archiv erscheinen, wenn das Commit ausgeführt wurde:
@@ -1423,7 +1479,7 @@ U b-subdir/random.c
 <p>Mit der -D-Option holt update die höchste Revision einer jeden Datei eines gegebenen Datums und überführt, wenn nötig, die Dateien der Arbeitskopie in vorangegangene Revisionen.</p>
 <p>Zusätzlich zu einem Datum kann, und sollte meistens auch, eine Uhrzeit angegeben werden. Zum Beispiel endete das vorangegangene Beispiel darin, vor allem die Revision 1.1 zu holen (nur drei der Dateien waren verändert, da alle anderen noch Revision 1.1 hatten). Als Beweis hier die Statusausgabe für die Datei hello.c:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -Q status hello.c
-==========================================
+<code class="docutils literal"><span class="pre">`==========================================`</span></code>
 File: hello.c Status: Up-to-date
 Working revision: 1.1.1.1 Sat Apr 24 22:45:03 1999
 Repository revision: 1.1.1.1 /usr/local/cvs/myproj/hello.c,v
@@ -1436,7 +1492,7 @@ U hello.c
 U a-subdir/subsubdir/fish.c
 U b-subdir/random.c
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs status hello.c
-=======================================
+<code class="docutils literal"><span class="pre">`=======================================`</span></code>
 File: hello.c Status: Locally Modified
 Working revision: 1.2 Sat Apr 24 22:45:22 1999
 Repository revision: 1.2 /usr/local/cvs/myproj/hello.c,v
@@ -1448,7 +1504,7 @@ Sticky Options: (none)
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q update -D &#8220;1999-04-19 23:59:59 GMT&#8221;
 U hello.c
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q status hello.c
-============================================
+<code class="docutils literal"><span class="pre">`============================================`</span></code>
 File: hello.c Status: Up-to-date
 Working revision: 1.2 Sun Apr 25 22:38:53 1999
 Repository revision: 1.2 /usr/local/cvs/myproj/hello.c,v
@@ -1486,7 +1542,7 @@ cvs [commit aborted]: correct above errors first!
 <p>Das bedeutet aber nicht, dass CVS auf einmal nichts mehr von allen anderen Revisionen weiß, die seitdem per Commit eingeflossen sind. Man kann immer noch die mit einem bindenden Datum versehene Arbeitskopie mit anderen Revisionen vergleichen, zukünftige eingeschlossen:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q diff -c -r 1.5 hello.c
 Index: hello.c
-=====================================
+<code class="docutils literal"><span class="pre">`=====================================`</span></code>
 RCS file: /usr/local/cvs/myproj/hello.c,v
 retrieving revision 1.5
 diff -c -r1.5 hello.c
@@ -1514,7 +1570,7 @@ printf (&#8220;Goodbye, world!n&#8221;);
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q update -A
 U hello.c
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs status hello.c
-======================================
+<code class="docutils literal"><span class="pre">`======================================`</span></code>
 File: hello.c Status: Up-to-date
 Working revision: 1.5 Sun Apr 25 22:50:27 1999
 Repository revision: 1.5 /usr/local/cvs/myproj/hello.c,v
@@ -1612,7 +1668,7 @@ M hello.c
 <p>Die Veränderungen an hello.c gehen jedoch nicht verloren; CVS erkennt immer noch, dass die Datei bezüglich des Archivs verändert wurde:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q diff -c hello.c
 Index: hello.c
-===========================================
+<code class="docutils literal"><span class="pre">`===========================================`</span></code>
 RCS file: /usr/local/cvs/myproj/hello.c,v
 retrieving revision 1.5
 diff -c -r1.5 hello.c
@@ -1641,7 +1697,7 @@ done
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$</p>
 <p>Die Markierung Release-1999_05_01 gehört selbstverständlich immer noch zu Revision 1.5. Vergleichen Sie den Status der Datei vor und nach dieser Umkehrung zu dieser Markierung:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q status hello.c
-==============================================
+<code class="docutils literal"><span class="pre">`==============================================`</span></code>
 File: hello.c Status: Up-to-date
 Working revision: 1.6 Tue May 4 20:09:17 1999
 Repository revision: 1.6 /usr/local/cvs/myproj/hello.c,v
@@ -1651,7 +1707,7 @@ Sticky Options: (none)
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q update -r Release-1999_05_01
 U hello.c
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q status hello.c
-==============================================
+<code class="docutils literal"><span class="pre">`==============================================`</span></code>
 File: hello.c Status: Up-to-date
 Working revision: 1.5 Tue May 4 20:21:12 1999
 Repository revision: 1.5 /usr/local/cvs/myproj/hello.c,v
@@ -1712,7 +1768,7 @@ T b-subdir/random.c
 <p>Das Resultat ist das gleiche (nun ja, der Name des übergeordneten Verzeichnisses der neuen Arbeitskopie kann unterschiedlich sein, doch dies ist für die Zwecke von CVS unwichtig). Sollte Ihre Arbeitskopie noch nicht durch commit abgeschickte Veränderungen beinhalten, sollten Sie für den Zugriff auf den Zweig besser checkout anstatt update verwenden. Sonst würde CVS versuchen, Ihre Änderungen in die Arbeitskopie einfließen zu lassen, während es diese zu einem Zweig macht. In diesem Fall könnten Konflikte auftreten, auch wenn nicht, wäre das Ergebnis ein unreiner Zweig. Dieser würde nicht dem tatsächlichen Zustand des Programmes mit der angegebenen Markierung entsprechen, da einige Dateien der Arbeitskopie Ihre Veränderungen beinhalten würden.</p>
 <p>Wie auch immer, nehmen wir an, dass Sie auf die eine oder andere Weise eine Arbeitskopie des gewünschten Zweiges bekommen haben:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q status hello.c
-===================================================
+<code class="docutils literal"><span class="pre">`===================================================`</span></code>
 File: hello.c Status: Up-to-date
 Working revision: 1.5 Tue Apr 20 06:12:56 1999
 Repository revision: 1.5 /usr/local/cvs/myproj/hello.c,v
@@ -1721,7 +1777,7 @@ Sticky Tag: Release-1999_05_01-bugfixes
 Sticky Date: (none)
 Sticky Options: (none)
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q status b-subdir/random.c
-==================================================
+<code class="docutils literal"><span class="pre">`==================================================`</span></code>
 File: random.c Status: Up-to-date
 Working revision: 1.2 Mon Apr 19 06:35:27 1999
 Repository revision: 1.2 /usr/local/cvs/myproj/b-subdir/random.c,v
@@ -1749,14 +1805,14 @@ done
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$</p>
 <p>werden Sie feststellen, dass etwas Lustiges mit den Revisionsnummern vor sich geht:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q status hello.c b-subdir/random.c
-===================================================
+<code class="docutils literal"><span class="pre">`===================================================`</span></code>
 File: hello.c Status: Up-to-date
 Working revision: 1.5.2.1 Wed May 5 00:13:58 1999
 Repository revision: 1.5.2.1 /usr/local/cvs/myproj/hello.c,v
 Sticky Tag: Release-1999_05_01-bugfixes (branch: 1.5.2)
 Sticky Date: (none)
 Sticky Options: (none)
-===================================================
+<code class="docutils literal"><span class="pre">`===================================================`</span></code>
 File: random.c Status: Up-to-date
 Working revision: 1.2.2.1 Wed May 5 00:14:25 1999
 Repository revision: 1.2.2.1 /usr/local/cvs/myproj/b-subdir/random.c,v
@@ -1791,7 +1847,7 @@ U hello.c
 U b-subdir/random.c
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -q diff -c -r Release-1999_05_01-bugfixes
 Index: hello.c
-===============================================
+<code class="docutils literal"><span class="pre">`===============================================`</span></code>
 RCS file: /usr/local/cvs/myproj/hello.c,v
 retrieving revision 1.5.2.1
 retrieving revision 1.6
@@ -1815,7 +1871,7 @@ printf (&#8220;Goodbye, world!n&#8221;);
 + /* a comment on the last line <em>/
 }
 Index: b-subdir/random.c
-===========================================
+```===========================================```
 RCS file: /usr/local/cvs/myproj/b-subdir/random.c,v
 retrieving revision 1.2.2.1
 retrieving revision 1.2
@@ -1896,7 +1952,7 @@ void main ()
 {
 &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt; random.c
 printf (&#8220;A random number.n&#8221;);
-=======
+<code class="docutils literal"><span class="pre">`=======`</span></code>
 printf (&#8220;A random number.n&#8221;);
 printf (&#8220;Get the joke?n&#8221;);
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 1.2.2.2
@@ -1949,9 +2005,15 @@ Anm. d. Übers.: engl. branch = Zweig, Verzweigung</div></blockquote>
 <p>Formatierung</p>
 <blockquote>
 <div>Matthias Hagedorn <a class="reference external" href="mailto:matthias&#46;hagedorn&#37;&#52;&#48;selflinux&#46;org">matthias<span>&#46;</span>hagedorn<span>&#64;</span>selflinux<span>&#46;</span>org</a></div></blockquote>
+</div>
+</div>
+<div class="section" id="verwaltung-eines-cvs-archivs">
+<h3>Verwaltung eines CVS-Archivs<a class="headerlink" href="#verwaltung-eines-cvs-archivs" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Beschreibung</p>
 <p>Der folgende Text enthält das Kapitel 4 der deutschen Übersetzung des Buches &#8220;Open Source Development with CVS&#8221;, welche unter der GNU Public License veröffentlicht wurden.</p>
 <p>Das SelfLinux-Team</p>
+<div class="section" id="die-rolle-des-administrators">
+<h4>Die Rolle des Administrators<a class="headerlink" href="#die-rolle-des-administrators" title="Link zu dieser Überschrift">¶</a></h4>
 <p>In  Übersicht CVS haben Sie genügend über CVS gelernt, um es als Projektteilnehmer effizient verwenden zu können. Wenn Sie aber ein Projektbetreuer werden wollen, müssen Sie wissen, wie man CVS installiert und Archive administriert. In diesem Kapitel ziehen wir den Vorhang auf und betrachten im Detail, wie das Archiv strukturiert ist und wie es von CVS genutzt wird. Sie werden alle wichtigen Schritte kennenlernen, die CVS während der update- und commit-Befehle durchläuft, und wie sie das Verhalten verändern können. Durch das Verständnis, wie CVS funktioniert, werden Sie auch dazu in der Lage sein, Problemen auf den Grund zu gehen und sie auf wartbare Art zu beseitigen.</p>
 <p>Das mag sehr kompliziert klingen, doch denken Sie daran, dass sich CVS bereits als sehr langlebig erwiesen hat und für viele weitere Jahre verwendbar sein wird. Was auch immer Sie jetzt lernen, wird für eine lange Zeit nützlich sein. Zudem tendiert CVS dazu, immer unersetzbarer zu werden, je länger Sie es verwenden. Wenn Sie sich so von etwas abhängig machen (und vertrauen Sie mir, Sie werden es), ist es die Mühe wert, es gründlich kennenzulernen.</p>
 <p>Lassen Sie uns mit diesem Gedanken im Hinterkopf gleich am Anfang beginnen: damit, CVS auf Ihr System zu bringen.</p>
@@ -1960,6 +2022,9 @@ Anm. d. Übers.: engl. branch = Zweig, Verzweigung</div></blockquote>
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ apt-get update
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ apt-get install cvs</p>
 <p>Wenn CVS noch nicht auf Ihrer Maschine installiert ist, müssen Sie es wahrscheinlich aus dem Quelltext bauen. Falls Sie kein Unix-Benutzer sein sollten, finden Sie es wahrscheinlich einfacher, ein fertig gebautes, ausführbares Programm für Ihr Betriebssystem zu verwenden (mehr dazu später). Glücklicherweise ist CVS vollständig &#8220;autokonfiskiert&#8221; - d.h. es verwendet den GNU-Autokonfigurations-Mechanismus, der das Compilieren des Quelltexts erstaunlich einfach macht.</p>
+</div>
+<div class="section" id="beschaffen-und-bauen-von-cvs-unter-unix">
+<h4>Beschaffen und Bauen von CVS unter Unix<a class="headerlink" href="#beschaffen-und-bauen-von-cvs-unter-unix" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Zum Zeitpunkt dieses Schreibens gibt es zwei anerkannte Server, von denen Sie CVS herunterladen können. Einer ist der FTP-Server der Free Software Foundation, <a class="reference external" href="ftp://ftp.gnu.org/gnu/cvs/">ftp://ftp.gnu.org/gnu/cvs/</a>, der CVS als ein offizielles GNU-Werkzeug anbietet. Der andere ist der Server von Cyclic Software. Cyclic Software ist, wenn nicht de Betreuer von CVS, dann doch der &#8220;Betreuer der Betreuer&#8221;, dadurch dass sie einen Server für das Archiv und Download-Zugriff für Benutzer und Entwickler zur Verfügung stellen. Deren Releases sind von en <a class="reference external" href="http://download.cyclic.com/pub/">http://download.cyclic.com/pub/</a> erhältlich.</p>
 <p>Beide Server sind gleich empfehlenswert. Im folgenden Beispiel verwende ich den Server von Cyclic Software. Wenn Sie Ihren FTP-Client (wahrscheinlich Ihren Web-Browser) darauf ansetzen, sehen Sie eine Liste von Verzeichnissen, ungefähr wie diese:
 Index of /pub</p>
@@ -2041,6 +2106,9 @@ MacCVSPro - en www.maccvs.org</div></blockquote>
 <p>Ich habe ehrlich gesagt keine Ahnung, welcher der beste ist. Probieren Sie sie alle aus, nicht notwendigerweise in der angegebenen Reihenfolge, und finden Sie heraus, welchen Sie mögen. MacCVSPro scheint aktiv weiterentwickelt zu werden. MacCvs ist offenbar ein Schwesterprojekt von WinCVS und teilt sich mit ihm eine Homepage (zum Zeitpunkt dieses Schreibens erklärt eine Bemerkung auf der WinCVS-Seite: &#8220;Die Entwicklung von MacCvs wird bald weitergehen&#8221;, was immer das auch bedeuten mag).</p>
 <p>Beschränkungen der Macintosh- und Windows-Versionen</p>
 <p>Die Macintosh- und Windows-Versionen von CVS sind generell in ihrer Funktionalität beschränkt. Sie können alle als Clients agieren, das heißt, sie können einen Archivserver kontaktieren, um eine Arbeitskopie zu erhalten, übergeben, aktualisieren und so weiter. Sie können aber nicht selbst Archive zur Verfügung stellen. Wenn Sie sie richtig einrichten, kann die Windows-Portierung ein Archiv auf der lokalen Platte verwenden, aber sie kann immer noch keine Archive für andere Maschinen zur Verfügung stellen. Im Allgemeinen gilt, dass Sie den CVS-Server auf einer Unix-Maschine laufen lassen müssen, wenn Sie ein im Netzwerk verfügbares CVS-Archiv haben</p>
+</div>
+<div class="section" id="anatomie-einer-cvs-distribution">
+<h4>Anatomie einer CVS-Distribution<a class="headerlink" href="#anatomie-einer-cvs-distribution" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Die vorhergehenden Anweisungen sind dazu gedacht, Ihnen einen schnellen Überblick zu geben, es gibt aber noch viel mehr in einer CVS Quelldistribution als nur den reinen Quelltext. Hier ist eine schnelle Übersicht des Quelltextbaums, damit Sie wissen, welche Teile nützliche Ressourcen sind und welche ignoriert werden können.</p>
 <p>Informationsdateien</p>
 <p>Im Hauptverzeichnis des Distributionsbaumes finden Sie verschiedene Dateien, die nützliche Informationen (und Hinweise auf weitere Informationen) beinhalten. Dies sind in ungefährer Reihenfolge der Relevanz:</p>
@@ -2106,6 +2174,9 @@ dir</p>
 <p>Es gibt auch eine Usenet-Newsgruppe, comp.software.config-mgmt, die Versionskontrolle und Konfigurationsmanagement allgemein behandelt und in der relativ viel über CVS diskutiert wird.</p>
 <p>Zuletzt gibt es mindestens drei Webseiten, die sich mit CVS beschäftigen. Der Webserver von Cyclic Software, en www.cyclic.com ist seit einigen Jahren die informelle Homepage von CVS und wird es wahrscheinlich auch auf absehbare Zeit bleiben. Cyclic Software stellt auch Serverplatz und Netzzugriff für das Archiv bereit, in dem sich die CVS-Quellen befinden. Die Webseiten von Cyclic enthalten umfassende Links zu experimentellen CVS-Patches, Werkzeuge von Dritten, die mit CVS zusammenarbeiten, Dokumentation, Mailinglisten-Archive und so ziemlich alles andere. Wenn Sie etwas, das Sie benötigen, nicht in der Distribution finden, ist en www.cyclic.com der richtige Ort, um mit der Suche zu beginnen.</p>
 <p>Zwei andere gute Server sind Pascal Mollis en www.loria.fr/~molli/cvs-index.html und Sean Dreilingers en <a class="reference external" href="http://durak.org/cvswebsites">http://durak.org/cvswebsites</a>. Die größte Attraktion an Mollis Webseiten ist natürlich die FAQ, doch sie beinhalten auch Links zu CVS-bezogenen Werkzeugen und Mailinglisten-Archiven. Dreilingers Seiten sind auf Information zur Verwendung von CVS zur Verwaltung von Webdokumenten spezialisiert und haben auch eine CVS-spezifische Suchmaschine.</p>
+</div>
+<div class="section" id="mit-einem-archiv-beginnen">
+<h4>Mit einem Archiv beginnen<a class="headerlink" href="#mit-einem-archiv-beginnen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Sobald die CVS-Programme auf Ihrem System installiert sind, können Sie sie direkt als Client benutzen, um auf entfernte Archive zuzugreifen, indem Sie die in Kapitel 2 beschriebene Vorgehensweise anwenden. Wenn Sie jedoch Revisionen auf Ihrer Maschine zur Verfügung stellen wollen, müssen Sie dort ein Archiv erzeugen.</p>
 <p>Der Befehl dafür ist:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs -d /usr/local/newrepos init</p>
@@ -2456,11 +2527,11 @@ some_random_tag: 1.1
 keyword substitution: b
 total revisions: 1; selected revisions: 1
 description:
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
+<code class="docutils literal"><span class="pre">`----------------------------`</span></code>
 revision 1.1
 date: 1999/06/21 02:56:18; author: jrandom; state: Exp;
 added a random image; ask <a class="reference external" href="mailto:jrandom&#37;&#52;&#48;red-bean&#46;com">jrandom<span>&#64;</span>red-bean<span>&#46;</span>com</a> why
-===========================================
+<code class="docutils literal"><span class="pre">`===========================================`</span></code>
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$</p>
 <p>Sie müssen dies nur bedenken, wenn Sie einmal RCS-Dateien von Hand editieren müssen (was selten ist, aber durchaus einmal vorkommen kann) - denken Sie dann daran, die &#64;-Zeichen in Revisionsinhalten und Log-Mitteilungen zu verdoppeln. Wenn Sie das nicht tun, wird die RCS-Datei durcheinander geraten und wahrscheinlich ein seltsames und unerwünschtes Verhalten zeigen.</p>
 <p>Wo wir über von Hand zu editierende RCS-Dateien reden - lassen Sie sich nicht von den Zugriffsrechten im Archiv in die Irre führen:
@@ -2737,6 +2808,9 @@ Manchmal ist die history-Datei die Ursache für Probleme mit Dateizugriffsrechte
 <p>Eine andere administrative Datei, die nicht der Revisionskontrolle unterliegt, ist passwd. Der Grund dafür ist, dass das Auschecken über das Netz die Passwörter offen legen könnte (auch wenn sie verschlüsselt sind). Sie müssen auf Grund Ihrer Sicherheitssituation selbst entscheiden, ob Sie passwd zur checkoutlist hinzufügen oder nicht; standardmäßig ist es nicht darin enthalten.</p>
 <p>Zwei abschließende Bemerkungen zum CVSROOT/-Verzeichnis: Wenn Sie einen genügend großen Fehler machen, ist es möglich, eine administrative Datei per commit zu übertragen, die dermaßen fehlerhaft ist, dass weitere Commits nicht mehr stattfinden können. Wenn Sie das tun, werden Sie natürlich keine korrigierte Version der administrativen Datei per commit übertragen können! Die Lösung ist, die Arbeitskopie des Archivs von Hand zu editieren, um das Problem zu beheben; es kann sein, dass das ganze Archiv nicht benutzbar ist, bis sie den Fehler behoben haben.</p>
 <p>Aus Gründen der Sicherheit sollten Sie nur vertrauenswürdigen Benutzern Schreibzugriff auf Ihr CVSROOT/-Verzeichnis gestatten (mit &#8220;vertrauenswürdig&#8221; meine ich, dass Sie sowohl ihren Absichten wie auch ihren Fähigkeiten, ihr Passwort nicht zu verraten, trauen). Die <a href="#id23"><span class="problematic" id="id24">*</span></a>info-Dateien ermöglichen es, beliebige Programme aufzurufen, sodass jeder, der Dateien in das CVSROOT/-Verzeichnis per commit übertragen oder diese editieren darf, grundsätzlich jedes Programm auf dem System ausführen kann. Daran sollten Sie immer denken.</p>
+</div>
+<div class="section" id="finden-sie-mehr-heraus">
+<h4>Finden Sie mehr heraus<a class="headerlink" href="#finden-sie-mehr-heraus" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Auch wenn dieses Kapitel versucht, eine vollständige Einführung in die Installation und Administration von CVS zu geben, habe ich einige Dinge ausgelassen, die entweder zu selten verwendet werden, als dass sie einer Erwähnung wert wären, oder die bereits gut im Cederqvist-Handbuch beschrieben sind. Die zweite Kategorie beinhaltet die Konfiguration weiterer Arten des entfernten Zugriffs: RSH/SSH, kserver (Kerberos 4) und GSSAPI (das neben vielem anderen Kerberos 5 enthält). Für RSH/SSH-Verbindungen muss nichts Spezielles getan werden; es muss nur sichergestellt sein, dass sich der fragliche Benutzer mittels RSH oder SSH auf der Archivmaschine anmelden kann. Wenn sie es können, CVS sowohl auf dem Client wie auf dem Server installiert ist und sie die richtigen Zugriffsrechte haben, um das Archiv direkt auf der Servermaschine zu verwenden, sollten sie dazu in der Lage sein, auf das Archiv von anderen Rechnern mittels der :ext:-Methode zuzugreifen.</p>
 <p>Beschreibungen bestimmter spezialisierter Funktionen von CVS habe ich auf spätere Kapitel verlagert, damit sie in einem Kontext eingeführt werden können, in dem ihre Nützlichkeit klar wird. Allgemeine Tipps zur Fehlerbehebung in CVS finden sich in Kapitel 8.</p>
 <p>Auch wenn es nicht notwendig ist, das gesamte Cederqvist-Handbuch zu lesen, sollten Sie sich damit vertraut machen; es wird eine unschätzbare Referenz darstellen. Wenn Info aus irgendwelchen Gründen auf Ihrer Maschine nicht funktioniert und Sie das Handbuch nicht ausdrucken möchten, können Sie es online anschauen unter en <a class="reference external" href="http://durak.org/cvswebsites/doc/">http://durak.org/cvswebsites/doc/</a> oder en www.loria.fr/~molli/cvs/doc/cvs_toc.html</p>
@@ -2756,11 +2830,23 @@ Anm. d. Übers.: Sog. »Templates«</div></blockquote>
 <p>Formatierung</p>
 <blockquote>
 <div>Matthias Nuessler <a class="reference external" href="mailto:m&#46;nuessler&#37;&#52;&#48;web&#46;de">m<span>&#46;</span>nuessler<span>&#64;</span>web<span>&#46;</span>de</a></div></blockquote>
+</div>
+</div>
+<div class="section" id="cvs-fur-fortgeschrittene">
+<h3>CVS für Fortgeschrittene<a class="headerlink" href="#cvs-fur-fortgeschrittene" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Beschreibung</p>
 <p>Der folgende Text enthält das Kapitel 6 der deutschen Übersetzung des Buches &#8220;Open Source Development with CVS&#8221;, welche unter der GNU Public License veröffentlicht wurden.</p>
 <p>Das SelfLinux-Team</p>
+<div class="section" id="uber-die-grundlagen-hinaus">
+<h4>Über die Grundlagen hinaus<a class="headerlink" href="#uber-die-grundlagen-hinaus" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Wir haben nun die grundlegenden Konzepte der Benutzung von CVS und der Administration des Archivs behandelt und werden jetzt einen Blick darauf werfen, wie CVS in den gesamten Entwicklungsvorgang integriert werden kann. Der grundlegende CVS-Arbeitszyklus von Checkout (auschecken), Update, Commit, Update, Commit und so weiter ist schon anhand von Beispielen in Kapitel 2 illustriert worden. Im Folgenden werden wir diesen Zyklus noch ausführlicher beschreiben. Außerdem werden wir in diesem Kapitel untersuchen, wie CVS den Entwicklern dabei helfen kann, miteinander zu kommunizieren, wie CVS einen Überblick über die Projektaktivitäten und den Fortschritt des Projekts liefern kann, wie es einen dabei unterstützt, Entwicklungszweige (sog. Branches) abzuspalten und wieder mit der Hauptentwicklungslinie (dem sog. Trunk, also Stamm oder Rumpf) zu vereinen, und schließlich, wie man mit CVS häufig wiederkehrende Vorgänge automatisieren kann. Für die Nutzung mancher dieser Eigenschaften werden wir neue CVS-Kommandos einführen, bei vielen genügt die erweiterte Nutzung der Kommandos, die Sie bereits kennen gelernt haben.</p>
+</div>
+<div class="section" id="cvs-als-telefon">
+<h4>CVS als Telefon<a class="headerlink" href="#cvs-als-telefon" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Ein Hauptvorteil bei der Benutzung von CVS für ein Projekt liegt darin, dass es sowohl als Kommunikationsmittel als auch als Protokollant dienen kann. Dieser Abschnitt konzentriert sich darauf, wie CVS verwendet werden kann, um die Teilnehmer eines Projekts darüber, was im Projekt vorgeht, auf dem Laufenden zu halten. Die Teilnehmer müssen jedoch informiert werden wollen, denn wenn sich jemand entschließt, diese Kommunikationsfähigkeiten nicht zu verwenden, dann kann auch CVS nicht darüber hinweg helfen.</p>
+</div>
+<div class="section" id="watches-wer-arbeitet-wann-woran">
+<h4>Watches: Wer arbeitet wann woran<a class="headerlink" href="#watches-wer-arbeitet-wann-woran" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Normalerweise behandelt CVS jede Arbeitskopie als isolierte »Sandbox1«. Niemand bekommt mit, was Sie an Ihrer Kopie bearbeiten, solange bis Sie Ihre Änderungen durch einen Commit freigeben. Umgekehrt wissen Sie nicht, was »die anderen« an ihrer Kopie tun, von den herkömmlichen Kommunikationsmitteln, wie »Hey, ich werde jetzt an parse.c arbeiten, sagt mir, wenn ihr etwas daran machen wollt, damit wir Konflikte vermeiden können!« den Gang runter zu brüllen, einmal abgesehen.</p>
 <p>Dieses formlose Vorgehen mag für Projekte ausreichen, bei denen jeder eine grobe Ahnung davon hat, wer wofür zuständig ist. Hingegen wird diese Vorgehensweise scheitern, wenn eine große Entwicklergruppe an allen möglichen Teilen des Projekts aktiv ist und Konflikte vermieden werden sollen. In solchen Fällen überschneiden sich die Zuständigkeiten, man kann jedoch nichts »den Gang runter brüllen«, da man über die ganze Welt verteilt arbeitet.</p>
 <p>Eine »Watch2« genannte CVS-Funktion gibt den Entwicklern ein Mittel in die Hand, um andere darüber zu informieren, wer gerade an welchen Dateien arbeitet. Indem er ein Watch auf eine Datei setzt, kann ein Entwickler CVS veranlassen, ihn zu benachrichtigen, sobald ein anderer beginnt, ebenfalls an ihr zu arbeiten. Diese Benachrichtigungen werden normalerweise als E-Mail versendet, man kann aber auch andere Benachrichtigungsmethoden einrichten.</p>
@@ -3135,6 +3221,9 @@ FREADME.txt _watchers=jrandom&gt;edit+unedit+commit</p>
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cat /usr/local/newrepos/myproj/CVS/fileattr
 cat: /usr/local/newrepos/myproj/CVS/fileattr: No such file or directory</p>
 <p>Nach dieser kurzen Enthüllung sollte klar sein, dass man die Analyse des fileattr-Formats besser CVS überlässt. Die Hauptmotivation dafür, eine grobe Ahnung von diesem Format zu haben (von der tiefen Befriedigung zu wissen, was hinter den Vorhängen vor sich geht, einmal abgesehen), liegt darin, dass man möglicherweise eine Erweiterung an der Funktionalität der Watches plant oder dass man eventuell auftretende Probleme beheben kann. Ansonsten ist es ausreichend, zu wissen, dass es keinen Grund zur Beunruhigung gibt, wenn plötzlich ein Unterverzeichnis namens CVS in Ihrem Archiv auftaucht. Es handelt sich einfach um den einzig sicheren Ort, an dem CVS Metainformationen wie eben die Beobachtungslisten speichern kann.</p>
+</div>
+<div class="section" id="log-nachrichten-und-commit-e-mails">
+<h4>Log-Nachrichten und Commit-E-Mails<a class="headerlink" href="#log-nachrichten-und-commit-e-mails" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Commit-E-Mails sind beim Commit abgeschickte Benachrichtigungen, welche die Log-Nachrichten und die vom Commit betroffenen Dateien auflisten. Sie gehen normalerweise an alle Teilnehmer des Projekts, manchmal auch an sonstige Interessierte. Da die Details, wie Commit-E-Mails eingerichtet werden, schon von Kapitel 4 abgedeckt worden sind, werde ich sie hier nicht wiederholen. Mir ist allerdings aufgefallen, dass Commit-E-Mails manchmal unerwartete Seiteneffekte auf Projekte haben können, Effekte, die Sie in Betracht ziehen sollten, wenn Sie Commit-E-Mails für Ihr Projekt einsetzen wollen.</p>
 <p>Erstens: Rechnen Sie damit, dass die Nachrichten meistens ignoriert werden. Ob sie gelesen werden oder nicht, hängt zumindest zum Teil davon ab, wie häufig Commits in Ihrem Projekt vorkommen. Tendieren die Entwickler eher dazu, täglich eine große Änderung per Commit zu veröffentlichen, oder eher dazu, es über viele kleine Änderungen, verteilt über den Tag, zu tun? Je näher Ihr Projekt dem zweiten Fall ist und je stärker die vielen kleinen Commits den ganzen Tag lang auf die Entwickler herunter prasseln, um so weniger werden sie sich um jede einzelne Nachricht kümmern.</p>
 <p>Daraus folgt nicht, dass die Benachrichtigungen keinen Zweck erfüllen, man sollte nur nicht davon ausgehen, dass jeder jede Nachricht liest. Es ist immer noch ein bequemer Weg, die Sachen im Auge zu behalten - wer was macht -, ohne das Aufdringliche, das Watches an sich haben. Gehen die E-Mails an eine öffentlich zugängliche Mailingliste, so hat man einen wundervollen Mechanismus, um interessierten Benutzern (Entwickler in spe!) die Möglichkeit zu bieten, täglich mitzubekommen, was am Quelltext geschieht.</p>
@@ -3164,6 +3253,9 @@ cvs [admin aborted]: attempt to specify a numeric revision</p>
 <p>(Es ist bei CVS-Fehlermeldungen leider häufig der Fall, dass man die Dinge aus der Sicht von CVS betrachten muss, damit sie einen Sinn ergeben!)</p>
 <p>Der admin -m-Aufruf ändert die Projekthistorie, seien Sie also vorsichtig. Es wird keine Aufzeichnung geben, die besagt, dass die Log-Nachricht jemals verändert wurde - es wird einfach so aussehen, als ob die Revision schon beim ursprünglichen Commit die neue Log-Nachricht erhalten hätte. Die alte Meldung wird nirgends ihre Spuren hinterlassen (außer Sie heben die Original-E-Mail auf).</p>
 <p>Obwohl sein Name scheinbar besagt, dass nur der designierte CVS-Administrator es benutzen kann, kann normalerweise jeder cvs admin aufrufen, solange er Schreibzugriff auf das fragliche Projekt hat. Existiert jedoch eine Unix-Benutzergruppe namens cvsadmin, dann ist die Nutzung dieses Kommandos auf die Mitglieder der Gruppe beschränkt. (Mit der Ausnahme, dass immer noch jeder cvs admin -k benutzen kann.) Dennoch benutzt man es besser mit großer Vorsicht, denn die Möglichkeit, die Geschichte des Projekts umzuschreiben, ist verglichen mit anderen, potenziell zerstörerischen Fähigkeiten noch harmlos. In Kapitel 9 gibt es noch mehr zu admin, zusammen mit Wegen, dessen Benutzung einzuschränken.</p>
+</div>
+<div class="section" id="wie-man-eine-arbeitskopie-los-wird">
+<h4>Wie man eine Arbeitskopie los wird<a class="headerlink" href="#wie-man-eine-arbeitskopie-los-wird" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Bei normaler CVS-Nutzung wird man den Verzeichnisbaum der Arbeitskopie so wie jeden anderen Verzeichnisbaum los:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ rm -rf myproj</p>
 <p>Wenn Sie sich Ihrer Arbeitskopie auf diese Art entledigen, werden die übrigen Entwickler allerdings nicht mitbekommen, dass Sie deren Nutzung eingestellt haben. CVS stellt ein Kommando zur Verfügung, mit dem man die Arbeitskopie explizit terminieren kann. Sehen Sie release8 als das Gegenstück zu checkout an - Sie teilen dem Archiv mit, dass Sie mit Ihrer Arbeitskopie abgeschlossen haben. Wie checkout wird release vom übergeordneten Verzeichnis im Verzeichnisbaum aufgerufen:
@@ -3185,6 +3277,9 @@ Are you sure you want to release (and delete) directory &#8216;myproj: y
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ ls</p>
 <p>Zum Zeitpunkt von CVS Version 1.10.6 ist das release-Kommando nicht in der Lage, die Position des Archivs anhand der Arbeitskopie zu erkennen (da release außerhalb der Arbeitskopie aufgerufen wird). Man muss daher entweder die globale Option -d &lt;ARCHIV&gt; mit angeben oder sicherstellen, dass die Umgebungsvariable CVSROOT richtig gesetzt worden ist. (Dieser Fehler mag in zukünftigen CVS-Versionen behoben worden sein.)</p>
 <p>Im Cederqvist wird behauptet, dass, wenn Sie release verwenden, statt den Arbeitsverzeichnisbaum einfach zu löschen, diejenigen benachrichtigt werden, die auf die freigegebenen Dateien ein Watch gesetzt haben, genau so, als hätten Sie unedit aufgerufen. Als ich das experimentell überprüfen wollte, habe ich festgestellt, dass das nicht stimmt.</p>
+</div>
+<div class="section" id="uberblick-uber-die-projekthistorie">
+<h4>Überblick über die Projekthistorie<a class="headerlink" href="#uberblick-uber-die-projekthistorie" title="Link zu dieser Überschrift">¶</a></h4>
 <p>In Kapitel 4 habe ich kurz das Kommando cvs history erwähnt. Dieses Kommando zeigt eine Zusammenfassung aller checkouts, commits, updates, rtags und releases an, die im Archiv getätigt wurden (vorausgesetzt, Logging war bei Erstellung der Datei CVSROOT/history im Archiv aktiv). Mit den folgenden Kommandos können Sie Inhalt und Erscheinungsbild der Zusammenfassung mit verschiedenen Optionen kontrollieren.</p>
 <p>Der erste Schritt liegt darin, sicherzustellen, dass Logging im Archiv eingeschaltet ist. Der Archivadministrator sollte erst einmal sicherstellen, dass es eine Datei history gibt:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cd /usr/local/newrepos/CVSROOT
@@ -3265,6 +3360,9 @@ Option  Bedeutung
 -l      Zeige nur die letzte solche Aktion dieses Benutzers
 -u BENUTZER     Zeige die Einträge für BENUTZER</p>
 <p>Tabelle 6.3 Optionen, die Benutzer heraus filtern</p>
+</div>
+<div class="section" id="detaillierter-uberblick-uber-projektaktivitaten-anmerkungen">
+<h4>Detaillierter Überblick über Projektaktivitäten: Anmerkungen<a class="headerlink" href="#detaillierter-uberblick-uber-projektaktivitaten-anmerkungen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Wenn das history-Kommando einem einen groben Überblick über die Projektaktivitäten gibt, dann ist das annotate9-Kommando sozusagen das Mikroskop, das es einem ermöglicht, die Details zu erkennen. Mit annotate kann man sehen, wer die letzte Person war, die ihre Finger an den einzelnen Zeilen einer Datei hatte, und bei welcher Revision dies geschah:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ floss$ cvs annotate
 Annotations for README.txt
@@ -3311,7 +3409,7 @@ Annotations for b-subdir/random.c
 <p>Ein Weg herauszufinden, was sie getan hat, ist, sich den diff10 zwischen dieser Revision und der vorangegangenen anzusehen:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs diff -r 1.20 -r 1.21 hello.c
 index: hello.c
-===============================================
+<code class="docutils literal"><span class="pre">`===============================================`</span></code>
 RCS file: /usr/local/newrepos/myproj/hello.c,v
 retrieving revision 1.20
 retrieving revision 1.21
@@ -3355,11 +3453,11 @@ jrandom: 1.1.1
 keyword substitution: kv
 total revisions: 22; selected revisions: 1
 description:
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;
+<code class="docutils literal"><span class="pre">`---------------------------`</span></code>
 evision 1.21
 date: 1999/07/25 20:17:42; author: jrandom; state: Exp; lines: +1 -1
 say hello with renewed enthusiasm
-==============================================</p>
+<code class="docutils literal"><span class="pre">`==============================================`</span></code></p>
 <p>Zusätzlich zu -r können Sie die Anmerkungen auch mit der Option -D DATUM filtern:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs annotate -D &#8220;5 weeks ago&#8221; hello.c
 Annotations for hello.c
@@ -3387,7 +3485,7 @@ Annotations for hello.c
 <p>Anmerkungen und Verzweigungen</p>
 <p>Wenn Sie keine weiteren Optionen angeben, zeigt annotate immer die Aktivitäten der Stammversion (engl. trunk). (Die Tendenz, die Stammversion so zu bevorzugen, ist entweder ein Bug oder ein Feature, je nach Standpunkt.) Sie können CVS zwingen, die Anmerkungen einer abgezweigten Version auszugeben, indem Sie die Marke dieses Zweiges als Argument für -r übergeben. Hier ein Beispiel einer Arbeitskopie, in der sich hello.c in einer abgezweigten Version namens Brancho_Gratuito befindet und in der mindestens eine Änderung in dem Zweig per Commit vorgenommen wurde:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs status hello.c
-==================================================
+<code class="docutils literal"><span class="pre">`==================================================`</span></code>
 File: hello.c Status: Up-to-date
 Working revision: 1.10.2.2 Sun Jul 25 21:29:05 1999
 Repository revision: 1.10.2.2 /usr/local/newrepos/myproj/hello.c,v
@@ -3456,6 +3554,9 @@ Annotations for hello.c
 1.2 (jrandom 21-Jun-99): printf (&#8220;Goodbye, world!n&#8221;);
 1.1 (jrandom 20-Jun-99): }</p>
 <p>Wenn Sie so vorgehen, vergessen Sie nicht, dass die Nummern nur für diese eine Datei gültig sind. Generell ist es wohl besser, - sofern möglich - den Namen der Zweigversion zu benutzen.</p>
+</div>
+<div class="section" id="verwendung-der-schlusselwortexpansion">
+<h4>Verwendung der Schlüsselwortexpansion<a class="headerlink" href="#verwendung-der-schlusselwortexpansion" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Sie erinnern sich vielleicht daran, dass Schlüsselwortexpansion kurz in Kapitel 2 erwähnt wurde. RCS-Schlüsselwörter sind spezielle Wörter, die in Dollarzeichen eingeschlossen sind und die CVS aus Textdateien heraussucht und zu Revisions-Kontrollinformationen expandiert. Wenn beispielsweise eine Datei</p>
 <p>$Author$</p>
 <p>enthält, dann wird CVS das beim Update dieser Datei auf eine bestimmte Revision durch den Benutzernamen derjenigen Person expandieren, die für den Commit der Revision verantwortlich ist:</p>
@@ -3500,6 +3601,9 @@ Annotations for hello.c
 <p>VERSION = &#8220;$Revision: 1.114 $&#8221;;</p>
 <p>CVS wird das Schlüsselwort wie jedes andere expandieren, es hat keine Vorstellung von der Semantik der Programmiersprache und geht nicht davon aus, dass die Anführungszeichen die Zeichenkette in irgendeiner Form schützen sollen.</p>
 <p>Eine komplette Liste der Schlüsselwörter (es gibt noch ein paar weitere, ziemlich obskure) gibt es in Kapitel 9.</p>
+</div>
+<div class="section" id="eine-prekare-lage-wie-uberlebt-man-die-arbeit-mit-verzweigungen">
+<h4>Eine prekäre Lage: Wie überlebt man die Arbeit mit Verzweigungen?<a class="headerlink" href="#eine-prekare-lage-wie-uberlebt-man-die-arbeit-mit-verzweigungen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Verzweigungen sind gleichzeitig eine der wichtigsten und am leichtesten mißbrauchten Fähigkeiten von CVS. Es kann sehr hilfreich sein, wenn man gefährliche oder störende Änderungen in einer getrennten Entwicklungslinie isoliert, bis sie sich stabilisiert haben. Wenn sie jedoch nicht richtig gemanagt werden, können Verzweigungen ein Projekt ganz schnell in Verwirrung und Chaos stürzen, nämlich wenn die Entwickler den Überblick verlieren, welche Änderungen wann wieder zusammengeführt wurden.</p>
 <p>Um erfolgreich mit Verzweigungen arbeiten zu können, sollte sich die Entwicklergruppe an folgende Regeln halten:</p>
 <p>Halten Sie die gleichzeitig aktiven Verzweigungen möglichst klein. Je mehr Verzweigungen zur gleichen Zeit entwickelt werden, umso wahrscheinlicher ist es, dass sie Konflikte erzeugen, wenn sie zurück in die Hauptversion einfließen sollen. In der Praxis erreicht man das, indem man die Verzweigungen so häufig wie möglich (sobald eine Zweigversion an einem stabilen Punkt angelangt ist) mit der Hauptlinie verschmilzt und die Entwicklungsarbeit an der Hauptversion fortsetzt. Indem man die parallel laufenden Entwicklungen klein hält, kann jeder besser nachvollziehen, was in welcher Verzweigung vorgeht, und die Wahrscheinlichkeit, dass Konflikte auftreten, wird kleiner.
@@ -3508,6 +3612,9 @@ Das heißt jetzt aber nicht, dass die absolute Anzahl an Verzweigungen im Projek
 <p>Minimieren Sie die Komplexität - also die Tiefe - in Ihrem Verzweigungsplan. Es mag Umstände geben, wo es angemessen ist, Verzweigungen einer Verzweigung zu haben, aber die sind spärlich gesät. (Man kann ein ganzes Leben lang programmieren, ohne jemals auf eine zu stoßen.) Nur weil CVS es ermöglicht, beliebig viele Ebenen von verschachtelten Verzweigungen zu haben und beliebige Verzweigungen zu vereinen, heißt das noch lange nicht, dass Sie das auch wollen. In den meisten Situationen ist es am besten, dass alle Verzweigungen ihre Wurzel in der Hauptversion haben und auch dahin zurückkehren.</p>
 <p>Benutzen Sie einheitlich benannte Marken, um all ihre Verzweigungs- und Zusammenführungsereignisse zu kennzeichnen. Im Idealfall sollte die Bedeutung jeder Marke und ihr Verhältnis zu den übrigen Verzweigungen allein durch den Namen offensichtlich sein. (Dieser Punkt wird noch anhand der Beispiele klarer werden.)</p>
 <p>Mit diesen Regeln im Kopf wenden wir uns nun einem typischen Szenario mit verzweigter Entwicklungsarbeit zu. Wir werden jrandom an der Hauptversion und qsmith an einer abgezweigten Version haben. Bedenken Sie aber, dass genauso gut mehrere Entwickler an beiden tätig sein könnten. Die normale Entwicklungsarbeit an jedweder Linie kann beliebig viele Personen umfassen, die Benennung und Zusammenführung überlässt man aber am besten genau einer Person auf jeder Seite, wie Sie gleich sehen werden.</p>
+</div>
+<div class="section" id="haufig-mit-der-hauptversion-verschmelzen">
+<h4>Häufig mit der Hauptversion verschmelzen<a class="headerlink" href="#haufig-mit-der-hauptversion-verschmelzen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Wir gehen davon aus, dass qsmith für einige Zeit an einer abgezweigten Version arbeiten möchte, damit er nicht die Hauptversion destabilisiert, die er mit jrandom teilt. Der erste Schritt liegt darin, die Verzweigung zu erzeugen. Beachten Sie, wie qsmith zunächst eine normale Marke (nicht verzweigend) am Punkt der Verzweigung erzeugt und erst dann die abgezweigte Version erstellt:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ pwd
 /home/qsmith/myproj
@@ -3732,6 +3839,9 @@ T b-subdir/random.c</p>
 <p>Obgleich nützlich als letzter Ausweg, ist das Filtern nach Datum ein weniger geeignetes Mittel, da die Änderungen auf Grund von persönlichen Erinnerungen anstelle von verlässlichen Vorgaben der Entwickler ausgewählt werden. Wenn der erste Satz Änderungen von qsmith über mehrere Commits anstelle von einem einzigen verteilt gewesen wäre, hätte jrandom leicht ein Datum oder eine Uhrzeit wählen können, das zwar einige der Änderungen auffängt, aber fälschlicherweise nicht alle.
 Bemerkung
 Es gibt keinen Grund, warum markierbare Punkte in jrandoms Änderungen als ein einziger Commit an das Archiv gesendet werden müssen - es hat sich in diesen Beispielen einfach so ergeben. Im wirklichen Leben könnte qsmith mehrere Commits zwischen den Markierungen vornehmen. Er kann auch völlig isoliert an dem Zweig arbeiten, wenn es ihm so gefällt. Der Sinn der Marken ist, aufeinander folgende Punkte anzuzeigen, zu denen er die Änderungen im Zweig für mit der Hauptversion verschmelzbar hält. Solange jrandom die Verschmelzung immer mit zwei -j-Optionen vornimmt und darauf achtet, die Zusammenführungsmarkierungen von qsmith in der richtigen Reihenfolge und jeweils nur einmal zu verwenden, sollte die Hauptversion niemals das Problem mit der mehrfach versuchten Verschmelzung erfahren. Konflikte können immer noch auftreten, es werden aber unvermeidbare sein, solche, bei denen sowohl in der Hauptversion als auch im Zweig Änderungen an denselben Stellen im Quelltext vorgenommen wurden. Diese müssen immer manuell aufgelöst werden.</p>
+</div>
+<div class="section" id="der-koordinierte-ansatz-verschmelzungen-von-und-zur-hauptversion">
+<h4>Der koordinierte Ansatz: Verschmelzungen von und zur Hauptversion<a class="headerlink" href="#der-koordinierte-ansatz-verschmelzungen-von-und-zur-hauptversion" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Für die an der Hauptversion tätigen Entwickler ist es von Vorteil, wenn häufig die Änderungen aus der abgezweigten Version in die Hauptversion eingearbeitet werden, denn so bekommen sie außer ihren eigenen Änderungen auch noch die Änderungen im Zweig mit. Die Entwickler, die den Zweig bearbeiten, sehen aber nichts von den Veränderungen der Hauptversion und können sie so nicht für ihre eigene Arbeit nutzen beziehungsweise sie darauf abstimmen.</p>
 <p>Damit das möglich wird, muss der am Zweig tätige Entwickler ab und zu (soll heißen: wann immer er Lust hat, die letzten Änderungen der Hauptversion zu übernehmen und die unvermeidlichen Konflikte zu behandeln) einen zusätzlichen Schritt ausführen:</p>
 <p>paste$ cvs update -j HEAD</p>
@@ -3765,6 +3875,9 @@ T a-subdir/whatever.c
 T a-subdir/subsubdir/fish.c
 T b-subdir/random.c</p>
 <p>Beachten Sie, dass jrandom nach dem Commit der Änderungen an hello.c keine Markierung gesetzt hat, qsmith hingegen schon. Das Prinzip dahinter ist, dass man nicht nach jeder winzigen Änderung eine Marke anzubringen braucht. Nach dem Zusammenführen oder nach einem Commit einer Entwicklungslinie zu einem verschmelzbaren Zustand hin jedoch schon! So haben andere Entwickler - möglicherweise an anderen Zweigen - einen Bezugspunkt, um ihre eigenen Zusammenführungen abzustützen.</p>
+</div>
+<div class="section" id="der-ansatz-fliegender-fisch-wie-s-einfacher-geht">
+<h4>Der Ansatz »fliegender Fisch«: Wie&#8217;s einfacher geht<a class="headerlink" href="#der-ansatz-fliegender-fisch-wie-s-einfacher-geht" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Es gibt auch eine einfachere, wenn auch leicht beschränkende Variante des Vorangegangenen. Bei ihr frieren die Entwickler am Zweig ihre Arbeit ein, wenn die Hauptversion eine Verschmelzung durchführt, worauf die Entwickler der Hauptversion einen völlig neuen Zweig abspalten, der dann den alten ersetzt. Die Entwickler des alten Zweiges wechseln zu dem neuen über und fahren mit der Arbeit fort. Dieser Zyklus wird wiederholt, bis es keinen Bedarf mehr für den Zweig gibt. Das Ganze geht in etwa so (in Steno - wir setzen wie immer voraus, dass <a class="reference external" href="mailto:jrandom&#37;&#52;&#48;floss">jrandom<span>&#64;</span>floss</a> die Hauptversion bearbeitet und <a class="reference external" href="mailto:qsmith&#37;&#52;&#48;paste">qsmith<span>&#64;</span>paste</a> den Zweig):
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> floss$ cvs tag -b BRANCH-1
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> paste$ cvs checkout -r BRANCH-1 myproj</p>
@@ -3796,7 +3909,7 @@ rcsmerge: warning: conflicts during merge
 ....
 &lt;&lt;&lt;&lt;&lt;&lt;&lt; README.txt
 key $Revision: 1.5 $
-=======
+<code class="docutils literal"><span class="pre">`=======`</span></code>
 key $Revision: 1.5 $
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; 1.14.2.1
 ...</p>
@@ -3811,6 +3924,9 @@ Merging differences between 1.14 and 1.14.2.1 into README.txt
 $Revision: 1.5 $
 ...</p>
 <p>Eines müssen Sie allerdings beachten: Wenn Sie -kk verwenden, wird auch jede andere Schlüsselwortexpansion, die Sie vielleicht für die Datei gesetzt haben, außer Kraft gesetzt. Das ist besonders bei Binärdateien ein Problem, die normalerweise auf -kb gesetzt sind (wodurch jede Schlüsselwortexpansion und jede Zeilenendekonvertierung unterdrückt wird). Wenn Sie also Binärdateien aus dem Zweig in die Hauptversion überführen möchten, benutzen Sie -kk nicht. Behandeln Sie stattdessen die auftretenden Konflikte von Hand.</p>
+</div>
+<div class="section" id="die-quelltexte-dritter-verfolgen-vendor-branches">
+<h4>Die Quelltexte Dritter verfolgen: Vendor Branches<a class="headerlink" href="#die-quelltexte-dritter-verfolgen-vendor-branches" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Manchmal müssen an einer Software eines externen Lieferanten lokale Änderungen vorgenommen werden, die bei jedem erhaltenen Update der Software aktualisiert werden müssen, nämlich wenn der Lieferant die lokalen Änderungen nicht übernimmt. (Und es gibt eine Menge in Frage kommender legitimer Gründe, warum das nicht möglich ist.)</p>
 <p>CVS kann einen bei dieser Aufgabe unterstützen. Der dafür zuständige Mechanismus nennt sich »Vendor Branches«, was soviel heißt wie »abgezweigte Version eines externen Lieferanten«. »Vendor Branches« sind die Erklärung für die (bisher) verwirrenden letzten beiden Optionen, die man bei cvs import angeben kann: vendor tag und release tag; beide habe ich in Kapitel 2 unter den Tisch fallen lassen.</p>
 <p>Das Ganze funktioniert so: Der allererste Import gleicht jedem anderen initialisierenden Import eines CVS-Projekts (abgesehen davon, dass Sie besondere Sorgfalt bei der Wahl der Lieferantenmarkierung (»vendor tag«) und der Versionsmarke (»release tag«) walten lassen sollten):
@@ -3895,7 +4011,7 @@ C src/digest.c
 M src/main.c
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs diff -c
 Index: src/digest.c
-===============================================
+<code class="docutils literal"><span class="pre">`===============================================`</span></code>
 RCS file: /usr/local/newrepos/theirproj/src/digest.c,v
 retrieving revision 1.2
 diff -c -r1.2 digest.c
@@ -3914,7 +4030,7 @@ printf (&#8220;gurgle, slorpn&#8221;);
 + &gt;&gt;&gt;&gt;&gt;&gt;&gt; 1.1.1.2
 }
 Index: src/main.c
-==========================================
+<code class="docutils literal"><span class="pre">`==========================================`</span></code>
 RCS file: /usr/local/newrepos/theirproj/src/main.c,v
 retrieving revision 1.2
 diff -c -r1.2 main.c
@@ -3937,7 +4053,7 @@ M src/main.c
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> ~$ cvs diff src/digest.c
 cvs diff src/digest.c
 Index: src/digest.c
-=====================================
+<code class="docutils literal"><span class="pre">`=====================================`</span></code>
 RCS file: /usr/local/newrepos/theirproj/src/digest.c,v
 retrieving revision 1.2
 diff -r1.2 digest.c
@@ -3956,6 +4072,9 @@ Checking in src/main.c;
 new revision: 1.3; previous revision: 1.2
 done</p>
 <p>und dann auf die nächste Version des Lieferanten warten. (Natürlich sollten Sie überprüfen, ob Ihre lokalen Anpassungen noch funktionieren!)</p>
+</div>
+<div class="section" id="der-bescheidene-guru">
+<h4>Der bescheidene Guru<a class="headerlink" href="#der-bescheidene-guru" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Wenn Sie alles in diesem Kapitel gelesen und verstanden haben (besser noch: damit experimentiert haben), können Sie beruhigt davon ausgehen, dass CVS keine unangenehmen Überraschungen mehr für Sie bereithält - zumindest solange niemand größere neue Funktionen einbaut, was mit einer gewissen Regelmäßigkeit geschieht. Alles, was Sie über CVS wissen müssen, um ein richtiges Projekt zu überstehen, wurde angesprochen.</p>
 <p>Bevor Ihnen das zu Kopf steigt, lassen Sie mich den Vorschlag wiederholen, den ich erstmals in Kapital 4 gemacht habe, nämlich die Mailingliste <a class="reference external" href="mailto:info-cvs&#37;&#52;&#48;gnu&#46;org">info-cvs<span>&#64;</span>gnu<span>&#46;</span>org</a> zu abonnieren. Trotz des kümmerlichen Signal-zu-Rauschen-Abstands, der den meisten Internet-Mailinglisten gemeinsam ist, sind die wenigen Signale, die durchkommen, das Warten fast immer wert. Ich war die ganze Zeit, in der ich dieses Kapitel geschrieben habe, auf der Mailingliste (während der übrigen Kapitel auch), und Sie wären erstaunt, wenn Sie wüssten, wie viele wichtige Details ich über das Verhalten von CVS anhand der Diskussionen gelernt habe. Wenn Sie CVS ernsthaft einsetzen wollen - besonders, wenn Sie CVS-Administrator für eine Entwicklergruppe sind -, können Sie sehr stark von dem gesammelten Wissen der anderen ernsthaften Anwender profitieren.</p>
 <blockquote>
@@ -3979,12 +4098,21 @@ Anm. d. Übers.: Schlüsselwörter ausschalten</div></blockquote>
 <p>Formatierung</p>
 <blockquote>
 <div>Johnny Graber <a class="reference external" href="mailto:linux&#37;&#52;&#48;jgraber&#46;ch">linux<span>&#64;</span>jgraber<span>&#46;</span>ch</a></div></blockquote>
+</div>
+</div>
+<div class="section" id="tipps-und-troubleshooting">
+<h3>Tipps und Troubleshooting<a class="headerlink" href="#tipps-und-troubleshooting" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Beschreibung</p>
 <p>Der folgende Text enthält das Kapitel 8 der deutschen Übersetzung des Buches &#8220;Open Source Development with CVS&#8221;, welche unter der GNU Public License veröffentlicht wurden.</p>
 <p>Das SelfLinux-Team</p>
+<div class="section" id="wenn-mal-was-schief-lauft">
+<h4>Wenn mal was schief läuft<a class="headerlink" href="#wenn-mal-was-schief-lauft" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Ich habe schon in den vorangegangenen Kapiteln betont, dass CVS keine Blackbox-Software ist. In eine Blackbox kann man nicht hineinschauen, sie bietet keinen Zugriff auf die inneren Vorgänge, sodass man nichts bereinigen kann (aber auch nichts durcheinander bringen). Die Prämisse ist die, dass bei einer Blackbox normalerweise nichts bereinigt werden muss. Die Software sollte die meiste Zeit über perfekt laufen, daher brauchen sich die Anwender nicht um die inneren Vorgänge zu kümmern. Wenn eine Blackbox ausfällt, so geschieht das jedoch meist gründlich. Jedes Problem bedeutet den Totalausfall, da man nicht viele Möglichkeiten hat, etwas zu reparieren.</p>
 <p>CVS ist eher eine völlig transparente Box - nur ohne die Box. Die beweglichen Teile sind der Umwelt direkt ausgesetzt - nicht etwa hermetisch abgeschlossen -, und Teile der Umwelt (unerwartete Dateizugriffs echte, abgebrochene Kommandos, konkurrierende Prozesse, was auch immer) können manchmal in den Mechanismus gelangen und sozusagen das Uhrwerk blockieren. Aber selbst wenn CVS nicht immer perfekt läuft, so fällt es auch fast nie komplett aus. Es hat den Vorteil des kontrollierten Leistungsrückgangs, und der Grad, zu dem es nicht perfekt läuft, ist für gewöhnlich proportional zur Anzahl und Schwere der in seiner Umgebung auftretenden Probleme. Wenn man genug darüber weiß, was CVS zu tun versucht - und wie es das versucht -, wird man wissen, was im Problemfall zu tun ist.</p>
 <p>Obwohl ich hier natürlich nicht alle Probleme aufzählen kann, an die Sie geraten können, so habe ich doch versucht, die häufigsten hier abzudecken. Das Kapitel ist in zwei Teile aufgeteilt: Der erste beschreibt die Umgebungseinflüsse, auf die CVS am empfindlichsten reagiert (hauptsächlich Zugriffsrechte im Archiv und die der Verwaltung dienenden Teile der Arbeitskopie), und der zweite Teil behandelt einige der am häufigsten anzutreffenden Probleme und deren Lösung. Indem Sie sich damit befassen, wie man diese Standardsituationen meistert, werden Sie auch ein Gefühl dafür bekommen, wie man an unerwartete Probleme im CVS herangeht.</p>
+</div>
+<div class="section" id="die-ublichen-verdachtigen">
+<h4>Die üblichen Verdächtigen<a class="headerlink" href="#die-ublichen-verdachtigen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Als CVS-Administrator (oder Notarzt) merkt man schnell, dass 90 Prozent der Probleme, welche die Anwender haben, durch Inkonsistenzen in deren Arbeitskopien und die übrigen 90 Prozent durch falsche Zugriffsrechte im Archiv verursacht werden. Deshalb werde ich, bevor wir uns den einzelnen Situationen widmen, einen kurzen Überblick über den administrativen Teil der Arbeitskopien geben und einige wichtige Tatsachen über die Zugriffsrechte ansprechen</p>
 <p>Der administrative Teil der Arbeitskopie</p>
 <p>In  Kapitel 2 haben Sie schon die Grundlagen des Aufbaus einer Arbeitskopie kennen gelernt; in diesem Abschnitt werden wir ein wenig mehr ins Detail gehen. Dabei geht es hauptsächlich um die Dateien in den administrativen Unterverzeichnissen, die den Namen CVS/ tragen. Entries, Root und Repository haben Sie bereits kennen gelernt, doch in CVS/ können sich auch noch andere, von der Situation abhängige Dateien befinden. Diese Dateien werde ich jetzt beschreiben, teils, damit sie Sie nicht überraschen, wenn Sie sie antreffen, teils, damit Sie von ihnen verursachte Probleme lösen können.</p>
@@ -4032,6 +4160,9 @@ CVS/config</p>
 <p>Bemerkung
 Dieses Problem könnte sich von alleine lösen - ich habe den Betreuern von CVS einen Patch zukommen lassen, durch den die History-Datei world-writeable wird, wenn ein neues Archiv angelegt wird. Wenn Sie also eine neuere Version von CVS beziehen, als gerade erhältlich ist (Stand: September 1999), könnte das Problem Sie nicht mehr betreffen.</p>
 <p>Aus Sicherheitsgründen sollten Sie dafür sorgen, dass die meisten Benutzer von CVS auf Unix-Ebene keinen Schreibzugriff auf das CVSROOT-Verzeichnis haben. Wenn jemand Checkin-Zugriff auf CVSROOT hat, dann kann er commitinfo, loginfo oder beliebige andere triggernde Dateien so anpassen, dass beliebige Programme seiner Wahl aufgerufen werden, er könnte sogar ein neues Programm mit einem Commit in das System bringen, wenn das, was er haben möchte, sich noch nicht dort befindet. Sie sollten daher davon ausgehen, dass jeder, der Commit- Zugang zu CVSROOT hat, in der Lage ist, beliebige Kommandos im System abzusetzen.</p>
+</div>
+<div class="section" id="haufige-probleme-und-deren-losung">
+<h4>Häufige Probleme und deren Lösung<a class="headerlink" href="#haufige-probleme-und-deren-losung" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Der Rest dieses Kapitels ist in einer Folge von Fragen und Antworten organisiert, ähnlich den FAQ (Frequently Asked Questions 4) aus dem Internet. Sie alle stammen aus wirklichen Erfahrungen mit CVS. Aber bevor wir uns die einzelnen Fälle ansehen, wollen wir uns noch einen Moment Zeit nehmen und uns die CVS Fehlerbehebung allgemein ansehen.</p>
 <p>Der erste Schritt bei der Behebung eines CVS-Problems ist üblicherweise der, festzustellen, ob es sich um ein Problem in der Arbeitskopie oder im Archiv handelt. Die beste Technik dafür - und das wird niemanden überraschen -, ist zu überprüfen, ob das Problem auch in anderen Arbeitskopien, als in der, bei der es erstmals festgestellt wurde, auftritt. Wenn das der Fall ist, dann ist es vermutlich ein Problem im Archiv, ansonsten wohl ein lokales Problem der betroffenen Arbeitskopie.</p>
 <p>Probleme in den Arbeitskopien treten häufiger auf. Nicht etwa, weil Arbeitskopien irgendwie weniger zuverlässig sind als das Archiv, sondern weil jedes Archiv normalerweise mehrere Arbeitskopien hat. Obwohl die meisten Verknotungen in einer Arbeitskopie mit genügend Geduld aufgelöst werden können, ist es häufig effizienter von der Zeit her, einfach die Arbeitskopie zu löschen und mittels Checkout neu anzulegen.</p>
@@ -4260,13 +4391,25 @@ Anm. d. Übers.: Batch-Dateien, um ein anderes »deutsches« Wort zu bemühen. S
 <p>Formatierung</p>
 <blockquote>
 <div>Matthias Hagedorn <a class="reference external" href="mailto:matthias&#46;hagedorn&#37;&#52;&#48;selflinux&#46;org">matthias<span>&#46;</span>hagedorn<span>&#64;</span>selflinux<span>&#46;</span>org</a></div></blockquote>
+</div>
+</div>
+<div class="section" id="cvs-referenz">
+<h3>CVS-Referenz<a class="headerlink" href="#cvs-referenz" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Beschreibung</p>
 <p>Der folgende Text enthält das Kapitel 9 der deutschen Übersetzung des Buches &#8220;Open Source Development with CVS&#8221;, welche unter der GNU Public License veröffentlicht wurden.</p>
 <p>Das SelfLinux-Team</p>
+<div class="section" id="organisation-und-konventionen">
+<h4>Organisation und Konventionen<a class="headerlink" href="#organisation-und-konventionen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Dieses Kapitel ist eine vollständige Referenz für CVS-Kommandos, Archivverwaltungsdateien, Schlüsselwortersetzung, Laufzeit-Kontrolldateien, Arbeitskopien und Umgebungsvariablen - alles, was in CVS Version 1.10.7 (genauer: Stand 20. August 1999) enthalten ist.</p>
 <p>Die Kommandos sind der wichtigste Teil jeder CVS-Referenz, also beginnen wir damit:</p>
+</div>
+<div class="section" id="kommandos">
+<h4>Kommandos<a class="headerlink" href="#kommandos" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Dieser Abschnitt ist alphabetisch geordnet, um es einfacher für Sie zu machen, einen bestimmten Befehl oder eine Option zu finden. Die folgenden Konventionen werden verwendet:</p>
 <p>Argumente zu Kommandos und Optionen sind in Großbuchstaben geschrieben und kursiv in der Zusammenfassung, die jede Erklärung einleitet. Optionale Teile werden in eckigen Klammern [] geschrieben. Wenn aus einer Menge ausgewählt werden muss, werden die Möglichkeiten durch ein Pipe-Symbol getrennt: x|y|z. Der Plural oder Punktierung - deuten auf mögliche Mehrfachoptionen hin, die üblicherweise durch Leerzeichen getrennt sind. Zum Beispiel bedeutet DATEIEN eine oder mehrere Dateien. Der Eintrag [&amp;MOD...] ist also ein Und-Zeichen, das direkt von einem Modulnamen gefolgt wird, dann ein Leerzeichen und dann evtl. noch ein Und-Zeichen mit Modulnamen und so weiter - kein Mal oder häufiger. (Hier wurde die Punktierung verwendet, weil ein Plural nicht eindeutig ausgesagt hätte, ob das Und-Zeichen nur beim ersten Modul notwendig ist oder bei allen.) Wenn ein Plural in Klammern steht, wie beispielsweise bei DATEI(EN), dann bedeutet das, dass hier zwar mehrere Argumente stehen können, üblicherweise aber nur eines verwendet wird. REV wird oft als Platzhalter für einen Revisionsbezeichner verwendet. Letzterer ist üblicherweise lediglich eine Revisionsnummer oder ein Bezeichner. In ganz seltenen Fällen ist es möglich, dass nur die eine oder die andere Variante verwendet werden kann, aber diese Fälle werden im Text besonders angemerkt.</p>
+</div>
+<div class="section" id="typische-eigenschaften-von-cvs-kommandos">
+<h4>Typische Eigenschaften von CVS-Kommandos<a class="headerlink" href="#typische-eigenschaften-von-cvs-kommandos" title="Link zu dieser Überschrift">¶</a></h4>
 <p>CVS-Kommandos setzen sich wie folgt zusammen:</p>
 <p>cvs [GLOBALE_OPTIONEN] KOMMANDO [OPTIONEN] [DATEIEN]</p>
 <p>Der zweite Satz von Optionen wird bisweilen Kommandooptionen genannt. Weil es aber so viele davon gibt, werden sie hier üblicherweise nur Optionen genannt, um etwas Platz zu sparen.</p>
@@ -4277,6 +4420,9 @@ Anm. d. Übers.: Batch-Dateien, um ein anderes »deutsches« Wort zu bemühen. S
 <p>Das bedeutet 23. August 1999 (genau genommen ist 23 August 1999 ebenfalls eine absolut gültige Datumsbezeichnung, solange Sie nicht vergessen, sie in Anführungszeichen zu setzen). Wenn Sie außerdem eine Tageszeit angeben müssen, dann geht das so:</p>
 <p>&#8220;1999-08-23 21:20:30 CET&#8221;</p>
 <p>Sie können sogar übliche englische Wörter als Zeitangabe einsetzen, wie zum Beispiel now (jetzt), yesterday (gestern) oder sogar 12 days ago(vor 12 Tagen). Im Allgemeinen können Sie gefahrlos mit Datumsformaten experimentieren; wenn CVS Ihre Datumsangabe überhaupt versteht, dann mit großer Wahrscheinlichkeit auch so, wie Sie es sich gedacht haben. Wenn nicht, dann wird der Befehl mit einer Fehlermeldung beendet.</p>
+</div>
+<div class="section" id="globale-optionen">
+<h4>Globale Optionen<a class="headerlink" href="#globale-optionen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Hier folgt eine Liste aller globalen Optionen für CVS</p>
 <p>&#8211;allow-root=ARCHIV</p>
 <p>Die alphabetisch erste globale Option, die praktisch nie auf der Kommandozeile verwendet wird. Sie wird mit dem pserver-Kommando zum Aufbau eines authentifizierten Zugriffes zu dem angegebenen Archiv verwendet. Dabei handelt es sich um das Hauptverzeichnis eines Archivs, (wie /usr/local/cvsarchiv/), nicht um ein Unterverzeichnis (wie /usr/local/cvsarchiv/projekt). Normalerweise ist die einzige Stelle, an der diese Option überhaupt vorkommt in der Datei /etc/inetd.conf (siehe Kapitel 4), genau wie das mit ihr verwendete pserver Kommando. Jedes Archiv, auf das mit cvs pserver auf einem bestimmten Rechner zugegriffen wird, benötigt eine entsprechende &#8211;allow-root-Option in /etc/inetd.conf. Dies ist eine Sicherheitsmaßnahme, die gewährleisten soll, dass niemand mittels eines cvs pserver-Kommandos Zugriff auf private Archive erlangen kann. (Siehe auch den Abschnitt Password Authentication Server im Cederqvist.)</p>
@@ -4355,6 +4501,9 @@ loginfo:31: no such user variable ${=BIRD}</p>
 <p>Verschlüsselt jede Kommunikation mit dem Server. Diese Option hat keine Wirkung, solange nicht eine Verbindung via GSSAPI zum Server (gserver) besteht. GSSAPI-Verbindungen werden in diesem Buch nicht behandelt, weil sie immer noch eher selten benutzt werden - obwohl sich das ändern könnte). (Siehe auch die Abschnitte Global Options und GSSAPI Authenticated im Cederqvist mit mehr Informationen zu dieser Thematik.)</p>
 <p>-z GZIPLEVEL</p>
 <p>Stellt die Stärke der Datenkompression für die Verbindungen zum Server ein. Das Argument GZIPLEVEL muss eine Zahl zwischen eins und neun sein. Eins steht für minimale Kompression (dafür schnell); neun hingegen hat nur auf sehr schnellen Rechnern oder sehr langsamen Verbindungen Sinn (komprimiert sehr stark, braucht aber viel Rechenzeit). Die meisten Benutzer dürften Werte zwischen drei und fünf praktikabel finden. Das Leerzeichen zwischen -z und seinem Argument ist optional.</p>
+</div>
+<div class="section" id="liste-der-befehle">
+<h4>Liste der Befehle<a class="headerlink" href="#liste-der-befehle" title="Link zu dieser Überschrift">¶</a></h4>
 <p>m Folgenden eine Liste aller CVS-Befehle</p>
 <p>add [OPTIONS] FILES</p>
 <p>Alternativen: ad, new
@@ -5574,6 +5723,9 @@ Erfordert: Arbeitskopie, Archiv
 <blockquote>
 <div>-l
 -R</div></blockquote>
+</div>
+<div class="section" id="schlusselwortersetzung-rcs-schlusselworter">
+<h4>Schlüsselwortersetzung (RCS-Schlüsselwörter)<a class="headerlink" href="#schlusselwortersetzung-rcs-schlusselworter" title="Link zu dieser Überschrift">¶</a></h4>
 <p>CVS kann bestimmte textuelle Ersetzungen in Dateien durchführen, die es Ihnen erlauben, einige Arten von Informationen automatisch innerhalb Ihrer Dateien auf dem aktuellsten Stand zu halten. Alle diese Ersetzungen werden durch ein spezielles Schlüsselwortmuster ausgelöst, das von Dollarzeichen eingeschlossen wird. Zum Beispiel wird</p>
 <p>$Revision$</p>
 <p>in einer Datei zu einem Ausdruck wie</p>
@@ -5630,6 +5782,9 @@ Erfordert: Arbeitskopie, Archiv
 <blockquote>
 <div>1.5</div></blockquote>
 <p>Natürlich wird in diesem Fall nach der ersten keine weitere Ersetzung stattfinden, sodass diese Methode mit Bedacht verwendet werden sollte.</p>
+</div>
+<div class="section" id="liste-der-schlusselworter">
+<h4>Liste der Schlüsselwörter<a class="headerlink" href="#liste-der-schlusselworter" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Hier nun all die mit Dollarzeichen abgeschlossenen Schlüssewörter, die CVS kennt. Es folgt eine Liste mit je einem Schlüsselwort, einer kurzen Beschreibung und einem Beispiel seiner expandierten Form.</p>
 <blockquote>
 <div><dl class="docutils">
@@ -5670,6 +5825,9 @@ $Source: /usr/local/archiv/proj/hallo.c,v $</dd>
 $State: Exp $</dd>
 </dl>
 </div></blockquote>
+</div>
+<div class="section" id="archivverwaltungsdateien">
+<h4>Archivverwaltungsdateien<a class="headerlink" href="#archivverwaltungsdateien" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Die Verwaltungsdateien eines Archivs werden im CVSROOT-Unterverzeichnis des Archivs gespeichert. Diese Dateien kontrollieren diverse Aspekte im Verhalten von CVS (selbstverständlich nur innerhalb dieses Archivs).</p>
 <p>Generell werden die Verwaltungsdateien genauso unter Revisionskontrolle gehalten wie alle anderen Dateien im Archiv (Ausnahmen werden extra angemerkt). Im Gegensatz zu anderen Dateien werden ausgecheckte Kopien der Verwaltungsdateien im Archiv jedoch direkt neben den korrespondierenden RCS-Dateien abgespeichert. Diese ausgecheckten Kopien üben die wirkliche Kontrolle über das Verhalten von CVS aus.</p>
 <p>Der normale Weg, um die Verwaltungsdateien zu modifizieren, ist der, einen Checkout auf eine Arbeitskopie des CVSROOT-Moduls durchzuführen, die Änderungen vorzunehmen und einen Commit zu machen. CVS aktualisiert die ausgecheckten Dateien im Archiv automatisch (siehe checkoutlist). In Notfällen ist es jedoch auch möglich, die ausgecheckten Kopien im Archiv direkt zu bearbeiten.</p>
@@ -5834,7 +5992,7 @@ $State: Exp $</dd>
 <p>users</p>
 <p>Verknüpft Benutzernamen mit E-Mail-Adressen. Jede Zeile sieht aus wie:</p>
 <p>BENUTZERNAME:EMAIL_ADRESSE</p>
-<p>Hiermit können Benachrichtigungen über beobachtete Dateien an <a href="#id122"><span class="problematic" id="id123">EMAIL_</span></a> ADRESSE anstatt an den BENUTZERNAMEN auf der Maschine mit dem Archiv versendet werden. (Alles, was hier gemacht wird, ist die Kontrolle der Expansion von %s in der notify-Datei.) Sollte die EMAIL_ADRESSE Leerzeichen enthalten, dann stellen Sie sicher, dass sie in Anführungszeichen steht.</p>
+<p>Hiermit können Benachrichtigungen über beobachtete Dateien an <a href="#id124"><span class="problematic" id="id125">EMAIL_</span></a> ADRESSE anstatt an den BENUTZERNAMEN auf der Maschine mit dem Archiv versendet werden. (Alles, was hier gemacht wird, ist die Kontrolle der Expansion von %s in der notify-Datei.) Sollte die EMAIL_ADRESSE Leerzeichen enthalten, dann stellen Sie sicher, dass sie in Anführungszeichen steht.</p>
 <p>Wenn Benutzer-Aliasing in der passwd-Datei verwendet wird, dann ist der Benutzername, der hier verglichen wird, der CVS-Benutzername (der auf der linken Seite), nicht der Systembenutzername (rechts, falls vorhanden).</p>
 <p>val-tags</p>
 <p>Diese Datei dient als Zwischenspeicher für gültige Markierungen, um deren Auffindung zu beschleunigen. Es sollte nie notwendig sein, dass Sie diese Datei bearbeiten müssen, aber es könnte notwendig sein, die Zugriffs- oder Eigentumsrechte zu ändern, wenn Leute Probleme beim Zugriff auf oder bei der Erzeugung von Markierungen haben.</p>
@@ -5842,6 +6000,9 @@ $State: Exp $</dd>
 <p>Wird in Verbindung mit rcsinfo verwendet, um das Format von Log-Mitteilungen zu verifizieren. Jede Zeile hat die Form:</p>
 <p>REGULÄRER_AUSDRUCK PROGRAMM [ARGUMENTE]</p>
 <p>Der vollständige Pfad zur aktuellen Vorlage für Log-Mitteilungen (siehe auch rcsinfo weiter vorne in diesem Kapitel) wird hinter dem letzten, in der verifymsg-Datei angegebenen Argument angefügt. Wenn PROGRAMM mit einem Rückgabewert ungleich null beendet wird, so schlägt commit fehl; andernfalls wird die Aktion fortgeführt. (Siehe auch den Abschnitt gemeinsame Syntax weiter vorn in diesem Kapitel.)</p>
+</div>
+<div class="section" id="laufzeit-kontrolldateien">
+<h4>Laufzeit-Kontrolldateien<a class="headerlink" href="#laufzeit-kontrolldateien" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Es gibt nur einige wenige Dateien auf der Client-Seite (Arbeitskopie), die das Verhalten von CVS beeinflussen können. In einigen Fällen entsprechen sie den Archivverwaltungsdateien; in anderen Fällen kontrollieren sie Verhaltensweisen, die nur für die Client-Seite von Bedeutung sind.</p>
 <p>.cvsrc</p>
 <p>Enthält Optionen, die Sie automatisch bei jedem Aufruf von CVS-Kommandos verwenden möchten. Das Format jeder Zeile ist</p>
@@ -5859,6 +6020,9 @@ $State: Exp $</dd>
 <p>Die Datei .cvspass ist nicht an einen Rechner gebunden. Sie können es von einer Maschine auf eine andere kopieren und haben dann auch dort all Ihre CVS-Passwörter verfügbar, ohne dort jemals cvs login aufrufen zu müssen. (Siehe auch die Kommandos login und logout.)</p>
 <p>.cvswrappers</p>
 <p>Hierbei handelt es sich um eine client-seitige Version der cvswrappers-Datei. (Siehe den Abschnitt Archivverwaltungsdateien in diesem Kapitel.) Eine .cvswrappers-Datei darf sich in Ihrem Home-Verzeichnis sowie in jedem Verzeichnis der Arbeitskopie befinden, genau wie bei .cvsignore.</p>
+</div>
+<div class="section" id="dateien-in-der-arbeitskopie">
+<h4>Dateien in der Arbeitskopie<a class="headerlink" href="#dateien-in-der-arbeitskopie" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Die CVS/-Verwaltungsunterverzeichnisse in jeder Arbeitskopie enthalten einige der folgenden Dateien:</p>
 <p>CVS/Base/ (Verzeichnis)</p>
 <p>Sollten Watches (siehe Kapitel 6) aktiviert sein, speichert cvs edit die Originalversion der Datei in diesem Verzeichnis. So kann cvs unedit auch dann funktionieren, wenn der Server gerade nicht erreichbar ist.</p>
@@ -5896,6 +6060,9 @@ $State: Exp $</dd>
 <p>Enthält eine Vorlage für Log-Mitteilungen entsprechend der Vorgabe durch die rcsinfo-Datei. (Siehe den Abschnitt Archivverwaltungsdateien weiter vorn in diesem Kapitel.) Diese Datei ist nur für externe Arbeitskopien von Bedeutung; lokale Arbeitskopien auf demselben Rechner wie das Archiv lesen rcsinfo direkt aus dem Archiv.</p>
 <p>CVS/Update.prog</p>
 <p>Enthält den Namen des Programmes, das mittels der -u-Option in der Datei modules angegeben wurde. (Siehe den Abschnitt Archivverwaltungsdateien in diesem Kapitel.)</p>
+</div>
+<div class="section" id="umgebungsvariablen">
+<h4>Umgebungsvariablen<a class="headerlink" href="#umgebungsvariablen" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Es folgt eine Liste aller Umgebungsvariablen, die CVS kennt.</p>
 <p>$COMSPEC</p>
 <p>Wird nur in OS/2 verwendet; sie enthält den Namen des Kommando-Interpreters. Standardwert ist: CMD.EXE.</p>
@@ -5956,11 +6123,20 @@ $State: Exp $</dd>
 <p>Formatierung</p>
 <blockquote>
 <div>Matthias Hagedorn <a class="reference external" href="mailto:matthias&#46;hagedorn&#37;&#52;&#48;selflinux&#46;org">matthias<span>&#46;</span>hagedorn<span>&#64;</span>selflinux<span>&#46;</span>org</a></div></blockquote>
+</div>
+</div>
+<div class="section" id="werkzeuge-von-drittanbietern-die-mit-cvs-zusammen-arbeiten">
+<h3>Werkzeuge von Drittanbietern, die mit CVS zusammen arbeiten<a class="headerlink" href="#werkzeuge-von-drittanbietern-die-mit-cvs-zusammen-arbeiten" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Beschreibung</p>
 <p>Der folgende Text enthält das Kapitel 10 der deutschen Übersetzung des Buches &#8220;Open Source Development with CVS&#8221;, welche unter der GNU Public License veröffentlicht wurden.</p>
 <p>Das SelfLinux-Team</p>
+<div class="section" id="was-sind-werkzeuge-von-drittanbietern">
+<h4>Was sind Werkzeuge von Drittanbietern?<a class="headerlink" href="#was-sind-werkzeuge-von-drittanbietern" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Viele Leute haben Programme geschrieben, die den Funktionsumfang von CVS erweitern. Ich nenne diese Werkzeuge von Drittanbietern, da sie auch separat zur CVS-Entwicklung verwaltet werden. Die meisten dieser Programme werden nicht zusammen mit CVS verbreitet, einige allerdings schon. Dieses Kapitel behandelt Werkzeuge von Drittanbietern, die ich nützlich finde, die aber nicht mit CVS vertrieben werden.</p>
 <p>Obwohl es einige sehr populäre und weit verbreitete Bedienungsoberflächen für CVS gibt, die nicht für die Kommandozeile oder nicht für Unix sind (Download-Adressen sind in Kapitel 4 aufgelistet), behandelt dieses Kapitel die meisten von ihnen nicht. Ihre Popularität macht es einfach, mehr über sie in Newsgruppen und Mailinglisten zu erfahren. Eine Ausnahme ist das Emacs pcl-cvs-Interface, das sehr nützlich, aber oft nicht einfach zu installieren ist. Damit fangen wir an.</p>
+</div>
+<div class="section" id="pcl-cvs-eine-emacs-bedienungsoberflache-fur-cvs">
+<h4>pcl-cvs: eine Emacs-Bedienungsoberfläche für CVS<a class="headerlink" href="#pcl-cvs-eine-emacs-bedienungsoberflache-fur-cvs" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Benötigt: Emacs, Elib</p>
 <p>URLS:</p>
 <blockquote>
@@ -5971,6 +6147,9 @@ $State: Exp $</dd>
 <p>Das letzte Problem ist wahrscheinlich eher temporärer Natur, es stellt sich jedoch die Frage, welche Version zu benutzen ist. Stefan Monnier hat erst kürzlich die Betreuung des pcl-cvs übernommen; die neueste Version, 2.9.6 (erhältlich vom ersten URL in der obigen Liste), lief ein bisschen holprig, als ich sie ausprobierte. Zweifellos werden die Probleme binnen kurzem ausgebügelt sein, aber in der Zwischenzeit möchten Sie möglicherweise eine etwas ältere Version benutzen. Da ich Version 1.0.5 lange Zeit täglich benutzt habe, wobei sie sich sehr gut verhielt, werde ich diese Version hier dokumentieren. Glücklicherweise ändert sich an der Installation von Version zu Version nicht allzu viel. Falls Sie sich also dazu entschließen, pcl-cvs zu benutzen, so schlage ich vor, dass Sie auf Stefan Monniers Seite nach einer neueren Version als 2.9.6 schauen; falls es eine gibt, versuchen Sie die, bevor Sie ganz auf 1.0.5 zurückgehen.</p>
 <p>Sie werden feststellen, dass ich zwei URLs für Version 1.0.5 angegeben habe. Die erste ist Per Cederqvists Site, wo er ein Archiv alter pcl-cvs-Versionen unterhält. Da ich nicht sicher bin, wie lange dieses Archiv noch Bestand haben wird, mache ich außerdem die Version 1.05 auf ftp.red-bean.com verfügbar.</p>
 <p>Obwohl der Rest dieser Anweisungen Beispiele aus einer 1.05-Distribution verwendet, sollten diese ebenfalls problemlos auf neuere Versionen anwendbar sein.</p>
+</div>
+<div class="section" id="installation-von-pcl-cvs">
+<h4>Installation von pcl-cvs<a class="headerlink" href="#installation-von-pcl-cvs" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Falls Sie sich normalerweise nicht mit Problemen der Emacs-Installation und -Instandhaltung beschäftigen, könnte Ihnen die pcl-cvs-Installationsprozedur etwas entmutigend erscheinen. Ein paar Hintergrundinformationen zur Arbeitsweise von Emacs hilft dem vielleicht etwas ab.</p>
 <p>Die meisten abstrakteren Funktionen von Emacs sind in einer Programmiersprache namens Emacs Lisp geschrieben (Emacs selbst ist praktisch ein Interpreter für diese Programmiersprache). Die Leute fügen Emacs neue Funktionen hinzu, indem sie Dateien mit Emacs Lisp-Programmcode verbreiten. Pcl-cvs ist in dieser Programmiersprache geschrieben und benötigt eine Sammlung (Bibliothek) nützlicher allgemeiner Emacs Lisp-Funktionen namens Elib (auch von Per Cederqvist geschrieben, wird aber nicht zusammen mit pcl-cvs verbreitet), um zu funktionieren.</p>
 <p>Elib ist in der normalen Emacs-Distribution nicht enthalten (zumindest nicht im FSF Emacs; bei XEmacs weiß ich es nicht), sodass Sie Elib zunächst selber herunterladen und installieren müssen, bevor Sie pcl-cvs nutzen können. Sie können es von <a class="reference external" href="ftp://ftp.lysator.liu.se/pub/emacs/elib-1.0.tar.gz">ftp://ftp.lysator.liu.se/pub/emacs/elib-1.0.tar.gz</a> bekommen. Installationsanweisungen sind in dem Archiv enthalten.</p>
@@ -6010,6 +6189,9 @@ pcl-cvs-1.05/texinfo.tex</p>
 <p>Im letzten Schritt muss nun Emacs mitgeteilt werden, wo sich die Eintrittspunkte zu den pcl-cvs-Funktionen befinden (wobei der Haupteintrittspunkt cvs-update ist), sodass Emacs weiß, wie es bei Bedarf den pcl-cvs-Code laden muss. Da Emacs grundsätzlich die Datei default.el liest, wenn er startet, müssen dort die Eintrittspunkte aufgelistet werden.</p>
 <p>Glücklicherweise liegt bei pcl-cvs die für default.el notwendige Liste schon bei. Kopieren Sie also einfach den Inhalt von pcl-cvs-startup.el in die Datei default.el hinein (oder in Ihre .emacs-Datei, falls Sie die Installation nur für sich selbst vornehmen), und starten Sie Ihren Emacs neu.</p>
 <p>Am besten kopieren Sie auch die .info-Dateien in Ihr Info-Verzeichnis, und fügen Sie pcl-cvs dem Inhaltsverzeichnis in der Datei dir hinzu.</p>
+</div>
+<div class="section" id="benutzung-von-pcl-cvs">
+<h4>Benutzung von pcl-cvs<a class="headerlink" href="#benutzung-von-pcl-cvs" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Wenn es erst einmal installiert ist, ist pcl-cvs ganz einfach zu benutzen. Sie starten einfach die Funktion cvs-update, und pcl-cvs erzeugt eine Liste mit den Dateien, die in Ihrer Arbeitskopie verändert oder aktualisiert wurden. Von dieser Liste aus können Sie dann Commits durchführen, diffs machen und so weiter.</p>
 <p>Da cvs-update der Haupteintrittspunkt ist, schlage ich vor, dass Sie ihn an eine einfach zu merkende Tastenkombination binden, bevor Sie weitermachen. Ich habe ihn in meiner .emacs-Datei an die Tastenkombination Ctrl+c v gebunden:</p>
 <blockquote>
@@ -6038,8 +6220,14 @@ conditions; again, consult the TeXinfo manual for details.
 &#8212;&#8212;&#8212;- End &#8212;-</p>
 <p>Wenn Sie nun irgendwo c eingeben, dann sind davon alle (und nur die) markierten Dateien betroffen. Schreiben Sie die Log-Mitteilung, und übermitteln Sie die Daten wie gehabt mit Ctrl+c Ctrl+c .</p>
 <p>Sie können auch d drücken, um cvs diff mit einer Datei (oder mehreren markierten Dateien) zu starten, und f, um eine Datei in Emacs zu bearbeiten. Es sind noch andere Kommandos möglich; drücken Sie Ctrl+h m im Buffer mit der Dateiliste, um zu sehen, was sonst noch geht.</p>
+</div>
+<div class="section" id="fehlerbehandlung-in-pcl-cvs">
+<h4>Fehlerbehandlung in pcl-cvs<a class="headerlink" href="#fehlerbehandlung-in-pcl-cvs" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Das Programm pcl-cvs hatte schon immer eine etwas ungeschickte Art, mit Fehlermeldungen und Informationen von CVS umzugehen (auch wenn das möglicherweise in aktuelleren Versionen verbessert wurde). Wenn es auf eine Nachricht von CVS stößt, die es nicht kennt, wird es hysterisch, und Sie landen in einem Mail-Buffer, vorbereitet, um einen Bug-Report an den Autor von pcl-cvs abzuschicken. Dummerweise sind aber unter den CVS-Nachrichten, die pcl-cvs möglicherweise nicht erkennt, auch solche, die bei einer problematischen Integration (Merge) von Quelltext entstehen, was zwar selten, aber doch immer mal wieder vorkommt.</p>
 <p>Falls pcl-cvs Sie also plötzlich in einen Mail-Buffer umschaltet - keine Panik. Lesen Sie den vorbereiteten Text der E-Mail sorgfältig durch - die problematische CVS-Ausgabe sollte da irgendwo drin stehen. Wenn es aussieht wie ein fehlgeschlagenes merge, dann verwerfen Sie die E-Mail einfach, und starten Sie erneut cvs-update. Diesmal sollte es keine Probleme mehr geben, da die Integration des problematischen Quelltexts bereits stattgefunden hat.</p>
+</div>
+<div class="section" id="die-zukunft-von-pcl-cvs">
+<h4>Die Zukunft von pcl-cvs<a class="headerlink" href="#die-zukunft-von-pcl-cvs" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Auch wenn ich den Eindruck erweckt haben mag, dass pcl-cvs kaum weiterentwickelt wird und eine riskante Investition sein könnte, scheint mir die Instabilität eine zeitweilige Erscheinung zu sein. Stefan Monnier reagiert sehr schnell auf Anfragen. (Ich schrieb ihn mehrfach an, während ich dieses Kapitel verfaßte, und erhielt immer sofort eine Antwort; er kümmert sich bereits um mehrere Fehler in der Version 2.9.6.) Sehr wahrscheinlich werden Sie zu dem Zeitpunkt, zu dem dieses Buch erschienen ist, bereits eine stabile Version 2.9.7 oder höher herunterladen können. [Anm.d.Übers.: 2.9.8 ist da.]</p>
 <p>Ich habe sogar eine ermutigende E-Mail zu diesem Thema von Greg Woods erhalten, einem früheren Betreuer von pcl-cvs, die ich hier wiedergeben möchte:
 E-Mail</p>
@@ -6060,6 +6248,9 @@ der steht, dass die Dateien wirklich ziemlich alt sind (zumindest nach
 Internet-Zeit ;-), und einen Verweis auf Stefans ftp-Server angegeben.
 [...]</p>
 <p>In einer späteren E-Mail sagte Greg, dass die FSF erwägt, pcl-cvs in ihre nächsten Ausgabe von Emacs (20.5) als Bestandteil zu integrieren, was den größten Teil der oben stehenden Installationshilfen überflüssig machen würde. Seufz. Manchmal ist es wirklich schwierig, mit der Entwicklung freier Software Schritt zu halten.</p>
+</div>
+<div class="section" id="cvsutils-allgemeine-werkzeuge-zur-nutzung-mit-cvs">
+<h4>cvsutils: allgemeine Werkzeuge zur Nutzung mit CVS<a class="headerlink" href="#cvsutils-allgemeine-werkzeuge-zur-nutzung-mit-cvs" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Benötigt: Perl</p>
 <p>URLs:</p>
 <blockquote>
@@ -6125,6 +6316,9 @@ Kontakt zum Archiv: Unter Umständen</p>
 <p>Nur mit wirklich paranoider Vorsicht anwenden!</p>
 <p>cvsdate</p>
 <p>Dieses Programm ist scheinbar unvollständig und wird möglicherweise niemals fertig gestellt. (Siehe die Datei README für Details.)</p>
+</div>
+<div class="section" id="cvs2cl-pl-die-erzeugung-von-changelogs-im-gnu-stil-aus-cvs-logs">
+<h4>cvs2cl.pl: die Erzeugung von ChangeLogs im GNU-Stil aus CVS Logs<a class="headerlink" href="#cvs2cl-pl-die-erzeugung-von-changelogs-im-gnu-stil-aus-cvs-logs" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Benötigt: Perl</p>
 <blockquote>
 <div>URL: en URL: <a class="reference external" href="http://www.red-bean.com/~kfogel/cvs2cl.shtml">http://www.red-bean.com/~kfogel/cvs2cl.shtml</a></div></blockquote>
@@ -6196,6 +6390,9 @@ a-verzeichnis/unterverzeichnis/fisch.c (2.1): Ich committe mit pcl-cvs 2.9, weil
 <tr><td>&nbsp;</td><td>Schreibe ein eigenes ChangeLog in jedes Unterverzeichnis, das nur die Commits in jenem Verzeichnis beinhaltet. (Im Gegensatz zur Erzeugung eines einzigen ChangeLogs, welches das aktuelle Verzeichnis und alle Unterverzeichnisse desselben beinhaltet.)</td></tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="cvslock-sperren-von-archiven">
+<h4>cvslock: Sperren von Archiven<a class="headerlink" href="#cvslock-sperren-von-archiven" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Benötigt: C-Compiler zur Installation; nichts Besonderes zur Laufzeit</p>
 <blockquote>
 <div>URL: <a class="reference external" href="ftp://riemann.iam.uni-bonn.de/pub/users/roessler/cvslock/">ftp://riemann.iam.uni-bonn.de/pub/users/roessler/cvslock/</a></div></blockquote>
@@ -6257,6 +6454,9 @@ cvslock: starting&#8217;find . -name &#8220;<em>cvslock</em>&#8221; -print&#8217
 <p>Das Kommando (das Argument zur Option -c) wird mit dem angegebenen Archivverzeichnis als Arbeitsverzeichnis gestartet.</p>
 <p>Normalerweise erzeugt cvslock eine Lesesperre. Wenn gegen Schreibzugriff gesperrt werden soll, dann geht das mit der Option -W. (Sie können für die Lesesperrung auch -R angeben, aber das ist ja sowieso standardmäßig aktiv.) Entfernen Sie immer alle Sperren, wenn Sie mit Ihrer Arbeit fertig sind, sodass andere CVS-Prozesse nicht unnötig warten müssen.</p>
 <p>Beachten Sie, dass cvslock auf der Maschine laufen muss, auf der sich das Archiv befindet - es gibt keine Möglichkeit, ein externes Archiv anzugeben. (Weitere Informationen erhalten Sie mit dem Befehl man cvslock, wodurch eine Anleitung angezeigt wird, die beim make install für cvslock mit installiert wurde.)</p>
+</div>
+<div class="section" id="weitere-pakete">
+<h4>Weitere Pakete<a class="headerlink" href="#weitere-pakete" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Eine Vielzahl anderer Softwarepakete von Drittanbietern ist für CVS verfügbar. Es folgen Hinweise auf einige von ihnen.</p>
 <p>CVSUp (Bestandteil des FreeBSD-Projektes)</p>
 <p>CVSUp ist ein effizientes Werkzeug zum Spiegeln1 von Dateien im allgemeinen mit spezieller Unterstützung für das Spiegeln von CVS-Archiven. Das Betriebssystem FreeBSD benutzt dieses Programm, um Aktualisierungen seines Hauptarchivs an andere weiterzuverteilen, sodass die Benutzer bequem auf dem neuesten Stand bleiben können.</p>
@@ -6268,6 +6468,9 @@ cvslock: starting&#8217;find . -name &#8220;<em>cvslock</em>&#8221; -print&#8217
 <p>Möglicherweise möchten Sie auch Fenners ursprüngliche Webseite unter en <a class="reference external" href="http://www.freebsd.org/~fenner/cvsweb/">http://www.freebsd.org/~fenner/cvsweb/</a> und die Aufbereitung der CVSWeb-Szene von Cyclic Software unter en <a class="reference external" href="http://www.cyclic.com/cyclic-pages/web-cvsweb.html">http://www.cyclic.com/cyclic-pages/web-cvsweb.html</a> besuchen.</p>
 <p>Das CVS-contrib/-Verzeichnis</p>
 <p>Wie schon in Kapitel 4 erwähnt, wird eine Reihe von Werkzeugen von Drittanbietern zusammen mit CVS geliefert und ist dort im Verzeichnis contrib/ zusammengefasst. Auch wenn mir keine formelle Regel bekannt ist, welche Werkzeuge mit CVS vertrieben werden, könnte dies ein laufender Versuch sein, die am häufigsten mit CVS verwendeten Werkzeuge zu finden und dort zu sammeln, sodass man stets weiß, wo man suchen muss. Bis es so weit ist, ist der beste Weg, um solche Programme zu finden, immer noch ein Blick auf die diversen CVS-Webseiten und das Fragen auf der Mailingliste.</p>
+</div>
+<div class="section" id="eigene-werkzeuge-schreiben">
+<h4>Eigene Werkzeuge schreiben<a class="headerlink" href="#eigene-werkzeuge-schreiben" title="Link zu dieser Überschrift">¶</a></h4>
 <p>CVS mag zuweilen wie ein wüster Haufen improvisierter Standards erscheinen. Da sind das RCS-Format, diverse Ausgabeformate (history, annotate, log, update usw.), diverse Formate für die Verwaltungsdateien der Archive und Arbeitskopien, das Client/Server-Protokoll, das Lock-Datei-Protokoll ... (Und? Ist es Ihnen schon langweilig geworden? Wissen Sie, Ich könnte fröhlich weitermachen.)</p>
 <p>Erfreulicherweise bleiben diese Standards von Version zu Version recht konsistent - wenn Sie also ein Programm zur Nutzung mit CVS schreiben, dann brauchen Sie zumindest nicht zu befürchten, auf ein bewegliches Ziel schießen zu müssen. Zu jedem internen Standard gibt es üblicherweise eine Reihe von Leuten auf der <a class="reference external" href="mailto:infocvs&#37;&#52;&#48;gnu&#46;org">infocvs<span>&#64;</span>gnu<span>&#46;</span>org</a> (  <a class="reference external" href="mailto:infocvs&#37;&#52;&#48;gnu&#46;org">infocvs<span>&#64;</span>gnu<span>&#46;</span>org</a>)-Mailingliste, die sich mit diesem sehr gut auskennen. (Einige von ihnen halfen mir weiter, während ich an diesem Buch schrieb.) Weiterhin ist da die Dokumentation (in Englisch), die mit der CVS-Distribution geliefert wird (insbesondere doc/cvs.texinfo, doc/cvsclient.texi und doc/RCSFILES). Zuletzt ist da immer noch der CVS-Quelltext selbst, das letzte Wort zu jeder Frage bezüglich Implementation oder Verhalten von CVS.</p>
 <p>Mit all diesen Informationen zu Ihrer Verfügung gibt es keinen Grund zu zögern. Wenn Sie sich irgendein Programm vorstellen können, das Ihr Leben mit CVS einfacher machen könnte, dann los, schreiben Sie es - die Chancen stehen gut, dass andere Leute das auch schon immer haben wollten. Anders als eine Veränderung an CVS selbst kann ein kleines eigenständiges Hilfsprogramm sich sehr schnell weit verbreiten, was schnellere Rückmeldung für seinen Autor und zügigere Behebung von Fehlern für alle Benutzer bedeutet.</p>
@@ -6283,6 +6486,9 @@ cvslock: starting&#8217;find . -name &#8220;<em>cvslock</em>&#8221; -print&#8217
 <p>Formatierung</p>
 <blockquote>
 <div>Matthias Hagedorn <a class="reference external" href="mailto:matthias&#46;hagedorn&#37;&#52;&#48;selflinux&#46;org">matthias<span>&#46;</span>hagedorn<span>&#64;</span>selflinux<span>&#46;</span>org</a></div></blockquote>
+</div>
+</div>
+</div>
 <div class="section" id="programmierung-unter-linux">
 <h2>Programmierung unter Linux<a class="headerlink" href="#programmierung-unter-linux" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="muss-man-programmieren-konnen-um-mit-linux-zu-arbeiten">
@@ -7454,8 +7660,8 @@ Auch Sonderadressen (z.B. für Broadcasts) werden zunächst erkannt. Um dies zu 
 <p>Der Programmlader versucht zunächst, sämtliche Bibliotheken zu laden. Er sucht dazu in den Pfaden, die in der Umgebungsvariablen LD_LIBRARY_PATH hinterlegt sind. Anschließend wird in einer Cache-Datei gesucht (/etc/ld.so.cache), welche aus Effizienzgründen verwendet wird, und letztlich in /usr/lib und /lib. Da die Verwendung von LD_LIBRARY_PATH im Normalbetrieb umständlich ist, wird diese normalerweise nicht gesetzt, vielmehr stehen alle Bibliotheken in der Cache-Datei. Diese wird über ein spezielles Werkzeug erstellt. Fast alle Bibliotheken werden über diesen Weg geladen.</p>
 <p>Findet der Dynamische Linker nicht alle benötigen Bibliotheken (oder fehlt eine Funktion oder ein anderes Symbol in einer gefundenen Bibliothek), so wird der Start mit einer Fehlermeldung abgebrochen.</p>
 </div>
-<div class="section" id="umgebungsvariablen">
-<h4>Umgebungsvariablen<a class="headerlink" href="#umgebungsvariablen" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="section" id="id72">
+<h4>Umgebungsvariablen<a class="headerlink" href="#id72" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Der Dynamische Linker wird über Umgebungsvariablen gesteuert. Neben der bereits erwähnten Variable LD_LIBRARY_PATH erkennt der Programmlader die Variable LD_PRELOAD. Die durch Leerzeichen getrennten Einträge dieser Variable bilden eine Liste von Bibliotheken, die auf jeden Fall zuerst geladen werden sollen. Dies ermöglicht es, Bibliotheken zu laden, die Funktionen von anderen Bibliotheken überschreiben. Der Linker verbindet die Programmfunktionen in diesem Fall nämlich mit denen aus dieser Bibliothek, selbst wenn später eine andere Bibliothek diese Funktion ebenfalls definiert. Dies ist jedoch auch für Angriffe ausnutzbar, so könnte man beispielsweise Bibliotheken &#8220;unterschieben&#8221;, die über Seiteneffekte von &#8220;normalen&#8221; Funktionen bestimmte ungewollte Aktionen ausführen. Aus diesem Grund ignoriert der Programmlader (beide) Variablen bei setuid Programmen (also Programme, die unter anderen Benutzerrechten laufen, als der Aufrufer besitzt). Dadurch kann ein Aufrufer sich keine zusätzlichen Rechte verschaffen.</p>
 <p>Eine Liste aller Umgebungsvariablen findet man in der Manpage ld.so.</p>
 </div>
@@ -7558,7 +7764,7 @@ return 0;</div></blockquote>
 <p>Jetzt haben wir alle Hilfsmittel beisammen, um den Rechner zu einem make love aufzufordern:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> $ make love
 gcc love.c -o love</p>
-<p>Und tatsächlich: der Rechner erwidert unseren Wunsch mit dem Aufruf des GNU-Compilers gcc -  Sollten Sie eine Fehlermeldung (zum Beispiel Makefile:6: <a href="#id72"><span class="problematic" id="id73">**</span></a>* missing separator...) erhalten, überprüfen Sie bitte nochmal das Makefile: die Zeile mit gcc - muss mit einem Tabulator-Zeichen beginnen! Wenn Sie das Verzeichnis auflisten (zum Beispiel mit ls -l), werden Sie feststellen, dass das make-Kommando tatsächlich ein love erzeugt hat, das sich aufrufen lässt:
+<p>Und tatsächlich: der Rechner erwidert unseren Wunsch mit dem Aufruf des GNU-Compilers gcc -  Sollten Sie eine Fehlermeldung (zum Beispiel Makefile:6: <a href="#id73"><span class="problematic" id="id74">**</span></a>* missing separator...) erhalten, überprüfen Sie bitte nochmal das Makefile: die Zeile mit gcc - muss mit einem Tabulator-Zeichen beginnen! Wenn Sie das Verzeichnis auflisten (zum Beispiel mit ls -l), werden Sie feststellen, dass das make-Kommando tatsächlich ein love erzeugt hat, das sich aufrufen lässt:
 <a class="reference external" href="mailto:user&#37;&#52;&#48;linux">user<span>&#64;</span>linux</a> $ ./love
 Hallo Schatz!</p>
 <p>Die beiden Schritte, Kompilation und Programmaufruf, lassen sich natürlich auch zusammen im Makefile unterbringen:</p>
@@ -7610,7 +7816,7 @@ gcc mummy.o daddy.o -o children</p>
 <p>Dies sind Ziele, die keine Abhängigkeiten besitzen. Damit können Sie aber nie up-to-date werden mit dem gewünschten Nebeneffekt, dass von make immer die Aktionen ausgeführt werden, wenn solch ein Pseudo-Ziel aufgerufen wird:</p>
 <dl class="docutils">
 <dt>clean :</dt>
-<dd>rm <a href="#id74"><span class="problematic" id="id75">*</span></a>.o core</dd>
+<dd>rm <a href="#id75"><span class="problematic" id="id76">*</span></a>.o core</dd>
 </dl>
 <p>Jedes Mal, wenn der Benutzer ein make clean eingibt, wird vom make-Kommando ein rm <em>.o core aufgerufen, d.h. es werden sämtliche Objekt-Dateien (</em>.o) und core-Dateien (diese werden bei einem Programm-Absturz angelegt) gelöscht.</p>
 <p>Weil das Ziel clean nie erzeugt wird, wird es als Pseudo-Ziel bezeichnet.</p>
@@ -7692,7 +7898,7 @@ $%      Name der entsprechenden Objekt-Datei (.o), falls das Ziel eine Bibliothe
 <p>In diesem Beispiel wird von make $&#64; durch den Namen des Ziels (children) ersetzt.</p>
 <p>Will man auf den Dateinamen oder Verzeichnisnamen zugreifen, kann man dies (ausser bei $?) über die Modifier F (wie File) oder D (wie Directory).</p>
 <p>Beispiel:</p>
-<p>$(<a href="#id76"><span class="problematic" id="id77">*</span></a>D), $(&#64;F)</p>
+<p>$(<a href="#id77"><span class="problematic" id="id78">*</span></a>D), $(&#64;F)</p>
 </div>
 </div>
 <div class="section" id="suffix-regeln">
@@ -7762,35 +7968,35 @@ Endung  Bedeutung
 man mit den eingebauten Regeln nicht einverstanden ist.</div></blockquote>
 </div>
 </div>
-<div class="section" id="kommandos">
-<h3>Kommandos<a class="headerlink" href="#kommandos" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="id79">
+<h3>Kommandos<a class="headerlink" href="#id79" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Da die Kommandos in einer eigenen (Unter-) Shell ausgeführt werden, stehen alle Möglichkeiten einer  Shell wie Wildcards, Ein-/Ausgabe-Umlenkung, - zur Verfügung.</p>
 <div class="section" id="wildcards">
 <h4>Wildcards<a class="headerlink" href="#wildcards" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Wildcards (im Deutschen auch als Jokerzeichen bezeichnet) können innerhalb von Kommandos verwendet werden, aber auch in den Abhängigkeiten einer Regel auftauchen:</p>
 <dl class="docutils">
-<dt>print <span class="classifier-delimiter">:</span> <span class="classifier"><a href="#id78"><span class="problematic" id="id79">*</span></a>.c</span></dt>
-<dd>lpr <a href="#id80"><span class="problematic" id="id81">*</span></a>.c</dd>
+<dt>print <span class="classifier-delimiter">:</span> <span class="classifier"><a href="#id80"><span class="problematic" id="id81">*</span></a>.c</span></dt>
+<dd>lpr <a href="#id82"><span class="problematic" id="id83">*</span></a>.c</dd>
 </dl>
-<p>Leider haben diese Wildcards eine leicht unterschiedliche Bedeutung: das erste Wildcard <a href="#id82"><span class="problematic" id="id83">*</span></a>.c innerhalb der Abhängigkeit wird von make aufgelöst, das Wildcard im Kommando (lpr <a href="#id84"><span class="problematic" id="id85">*</span></a>.c) von der Shell. Während bei der Shell die Hidden Files (das sind diejenige Dateien wie zum Beispiel .bashrc, die mit einem . anfangen) nicht dazugehören, ist hier das make-Kommando anderer Auffassung.</p>
+<p>Leider haben diese Wildcards eine leicht unterschiedliche Bedeutung: das erste Wildcard <a href="#id84"><span class="problematic" id="id85">*</span></a>.c innerhalb der Abhängigkeit wird von make aufgelöst, das Wildcard im Kommando (lpr <a href="#id86"><span class="problematic" id="id87">*</span></a>.c) von der Shell. Während bei der Shell die Hidden Files (das sind diejenige Dateien wie zum Beispiel .bashrc, die mit einem . anfangen) nicht dazugehören, ist hier das make-Kommando anderer Auffassung.</p>
 </div>
 <div class="section" id="mehrere-kommandos">
 <h4>Mehrere Kommandos<a class="headerlink" href="#mehrere-kommandos" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Jede Zeile im Aktions-Teil wird in einer eigenen Unter- Shell gestartet. Will man mehrere Kommados auf einmal absetzen, werden diese hintereinander aufgereiht und jeweils durch einen Strichpunkt (;) voneinander getrennt:</p>
 <dl class="docutils">
 <dt>clean :</dt>
-<dd>cd obj ; rm <a href="#id86"><span class="problematic" id="id87">*</span></a>.o</dd>
+<dd>cd obj ; rm <a href="#id88"><span class="problematic" id="id89">*</span></a>.o</dd>
 </dl>
-<p>Bei diesem Beispiel ist zu bedenken, dass das zweite Kommando (rm <a href="#id88"><span class="problematic" id="id89">*</span></a>.o) auch dann ausgführt wird, wenn der erste Teil (cd obj) nicht geklappt hat. Deswegen können Kommandos auch über &amp;&amp; (UND) verknüpft werden:</p>
+<p>Bei diesem Beispiel ist zu bedenken, dass das zweite Kommando (rm <a href="#id90"><span class="problematic" id="id91">*</span></a>.o) auch dann ausgführt wird, wenn der erste Teil (cd obj) nicht geklappt hat. Deswegen können Kommandos auch über &amp;&amp; (UND) verknüpft werden:</p>
 <dl class="docutils">
 <dt>clean :</dt>
-<dd>cd obj &amp;&amp; rm <a href="#id90"><span class="problematic" id="id91">*</span></a>.o</dd>
+<dd>cd obj &amp;&amp; rm <a href="#id92"><span class="problematic" id="id93">*</span></a>.o</dd>
 </dl>
-<p>Vorteil der UND-Verknüpfung: Schlägt das erste Kommando (cd obj) fehl, wird das zweite Kommando (rm <a href="#id92"><span class="problematic" id="id93">*</span></a>.o) auf keinen Fall ausgeführt.</p>
+<p>Vorteil der UND-Verknüpfung: Schlägt das erste Kommando (cd obj) fehl, wird das zweite Kommando (rm <a href="#id94"><span class="problematic" id="id95">*</span></a>.o) auf keinen Fall ausgeführt.</p>
 <p>Man kann die Kommandos auch auf mehrere Zeilen verteilen, indem man sie mit dem Backslash () als allerletztes Zeichen in der Zeile verbindet:</p>
 <dl class="docutils">
 <dt>clean :</dt>
-<dd>cd obj &amp;&amp;       rm <a href="#id94"><span class="problematic" id="id95">*</span></a>.o</dd>
+<dd>cd obj &amp;&amp;       rm <a href="#id96"><span class="problematic" id="id97">*</span></a>.o</dd>
 </dl>
 <p>Dabei ist darauf zu achten, dass der Backslash () wirklich das letzte Zeichen in der Zeile ist &#8211; er hebt nämlich die Bedeutung des nächsten Zeichens (in diesem Fall das Zeilenende) auf. Steht hier ein Leerzeichen, wird die (nicht vorhandene) Sonderbedeutung des Leerzeichens aufgehoben.</p>
 </div>
@@ -7817,7 +8023,7 @@ man mit den eingebauten Regeln nicht einverstanden ist.</div></blockquote>
 <dt>clean :</dt>
 <dd><ul class="first last simple">
 <li>rm core</li>
-<li>rm <a href="#id96"><span class="problematic" id="id97">*</span></a>.o</li>
+<li>rm <a href="#id98"><span class="problematic" id="id99">*</span></a>.o</li>
 </ul>
 </dd>
 </dl>
@@ -7826,7 +8032,7 @@ man mit den eingebauten Regeln nicht einverstanden ist.</div></blockquote>
 <dl class="docutils">
 <dt>clean :</dt>
 <dd>rm -f core
-rm -f <a href="#id98"><span class="problematic" id="id99">*</span></a>.o</dd>
+rm -f <a href="#id100"><span class="problematic" id="id101">*</span></a>.o</dd>
 </dl>
 </div>
 <div class="section" id="ausgabe-unterdrucken">
@@ -8023,8 +8229,8 @@ love.o: love.c darling.h</p>
 <p>Alle übrigen Kommandos wie Compiler-Aufruf und andere Programme sollten in Variablen abgespeichert werden.</p>
 <p>Grund: Zum einen ist dies änderungsfreundlicher, zum anderen kann bei Bedarf das Kommando über die Kommandozeile mitgegeben werden.</p>
 </div>
-<div class="section" id="id100">
-<h4>Variablen<a class="headerlink" href="#id100" title="Link zu dieser Überschrift">¶</a></h4>
+<div class="section" id="id102">
+<h4>Variablen<a class="headerlink" href="#id102" title="Link zu dieser Überschrift">¶</a></h4>
 <p>Kommando-Variablen</p>
 <p>Nach Möglichkeit sollten Variablen genauso wie das Kommando heissen und mit dem Namen des Kommandos vorbelegt sein.</p>
 <p>Beispiel:</p>
@@ -8139,8 +8345,8 @@ installdirs     Verzeichnisse, die für &#8220;install&#8221; erzeugt werden mü
 </div>
 <div class="section" id="doxygen-howto">
 <h2>Doxygen Howto<a class="headerlink" href="#doxygen-howto" title="Link zu dieser Überschrift">¶</a></h2>
-<div class="section" id="id101">
-<h3>Einleitung<a class="headerlink" href="#id101" title="Link zu dieser Überschrift">¶</a></h3>
+<div class="section" id="id103">
+<h3>Einleitung<a class="headerlink" href="#id103" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Um als Neueinsteiger in ein komplexes Projekt einsteigen zu können, ist eine Dokumentation beziehungsweise ein Design-Dokument unabdingbar. Vor allem bei OO-Projekten ist das zugrunde gelegte Datenmodell nur schwer aus dem Quellcode zu extrahieren. Die Klassen-Hierarchie und das zugrunde gelegte Design lässt sich nur mit viel Mühe aus dem Spagetti-Code herauslesen. Ausserdem steht man vor dem Problem, dass neue Entwicker auch neue Erweiterungen beziehungsweise Umorganisationen in der Klassenhierarchie vornehmen, diese im Design-Dokument aber vergessen werden, zu dokumentieren. Um diese Probleme zu umschiffen, wäre eine automatisch erstellte Dokumentation praktisch. An diesem Punkt setzt doxygen an.</p>
 <div class="section" id="doxygen">
 <h4>Doxygen<a class="headerlink" href="#doxygen" title="Link zu dieser Überschrift">¶</a></h4>
@@ -8168,18 +8374,18 @@ FILE_PATTERNS    = &lt;Endung&gt; zum Beispiel .h,.cpp bei einem c++ Projekt</p>
 <dd><ul class="first simple">
 <li>...Text...</li>
 </ul>
-<p class="last"><a href="#id102"><span class="problematic" id="id103">*</span></a>/</p>
+<p class="last"><a href="#id104"><span class="problematic" id="id105">*</span></a>/</p>
 </dd>
-<dt>/<a href="#id104"><span class="problematic" id="id105">*</span></a>!</dt>
+<dt>/<a href="#id106"><span class="problematic" id="id107">*</span></a>!</dt>
 <dd><ul class="first simple">
 <li>...Text...</li>
 </ul>
-<p class="last"><a href="#id106"><span class="problematic" id="id107">*</span></a>/</p>
+<p class="last"><a href="#id108"><span class="problematic" id="id109">*</span></a>/</p>
 </dd>
-<dt>/<a href="#id108"><span class="problematic" id="id109">*</span></a>!</dt>
+<dt>/<a href="#id110"><span class="problematic" id="id111">*</span></a>!</dt>
 <dd><blockquote class="first">
 <div>...Text...</div></blockquote>
-<p class="last"><a href="#id110"><span class="problematic" id="id111">*</span></a>/</p>
+<p class="last"><a href="#id112"><span class="problematic" id="id113">*</span></a>/</p>
 </dd>
 </dl>
 <p>Diese Art und Weise der Kommentare ist vom C-Stil abgeleitet. Wer die C++ Kommentare bevorzugt, kann die folgenden speziellen Blöcke benutzen:</p>
@@ -8191,21 +8397,21 @@ FILE_PATTERNS    = &lt;Endung&gt; zum Beispiel .h,.cpp bei einem c++ Projekt</p>
 //!</p>
 <p>Zusätzlich ist es möglich, Kurzbeschreibungen (brief) zu setzen:</p>
 <dl class="docutils">
-<dt>/<a href="#id112"><span class="problematic" id="id113">*</span></a>!brief Beschreibung</dt>
+<dt>/<a href="#id114"><span class="problematic" id="id115">*</span></a>!brief Beschreibung</dt>
 <dd><ul class="first simple">
 <li>geht hier weiter</li>
 <li></li>
 <li>Detailierte Beschreinungen folgen hier</li>
 </ul>
-<p class="last"><a href="#id114"><span class="problematic" id="id115">*</span></a>/</p>
+<p class="last"><a href="#id116"><span class="problematic" id="id117">*</span></a>/</p>
 </dd>
 </dl>
 <p>Eine andere Möglichkeit stellt das Folgende dar:</p>
 <p>/// Brief Beschreibung.
-/** Detailierte beschreibung folgt nach dem Punkt. <a href="#id116"><span class="problematic" id="id117">*</span></a>/</p>
+/** Detailierte beschreibung folgt nach dem Punkt. <a href="#id118"><span class="problematic" id="id119">*</span></a>/</p>
 <p>Parameterbeschreibungen werden mit dem Tag param eingeleitet:</p>
 <p>/// Eine Methode.
-/<a href="#id118"><span class="problematic" id="id119">*</span></a>!</p>
+/<a href="#id120"><span class="problematic" id="id121">*</span></a>!</p>
 <blockquote>
 <div><blockquote>
 <div><blockquote>
@@ -8214,7 +8420,7 @@ FILE_PATTERNS    = &lt;Endung&gt; zum Beispiel .h,.cpp bei einem c++ Projekt</p>
 param pa1 Parameter 1
 param pa2 Parameter 2</p>
 </div></blockquote>
-<p><a href="#id120"><span class="problematic" id="id121">*</span></a>/</p>
+<p><a href="#id122"><span class="problematic" id="id123">*</span></a>/</p>
 <p>int sohn(int pa1, int pa2); //! Detailierte Beschreibung</p>
 </div></blockquote>
 <p>Einige weitere Tags:

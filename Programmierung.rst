@@ -731,8 +731,9 @@ Hier wurde das Kommando mit cvs ci anstatt cvs commit angegeben. Die meisten CVS
 In den meisten Fällen kann die Revisionsnummer einer Datei ignoriert werden. Meistens werden diese Nummern nur für interne Verwaltungsaufgaben von CVS selbst automatisch verwendet. Dennoch sind Revisionsnummern sehr nützlich, wenn man ältere Versionen einer Datei holen möchte (oder dagegen einen Diff macht).
 
 Die Untersuchung der Entries-Datei ist nicht die einzige Möglichkeit, Revisionsnummern herauszubekommen. Dazu kann auch das status-Kommando verwendet werden.
+
 user@linux ~$ cvs status hello.c
-=====================================================
+```=====================================================```
 File: hello.c Status: Up-to-date
 
 Working revision: 1.3 Tue Apr 20 02:34:42 1999
@@ -744,7 +745,7 @@ Sticky Options: (none)
 Dies gibt, wenn es ohne bestimmte Dateinamen aufgerufen wird, den Status aller Dateien eines Projektes aus:
 user@linux ~$ cvs status
 cvs status: Examining.
-============================================
+```============================================```
 File: README.txt Status: Up-to-date
 
 Working revision: 1.1.1.1 Sun Apr 18 18:18:22 1999
@@ -753,7 +754,7 @@ Sticky Tag: (none)
 Sticky Date: (none)
 Sticky Options: (none)
 
-================================================
+```================================================```
 File: hello.c Status: Up-to-date
 Working revision: 1.3 Tue Apr 20 02:34:42 1999
 Repository revision: 1.3 /usr/local/cvs/myproj/hello.c,v
@@ -762,7 +763,7 @@ Sticky Date: (none)
 Sticky Options: (none)
 
 cvs status: Examining a-subdir
-===============================================
+```===============================================```
 File: whatever.c Status: Up-to-date
 
 Working revision: 1.1.1.1 Sun Apr 18 18:18:22 1999
@@ -772,7 +773,7 @@ Sticky Date: (none)
 Sticky Options: (none)
 
 cvs status: Examining a-subdir/subsubdir
-===============================================
+```===============================================```
 File: fish.c Status: Up-to-date
 
 Working revision: 1.2 Mon Apr 19 06:35:27 1999
@@ -783,7 +784,7 @@ Sticky Date: (none)
 Sticky Options: (none)
 
 cvs status: Examining b-subdir
-==============================================
+```==============================================```
 File: random.c Status: Up-to-date
 
 Working revision: 1.2 Mon Apr 19 06:35:27 1999
@@ -796,7 +797,7 @@ user@linux ~$
 Ignorieren Sie einfach alle Teile, die Sie nicht verstehen. Tatsächlich gilt dies grundsätzlich für CVS. Oft wird die kleine Information, die Sie benötigen, von Unmengen an Informationen flankiert, die Sie entweder gar nicht interessieren oder vielleicht auch gar nicht verstehen. Das ist völlig normal. Suchen Sie sich einfach das heraus, was Sie brauchen, und ignorieren Sie den Rest.
 
 Im vorangegangenen Beispiel besteht der interessante Teil aus den ersten drei Zeilen (die Leerzeile nicht mitgezählt) der Statusausgabe jeder Datei. Die erste Zeile ist die wichtigste; dort stehen der Dateiname und der Status der Datei innerhalb der Arbeitskopie. Zurzeit sind alle Dateien auf dem gleichen Stand mit dem Archiv, daher steht überall der Status Up-to-date. Wenn jedoch random.c modifiziert und noch nicht an das Archiv mittels Commit übertragen worden wäre, könnte dies so aussehen:
-====================================================
+```====================================================```
 File: random.c Status: Locally Modified
 
 Working revision: 1.2 Mon Apr 19 06:35:27 1999
@@ -807,7 +808,7 @@ Sticky Options: (none)
 
 Working revision und Repository revision zeigen an, ob die Datei mit dem Archiv übereinstimmt. Zurück bei der original Arbeitskopie (die Kopie von jrandom, welche die aktuellen Änderungen von hello.c noch nicht hat) wird Folgendes ausgegeben:
 user@linux ~$ cvs status hello.c
-==================================================
+```==================================================```
 File: hello.c Status: Needs Patch
 
 Working revision: 1.2 Mon Apr 19 02:17:07 1999
@@ -831,7 +832,7 @@ printf ("between hello and goodbye\n");
 
 einfügte. Zu diesem Zeitpunkt ist der Status unserer Kopie von hello.c
 user@linux ~$ cvs status hello.c
-===============================================
+```===============================================```
 File: hello.c Status: Needs Merge
 
 Working revision: 1.2 Mon Apr 19 02:17:07 1999
@@ -860,7 +861,7 @@ main ()
 printf ("Hello, world!\n");
 <<<<<< hello.c
 printf ("this change will conflict\n");
-=======
+```=======```
 printf ("between hello and goodbye\n");
 >>>>>>> 1.3
 printf ("Goodbye, world!\n");
@@ -871,7 +872,7 @@ Konflikte werden durch Konfliktmarkierungen in folgendem Format angezeigt:
 die noch nicht durch Commit abgeschickten Änderungen der Arbeitskopie
 blah blah lah
 
-=======
+```=======```
 die neuen Änderungen aus dem Archiv
 blah blah blah
 und so weiter
@@ -928,28 +929,28 @@ jrandom: 1.1.1
 keyword substitution: kv
 total revisions: 5; selected revisions: 5
 description:
-----------------
+```----------------```
 revision 1.4
 date: 1999/04/20 04:14:37; author: jrandom; state: Exp; lines: +1 -1
 adjusted middle line
-----------------
+```----------------```
 revision 1.3
 date: 1999/04/20 02:30:05; author: qsmith; state: Exp; lines: +1 -0
 added new middle line
-----------------
+```----------------```
 revision 1.2
 date: 1999/04/19 06:35:15; author: jrandom; state: Exp; lines: +1 -0
 print goodbye too
-----------------
+```----------------```
 revision 1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp;
 branches: 1.1.1;
 Initial revision
-----------------
+```----------------```
 revision 1.1.1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp; lines: +0 -0
 initial import into CVS
-=========================================
+```=========================================```
 
 Wie üblich, steht am Anfang eine Menge an Informationen, die einfach ignoriert werden kann. Die richtig guten Sachen kommen nach den Zeilen mit den Strichen, und das Format ist eigentlich selbsterklärend.
 
@@ -980,20 +981,20 @@ jrandom: 1.1.1
 keyword substitution: kv
 total revisions: 3; selected revisions: 3
 description:
----------------
+```---------------```
 revision 1.2
 date: 1999/04/19 06:35:27; author: jrandom; state: Exp; lines: +8 -1
 filled out C code
----------------
+```---------------```
 revision 1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp;
 branches: 1.1.1;
 Initial revision
-----------------
+```----------------```
 revision 1.1.1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp; lines: +0 -0
 initial import into CVS
-=================================================
+```=================================================```
 RCS file: /usr/local/cvs/myproj/b-subdir/random.c,v
 Working file: b-subdir/random.c
 head: 1.2
@@ -1006,20 +1007,20 @@ jrandom: 1.1.1
 keyword substitution: kv
 total revisions: 3; selected revisions: 3
 description:
-----------------
+```----------------```
 revision 1.2
 date: 1999/04/19 06:35:27; author: jrandom; state: Exp; lines: +8 -1
 filled out C code
-----------------
+```----------------```
 revision 1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp;
 branches: 1.1.1;
 Initial revision
-----------------
+```----------------```
 revision 1.1.1.1
 date: 1999/04/18 18:18:22; author: jrandom; state: Exp; lines: +0 -0
 initial import into CVS
-============================================
+```============================================```
 
 In dieser Ausgabe kann man sehen, dass die beiden Revisionen Teil des gleichen Commits waren. (Die Tatsache, dass die Zeitstempel der beiden Revisionen gleich sind, oder zumindest sehr nahe beieinander liegen, ist ein weiterer Beweis.)
 
@@ -1035,7 +1036,7 @@ adjusted middle line
 und sich fragt, was jrandom getan hat. Formal gesprochen fragt sich qsmith: Was ist der Unterschied zwischen meiner Revision (1.3) von hello.c und der darauf folgenden von jrandom (1.4)? Dies kann mit dem diff-Kommando herausgefunden werden, indem nun zwei unterschiedliche Revisionen durch die zusätzliche Kommandooption -r verglichen werden:
 user@linux ~$ cvs diff -c -r 1.3 -r 1.4 hello.c
 Index: hello.c
-================================================
+```================================================```
 RCS file: /usr/local/cvs/myproj/hello.c,v
 retrieving revision 1.3
 retrieving revision 1.4
@@ -1094,7 +1095,7 @@ printf ("Goodbye, world!\n");
 
 Als Nächstes führt er update -p aus, um sicherzustellen, dass die Revision 1.3 tatsächlich die ist, die er haben möchte:
 user@linux ~$ cvs update -p -r 1.3 hello.c
-=========================================
+```=========================================```
 Checking out hello.c
 RCS: /usr/local/cvs/myproj/hello.c,v
 VERS: 1.3
@@ -1131,7 +1132,7 @@ cvs update: Updating b-subdir
 Wenn nun update ausgeführt wird, wird die Datei als modifiziert markiert, was auch Sinn hat, da der Inhalt verändert wurde. Speziell ist der Inhalt der gleiche wie der der älteren Revision 1.3 (nicht dass CVS sich darüber bewusst wäre, dass diese identisch mit einer älteren Revision ist - CVS merkt nur, dass die Datei verändert wurde). Wenn qsmith ganz sichergehen wollte, könnte er einen Diff zur Überprüfung machen:
 user@linux ~$ cvs -Q diff -c
 Index: hello.c
-=============================================
+```=============================================```
 RCS file: /usr/local/cvs/myproj/hello.c,v
 retrieving revision 1.4
 diff -c -r1.4 hello.c
@@ -1366,7 +1367,7 @@ Mit der -D-Option holt update die höchste Revision einer jeden Datei eines gege
 
 Zusätzlich zu einem Datum kann, und sollte meistens auch, eine Uhrzeit angegeben werden. Zum Beispiel endete das vorangegangene Beispiel darin, vor allem die Revision 1.1 zu holen (nur drei der Dateien waren verändert, da alle anderen noch Revision 1.1 hatten). Als Beweis hier die Statusausgabe für die Datei hello.c:
 user@linux ~$ cvs -Q status hello.c
-==========================================
+```==========================================```
 File: hello.c Status: Up-to-date
 Working revision: 1.1.1.1 Sat Apr 24 22:45:03 1999
 Repository revision: 1.1.1.1 /usr/local/cvs/myproj/hello.c,v
@@ -1381,7 +1382,7 @@ U hello.c
 U a-subdir/subsubdir/fish.c
 U b-subdir/random.c
 user@linux ~$ cvs status hello.c
-=======================================
+```=======================================```
 File: hello.c Status: Locally Modified
 Working revision: 1.2 Sat Apr 24 22:45:22 1999
 Repository revision: 1.2 /usr/local/cvs/myproj/hello.c,v
@@ -1394,7 +1395,7 @@ Wir sind fast am Ziel. Betrachten wir nun Datum und Uhrzeit in der Zeile Sticky 
 user@linux ~$ cvs -q update -D "1999-04-19 23:59:59 GMT"
 U hello.c
 user@linux ~$ cvs -q status hello.c
-============================================
+```============================================```
 File: hello.c Status: Up-to-date
 Working revision: 1.2 Sun Apr 25 22:38:53 1999
 Repository revision: 1.2 /usr/local/cvs/myproj/hello.c,v
@@ -1439,7 +1440,7 @@ so würde CVS das nicht zulassen, da dies so wäre, als erlaube man, in der Zeit
 Das bedeutet aber nicht, dass CVS auf einmal nichts mehr von allen anderen Revisionen weiß, die seitdem per Commit eingeflossen sind. Man kann immer noch die mit einem bindenden Datum versehene Arbeitskopie mit anderen Revisionen vergleichen, zukünftige eingeschlossen:
 user@linux ~$ cvs -q diff -c -r 1.5 hello.c
 Index: hello.c
-=====================================
+```=====================================```
 RCS file: /usr/local/cvs/myproj/hello.c,v
 retrieving revision 1.5
 diff -c -r1.5 hello.c
@@ -1469,7 +1470,7 @@ Das bindende Datum sowie alle anderen bindenden Eigenschaften können mit der Op
 user@linux ~$ cvs -q update -A
 U hello.c
 user@linux ~$ cvs status hello.c
-======================================
+```======================================```
 File: hello.c Status: Up-to-date
 Working revision: 1.5 Sun Apr 25 22:50:27 1999
 Repository revision: 1.5 /usr/local/cvs/myproj/hello.c,v
@@ -1602,7 +1603,7 @@ user@linux ~$
 Die Veränderungen an hello.c gehen jedoch nicht verloren; CVS erkennt immer noch, dass die Datei bezüglich des Archivs verändert wurde:
 user@linux ~$ cvs -q diff -c hello.c
 Index: hello.c
-===========================================
+```===========================================```
 RCS file: /usr/local/cvs/myproj/hello.c,v
 retrieving revision 1.5
 diff -c -r1.5 hello.c
@@ -1633,7 +1634,7 @@ user@linux ~$
 
 Die Markierung Release-1999_05_01 gehört selbstverständlich immer noch zu Revision 1.5. Vergleichen Sie den Status der Datei vor und nach dieser Umkehrung zu dieser Markierung:
 user@linux ~$ cvs -q status hello.c
-==============================================
+```==============================================```
 File: hello.c Status: Up-to-date
 Working revision: 1.6 Tue May 4 20:09:17 1999
 Repository revision: 1.6 /usr/local/cvs/myproj/hello.c,v
@@ -1643,7 +1644,7 @@ Sticky Options: (none)
 user@linux ~$ cvs -q update -r Release-1999_05_01
 U hello.c
 user@linux ~$ cvs -q status hello.c
-==============================================
+```==============================================```
 File: hello.c Status: Up-to-date
 Working revision: 1.5 Tue May 4 20:21:12 1999
 Repository revision: 1.5 /usr/local/cvs/myproj/hello.c,v
@@ -1729,7 +1730,7 @@ Das Resultat ist das gleiche (nun ja, der Name des übergeordneten Verzeichnisse
 
 Wie auch immer, nehmen wir an, dass Sie auf die eine oder andere Weise eine Arbeitskopie des gewünschten Zweiges bekommen haben:
 user@linux ~$ cvs -q status hello.c
-===================================================
+```===================================================```
 File: hello.c Status: Up-to-date
 Working revision: 1.5 Tue Apr 20 06:12:56 1999
 Repository revision: 1.5 /usr/local/cvs/myproj/hello.c,v
@@ -1738,7 +1739,7 @@ Sticky Tag: Release-1999_05_01-bugfixes
 Sticky Date: (none)
 Sticky Options: (none)
 user@linux ~$ cvs -q status b-subdir/random.c
-==================================================
+```==================================================```
 File: random.c Status: Up-to-date
 Working revision: 1.2 Mon Apr 19 06:35:27 1999
 Repository revision: 1.2 /usr/local/cvs/myproj/b-subdir/random.c,v
@@ -1768,14 +1769,14 @@ user@linux ~$
 
 werden Sie feststellen, dass etwas Lustiges mit den Revisionsnummern vor sich geht:
 user@linux ~$ cvs -q status hello.c b-subdir/random.c
-===================================================
+```===================================================```
 File: hello.c Status: Up-to-date
 Working revision: 1.5.2.1 Wed May 5 00:13:58 1999
 Repository revision: 1.5.2.1 /usr/local/cvs/myproj/hello.c,v
 Sticky Tag: Release-1999_05_01-bugfixes (branch: 1.5.2)
 Sticky Date: (none)
 Sticky Options: (none)
-===================================================
+```===================================================```
 File: random.c Status: Up-to-date
 Working revision: 1.2.2.1 Wed May 5 00:14:25 1999
 Repository revision: 1.2.2.1 /usr/local/cvs/myproj/b-subdir/random.c,v
@@ -1827,7 +1828,7 @@ U hello.c
 U b-subdir/random.c
 user@linux ~$ cvs -q diff -c -r Release-1999_05_01-bugfixes
 Index: hello.c
-===============================================
+```===============================================```
 RCS file: /usr/local/cvs/myproj/hello.c,v
 retrieving revision 1.5.2.1
 retrieving revision 1.6
@@ -1851,7 +1852,7 @@ printf ("Goodbye, world!\n");
 + /* a comment on the last line */
 }
 Index: b-subdir/random.c
-===========================================
+```===========================================```
 RCS file: /usr/local/cvs/myproj/b-subdir/random.c,v
 retrieving revision 1.2.2.1
 retrieving revision 1.2
@@ -1941,7 +1942,7 @@ void main ()
 {
 <<<<<<<< random.c
 printf ("A random number.\n");
-=======
+```=======```
 printf ("A random number.\n");
 printf ("Get the joke?\n");
 >>>>>>> 1.2.2.2
@@ -2800,11 +2801,11 @@ some_random_tag: 1.1
 keyword substitution: b
 total revisions: 1; selected revisions: 1
 description:
-----------------------------
+```----------------------------```
 revision 1.1
 date: 1999/06/21 02:56:18; author: jrandom; state: Exp;
 added a random image; ask jrandom@red-bean.com why
-===========================================
+```===========================================```
 user@linux ~$
 
 Sie müssen dies nur bedenken, wenn Sie einmal RCS-Dateien von Hand editieren müssen (was selten ist, aber durchaus einmal vorkommen kann) - denken Sie dann daran, die @-Zeichen in Revisionsinhalten und Log-Mitteilungen zu verdoppeln. Wenn Sie das nicht tun, wird die RCS-Datei durcheinander geraten und wahrscheinlich ein seltsames und unerwünschtes Verhalten zeigen.
@@ -4031,7 +4032,7 @@ printf ("Hellooo, world!\n");
 Ein Weg herauszufinden, was sie getan hat, ist, sich den diff10 zwischen dieser Revision und der vorangegangenen anzusehen:
 user@linux ~$ cvs diff -r 1.20 -r 1.21 hello.c
 index: hello.c
-===============================================
+```===============================================```
 RCS file: /usr/local/newrepos/myproj/hello.c,v
 retrieving revision 1.20
 retrieving revision 1.21
@@ -4077,11 +4078,11 @@ jrandom: 1.1.1
 keyword substitution: kv
 total revisions: 22; selected revisions: 1
 description:
----------------------------
+```---------------------------```
 evision 1.21
 date: 1999/07/25 20:17:42; author: jrandom; state: Exp; lines: +1 -1
 say hello with renewed enthusiasm
-==============================================
+```==============================================```
 
 Zusätzlich zu -r können Sie die Anmerkungen auch mit der Option -D DATUM filtern:
 user@linux ~$ cvs annotate -D "5 weeks ago" hello.c
@@ -4112,7 +4113,7 @@ Anmerkungen und Verzweigungen
 
 Wenn Sie keine weiteren Optionen angeben, zeigt annotate immer die Aktivitäten der Stammversion (engl. trunk). (Die Tendenz, die Stammversion so zu bevorzugen, ist entweder ein Bug oder ein Feature, je nach Standpunkt.) Sie können CVS zwingen, die Anmerkungen einer abgezweigten Version auszugeben, indem Sie die Marke dieses Zweiges als Argument für -r übergeben. Hier ein Beispiel einer Arbeitskopie, in der sich hello.c in einer abgezweigten Version namens Brancho_Gratuito befindet und in der mindestens eine Änderung in dem Zweig per Commit vorgenommen wurde:
 user@linux ~$ cvs status hello.c
-==================================================
+```==================================================```
 File: hello.c Status: Up-to-date
 Working revision: 1.10.2.2 Sun Jul 25 21:29:05 1999
 Repository revision: 1.10.2.2 /usr/local/newrepos/myproj/hello.c,v
@@ -4612,7 +4613,7 @@ user@linux ~$ cat README.txt
 ....
 <<<<<<< README.txt
 key $Revision: 1.5 $
-=======
+```=======```
 key $Revision: 1.5 $
 >>>>>>> 1.14.2.1
 ...
@@ -4725,7 +4726,7 @@ C src/digest.c
 M src/main.c
 user@linux ~$ cvs diff -c
 Index: src/digest.c
-===============================================
+```===============================================```
 RCS file: /usr/local/newrepos/theirproj/src/digest.c,v
 retrieving revision 1.2
 diff -c -r1.2 digest.c
@@ -4744,7 +4745,7 @@ printf ("gurgle, slorp\n");
 + >>>>>>> 1.1.1.2
 }
 Index: src/main.c
-==========================================
+```==========================================```
 RCS file: /usr/local/newrepos/theirproj/src/main.c,v
 retrieving revision 1.2
 diff -c -r1.2 main.c
@@ -4768,7 +4769,7 @@ M src/main.c
 user@linux ~$ cvs diff src/digest.c
 cvs diff src/digest.c
 Index: src/digest.c
-=====================================
+```=====================================```
 RCS file: /usr/local/newrepos/theirproj/src/digest.c,v
 retrieving revision 1.2
 diff -r1.2 digest.c
